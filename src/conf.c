@@ -148,6 +148,7 @@ int FTI_ReadConf(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
     FTI_Exec->ckptID = 0;
     FTI_Exec->ckptLvel = 0;
     FTI_Exec->ckptIntv = 1;
+    FTI_Exec->ckptSize = 0;
     FTI_Exec->wasLastOffline = 0;
     FTI_Exec->ckptNext = 0;
     FTI_Exec->ckptLast = 0;
