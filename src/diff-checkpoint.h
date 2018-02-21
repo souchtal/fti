@@ -51,8 +51,6 @@ typedef struct              FTIT_DataRange
 
 typedef struct              FTIT_DataDiff
 {
-    FTI_ADDRVAL*            dirtyPages;         /**< dirty pages array          */
-    long                  dirtyPagesCnt;
     FTIT_DataRange*         ranges;
     FTI_ADDRVAL             basePtr;
     long                  totalSize;

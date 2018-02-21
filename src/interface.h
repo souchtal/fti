@@ -255,6 +255,7 @@ int FTI_ExcludePage( FTI_ADDRVAL addr );
 int FTI_ShiftPageItems( int idx, long pos );
 int FTI_RangeCmpPage(int idx, long idr, FTI_ADDRVAL page);
 int FTI_RegisterSigHandler();
+int FTI_GetRangeIndices( FTI_ADDRVAL page, int* idx, long* pos);
 void FTI_SigHandler( int signum, siginfo_t* info, void* ucontext );
 int FTI_ProtectPages( int idx, FTIT_dataset* FTI_Data , FTIT_execution* FTI_Exec);
 FTI_ADDRVAL FTI_GetFirstInclPage(FTI_ADDRVAL addr); 
