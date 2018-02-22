@@ -664,6 +664,20 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
 
             MD5_Init( &mdContext );
             cpycnt = 0;
+            // ***** JUST FOR TESTING *****
+            if( FTI_Topo->splitRank==0 ) {
+                uintptr_t buffer_offset, buffer_size;
+                printf("ftiff.c -> LINE: %d, id: %d\n",__LINE__, currentdbvar->id);
+                while( FTI_ReceiveDiffChunk(currentdbvar->id, (FTI_ADDRVAL) dptr, (FTI_ADDRVAL) currentdbvar->chunksize, &buffer_offset, &buffer_size) ) {
+                    printf("ID: %i, Data-ptr: %p, offset: %p, size: %lu\n",
+                            currentdbvar->id,
+                            (void*) dptr,
+                            (void*) buffer_offset,
+                            buffer_size);
+
+                }
+            }
+
             // write ckpt data
             while ( cpycnt < currentdbvar->chunksize ) {
                 cpybuf = currentdbvar->chunksize - cpycnt;

@@ -69,23 +69,24 @@ int FTI_InitDiffCkpt( FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data )
 }
 
 void printReport() {
-    long num_changed = 0;
-    long num_prot=0; 
+    long num_unchanged = 0;
+    long num_prot = 0; 
     int i,j;
     for(i=0; i<FTI_DataDiffInfo.nbProtVar; ++i) {
-        num_changed += FTI_DataDiffInfo.dataDiff[i].rangeCnt-1;
+        num_prot += FTI_DataDiffInfo.dataDiff[i].totalSize;
         for(j=0; j<FTI_DataDiffInfo.dataDiff[i].rangeCnt; ++j) {
-            num_prot += FTI_DataDiffInfo.dataDiff[i].ranges[j].size;
+            num_unchanged += FTI_DataDiffInfo.dataDiff[i].ranges[j].size;
         }
     }
     num_prot /= FTI_PageSize;
+    num_unchanged /= FTI_PageSize;
 
     printf(
             "Diff Ckpt Summary\n"
             "-------------------------------------\n"
             "number of pages protected:       %lu\n"
             "number of pages changed:         %lu\n",
-            num_prot, num_changed);
+            num_prot, num_unchanged);
     fflush(stdout);
     
 }
@@ -218,14 +219,20 @@ int FTI_ExcludePage( FTI_ADDRVAL addr ) {
         return FTI_NSCS;
     }
     // swap array elements i -> i+1 for i > pos and increase counter
-    FTI_ShiftPageItems( idx, pos );
     FTI_ADDRVAL base = FTI_DataDiffInfo.dataDiff[idx].basePtr;
     FTI_ADDRVAL offset = FTI_DataDiffInfo.dataDiff[idx].ranges[pos].offset;
     FTI_ADDRVAL end = base + offset + FTI_DataDiffInfo.dataDiff[idx].ranges[pos].size;
     // update values
-    FTI_DataDiffInfo.dataDiff[idx].ranges[pos].size = (page + FTI_PageSize) - (base + offset);
-    FTI_DataDiffInfo.dataDiff[idx].ranges[pos+1].offset = page - base + FTI_PageSize;
-    FTI_DataDiffInfo.dataDiff[idx].ranges[pos+1].size = end - (page + FTI_PageSize);
+    FTI_DataDiffInfo.dataDiff[idx].ranges[pos].size = page - (base + offset);
+    if( FTI_DataDiffInfo.dataDiff[idx].ranges[pos].size == 0 ) {
+        FTI_DataDiffInfo.dataDiff[idx].ranges[pos].offset = page - base + FTI_PageSize;
+        FTI_DataDiffInfo.dataDiff[idx].ranges[pos].size = end - (page + FTI_PageSize);
+    } else {
+        FTI_ShiftPageItems( idx, pos );
+        FTI_DataDiffInfo.dataDiff[idx].ranges[pos+1].offset = page - base + FTI_PageSize;
+        FTI_DataDiffInfo.dataDiff[idx].ranges[pos+1].size = end - (page + FTI_PageSize);
+    }
+
     // add dirty page to buffer
 }
 
@@ -413,3 +420,84 @@ bool FTI_isProtectedPage( FTI_ADDRVAL page )
     }
     return inRange;
 }
+
+int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size, FTI_ADDRVAL* buffer_offset, FTI_ADDRVAL* buffer_size) {
+    static bool init = true;
+    static long pos;
+    static FTI_ADDRVAL data_ptr;
+    static FTI_ADDRVAL data_end;
+    if ( init ) {
+        pos = 0;
+        data_ptr = data_offset;
+        data_end = data_offset + data_size;
+        init = false;
+    }
+    int idx;
+    long i;
+    bool flag;
+    // reset function and return not found
+    if ( pos == -1 ) {
+        init = true;
+        return 0;
+    }
+    for(idx=0; (flag = FTI_DataDiffInfo.dataDiff[idx].id != id) && (idx < FTI_DataDiffInfo.nbProtVar); ++idx);
+    if( !flag ) {
+        FTI_ADDRVAL base = FTI_DataDiffInfo.dataDiff[idx].basePtr;
+        // all memory dirty
+        if ( FTI_DataDiffInfo.dataDiff[idx].rangeCnt == 0 ) {
+            // set pos = -1 to ensure a return value of 0 and a function reset at next invokation
+            pos = -1;
+            *buffer_offset = data_ptr;
+            *buffer_size = data_size;
+            return 1;
+        }
+        for(i=pos; i<FTI_DataDiffInfo.dataDiff[idx].rangeCnt; ++i) {
+            FTI_ADDRVAL range_size = FTI_DataDiffInfo.dataDiff[idx].ranges[i].size;
+            FTI_ADDRVAL range_offset = FTI_DataDiffInfo.dataDiff[idx].ranges[i].offset + base;
+            FTI_ADDRVAL range_end = range_offset + range_size;
+            FTI_ADDRVAL dirty_range_end; 
+            FTI_ADDRVAL data_end = base + FTI_DataDiffInfo.dataDiff[i].totalSize;  
+            printf("LINE: %d, id: %d, i: %lu, offset: %p, size: %lu\n",
+                    __LINE__, 
+                    FTI_DataDiffInfo.dataDiff[idx].id, 
+                    i,
+                    range_offset,
+                    range_size);
+            // dirty pages at beginning of data buffer
+            if ( data_ptr < range_offset ) {
+                *buffer_offset = data_ptr;
+                *buffer_size = range_offset - data_ptr;
+                // at next call, data_ptr should be equal to range_offset of range[pos]
+                // and one of the next if clauses should be invoked
+                data_ptr = range_offset;
+                pos = i;
+                return 1;
+            }
+            // dirty pages after the beginning of data buffer
+            if ( (data_ptr >= range_offset) && (range_end < data_end) ) {
+                if ( i < FTI_DataDiffInfo.dataDiff[idx].rangeCnt-1 ) {
+                    data_ptr = FTI_DataDiffInfo.dataDiff[idx].ranges[i+1].offset + base;
+                    pos = i+1;
+                    *buffer_offset = range_end;
+                    *buffer_size = data_ptr - range_end;
+                    return 1;
+                // this is the last clean range
+                } else {
+                    data_ptr = data_end;
+                    pos = -1;
+                    *buffer_offset = range_end;
+                    *buffer_size = data_ptr - range_end;
+                    return 1;
+                }
+            }
+            // data buffer ends inside clean range
+            if ( (data_ptr >= range_offset) && (range_end > data_end) ) {
+                break;
+            }
+        }
+    }
+    // nothing to return -> function reset
+    init = true;
+    return 0;
+}
+
