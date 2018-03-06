@@ -260,6 +260,7 @@ extern "C" {
         long*            fs;                 /**< File size.                     */
         long*            pfs;                /**< Partner file size.             */
         char*            ckptFile;           /**< Ckpt file name. [FTI_BUFS]     */
+        char*            currentCkptFile;    /**< Ckpt file name. [FTI_BUFS]     */
         int*             nbVar;              /**< Number of variables. [FTI_BUFS]*/
         int*             varID;              /**< Variable id for size.[FTI_BUFS]*/
         long*            varSize;            /**< Variable size. [FTI_BUFS]      */
@@ -286,6 +287,7 @@ extern "C" {
         unsigned int    syncIter;           /**< To check mean iter. time.      */
         int             syncIterMax;        /**< Maximal synch. intervall.      */
         unsigned int    minuteCnt;          /**< Checkpoint minute counter.     */
+        bool            hasCkpt;            /**< Indicator that ckpt exists     */
         unsigned int    ckptCnt;            /**< Checkpoint number counter.     */
         unsigned int    ckptIcnt;           /**< Iteration loop counter.        */
         unsigned int    ckptID;             /**< Checkpoint ID.                 */
@@ -313,6 +315,7 @@ extern "C" {
      */
     typedef struct FTIT_configuration {
         bool            enableDiffCkpt;     /**< Enable differential ckpt.      */
+        int             diffMode;           /**< Enable differential ckpt.      */
         char            cfgFile[FTI_BUFS];  /**< Configuration file name.       */
         int             saveLastCkpt;       /**< TRUE to save last checkpoint.  */
         int             verbosity;          /**< Verbosity level.               */

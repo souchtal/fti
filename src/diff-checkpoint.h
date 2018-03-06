@@ -42,6 +42,8 @@
 /**                                                                             */
 /** Global Constans                                                             */
 
+#define DIFF_BLOCK_SIZE 4096
+
 typedef struct              FTIT_DataRange
 {
     FTI_ADDRVAL             offset;
@@ -49,7 +51,7 @@ typedef struct              FTIT_DataRange
 
 }FTIT_DataRange;
 
-typedef struct              FTIT_DataDiff
+typedef struct              FTIT_DataDiffSignal
 {
     FTIT_DataRange*         ranges;
     FTI_ADDRVAL             basePtr;
@@ -57,14 +59,38 @@ typedef struct              FTIT_DataDiff
     long                  rangeCnt;
     int                     id;
 
-}FTIT_DataDiff;
+}FTIT_DataDiffSignal;
 
-typedef struct              FTIT_DataDiffInfo
+typedef struct              FTIT_DataDiffInfoSignal
 {
-    FTIT_DataDiff*          dataDiff;
+    FTIT_DataDiffSignal*          dataDiff;
     int                     nbProtVar;
 
-}FTIT_DataDiffInfo;
+}FTIT_DataDiffInfoSignal;
+
+typedef struct              FTIT_HashBlock
+{
+    unsigned char*          hash;
+    bool                    dirty;
+
+}FTIT_HashBlock;
+
+typedef struct              FTIT_DataDiffHash
+{
+    FTIT_HashBlock*         hashBlocks;
+    FTI_ADDRVAL             basePtr;
+    long                    nbBlocks;
+    long                    totalSize;
+    int                     id;
+
+}FTIT_DataDiffHash;
+
+typedef struct              FTIT_DataDiffInfoHash
+{
+    FTIT_DataDiffHash*      dataDiff;
+    int                     nbProtVar;
+
+}FTIT_DataDiffInfoHash;
 
 //typedef struct              FTIT_PageRange 
 //{

@@ -14,7 +14,7 @@
 
 #define PRECISION   0.000
 #define ITER_TIMES  50000
-#define ITER_OUT    10000
+#define ITER_OUT    1000
 #define WORKTAG     50
 #define REDUCE      5
 

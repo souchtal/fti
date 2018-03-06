@@ -151,9 +151,8 @@ int FTI_Init(char* configFile, MPI_Comm globalComm)
         FTI_Listen(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt); //infinite loop inside, can stop only by callling FTI_Finalize
     }
     else { // If I am an application process
-        if (FTI_Conf.enableDiffCkpt) {
-            FTI_InitDiffCkpt( &FTI_Exec, FTI_Data );
-        }
+        // call in any case. treatment for diffCkpt disabled inside initializer.
+        FTI_InitDiffCkpt( &FTI_Conf, &FTI_Exec, FTI_Data );
         if (FTI_Exec.reco) {
             res = FTI_Try(FTI_RecoverFiles(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt), "recover the checkpoint files.");
             if (FTI_Conf.ioMode == FTI_IO_FTIFF && res == FTI_SCES) {
@@ -161,6 +160,8 @@ int FTI_Init(char* configFile, MPI_Comm globalComm)
             }
             FTI_Exec.ckptCnt = FTI_Exec.ckptID;
             FTI_Exec.ckptCnt++;
+            // needed for differential checkpointing
+            FTI_Exec.hasCkpt = true;
             if (res != FTI_SCES) {
                 FTI_Exec.reco = 0;
                 FTI_Exec.initSCES = 2; //Could not recover all ckpt files (or failed reading meta; FTI-FF)
@@ -433,7 +434,7 @@ int FTI_Protect(int id, void* ptr, long count, FTIT_type type)
             FTI_Data[i].size = type.size * count;
             FTI_Exec.ckptSize = FTI_Exec.ckptSize + ((type.size * count) - prevSize);
             if(FTI_Conf.enableDiffCkpt) {
-                FTI_ProtectPages( i, FTI_Data, &FTI_Exec );
+                FTI_RegisterProtections( i, FTI_Data, &FTI_Exec );
             }
             sprintf(str, "Variable ID %d reseted. Current ckpt. size per rank is %.2fMB.", id, (float) FTI_Exec.ckptSize / (1024.0 * 1024.0));
             FTI_Print(str, FTI_DBUG);
@@ -457,12 +458,13 @@ int FTI_Protect(int id, void* ptr, long count, FTIT_type type)
     FTI_Data[FTI_Exec.nbVar].size = type.size * count;
     FTI_Exec.nbVar = FTI_Exec.nbVar + 1;
     FTI_Exec.ckptSize = FTI_Exec.ckptSize + (type.size * count);
+    
+    if(FTI_Conf.enableDiffCkpt) {
+        FTI_RegisterProtections( FTI_Exec.nbVar-1, FTI_Data, &FTI_Exec);
+    }
+
     sprintf(str, "Variable ID %d to protect. Current ckpt. size per rank is %.2fMB.", id, (float) FTI_Exec.ckptSize / (1024.0 * 1024.0));
     FTI_Print(str, FTI_INFO);
-
-    if(FTI_Conf.enableDiffCkpt) {
-        FTI_ProtectPages( FTI_Exec.nbVar-1, FTI_Data, &FTI_Exec);
-    }
 
     return FTI_SCES;
 }
@@ -841,6 +843,16 @@ int FTI_Checkpoint(int id, int level)
         //Setting recover flag to 1 (to recover from current ckpt level)
         FTI_Try(FTI_UpdateConf(&FTI_Conf, &FTI_Exec, 1), "update configuration file.");
         FTI_Exec.initSCES = 1; //in case FTI couldn't recover all ckpt files in FTI_Init
+    }
+    // needed for differential checkpointing
+    if ( !FTI_Exec.hasCkpt && FTI_Conf.enableDiffCkpt ) {
+        FTI_Exec.hasCkpt = true;
+    }
+    if ( FTI_Conf.enableDiffCkpt ) {
+        int idx;
+        for(idx = 0; idx<FTI_Exec.nbVar; ++idx) {
+            FTI_UpdateProtections(idx, FTI_Data, &FTI_Exec);
+        }
     }
     return FTI_DONE;
 }

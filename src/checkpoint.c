@@ -131,8 +131,13 @@ int FTI_WriteCkpt(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
     double tt = MPI_Wtime(); //Start time
 
     //update ckpt file name
+    //if( FTI_Conf->ioMode == FTI_IO_FTIFF ) {
+    //snprintf(FTI_Exec->meta[0].ckptFile, FTI_BUFS,
+    //        "Ckpt1-Rank%d.fti", FTI_Topo->myRank);
+    //} else {
     snprintf(FTI_Exec->meta[0].ckptFile, FTI_BUFS,
             "Ckpt%d-Rank%d.fti", FTI_Exec->ckptID, FTI_Topo->myRank);
+    //}
 
 #ifdef ENABLE_HDF5 //If HDF5 is installed overwrite the name
     if (FTI_Conf->ioMode == FTI_IO_HDF5) {

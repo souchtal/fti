@@ -579,7 +579,7 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
         return FTI_NSCS;
     }
 
-    char str[FTI_BUFS], fn[FTI_BUFS];
+    char str[FTI_BUFS], fn[FTI_BUFS], fnr[FTI_BUFS];
 
     //If inline L4 save directly to global directory
     int level = FTI_Exec->ckptLvel;
@@ -587,7 +587,12 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
         snprintf(fn, FTI_BUFS, "%s/%s", FTI_Conf->gTmpDir, FTI_Exec->meta[0].ckptFile);
     }
     else {
-        snprintf(fn, FTI_BUFS, "%s/%s", FTI_Conf->lTmpDir, FTI_Exec->meta[0].ckptFile);
+        if( FTI_Exec->hasCkpt && FTI_Conf->enableDiffCkpt ) {
+            snprintf(fn, FTI_BUFS, "%s/l1/%s", FTI_Conf->localDir, FTI_Exec->meta[0].currentCkptFile);
+            snprintf(fnr, FTI_BUFS, "%s/%s", FTI_Conf->lTmpDir, FTI_Exec->meta[0].ckptFile);
+        } else {
+            snprintf(fn, FTI_BUFS, "%s/%s", FTI_Conf->lTmpDir, FTI_Exec->meta[0].ckptFile);
+        }
     }
 
     FILE* fd;
@@ -658,49 +663,63 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
             clearerr(fd);
             errno = 0;
 
+            // ***** JUST FOR TESTING *****
+            //if( FTI_Topo->splitRank==0 ) {
+            //    uintptr_t buffer_offset, buffer_size;
+            //    while( FTI_ReceiveDiffChunk(currentdbvar->id, (FTI_ADDRVAL) dptr, (FTI_ADDRVAL) currentdbvar->chunksize, &buffer_offset, &buffer_size, FTI_Exec) ) {
+            //        printf("ID: %i, Data-ptr: %p, offset: %p, size: %lu\n",
+            //                currentdbvar->id,
+            //                (void*) dptr,
+            //                (void*) buffer_offset,
+            //                buffer_size);
+
+            //    }
+            //}
+
             // get source and destination pointer
             dptr = (char*)(FTI_Data[currentdbvar->idx].ptr) + currentdb->dbvars[dbvar_idx].dptr;
             fptr = currentdbvar->fptr;
+            uintptr_t chunk_addr, chunk_size, chunk_offset, base;
+            
+            uintptr_t diffSize = 0;
 
             MD5_Init( &mdContext );
-            cpycnt = 0;
-            // ***** JUST FOR TESTING *****
-            if( FTI_Topo->splitRank==0 ) {
-                uintptr_t buffer_offset, buffer_size;
-                printf("ftiff.c -> LINE: %d, id: %d\n",__LINE__, currentdbvar->id);
-                while( FTI_ReceiveDiffChunk(currentdbvar->id, (FTI_ADDRVAL) dptr, (FTI_ADDRVAL) currentdbvar->chunksize, &buffer_offset, &buffer_size) ) {
-                    printf("ID: %i, Data-ptr: %p, offset: %p, size: %lu\n",
-                            currentdbvar->id,
-                            (void*) dptr,
-                            (void*) buffer_offset,
-                            buffer_size);
-
-                }
-            }
-
             // write ckpt data
-            while ( cpycnt < currentdbvar->chunksize ) {
-                cpybuf = currentdbvar->chunksize - cpycnt;
-                cpynow = ( cpybuf > membs ) ? membs : cpybuf;
-                cpycnt += cpynow;
-                fseek( fd, fptr, SEEK_SET );
-                fwrite( dptr, cpynow, 1, fd );
-                // if error for writing the data, print error and exit to calling function.
-                if (ferror(fd)) {
-                    int fwrite_errno = errno;
-                    char error_msg[FTI_BUFS];
-                    error_msg[0] = 0;
-                    strerror_r(fwrite_errno, error_msg, FTI_BUFS);
-                    snprintf(str, FTI_BUFS, "Dataset #%d could not be written: %s.", currentdbvar->id, error_msg);
-                    FTI_Print(str, FTI_EROR);
-                    fclose(fd);
-                    return FTI_NSCS;
+            while( FTI_ReceiveDiffChunk(currentdbvar->id, (FTI_ADDRVAL) dptr, (FTI_ADDRVAL) currentdbvar->chunksize, &chunk_addr, &chunk_size, FTI_Exec) ) {
+                cpycnt = 0;
+                chunk_offset = chunk_addr - (FTI_ADDRVAL) dptr;
+                // add hash of unchanged data and advance data and file pointer
+                MD5_Update( &mdContext, dptr, chunk_offset );
+                dptr += chunk_offset;
+                fptr += chunk_offset;
+
+                while ( cpycnt < chunk_size ) {
+                    cpybuf = chunk_size - cpycnt;
+                    cpynow = ( cpybuf > membs ) ? membs : cpybuf;
+                    cpycnt += cpynow;
+                    fseek( fd, fptr, SEEK_SET );
+                    diffSize += (fwrite( dptr, cpynow, 1, fd ))*cpynow;
+                    // if error for writing the data, print error and exit to calling function.
+                    if (ferror(fd)) {
+                        int fwrite_errno = errno;
+                        char error_msg[FTI_BUFS];
+                        error_msg[0] = 0;
+                        strerror_r(fwrite_errno, error_msg, FTI_BUFS);
+                        snprintf(str, FTI_BUFS, "Dataset #%d could not be written: %s.", currentdbvar->id, error_msg);
+                        FTI_Print(str, FTI_EROR);
+                        fclose(fd);
+                        return FTI_NSCS;
+                    }
+                    MD5_Update( &mdContext, dptr, cpynow );
+                    dptr += cpynow;
+                    fptr += cpynow;
                 }
-                MD5_Update( &mdContext, dptr, cpynow );
-                dptr += cpynow;
-                fptr += cpynow;
             }
             MD5_Final( currentdbvar->hash, &mdContext );
+
+            char strinfo[FTI_BUFS];
+            snprintf(strinfo, FTI_BUFS, "DIFF: written %lu bytes out of %lu bytes.", diffSize, currentdbvar->chunksize);
+            FTI_Print(strinfo, FTI_INFO);
 
             // write datablock variables meta data
             fseek( fd, mdoffset, SEEK_SET );
@@ -746,6 +765,11 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
         FTI_Print(str, FTI_WARN);
         return FTI_NSCS;
     }
+    if( FTI_Exec->hasCkpt && FTI_Conf->enableDiffCkpt ) {
+        int indicator = rename(fn, fnr);
+    }
+    
+    strncpy(FTI_Exec->meta[0].currentCkptFile, FTI_Exec->meta[0].ckptFile, FTI_BUFS);
 
     return FTI_SCES;
 
@@ -976,11 +1000,11 @@ int FTIFF_Recover( FTIT_execution *FTI_Exec, FTIT_dataset *FTI_Data, FTIT_checkp
 
             MD5_Final( hash, &mdContext );
 
-            if ( memcmp( currentdbvar->hash, hash, MD5_DIGEST_LENGTH ) != 0 ) {
-                snprintf( strerr, FTI_BUFS, "FTI-FF: RecoveryGlobal - dataset with id:%i has been corrupted! Discard recovery.", currentdbvar->id);
-                FTI_Print(strerr, FTI_WARN);
-                return FTI_NREC;
-            }
+            //if ( memcmp( currentdbvar->hash, hash, MD5_DIGEST_LENGTH ) != 0 ) {
+            //    snprintf( strerr, FTI_BUFS, "FTI-FF: RecoveryGlobal - dataset with id:%i has been corrupted! Discard recovery.", currentdbvar->id);
+            //    FTI_Print(strerr, FTI_WARN);
+            //    return FTI_NREC;
+            //}
 
         }
 
