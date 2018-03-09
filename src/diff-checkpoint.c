@@ -629,11 +629,11 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
             }
             // check if we are at the end of the data region
             if ( FTI_HashCmp( idx, hashIdx, (FTI_ADDRPTR) data_ptr, hashBlockSize ) == -1 ) {
-                if ( data_ptr != data_end ) {
-                    FTI_Print("DIFF-CKPT: meta-data inconsistency: data size stored does not match runtime data size", FTI_WARN);
-                    init = true;
-                    return 0;
-                }
+                //if ( data_ptr != data_end ) {
+                //    FTI_Print("DIFF-CKPT: meta-data inconsistency: data size stored does not match runtime data size", FTI_WARN);
+                //    init = true;
+                //    return 0;
+                //}
                 if ( *buffer_size != 0 ) {
                     pos = -1;
                     return 1;
