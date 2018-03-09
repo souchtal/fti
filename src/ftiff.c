@@ -1456,7 +1456,7 @@ int FTIFF_CheckL1RecoverInit( FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo,
                                 rcount += rbuffer;
                                 MD5_Update (&mdContext, buffer, rbuffer);
                             }
-                            MPI_Abort(FTI_COMM_WORLD, -1);
+                            //MPI_Abort(FTI_COMM_WORLD, -1);
                             unsigned char hash[MD5_DIGEST_LENGTH];
                             MD5_Final (hash, &mdContext);
                             int i;
