@@ -26,6 +26,8 @@ The `FB` has the following structure:
 
 The `VB` block possesses the following sub structure:
 ```
+   |<-------------------------------------------------- VB --------------------------------------------------->|
+   #                                                                                                          #
    |<------------- VCB_1 --------------------------->|      |<------------- VCB_1 --------------------------->|
    #                                                 #      #                                                 #       
    +-------------------------------------------------+      +-------------------------------------------------+
@@ -37,8 +39,12 @@ The `VB` block possesses the following sub structure:
    +-------------------------------------------------+      +-------------------------------------------------+
 ```
 
-Where the `VMB_i` (variable meta data block) hold meta data related to the data chunk stored in `VDB_ij` (variable chunk). The number of data chunks (e.g. `k` and `l` in the scetch), generally may differ. We refer to the set `VMB_i, VC_i1, ..., VC_ik` as `VCB_i` (variable chunk block). The `VMB_i` have the following sub structure:
+Where the `VMB_i` (variable meta data block) hold meta data related to the data chunk stored in `VDB_ij` (variable chunk). The number of data chunks (e.g. `k` and `l` in the scetch), generally may differ. We refer to the set `VMB_i, VC_i1, ..., VC_ik` as `VCB_i` (variable chunk block).  
+
+The `VMB_i` have the following sub structure:
 ```
+   |<-------------- VMB_i ------------->|
+   #                                    #
    +-------++---------+      +----------+
    |       ||         |      |          |
    | BMD_i || VMD_i1  | ---- | VMD_ij   |
@@ -49,6 +55,20 @@ Where the `BMD_i` (block meta data) have the following structure:
 ```c++
    BMD_i {
        numvars          // Number of variable chunks in data block 
-       dbsize           // Size of VCB_i
+       dbsize           // Size of entire block VCB_i (meta + actual data)
+   }
+```
+The `VMD_ij` have the following structure:
+```c++
+   VMD_ij {
+       id               // Id of protected variable the data chunk belongs to
+       idx              // Index of element in FTI_Data corresponding to protected variable with id='id'
+       containerid      // Id of container variable chunk is stored in
+       hascontent       // Boolean value indicating if container holds data or not
+       dptr             // Position of chunk in runtime-data (FTI_Data[idx].ptr + dptr)
+       fptr             // Position of chunk in file
+       chunksize        // Size of chunk stored in container
+       containersize    // Total space in container
+       hash             // Hash of 'VC_ij'
    }
 ```
