@@ -667,6 +667,12 @@ int FTIFF_Checksum(FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data, char* check
             currentdbvar = &(currentdb->dbvars[dbvar_idx]);
             dptr = (char*)(FTI_Data[currentdbvar->idx].ptr) + currentdb->dbvars[dbvar_idx].dptr;
             MD5_Update (&mdContext, dptr, currentdbvar->chunksize);
+            // pad with zeros if chunk doesnt match the container size
+            long fillup;
+            if( (fillup = currentdbvar->containersize - currentdbvar->chunksize) > 0 ) {
+                void* zeros = calloc( 1, fillup );
+                MD5_Update( &mdContext, zeros, fillup );
+            }
 
         }
 
@@ -850,11 +856,11 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
                                 (FTI_ADDRPTR)(FTI_ADDRVAL)fptr, 
                                 chunk_size);
                     }
+                    fseek( fd, fptr, SEEK_SET );
                     while ( cpycnt < chunk_size ) {
                         cpybuf = chunk_size - cpycnt;
                         cpynow = ( cpybuf > membs ) ? membs : cpybuf;
                         cpycnt += cpynow;
-                        fseek( fd, fptr, SEEK_SET );
                         diffSize += (fwrite( dptr, cpynow, 1, fd ))*cpynow;
                         // if error for writing the data, print error and exit to calling function.
                         if (ferror(fd)) {
@@ -872,23 +878,25 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
                         fptr += cpynow;
                     }
                 } 
-                //if ( currentdbvar->chunksize < currentdbvar->containersize ) {
-                //    long zero_size = currentdbvar->containersize - currentdbvar->chunksize;
-                //    void* zero_buffer = calloc( 1, CHUNK_SIZE ); 
-                //    long hashed = 0, written = 0;
-                //    while ( hashed < zero_size ) {
-                //        int toHash = ( (zero_size - hashed) > CHUNK_SIZE ) ? CHUNK_SIZE : zero_size - hashed;
-                //        MD5_Update( &mdContext, zero_buffer, toHash );
-                //        hashed += toHash;
-                //    }
-                //    while ( written < zero_size ) {
-                //        int toWrite = ( (zero_size - written) > CHUNK_SIZE ) ? CHUNK_SIZE : zero_size - written;
-                //        fwrite( zero_buffer, toWrite, 1, fd );
-                //        written += toWrite;
-                //    }
-                //}
                 MD5_Final( currentdbvar->hash, &mdContext );
             
+                // pad rest of container space with zeros if chunksize is smaller then container size
+                long padding;
+                if ( (padding = currentdbvar->containersize - currentdbvar->chunksize) > 0 ) {
+                    void* zeros = calloc( 1, membs );
+                    cpycnt = 0;
+                    fseek( fd, fptr, SEEK_SET );
+                    while( cpycnt < padding ) {
+                        cpybuf = padding - cpycnt;
+                        cpynow = ( cpybuf > membs ) ? membs : cpybuf;
+                        cpycnt += cpynow;
+                        int buffer = 0;
+                        while( buffer < cpynow ) {
+                            buffer += (fwrite( zeros, cpynow, 1, fd ))*cpynow;
+                            fptr += buffer;
+                        }
+                    }
+                }
                 char strinfo[FTI_BUFS];
                 snprintf(strinfo, FTI_BUFS, "DIFF: written %lu bytes out of %lu bytes.", diffSize, currentdbvar->chunksize);
                 FTI_Print(strinfo, FTI_INFO);
@@ -1395,6 +1403,7 @@ int FTIFF_CheckL1RecoverInit( FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo,
     int fexist = 0, fileTarget, ckptID, fcount;
     struct dirent *entry = malloc(sizeof(struct dirent));
     struct stat ckptFS;
+    // File meta-data
     FTIFF_metaInfo *FTIFFMeta = calloc( 1, sizeof(FTIFF_metaInfo) );
     MD5_CTX mdContext;
     DIR *L1CkptDir = opendir( FTI_Ckpt[1].dir );
@@ -1404,59 +1413,33 @@ int FTIFF_CheckL1RecoverInit( FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo,
                 snprintf(str, FTI_BUFS, "FTI-FF: L1RecoveryInit - found file with name: %s", entry->d_name);
                 FTI_Print(str, FTI_DBUG);
                 sscanf(entry->d_name, "Ckpt%d-Rank%d.fti", &ckptID, &fileTarget );
+                // If ranks coincide
                 if( fileTarget == FTI_Topo->myRank ) {
                     snprintf(tmpfn, FTI_BUFS, "%s/%s", FTI_Ckpt[1].dir, entry->d_name);
                     int ferr = stat(tmpfn, &ckptFS);
+                    // Check for reasonable file size. At least has to contain file meta-data
                     if (!ferr && S_ISREG(ckptFS.st_mode) && ckptFS.st_size > sizeof(FTIFF_metaInfo) ) {
+                        printf("File Size: %ld\n", ckptFS.st_size);
                         int fd = open(tmpfn, O_RDONLY);
                         lseek(fd, 0, SEEK_SET);
+                        // Read in file meta-data
                         read( fd, FTIFFMeta, sizeof(FTIFF_metaInfo) );
                         unsigned char hash[MD5_DIGEST_LENGTH];
                         FTIFF_GetHashMetaInfo( hash, FTIFFMeta );
+                        // Check if hash of file meta-data is consistent
                         if ( memcmp( FTIFFMeta->myHash, hash, MD5_DIGEST_LENGTH ) == 0 ) {
                             long rcount = sizeof(FTIFF_metaInfo), toRead, diff;
                             int rbuffer;
                             char *buffer = malloc( CHUNK_SIZE );
                             MD5_Init (&mdContext);
                             while( rcount < FTIFFMeta->fs ) {
-                                long rcount_tmp = rcount;
-                                long hole = rcount;
-                                long hole_end;
-                                if ( (hole = lseek( fd, hole, SEEK_HOLE )) > 0 ) {
-                                    if ( (hole_end = lseek( fd, hole, SEEK_DATA )) > 0 ) {
-                                        if ( FTI_Topo->splitRank == 0 ) {
-                                            printf("found hole at: %ld of size: %ld\n", hole, hole_end-hole);
-                                        }
-                                    }
-                                }
-                                rcount = (long) lseek( fd, rcount, SEEK_DATA );
-                                if ( rcount == -1 && errno == ENXIO /* no such device or address */ ) {
-                                    char errstr[FTI_BUFS];
-                                    snprintf(errstr, FTI_BUFS, "rcount at: %ld gives errno: %d", rcount_tmp, errno);
-                                    FTI_Print(errstr, FTI_EROR);
-                                    break;
-                                }
-                                if ( rcount < rcount_tmp ) {
-                                    char errstr[FTI_BUFS];
-                                    snprintf(errstr, FTI_BUFS, "rcount: %ld is smaller then rcount_tmp: %ld", rcount, rcount_tmp);
-                                    FTI_Print(errstr, FTI_EROR);
-                                    break;
-                                }
+                                lseek( fd, rcount, SEEK_SET );
                                 diff = FTIFFMeta->fs - rcount;
                                 toRead = ( diff < CHUNK_SIZE ) ? diff : CHUNK_SIZE;
-                                rbuffer = 0;
-                                int ferr;
-                                ferr = read( fd, buffer, toRead );
-                                if ( ferr == -1 ) {
-                                    close(fd);
-                                    FTI_Print("FTI-FF: Could not read from file", FTI_EROR);
-                                    errno = 0;
-                                }
-                                rbuffer += ferr;
+                                rbuffer = read( fd, buffer, toRead );
                                 rcount += rbuffer;
                                 MD5_Update (&mdContext, buffer, rbuffer);
                             }
-                            //MPI_Abort(FTI_COMM_WORLD, -1);
                             unsigned char hash[MD5_DIGEST_LENGTH];
                             MD5_Final (hash, &mdContext);
                             int i;
@@ -1473,6 +1456,7 @@ int FTIFF_CheckL1RecoverInit( FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo,
                                 fexist = 1;
                             } else {
                                 printf("Checksums do not match\n");
+                                MPI_Abort(FTI_COMM_WORLD, -1);
                             }
                         }
                         close(fd);
@@ -1568,13 +1552,11 @@ int FTIFF_CheckL2RecoverInit( FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo,
                             char *buffer = malloc( CHUNK_SIZE );
                             MD5_Init (&mdContext);
                             while( rcount < FTIFFMeta->fs ) {
-                                rcount = lseek( fd, rcount, SEEK_DATA );
+                                lseek( fd, rcount, SEEK_SET );
                                 diff = FTIFFMeta->fs - rcount;
                                 toRead = ( diff < CHUNK_SIZE ) ? diff : CHUNK_SIZE;
-                                rbuffer = 0;
-                                while ( rbuffer < toRead ) {
-                                    rbuffer += read( fd, buffer, toRead );
-                                }
+                                rbuffer = read( fd, buffer, toRead );
+                                rcount += rbuffer;
                                 MD5_Update (&mdContext, buffer, rbuffer);
                             }
                             unsigned char hash[MD5_DIGEST_LENGTH];
