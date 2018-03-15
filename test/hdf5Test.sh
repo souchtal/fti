@@ -30,6 +30,10 @@ printOffline () {
 
 configs=("configH0I1.h5" "configH1I1.h5" "configH1I0.h5")
 
+./hdf5CreateBasePattern
+h5dump pattern.h5 | tail -n +2 > patterns/hdf5_io/h5dumpOrigin.log
+rm pattern.h5
+
 for config in ${configs[*]}; do
 	for level in 1 2 3 4; do
 		printRun $config $level

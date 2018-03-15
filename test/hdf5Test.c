@@ -377,7 +377,7 @@ int main(int argc, char** argv) {
     FTI_AddSimpleField(&FloatsDef, &FTI_DBLE, offsetof(Floats, doublePrec), 1, "double");
     //FTI_AddSimpleField(&FloatsDef, &FTI_LDBE, offsetof(Floats, longDoublePrec), 2, "long double");
 
-    FTI_InitComplexType(&FloatsType, &FloatsDef, 3, sizeof(Floats), "struct Floats", &charsAndFloatsGroup);
+    FTI_InitComplexType(&FloatsType, &FloatsDef, 2, sizeof(Floats), "struct Floats", &charsAndFloatsGroup);
 
     //Integers aggregated
     FTIT_complexType AllIntsDef;

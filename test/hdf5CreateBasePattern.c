@@ -402,7 +402,7 @@ int main() {
     hid_t allTypesType= H5Tcreate( H5T_COMPOUND, sizeof(AllTypes) );
     
     H5Tinsert( allTypesType, "struct AllInts", offsetof(AllTypes, allInts ), allIntsType );
-    H5Tinsert( allTypesType, "struct FloatChars", offsetof(AllTypes, floatsChars ), floatsCharsType);
+    H5Tinsert( allTypesType, "struct FloatsChars", offsetof(AllTypes, floatsChars ), floatsCharsType);
     
     H5Tcommit( root_group_id, "struct AllTypes", allTypesType, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
     
