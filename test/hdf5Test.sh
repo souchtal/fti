@@ -55,12 +55,12 @@ for config in ${configs[*]}; do
 			exit 1
 		fi
 
-		diff h5dump.log patterns/h5dumpOrigin.log
+		diff h5dump.log patterns/hdf5_io/h5dumpOrigin.log
 		if [ $? != 0 ]; then
 			echo "h5dump.log:"
 			cat h5dump.log
 			echo "h5dumpOrigin.log:"
-			cat patterns/h5dumpOrigin.log
+			cat patterns/hdf5_io/h5dumpOrigin.log
 			exit 1
 		fi
 
@@ -84,7 +84,7 @@ for config in ${configs[*]}; do
 		if [ $? != 0 ]; then
 			exit 1
 		fi
-		diff -q h5dump.log patterns/h5dumpOrigin.log
+		diff -q h5dump.log patterns/hdf5_io/h5dumpOrigin.log
 		if [ $? != 0 ]; then
 			cat logFile1
 			exit 1
