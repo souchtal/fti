@@ -63,6 +63,7 @@
 #define CHUNK_SIZE 131072    /**< MD5 algorithm chunk size.      */
 
 #include <fcntl.h>
+#include <signal.h>
 #include <sys/mman.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -244,3 +245,34 @@ int FTI_Topology(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
         FTIT_topology* FTI_Topo);
 
 #endif
+
+// DIFFERENTIAL CHECKPOINTING
+
+typedef uintptr_t           FTI_ADDRVAL;        /**< for ptr manipulation       */
+typedef void*               FTI_ADDRPTR;        /**< void ptr type              */ 
+
+int FTI_InitDiffCkpt(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data);
+int FTI_FinalizeDiffCkpt();
+int FTI_RemoveSigHandler();
+int FTI_RemoveProtections();
+int FTI_FreeDiffCkptStructs(); 
+int FTI_ExcludePage( FTI_ADDRVAL addr );
+int FTI_ShiftPageItemsRight( int idx, long pos );
+int FTI_ShiftPageItemsLeft( int idx, long pos );
+int FTI_RangeCmpPage(int idx, long idr, FTI_ADDRVAL page);
+int FTI_RegisterSigHandler();
+int FTI_GetRangeIndices( FTI_ADDRVAL page, int* idx, long* pos);
+int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size, FTI_ADDRVAL* buffer_offset, FTI_ADDRVAL* buffer_size, FTIT_execution* FTI_Exec, FTIFF_dbvar* dbvar);
+int FTI_HashCmp( int varIdx, long hashIdx, FTI_ADDRPTR ptr, int hashBlockSize );
+int FTI_UpdateHashBlocks(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Exec);
+int FTI_UpdateProtections(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Exec); 
+void FTI_SigHandler( int signum, siginfo_t* info, void* ucontext );
+int FTI_RegisterProtections( int idx, FTIT_dataset* FTI_Data , FTIT_execution* FTI_Exec);
+int FTI_ProtectPages ( int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Exec );
+int FTI_GenerateHashBlocks( int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Exec );
+FTI_ADDRVAL FTI_GetFirstInclPage(FTI_ADDRVAL addr); 
+FTI_ADDRVAL FTI_GetLastInclPage(FTI_ADDRVAL addr); 
+bool FTI_isValidRequest( FTI_ADDRVAL addr_val );
+bool FTI_ProtectedPageIsValid( FTI_ADDRVAL page );
+bool FTI_isProtectedPage( FTI_ADDRVAL page ); 
+
