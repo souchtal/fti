@@ -14,7 +14,7 @@
 
 #define PRECISION   0.005
 #define ITER_TIMES  5000
-#define ITER_OUT    500
+#define ITER_OUT    5
 #define WORKTAG     50
 #define REDUCE      5
 
@@ -111,11 +111,11 @@ int main(int argc, char *argv[])
     for (i = 0; i < ITER_TIMES; i++) {
         int checkpointed = FTI_Snapshot();
         localerror = doWork(nbProcs, rank, M, nbLines, g, h);
-        if (((i%ITER_OUT) == 0) && (rank == 0)) {
-            printf("Step : %d, error = %f\n", i, globalerror);
-        }
         if ((i%REDUCE) == 0) {
             MPI_Allreduce(&localerror, &globalerror, 1, MPI_DOUBLE, MPI_MAX, FTI_COMM_WORLD);
+        }
+        if (((i%ITER_OUT) == 0) && (rank == 0)) {
+            printf("Step : %d, error = %f\n", i, globalerror);
         }
         if(globalerror < PRECISION) {
             break;
