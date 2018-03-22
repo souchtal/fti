@@ -917,8 +917,8 @@ int FTI_Checkpoint(int id, int level)
     }
 
     //TODO change to FTI_UpdateChanges
-    verifyRanges();
-    resetPageCounter();
+    //verifyRanges();
+    //resetPageCounter();
     FTI_UpdateChanges(FTI_Data);
     FTI_Exec.hasCkpt = true;
 
