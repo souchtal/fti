@@ -423,7 +423,10 @@ int FTI_UpdateHashBlocks(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Ex
             newNbBlocks++;
             FTI_HashDiffInfo.dataDiff[idx].hashBlocks = (FTIT_HashBlock*) realloc(FTI_HashDiffInfo.dataDiff[idx].hashBlocks, sizeof(FTIT_HashBlock)*(newNbBlocks));
             FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash = (unsigned char*) realloc( FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash, (MD5_DIGEST_LENGTH)*(newNbBlocks) );
-            FTI_HashDiffInfo.dataDiff[idx].hashBlocks[newNbBlocks-1].hash = FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash + (newNbBlocks-1) * MD5_DIGEST_LENGTH;
+            int hashIdx;
+            for(hashIdx = 0; hashIdx<newNbBlocks; ++hashIdx) {
+                FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].hash = FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash + (hashIdx) * MD5_DIGEST_LENGTH;
+            }
             MD5_CTX ctx;
             MD5_Init(&ctx);
             MD5_Update(&ctx, (FTI_ADDRPTR) (data_ptr+(newNbBlocks-1)*DIFF_BLOCK_SIZE), data_size-(data_size/DIFF_BLOCK_SIZE * DIFF_BLOCK_SIZE));
@@ -446,10 +449,12 @@ int FTI_UpdateHashBlocks(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Ex
         FTI_HashDiffInfo.dataDiff[idx].hashBlocks = (FTIT_HashBlock*) realloc(FTI_HashDiffInfo.dataDiff[idx].hashBlocks, sizeof(FTIT_HashBlock)*(newNbBlocks));    
         FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash = (unsigned char*) realloc( FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash, (MD5_DIGEST_LENGTH) * newNbBlocks );
         int hashIdx;
+        for(hashIdx = 0; hashIdx<newNbBlocks; ++hashIdx) {
+            FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].hash = FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash + (hashIdx) * MD5_DIGEST_LENGTH;
+        }
         long oldNbBlocks = FTI_HashDiffInfo.dataDiff[idx].nbBlocks;
         for(hashIdx = oldNbBlocks; hashIdx<newNbBlocks; ++hashIdx) {
             int hashBlockSize = ( (data_end - data_ptr) > DIFF_BLOCK_SIZE ) ? DIFF_BLOCK_SIZE : data_end - data_ptr;
-            FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].hash = FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash + hashIdx*MD5_DIGEST_LENGTH;
             MD5_CTX ctx;
             MD5_Init(&ctx);
             MD5_Update(&ctx, (FTI_ADDRPTR) data_ptr, hashBlockSize);
