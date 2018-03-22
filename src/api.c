@@ -916,7 +916,10 @@ int FTI_Checkpoint(int id, int level)
         while ( (currentDB = currentDB->next) != NULL );    
     }
 
-    FTI_UpdateHashChanges(FTI_Data);
+    //TODO change to FTI_UpdateChanges
+    verifyRanges();
+    resetPageCounter();
+    FTI_UpdateChanges(FTI_Data);
     FTI_Exec.hasCkpt = true;
 
     //if ( FTI_Conf.enableDiffCkpt ) {

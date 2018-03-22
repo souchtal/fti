@@ -39,8 +39,6 @@
 #define _DEFAULT_SOURCE
 #define _BSD_SOURCE
 
-#define FTI_ASSERT_ALIGNED( VAL, ALIGNMENT ) assert( ( VAL % ALIGNMENT ) == 0 )
-
 #include "diff-checkpoint.h"
 
 /**                                                                                     */
@@ -60,27 +58,7 @@ static int diffMode;
 static struct sigaction     FTI_SigAction;       /**< sigaction meta data               */
 static struct sigaction     OLD_SigAction;       /**< previous sigaction meta data      */
 
-static long countPages;
-static FTI_ADDRVAL* pagesGlobal;
-
 /** Function Definitions                                                                */
-int compare( const void* a, const void* b)
-{
-     FTI_ADDRVAL A = * ( (FTI_ADDRVAL*) a );
-     FTI_ADDRVAL B = * ( (FTI_ADDRVAL*) b );
-
-     if ( A == B ) return 0;
-     else if ( A < B ) return -1;
-     else return 1;
-}
-
-long getCountPages() {
-    return countPages;
-}
-
-void resetPageCounter() {
-    countPages = 0;
-}
 
 int FTI_InitDiffCkpt( FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data )
 {
@@ -100,11 +78,6 @@ int FTI_InitDiffCkpt( FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FT
         // init data diff structure
         FTI_SignalDiffInfo.dataDiff = NULL;
         FTI_SignalDiffInfo.nbProtVar = 0;
-        
-        pagesGlobal = NULL;
-        countPages = 0;
-        
-        
         // register signal handler
         return FTI_RegisterSigHandler();
     } else {
@@ -164,11 +137,9 @@ int FTI_FreeDiffCkptStructs() {
 int FTI_RemoveProtections() {
     int i,j;
     for(i=0; i<FTI_SignalDiffInfo.nbProtVar; ++i){
-        if ( FTI_SignalDiffInfo.dataDiff[i].rangeCnt == 0 ) { continue; }
         for(j=0; j<FTI_SignalDiffInfo.dataDiff[i].rangeCnt; ++j) {
             FTI_ADDRPTR ptr = (FTI_ADDRPTR) (FTI_SignalDiffInfo.dataDiff[i].basePtr + FTI_SignalDiffInfo.dataDiff[i].ranges[j].offset);
             long size = (long) FTI_SignalDiffInfo.dataDiff[i].ranges[j].size;
-            if ( size == 0 ) { continue; }
             if ( mprotect( ptr, size, PROT_READ|PROT_WRITE ) == -1 ) {
                 // ENOMEM is return e.g. if allocation was already freed, which will (hopefully) 
                 // always be the case if FTI_Finalize() is called at the end and the buffer was allocated dynamically
@@ -214,7 +185,7 @@ int FTI_RegisterSigHandler()
 
 void FTI_SigHandler( int signum, siginfo_t* info, void* ucontext ) 
 {
-    char strdbg[FTI_BUFS], strerr[FTI_BUFS];
+    char strdbg[FTI_BUFS];
 
     if ( signum == SIGSEGV ) {
         if( FTI_isValidRequest( (FTI_ADDRVAL)info->si_addr ) ){
@@ -225,17 +196,13 @@ void FTI_SigHandler( int signum, siginfo_t* info, void* ucontext )
             
             // remove protection from page
             if ( mprotect( (FTI_ADDRPTR)(((FTI_ADDRVAL)info->si_addr) & FTI_PageMask), FTI_PageSize, PROT_READ|PROT_WRITE ) == -1) {
-                snprintf(strerr, FTI_BUFS, "FTI was unable to protect address: %p", (FTI_ADDRPTR)(((FTI_ADDRVAL)info->si_addr) & FTI_PageMask));
-                FTI_Print( strerr, FTI_EROR );
+                FTI_Print( "FTI was unable to register the signal handler", FTI_EROR );
                 errno = 0;
                 if( sigaction(SIGSEGV, &OLD_SigAction, NULL) == -1 ){
                     FTI_Print( "FTI was unable to restore the parent signal handler", FTI_EROR );
                     errno = 0;
                 }
             }
-
-            pagesGlobal = (FTI_ADDRVAL*) realloc( pagesGlobal, (++countPages) * sizeof(FTI_ADDRVAL) );
-            pagesGlobal[countPages-1] = ((FTI_ADDRVAL)info->si_addr) & FTI_PageMask;
             
             // register page as dirty
             FTI_ExcludePage( (FTI_ADDRVAL)info->si_addr );
@@ -253,14 +220,14 @@ void FTI_SigHandler( int signum, siginfo_t* info, void* ucontext )
                 FTI_Print( "FTI was unable to restore the parent handler", FTI_EROR );
                 errno = 0;
             }
-            printf("BEFORE - address: %p\n", info->si_addr);    
             raise(SIGSEGV);
+            
             // if returns from old signal handler (which it shouldn't), register FTI handler again.
             // TODO since we are talking about seg faults, we might not attempt to register our handler again here.
-            //if( sigaction(SIGSEGV, &FTI_SigAction, &OLD_SigAction) == -1 ){
-            //    FTI_Print( "FTI was unable to register the signal handler", FTI_EROR );
-            //    errno = 0;
-            //}
+            if( sigaction(SIGSEGV, &FTI_SigAction, &OLD_SigAction) == -1 ){
+                FTI_Print( "FTI was unable to register the signal handler", FTI_EROR );
+                errno = 0;
+            }
         }
     }
 }
@@ -290,6 +257,7 @@ int FTI_ExcludePage( FTI_ADDRVAL addr ) {
         FTI_SignalDiffInfo.dataDiff[idx].ranges[pos+1].offset = page - base + FTI_PageSize;
         FTI_SignalDiffInfo.dataDiff[idx].ranges[pos+1].size = end - (page + FTI_PageSize);
     }
+
     // add dirty page to buffer
 }
 
@@ -298,7 +266,6 @@ int FTI_GetRangeIndices( FTI_ADDRVAL page, int* idx, long* pos)
     // binary search for page
     int i;
     for(i=0; i<FTI_SignalDiffInfo.nbProtVar; ++i){
-        if(FTI_SignalDiffInfo.dataDiff[i].rangeCnt == 0) { continue; }
         bool found = false;
         long LOW = 0;
         long UP = FTI_SignalDiffInfo.dataDiff[i].rangeCnt - 1;
@@ -383,7 +350,7 @@ int FTI_RegisterProtections(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI
     if( diffMode == 0 ) {
         return FTI_GenerateHashBlocks( idx, FTI_Data, FTI_Exec );
     } else if ( diffMode == 1 ) {
-        return FTI_ProtectPages ( idx, FTI_Data );
+        return FTI_ProtectPages ( idx, FTI_Data, FTI_Exec );
     } else {
         return FTI_SCES;
     }
@@ -498,28 +465,20 @@ int FTI_GenerateHashBlocks( int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI
     return FTI_SCES;
 }
 
-int FTI_ProtectPages ( int idx, FTIT_dataset* FTI_Data ) {
+int FTI_ProtectPages ( int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Exec ) {
     char strdbg[FTI_BUFS];
     FTI_ADDRVAL first_page = FTI_GetFirstInclPage((FTI_ADDRVAL)FTI_Data[idx].ptr);
     FTI_ADDRVAL last_page = FTI_GetLastInclPage((FTI_ADDRVAL)FTI_Data[idx].ptr+FTI_Data[idx].size);
-    
-    FTI_ASSERT_ALIGNED(first_page, FTI_PageSize); 
-    FTI_ASSERT_ALIGNED(last_page, FTI_PageSize); 
-    
     FTI_ADDRVAL psize = 0;
 
     // check if dataset includes at least one full page.
     if (first_page < last_page) {
         psize = last_page - first_page + FTI_PageSize;
-        
-        FTI_ASSERT_ALIGNED(psize, FTI_PageSize); 
-        
         if ( mprotect((FTI_ADDRPTR) first_page, psize, PROT_READ) == -1 ) {
             FTI_Print( "FTI was unable to register the pages", FTI_EROR );
             errno = 0;
             return FTI_NSCS;
         }
-
         // TODO no support for datasets that change size yet
         FTI_SignalDiffInfo.dataDiff = (FTIT_DataDiffSignal*) realloc( FTI_SignalDiffInfo.dataDiff, (FTI_SignalDiffInfo.nbProtVar+1) * sizeof(FTIT_DataDiffSignal));
         assert( FTI_SignalDiffInfo.dataDiff != NULL );
@@ -537,12 +496,7 @@ int FTI_ProtectPages ( int idx, FTIT_dataset* FTI_Data ) {
     } else {
         FTI_SignalDiffInfo.dataDiff = (FTIT_DataDiffSignal*) realloc( FTI_SignalDiffInfo.dataDiff, (FTI_SignalDiffInfo.nbProtVar+1) * sizeof(FTIT_DataDiffSignal));
         assert( FTI_SignalDiffInfo.dataDiff != NULL );
-        FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar].ranges         = (FTIT_DataRange*) malloc( sizeof(FTIT_DataRange) );
         FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar].rangeCnt       = 0;
-        FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar].ranges->offset = (FTI_ADDRVAL) 0x0;
-        FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar].ranges->size   = 0;
-        FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar].basePtr        = (FTI_ADDRVAL) 0x0;
-        FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar].totalSize      = 0;
         FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar].id             = FTI_Data[idx].id;
         FTI_SignalDiffInfo.nbProtVar++;
         first_page = (FTI_ADDRVAL) NULL;
@@ -550,14 +504,13 @@ int FTI_ProtectPages ( int idx, FTIT_dataset* FTI_Data ) {
     }
 
     // debug information
-    snprintf(strdbg, FTI_BUFS, "FTI-DIFFCKPT: 'FTI_ProtectPages' - ID: %d, size: %lu, pages protect: %lu, addr: %p, first page: %p, last page: %p rangeCnt: %ld\n", 
+    snprintf(strdbg, FTI_BUFS, "FTI-DIFFCKPT: 'FTI_ProtectPages' - ID: %d, size: %lu, pages protect: %lu, addr: %p, first page: %p, last page: %p\n", 
             FTI_Data[idx].id, 
             FTI_Data[idx].size, 
             psize/FTI_PageSize,
             FTI_Data[idx].ptr,
             (FTI_ADDRPTR) first_page,
-            (FTI_ADDRPTR) last_page,
-            FTI_SignalDiffInfo.dataDiff[FTI_SignalDiffInfo.nbProtVar-1].rangeCnt );
+            (FTI_ADDRPTR) last_page);
     FTI_Print( strdbg, FTI_DBUG );
     return FTI_SCES;
 }
@@ -597,7 +550,6 @@ bool FTI_ProtectedPageIsValid( FTI_ADDRVAL page )
     bool isValid = false;
     int i;
     for(i=0; i<FTI_SignalDiffInfo.nbProtVar; ++i){
-        if(FTI_SignalDiffInfo.dataDiff[i].rangeCnt == 0) { continue; }
         long LOW = 0;
         long UP = FTI_SignalDiffInfo.dataDiff[i].rangeCnt - 1;
         long MID = (LOW+UP)/2; 
@@ -631,7 +583,6 @@ bool FTI_isProtectedPage( FTI_ADDRVAL page )
     bool inRange = false;
     int i;
     for(i=0; i<FTI_SignalDiffInfo.nbProtVar; ++i) {
-        if(FTI_SignalDiffInfo.dataDiff[i].rangeCnt == 0) { continue; }
         if( (page >= FTI_SignalDiffInfo.dataDiff[i].basePtr) && (page <= FTI_SignalDiffInfo.dataDiff[i].basePtr + FTI_SignalDiffInfo.dataDiff[i].totalSize - FTI_PageSize) ) {
             inRange = true;
             break;
@@ -660,30 +611,6 @@ int FTI_HashCmp( int varIdx, long hashIdx, FTI_ADDRPTR ptr, int hashBlockSize ) 
     // return -1 if end
     } else {
         return -1;
-    }
-}
-
-int FTI_UpdateChanges(FTIT_dataset* FTI_Data) 
-{
-    if( diffMode == 0 ) {
-        return FTI_UpdateHashChanges( FTI_Data );
-    } else if ( diffMode == 1 ) {
-        return FTI_UpdateSigChanges( FTI_Data );
-    } else {
-        return FTI_SCES;
-    }
-}
-
-int FTI_UpdateSigChanges(FTIT_dataset* FTI_Data) 
-{
-    FTI_RemoveProtections();
-    FTI_FreeDiffCkptStructs();
-    int varIdx;
-    int nbProtVar = FTI_SignalDiffInfo.nbProtVar; 
-    FTI_SignalDiffInfo.dataDiff = NULL;
-    FTI_SignalDiffInfo.nbProtVar = 0;
-    for(varIdx=0; varIdx<nbProtVar; ++varIdx) {
-        FTI_ProtectPages( varIdx, FTI_Data );     
     }
 }
 
@@ -866,62 +793,5 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
     // nothing to return -> function reset
     init = true;
     return 0;
-}
-
-bool verifyRanges() {
-    FTI_ADDRVAL* pagesLocal = NULL;
-    long localPageCount = 0;
-    long memalloc = 0;
-    int varIdx;
-    int pageIdx;
-    int rangeIdx;
-    for(varIdx = 0; varIdx<FTI_SignalDiffInfo.nbProtVar; ++varIdx) {
-        FTI_ADDRVAL numPages;
-        FTI_ADDRVAL offset;
-        FTI_ADDRVAL base;
-        FTI_ADDRVAL endLastRange;
-        FTI_ADDRVAL end;
-        FTI_ADDRVAL first_page = FTI_SignalDiffInfo.dataDiff[varIdx].basePtr;
-        assert(first_page%FTI_PageSize == 0);
-        long rangeCnt = FTI_SignalDiffInfo.dataDiff[varIdx].rangeCnt;
-        for(rangeIdx=0; rangeIdx<rangeCnt; ++rangeIdx) {
-            assert(FTI_SignalDiffInfo.dataDiff[varIdx].ranges[rangeIdx].size%FTI_PageSize == 0);
-            if ( rangeIdx > 0 ) {
-                offset = first_page + FTI_SignalDiffInfo.dataDiff[varIdx].ranges[rangeIdx].offset;
-                base = first_page + FTI_SignalDiffInfo.dataDiff[varIdx].ranges[rangeIdx-1].offset + FTI_SignalDiffInfo.dataDiff[varIdx].ranges[rangeIdx-1].size;
-                assert(offset%FTI_PageSize == 0);
-                assert(base%FTI_PageSize == 0);
-            } else {
-                offset = first_page + FTI_SignalDiffInfo.dataDiff[varIdx].ranges[rangeIdx].offset;
-                base = first_page;
-                assert(offset%FTI_PageSize == 0);
-                assert(base%FTI_PageSize == 0);
-            }
-            numPages = offset - base;
-            FTI_ASSERT_ALIGNED(numPages, FTI_PageSize);
-            numPages /= FTI_PageSize;
-            for(pageIdx = 0; pageIdx<numPages; ++pageIdx) {
-                pagesLocal = (FTI_ADDRVAL*) realloc( pagesLocal, sizeof(FTI_ADDRVAL) * (++localPageCount) );
-                pagesLocal[localPageCount-1] = base + pageIdx*FTI_PageSize;
-            }
-        }
-        endLastRange = offset + FTI_SignalDiffInfo.dataDiff[varIdx].ranges[rangeCnt-1].size;
-        end = FTI_SignalDiffInfo.dataDiff[varIdx].basePtr + FTI_SignalDiffInfo.dataDiff[varIdx].totalSize;
-        assert(endLastRange%FTI_PageSize == 0);
-        assert(end%FTI_PageSize == 0);
-        if ( end != endLastRange ) {
-            numPages = (end - endLastRange)/FTI_PageSize;
-            for(pageIdx = 0; pageIdx<numPages; ++pageIdx) {
-                pagesLocal = (FTI_ADDRVAL*) realloc( pagesLocal, sizeof(FTI_ADDRVAL) * (++localPageCount) );
-                pagesLocal[localPageCount-1] = endLastRange + pageIdx*FTI_PageSize;
-            }
-        }
-    }
-    assert( localPageCount == countPages );
-    qsort( pagesLocal, localPageCount, sizeof(FTI_ADDRVAL), compare );
-    qsort( pagesGlobal, countPages, sizeof(FTI_ADDRVAL), compare );
-    for(pageIdx=0; pageIdx<countPages; ++pageIdx) {
-        assert( compare( &pagesGlobal[pageIdx], &pagesLocal[pageIdx] ) == 0 );
-    }
 }
 
