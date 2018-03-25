@@ -72,6 +72,7 @@ typedef struct              FTIT_HashBlock
 {
     unsigned char*          hash;
     bool                    dirty;
+    bool                    isValid;
 
 }FTIT_HashBlock;
 
