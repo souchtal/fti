@@ -409,50 +409,40 @@ int FTI_UpdateHashBlocks(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Ex
     FTI_ADDRVAL data_size = (FTI_ADDRVAL) FTI_Data[idx].size;
 
     FTI_HashDiffInfo.dataDiff[idx].basePtr = data_ptr; 
-
-    // if data size decreases
-    if ( FTI_HashDiffInfo.dataDiff[idx].totalSize > data_size ) {
-        
-        long newNbBlocks = data_size/DIFF_BLOCK_SIZE;
-        //dbg begin
-        //char str[FTI_BUFS];
-        //snprintf(str, FTI_BUFS, "id %d, newNbBlocks: %ld, nbBlocks: %ld\n", FTI_Data[idx].id, newNbBlocks,FTI_HashDiffInfo.dataDiff[idx].nbBlocks); 
-        //FTI_Print(str,FTI_INFO);
-        // dbg end
-        if ( data_size%DIFF_BLOCK_SIZE != 0 ) {
-            newNbBlocks++;
-            FTI_HashDiffInfo.dataDiff[idx].hashBlocks = (FTIT_HashBlock*) realloc(FTI_HashDiffInfo.dataDiff[idx].hashBlocks, sizeof(FTIT_HashBlock)*(newNbBlocks));
-            FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash = (unsigned char*) realloc( FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash, (MD5_DIGEST_LENGTH)*(newNbBlocks) );
-            int hashIdx;
-            for(hashIdx = 0; hashIdx<newNbBlocks; ++hashIdx) {
-                FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].hash = FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash + (hashIdx) * MD5_DIGEST_LENGTH;
-            }
-            MD5_CTX ctx;
-            MD5_Init(&ctx);
-            MD5_Update(&ctx, (FTI_ADDRPTR) (data_ptr+(newNbBlocks-1)*DIFF_BLOCK_SIZE), data_size-(data_size/DIFF_BLOCK_SIZE * DIFF_BLOCK_SIZE));
-            MD5_Final(FTI_HashDiffInfo.dataDiff[idx].hashBlocks[newNbBlocks-1].hash, &ctx);
-            FTI_HashDiffInfo.dataDiff[idx].hashBlocks[newNbBlocks-1].dirty = true;
-        }
-        FTI_HashDiffInfo.dataDiff[idx].nbBlocks = newNbBlocks;
-        FTI_HashDiffInfo.dataDiff[idx].totalSize = data_size;
+    long newNbBlocks = data_size/DIFF_BLOCK_SIZE;
+    long oldNbBlocks;
+    newNbBlocks += ((data_size%DIFF_BLOCK_SIZE) == 0) ? 0 : 1;
+    oldNbBlocks = FTI_HashDiffInfo.dataDiff[idx].nbBlocks;
     
-    } else if ( FTI_HashDiffInfo.dataDiff[idx].totalSize < data_size ) {
-        long newNbBlocks = data_size/DIFF_BLOCK_SIZE;
-        // dbg begin
-        //char str[FTI_BUFS];
-        //snprintf(str, FTI_BUFS, "id %d, newNbBlocks: %ld, nbBlocks: %ld\n", FTI_Data[idx].id, newNbBlocks,FTI_HashDiffInfo.dataDiff[idx].nbBlocks); 
-        //FTI_Print(str,FTI_INFO);
-        // dbg end
-        if ( data_size%DIFF_BLOCK_SIZE != 0 ) {
-            newNbBlocks++;
+    assert(oldNbBlocks > 0);
+    
+    FTI_HashDiffInfo.dataDiff[idx].nbBlocks = newNbBlocks;
+    FTI_HashDiffInfo.dataDiff[idx].totalSize = data_size;
+
+    // if number of blocks decreased
+    if ( newNbBlocks < oldNbBlocks ) {
+        
+        // reduce hash array
+        FTI_HashDiffInfo.dataDiff[idx].hashBlocks = (FTIT_HashBlock*) realloc(FTI_HashDiffInfo.dataDiff[idx].hashBlocks, sizeof(FTIT_HashBlock)*(newNbBlocks));
+        FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash = (unsigned char*) realloc( FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash, (MD5_DIGEST_LENGTH)*(newNbBlocks) );
+        int hashIdx;
+        for(hashIdx = 0; hashIdx<newNbBlocks; ++hashIdx) {
+            FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].hash = FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash + (hashIdx) * MD5_DIGEST_LENGTH;
         }
+
+    // if number of blocks increased
+    } else if ( newNbBlocks > oldNbBlocks ) {
+        
+        // extend hash array
         FTI_HashDiffInfo.dataDiff[idx].hashBlocks = (FTIT_HashBlock*) realloc(FTI_HashDiffInfo.dataDiff[idx].hashBlocks, sizeof(FTIT_HashBlock)*(newNbBlocks));    
         FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash = (unsigned char*) realloc( FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash, (MD5_DIGEST_LENGTH) * newNbBlocks );
         int hashIdx;
         for(hashIdx = 0; hashIdx<newNbBlocks; ++hashIdx) {
             FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].hash = FTI_HashDiffInfo.dataDiff[idx].hashBlocks[0].hash + (hashIdx) * MD5_DIGEST_LENGTH;
         }
-        long oldNbBlocks = FTI_HashDiffInfo.dataDiff[idx].nbBlocks;
+        
+        data_ptr += oldNbBlocks * DIFF_BLOCK_SIZE;
+        // set new hash values
         for(hashIdx = oldNbBlocks; hashIdx<newNbBlocks; ++hashIdx) {
             int hashBlockSize = ( (data_end - data_ptr) > DIFF_BLOCK_SIZE ) ? DIFF_BLOCK_SIZE : data_end - data_ptr;
             MD5_CTX ctx;
@@ -460,10 +450,9 @@ int FTI_UpdateHashBlocks(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Ex
             MD5_Update(&ctx, (FTI_ADDRPTR) data_ptr, hashBlockSize);
             MD5_Final(FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].hash, &ctx);
             FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].dirty = true; 
-            data_ptr += DIFF_BLOCK_SIZE;
+            data_ptr += hashBlockSize;
         }
-        FTI_HashDiffInfo.dataDiff[idx].nbBlocks = newNbBlocks;
-        FTI_HashDiffInfo.dataDiff[idx].totalSize = data_size;
+    
     }
     return 0;
 }
@@ -654,7 +643,7 @@ int FTI_HashCmp( int varIdx, long hashIdx, FTI_ADDRPTR ptr, int hashBlockSize ) 
         MD5_Update(&ctx, ptr, hashBlockSize);
         MD5_Final(hashNow, &ctx);
         // set clean if unchanged
-        if ( memcmp(hashNow, FTI_HashDiffInfo.dataDiff[varIdx].hashBlocks[hashIdx].hash, MD5_DIGEST_LENGTH) == 0 ) {
+        if ( (memcmp(hashNow, FTI_HashDiffInfo.dataDiff[varIdx].hashBlocks[hashIdx].hash, MD5_DIGEST_LENGTH) == 0) ) { //&& ( hashBlockSize == DIFF_BLOCK_SIZE ) ) {
             FTI_HashDiffInfo.dataDiff[varIdx].hashBlocks[hashIdx].dirty = false;
             return 0;
         // set dirty if changed
@@ -720,6 +709,9 @@ int FTI_UpdateHashChanges(FTIT_dataset* FTI_Data)
 
 int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size, FTI_ADDRVAL* buffer_offset, FTI_ADDRVAL* buffer_size, FTIT_execution* FTI_Exec, FTIFF_dbvar* dbvar) {
    
+    // FOR TESTING
+    int rank;
+    MPI_Comm_rank(FTI_COMM_WORLD, &rank);
     static bool init = true;
     static long pos;
     static FTI_ADDRVAL data_ptr;
@@ -759,6 +751,12 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
                 *buffer_size = data_size;
                 return 1;
             }
+            if (pos == 0) {
+                long checkamount = FTI_CheckDiffAmount(idx, (FTI_ADDRPTR) data_offset, data_size);
+                if(rank == 0) {
+                    printf("[var-id:%d] expected amount: %ld\n",id,checkamount);
+                }
+            }
             long hashIdx = pos;
             int hashBlockSize = ( (data_end - data_ptr) > DIFF_BLOCK_SIZE ) ? DIFF_BLOCK_SIZE : data_end - data_ptr;
             // advance *buffer_offset for clean regions
@@ -778,7 +776,8 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
                 hashBlockSize = ( (data_end - data_ptr) > DIFF_BLOCK_SIZE ) ? DIFF_BLOCK_SIZE : data_end - data_ptr;
             }
             // check if we are at the end of the data region
-            if ( FTI_HashCmp( idx, hashIdx, (FTI_ADDRPTR) data_ptr, hashBlockSize ) == -1 ) {
+            //if ( FTI_HashCmp( idx, hashIdx, (FTI_ADDRPTR) data_ptr, hashBlockSize ) == -1 ) {
+            if ( data_ptr == data_end ) {
                 //if ( data_ptr != data_end ) {
                 //    FTI_Print("DIFF-CKPT: meta-data inconsistency: data size stored does not match runtime data size", FTI_WARN);
                 //    init = true;
@@ -872,6 +871,26 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
     // nothing to return -> function reset
     init = true;
     return 0;
+}
+
+long FTI_CheckDiffAmount(int idx, FTI_ADDRPTR ptr, FTI_ADDRVAL size) {
+    long counter = 0;
+    long dirty = 0;
+    long nbBlocks = size/DIFF_BLOCK_SIZE;// + ((size%DIFF_BLOCK_SIZE)==0)?0:1;
+    nbBlocks += ((size%DIFF_BLOCK_SIZE)==0)?0:1;
+    int i;
+    //printf("nbBlocks:%ld, size:%lu, diff_block_size:%d\n",nbBlocks, size, DIFF_BLOCK_SIZE);
+    for(i=0; i<nbBlocks; ++i) {
+        int hbs = ((size-counter)>DIFF_BLOCK_SIZE)?DIFF_BLOCK_SIZE:size-counter;
+        int res = FTI_HashCmp( idx, i, ptr, hbs ); 
+        assert(res != -1);
+        if ( res == 1 ) {
+            dirty += hbs;
+        }
+        counter += hbs;
+        ptr += hbs;
+    }
+    return dirty;
 }
 
 bool verifyRanges() {

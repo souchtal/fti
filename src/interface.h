@@ -263,6 +263,7 @@ int FTI_RangeCmpPage(int idx, long idr, FTI_ADDRVAL page);
 int FTI_RegisterSigHandler();
 int FTI_GetRangeIndices( FTI_ADDRVAL page, int* idx, long* pos);
 int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size, FTI_ADDRVAL* buffer_offset, FTI_ADDRVAL* buffer_size, FTIT_execution* FTI_Exec, FTIFF_dbvar* dbvar);
+long FTI_CheckDiffAmount(int idx, FTI_ADDRPTR ptr, FTI_ADDRVAL size);
 int FTI_HashCmp( int varIdx, long hashIdx, FTI_ADDRPTR ptr, int hashBlockSize );
 int FTI_UpdateHashBlocks(int idx, FTIT_dataset* FTI_Data, FTIT_execution* FTI_Exec);
 int FTI_UpdateChanges(FTIT_dataset* FTI_Data);

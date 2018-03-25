@@ -921,7 +921,8 @@ int FTI_Checkpoint(int id, int level)
     //resetPageCounter();
     FTI_UpdateChanges(FTI_Data);
     FTI_Exec.hasCkpt = true;
-
+    
+    
     //if ( FTI_Conf.enableDiffCkpt ) {
     //    int idx;
     //    for(idx = 0; idx<FTI_Exec.nbVar; ++idx) {
