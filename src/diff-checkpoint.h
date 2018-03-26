@@ -38,11 +38,12 @@
  */
 
 #include "interface.h"
-
+#include "checksum.h"
 /**                                                                             */
 /** Global Constans                                                             */
 
-#define DIFF_BLOCK_SIZE 4096
+#define HASH_MODE 0
+#define DIFF_BLOCK_SIZE 128
 
 typedef struct              FTIT_DataRange
 {
@@ -70,7 +71,8 @@ typedef struct              FTIT_DataDiffInfoSignal
 
 typedef struct              FTIT_HashBlock
 {
-    unsigned char*          hash;
+    unsigned char*          md5hash;
+    uint32_t                crc32hash;
     bool                    dirty;
     bool                    isValid;
 

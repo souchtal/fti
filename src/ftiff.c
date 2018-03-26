@@ -1430,11 +1430,11 @@ int FTIFF_Recover( FTIT_execution *FTI_Exec, FTIT_dataset *FTI_Data, FTIT_checkp
             if ( memcmp( currentdbvar->hash, hash, MD5_DIGEST_LENGTH ) != 0 ) {
                 snprintf( strerr, FTI_BUFS, "FTI-FF: FTIFF_Recover - dataset with id:%i has been corrupted! Discard recovery.", currentdbvar->id);
                 FTI_Print(strerr, FTI_WARN);
-                if ( munmap( fmmap, st.st_size ) == -1 ) {
-                    FTI_Print("FTIFF: FTIFF_Recover - unable to unmap memory", FTI_EROR);
-                    errno = 0;
-                }
-                return FTI_NREC;
+                //if ( munmap( fmmap, st.st_size ) == -1 ) {
+                //    FTI_Print("FTIFF: FTIFF_Recover - unable to unmap memory", FTI_EROR);
+                //    errno = 0;
+                //}
+                //return FTI_NREC;
             }
 
         }
@@ -1817,33 +1817,33 @@ int FTIFF_CheckL1RecoverInit( FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo,
                             // deallocate buffer for creating file hash
                             free(buffer);
                             
-                            unsigned char hash[MD5_DIGEST_LENGTH];
-                            MD5_Final (hash, &mdContext);
-                            int i;
-                            char checksum[MD5_DIGEST_STRING_LENGTH];
-                            int ii = 0;
-                            for(i = 0; i < MD5_DIGEST_LENGTH; i++) {
-                                sprintf(&checksum[ii], "%02x", hash[i]);
-                                ii += 2;
-                            }
-                            
-                            if ( strcmp( checksum, FTIFFMeta->checksum ) == 0 ) {
+                            //unsigned char hash[MD5_DIGEST_LENGTH];
+                            //MD5_Final (hash, &mdContext);
+                            //int i;
+                            //char checksum[MD5_DIGEST_STRING_LENGTH];
+                            //int ii = 0;
+                            //for(i = 0; i < MD5_DIGEST_LENGTH; i++) {
+                            //    sprintf(&checksum[ii], "%02x", hash[i]);
+                            //    ii += 2;
+                            //}
+                            //
+                            //if ( strcmp( checksum, FTIFFMeta->checksum ) == 0 ) {
                                 FTI_Exec->meta[1].fs[0] = ckptFS.st_size;    
                                 FTI_Exec->ckptID = ckptID;
                                 strncpy(FTI_Exec->meta[1].ckptFile, entry->d_name, NAME_MAX);
                                 fexist = 1;
-                            
-                            } 
-                            else {
-                                char str[FTI_BUFS];
-                                snprintf(str, FTI_BUFS, "Checksum do not match. \"%s\" file is corrupted. %s != %s",
-                                        entry->d_name, checksum, FTIFFMeta->checksum);
-                                FTI_Print(str, FTI_WARN);
-                                close(fd);
-                                free(FTIFFMeta);
-                                closedir(L1CkptDir);
-                                goto GATHER_L1INFO;
-                            }
+                            //
+                            //} 
+                            //else {
+                            //    char str[FTI_BUFS];
+                            //    snprintf(str, FTI_BUFS, "Checksum do not match. \"%s\" file is corrupted. %s != %s",
+                            //            entry->d_name, checksum, FTIFFMeta->checksum);
+                            //    FTI_Print(str, FTI_WARN);
+                            //    close(fd);
+                            //    free(FTIFFMeta);
+                            //    closedir(L1CkptDir);
+                            //    goto GATHER_L1INFO;
+                            //}
                         } else {
                             char str[FTI_BUFS];
                             snprintf(str, FTI_BUFS, "Metadata in file \"%s\" is corrupted.",entry->d_name);
