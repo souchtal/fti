@@ -42,7 +42,7 @@
 /**                                                                             */
 /** Global Constans                                                             */
 
-#define HASH_MODE 0
+#define HASH_MODE 1
 #define DIFF_BLOCK_SIZE 128
 
 typedef struct              FTIT_DataRange

@@ -758,8 +758,10 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
     static long pos;
     static FTI_ADDRVAL data_ptr;
     static FTI_ADDRVAL data_end;
+    static long hash_ptr;
     char strdbg[FTI_BUFS];
     if ( init ) {
+        hash_ptr = dbvar->dptr;
         pos = 0;
         data_ptr = data_offset;
         data_end = data_offset + data_size;
@@ -799,15 +801,16 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
             //        printf("[var-id:%d] expected amount: %ld\n",id,checkamount);
             //    }
             //}
-            long hashIdx = pos;
             int hashBlockSize = ( (data_end - data_ptr) > DIFF_BLOCK_SIZE ) ? DIFF_BLOCK_SIZE : data_end - data_ptr;
+            long hashIdx = hash_ptr/DIFF_BLOCK_SIZE;
             
             // advance *buffer_offset for clean regions
             bool clean = FTI_HashCmp( idx, hashIdx, (FTI_ADDRPTR) data_ptr, hashBlockSize ) == 0;
             clean &= FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].isValid;
             while( clean ) {
                 data_ptr += hashBlockSize;
-                ++hashIdx;
+                hash_ptr += hashBlockSize;
+                hashIdx = hash_ptr/DIFF_BLOCK_SIZE;
                 hashBlockSize = ( (data_end - data_ptr) > DIFF_BLOCK_SIZE ) ? DIFF_BLOCK_SIZE : data_end - data_ptr;
                 clean = FTI_HashCmp( idx, hashIdx, (FTI_ADDRPTR) data_ptr, hashBlockSize ) == 0;
                 clean &= FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].isValid;
@@ -824,7 +827,8 @@ int FTI_ReceiveDiffChunk(int id, FTI_ADDRVAL data_offset, FTI_ADDRVAL data_size,
             while( dirty && inRange ) {
                 *buffer_size += hashBlockSize;
                 data_ptr += hashBlockSize;
-                ++hashIdx;
+                hash_ptr += hashBlockSize;
+                hashIdx = hash_ptr/DIFF_BLOCK_SIZE;
                 hashBlockSize = ( (data_end - data_ptr) > DIFF_BLOCK_SIZE ) ? DIFF_BLOCK_SIZE : data_end - data_ptr;
                 dirty = FTI_HashCmp( idx, hashIdx, (FTI_ADDRPTR) data_ptr, hashBlockSize ) == 1;
                 dirty |= !(FTI_HashDiffInfo.dataDiff[idx].hashBlocks[hashIdx].isValid);

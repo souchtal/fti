@@ -852,9 +852,9 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
 
         endoffile += currentdb->dbsize;
 
-        if(FTI_Topo->splitRank == 0){
-            printf("endoffile:%ld\n", endoffile);
-        }
+        //if(FTI_Topo->splitRank == 0){
+        //    printf("endoffile:%ld\n", endoffile);
+        //}
         //ftruncate(fdd, endoffile);
         //if (fd == NULL) {
         //    snprintf(strerr, FTI_BUFS, "FTI was unable to set checkpoint file (%s) to size %ld.", fn, endoffile);
@@ -958,9 +958,9 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
                 dptr += chunk_offset;
                 fptr += chunk_offset;
                 
-                if(FTI_Topo->splitRank==0){
-                    printf("[var-id:%d|cont-id:%d|chunk-id:%d] WRITECHECK -> fptr: %ld, chunksize returned: %ld",currentdbvar->id, currentdbvar->containerid, chunkid, fptr, chunk_size);
-                }
+                //if(FTI_Topo->splitRank==0){
+                //    printf("[var-id:%d|cont-id:%d|chunk-id:%d] WRITECHECK -> fptr: %ld, chunksize returned: %ld",currentdbvar->id, currentdbvar->containerid, chunkid, fptr, chunk_size);
+                //}
 
                 long WRITTEN = 0;
                 // write ckpt data
@@ -990,9 +990,9 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
                     fptr += cpynow;
                     diffSize += cpynow;
                 }
-                if(FTI_Topo->splitRank==0){
-                    printf("written: %ld\n",WRITTEN);
-                }
+                //if(FTI_Topo->splitRank==0){
+                //    printf("written: %ld\n",WRITTEN);
+                //}
                 chunkid++;
 
             }
@@ -1048,17 +1048,18 @@ int FTIFF_WriteFTIFF(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
                             );
                 }
             }
-            int ii = 0, i;
-            for(i = 0; i < MD5_DIGEST_LENGTH; i++) {
-                sprintf(&checkSum[ii], "%02x", checkHash[i]);
-                ii += 2;
-            }
-            snprintf(str, FTI_BUFS, "dataset hash id: %d -> %s", currentdbvar->id, checkSum);
-            FTI_Print(str, FTI_INFO);
+            //int ii = 0, i;
+            //for(i = 0; i < MD5_DIGEST_LENGTH; i++) {
+            //    sprintf(&checkSum[ii], "%02x", checkHash[i]);
+            //    ii += 2;
+            //}
+            //snprintf(str, FTI_BUFS, "dataset hash id: %d -> %s", currentdbvar->id, checkSum);
+            //FTI_Print(str, FTI_INFO);
 
             fptr = currentdbvar->fptr + currentdbvar->chunksize;
 
-            snprintf(str,FTI_BUFS,"[var-id:%d|cont-id:%d] DIFF-CKPT: %ld of %ld Bytes written.\n", currentdbvar->id, currentdbvar->containerid, diffSize, currentdbvar->chunksize);
+            snprintf(str,FTI_BUFS,"[var-id:%d|cont-id:%d] DIFF-CKPT: %ld of %ld Bytes written (%.2lf\%).", currentdbvar->id, currentdbvar->containerid, diffSize, currentdbvar->chunksize,
+                    100*(((double)diffSize)/((double)currentdbvar->chunksize)));
             FTI_Print(str,FTI_INFO);
 
             // pad rest of container space with zeros if chunksize is smaller then container size
