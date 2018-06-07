@@ -54,6 +54,9 @@ static FTIT_topology FTI_Topo;
 /** Array of datasets and all their internal information.                  */
 static FTIT_dataset FTI_Data[FTI_BUFS];
 
+/** Array of types defined by user.                                        */
+static FTIT_type* FTI_Type[FTI_BUFS];
+
 /** SDC injection model and all the required information.                  */
 static FTIT_injection FTI_Inje;
 
@@ -133,6 +136,10 @@ int FTI_Init(char* configFile, MPI_Comm globalComm)
     if( FTI_Conf.ioMode == FTI_IO_FTIFF ) {
         FTIFF_InitMpiTypes();
     }
+    if (FTI_Conf.ioMode == FTI_IO_HDF5) {
+        FTI_Exec.H5RootGroup.childrenNo = 0;
+        sprintf(FTI_Exec.H5RootGroup.name, "/");
+    }
     FTI_Exec.initSCES = 1;
     if (FTI_Topo.amIaHead) { // If I am a FTI dedicated process
         if (FTI_Exec.reco) {
@@ -199,6 +206,8 @@ int FTI_InitType(FTIT_type* type, int size)
     type->id = FTI_Exec.nbType;
     type->size = size;
     type->structure = NULL;
+    FTI_Exec.nbType = FTI_Exec.nbType + 1;
+    FTI_Type[type->id] = type;
 
 #ifdef ENABLE_HDF5
     type->h5group = FTI_Exec.H5groups[0];
@@ -299,12 +308,17 @@ int FTI_InitComplexType(FTIT_type* newType, FTIT_complexType* typeDefinition, in
     newType->id = FTI_Exec.nbType;
     newType->size = size;
     //assign type definition to type structure (types, names, ranks, dimLengths)
+    typeDefinition->size = size;
     typeDefinition->length = length;
     if (name == NULL || !strlen(name)) {
         sprintf(typeDefinition->name, "Type%d", newType->id);
     } else {
         strncpy(typeDefinition->name, name, FTI_BUFS);
     }
+
+    newType->structure = typeDefinition;
+    FTI_Exec.nbType = FTI_Exec.nbType + 1;
+    FTI_Type[newType->id] = newType;
 
     #ifdef ENABLE_HDF5
         newType->h5datatype = -1; //to mark as closed
@@ -423,6 +437,9 @@ int FTI_InitGroup(FTIT_H5Group* h5group, char* name, FTIT_H5Group* parent)
     h5group->id = FTI_Exec.nbGroup;
     h5group->childrenNo = 0;
     strncpy(h5group->name, name, FTI_BUFS);
+    parent->children[parent->childrenNo] = h5group;
+    parent->childrenNo++;
+
 #ifdef ENABLE_HDF5
     h5group->h5groupID = -1; //to mark as closed
 #endif
@@ -586,6 +603,10 @@ int FTI_DefineDataset(int id, int rank, int* dimLength, char* name, FTIT_H5Group
                 for (j = 0; j < rank; j++) {
                     FTI_Data[i].dimLength[j] = dimLength[j];
                 }
+            } else {
+                //rank and dimensions not defined
+                FTI_Data[i].rank = 1;
+                FTI_Data[i].dimLength[0] = FTI_Data[i].count;
             }
 
             if (h5group != NULL) {

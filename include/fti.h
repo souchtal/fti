@@ -234,6 +234,7 @@ extern "C" {
      *  This type allows creating complex datatypes.
      */
     typedef struct FTIT_complexType {
+        FTIT_typeField      field[FTI_BUFS];        /**< Fields of the complex type.        */
         char                name[FTI_BUFS];         /**< Name of the complex type.          */
         int                 length;                 /**< Number of types in complex type.   */
         FTIT_typeField      field[FTI_BUFS];        /**< Fields of the complex type.        */
@@ -316,6 +317,7 @@ extern "C" {
         FTIT_H5Group**  H5groups;           /**< HDF5 root group.               */
         MPI_Comm        globalComm;         /**< Global communicator.           */
         MPI_Comm        groupComm;          /**< Group communicator.            */
+        FTIT_H5Group    H5RootGroup;        /** HDF5 root group.                 */
     } FTIT_execution;
 
     /** @typedef    FTIT_configuration
