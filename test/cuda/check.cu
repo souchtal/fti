@@ -53,7 +53,8 @@ do {                                                                            
 #define BLOCK_SIZE 1024
 
 //#define N 100000
-#define N ((size_t)1 << 25)
+//#define N ((size_t)1 << 25)
+#define N ((size_t)1 << 20)
 #define CNTRLD_EXIT 10
 #define RECOVERY_FAILED 20
 #define DATA_CORRUPT 30
@@ -204,6 +205,21 @@ int main(int argc, char* argv[]) {
 
     threads_per_block = BLOCK_SIZE;
     blocks_per_grid = (asize + threads_per_block - 1) / threads_per_block;
+    
+    state = FTI_Status();
+
+    if ( (FTI_APP_RANK == 0) && (state == INIT) ) { printf(
+    "<< ALLOCATE GPU MEMORY >>\n"
+    "## \n"
+    "## h_A = (double*) malloc(asize_with_dt);\n"
+    "## h_B = (double*) malloc(asize_with_dt);\n"
+    "## \n"
+    "## CUDA_CALL_SAFE(cudaMalloc(&d_A, asize_with_dt));\n"
+    "## CUDA_CALL_SAFE(cudaMalloc(&d_B, asize_with_dt));\n"
+    "## \n"
+    "## FTI_Protect(0, d_A, asize, FTI_DBLE);\n"
+    "## FTI_Protect(1, d_B, asize, FTI_DBLE);\n"
+    "## FTI_Protect(2, &asize, 1, FTI_INTG);\n");}
 
     h_A = (double*) malloc(asize_with_dt);
     h_B = (double*) malloc(asize_with_dt);
@@ -215,18 +231,28 @@ int main(int argc, char* argv[]) {
     FTI_Protect(1, d_B, asize, FTI_DBLE);
     FTI_Protect(2, &asize, 1, FTI_INTG);
 
-    state = FTI_Status();
-
     if (state == INIT) {
+        if (FTI_APP_RANK == 0) { printf(
+        "<< SEND DATA TO GPU MEMORY PERFORM CHECKPOINT AND SIMULATE CRASH >>\n"
+        "## \n"
+        "## init_arrays(h_A, h_B, asize);\n"
+        "## write_data(h_B, &asize, FTI_APP_RANK);\n"
+        "## CUDA_CALL_SAFE(cudaMemcpy(d_A, h_A, asize_with_dt, cudaMemcpyHostToDevice));\n"
+        "## CUDA_CALL_SAFE(cudaMemcpy(d_B, h_B, asize_with_dt, cudaMemcpyHostToDevice));\n"
+        "## MPI_Barrier(FTI_COMM_WORLD);\n"
+        "## FTI_Checkpoint(1,level);\n"
+        "## if (crash && FTI_APP_RANK == 0) {\n"
+        "##     exit(CNTRLD_EXIT);\n"
+        "## }\n"); }
         init_arrays(h_A, h_B, asize);
         write_data(h_B, &asize, FTI_APP_RANK);
         CUDA_CALL_SAFE(cudaMemcpy(d_A, h_A, asize_with_dt, cudaMemcpyHostToDevice));
         CUDA_CALL_SAFE(cudaMemcpy(d_B, h_B, asize_with_dt, cudaMemcpyHostToDevice));
         MPI_Barrier(FTI_COMM_WORLD);
         FTI_Checkpoint(1,level);
-        sleep(5);
+        //sleep(5);
         if (crash && FTI_APP_RANK == 0) {
-            exit(CNTRLD_EXIT);
+            MPI_Abort(MPI_COMM_WORLD,0);
         }
     }
 
@@ -247,6 +273,16 @@ int main(int argc, char* argv[]) {
      * on INIT, B is initialized randomly
      * on RESTART or KEEP, B is recovered and must be equal to B_chk
      */
+
+    if ( (FTI_APP_RANK == 0) ) { printf(
+    "<< VALIDATE RESULT AFTER RECOVERY >>\n"
+    "## \n"
+    "## vecmult<<< blocks_per_grid, threads_per_block >>>(d_A, d_B, asize);\n"
+    "## CUDA_CALL_SAFE(cudaDeviceSynchronize());\n"
+    "## CUDA_CALL_SAFE(cudaMemcpy(h_A, d_A, asize_with_dt, cudaMemcpyDeviceToHost));\n"
+    "## result = validify(h_A, B_chk, asize);\n"
+    "## result += (asize_chk == asize) ? 0 : -1;\n"
+    "## MPI_Allreduce(&result, &result_glb, 1, MPI_INT, MPI_SUM, FTI_COMM_WORLD);\n"); }
 
     vecmult<<< blocks_per_grid, threads_per_block >>>(d_A, d_B, asize);
     CUDA_CALL_SAFE(cudaDeviceSynchronize());
