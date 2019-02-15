@@ -1148,54 +1148,54 @@ pipeline {
       //    executeSteps_two( '', '' )
       //  }
       //}
-      //stage('PGI Compiler Tests (1/2)') {
-      //  agent {
-      //    docker {
-      //      image 'kellekai/archlinuxpgi18:stable'
-      //    }
-      //  }
-      //  environment {
-      //    PGICC = '/opt/pgi/linux86-64/18.4/bin/'
-      //    PGIMPICC = '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/'
-      //    LM_LICENSE_FILE = '$PGI/license.dat'
-      //    LD_LIBRARY_PATH = '/opt/pgi/linux86-64/18.4/lib'
-      //  }
-      //  steps {
-      //    sh '''
-      //      export PATH=$PGICC:$PGIMPICC:$PATH
-      //      echo $PATH
-      //      ls /opt/pgi/
-      //      mkdir build; cd build
-      //      CC=pgcc FC=pgfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DHDF5_ROOT=/opt/HDF5/1.10.4 -DENABLE_HDF5=ON ..
-      //      make -j 16 all install
-      //    '''
-      //    executeSteps_one( '/opt/pgi/linux86-64/18.4/bin/', '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/' )
-      //  }
-      //}
-      //stage('PGI Compiler Tests (2/2)') {
-      //  agent {
-      //    docker {
-      //      image 'kellekai/archlinuxpgi18:stable'
-      //    }
-      //  }
-      //  environment {
-      //    PGICC = '/opt/pgi/linux86-64/18.4/bin/'
-      //    PGIMPICC = '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/'
-      //    LM_LICENSE_FILE = '$PGI/license.dat'
-      //    LD_LIBRARY_PATH = '/opt/pgi/linux86-64/18.4/lib'
-      //  }
-      //  steps {
-      //    sh '''
-      //      export PATH=$PGICC:$PGIMPICC:$PATH
-      //      echo $PATH
-      //      ls /opt/pgi/
-      //      mkdir build; cd build
-      //      CC=pgcc FC=pgfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DHDF5_ROOT=/opt/HDF5/1.10.4 -DENABLE_HDF5=ON ..
-      //      make -j 16 all install
-      //    '''
-      //    executeSteps_two( '/opt/pgi/linux86-64/18.4/bin/', '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/' )
-      //  }
-      //}
+      stage('PGI Compiler Tests (1/2)') {
+        agent {
+          docker {
+            image 'kellekai/archlinuxpgi18:stable'
+          }
+        }
+        environment {
+          PGICC = '/opt/pgi/linux86-64/18.4/bin/'
+          PGIMPICC = '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/'
+          LM_LICENSE_FILE = '$PGI/license.dat'
+          LD_LIBRARY_PATH = '/opt/pgi/linux86-64/18.4/lib'
+        }
+        steps {
+          sh '''
+            export PATH=$PGICC:$PGIMPICC:$PATH
+            echo $PATH
+            ls /opt/pgi/
+            mkdir build; cd build
+            CC=pgcc FC=pgfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DHDF5_ROOT=/opt/HDF5/1.10.4 -DENABLE_HDF5=ON ..
+            make -j 16 all install
+          '''
+          executeSteps_one( '/opt/pgi/linux86-64/18.4/bin/', '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/' )
+        }
+      }
+      stage('PGI Compiler Tests (2/2)') {
+        agent {
+          docker {
+            image 'kellekai/archlinuxpgi18:stable'
+          }
+        }
+        environment {
+          PGICC = '/opt/pgi/linux86-64/18.4/bin/'
+          PGIMPICC = '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/'
+          LM_LICENSE_FILE = '$PGI/license.dat'
+          LD_LIBRARY_PATH = '/opt/pgi/linux86-64/18.4/lib'
+        }
+        steps {
+          sh '''
+            export PATH=$PGICC:$PGIMPICC:$PATH
+            echo $PATH
+            ls /opt/pgi/
+            mkdir build; cd build
+            CC=pgcc FC=pgfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DHDF5_ROOT=/opt/HDF5/1.10.4 -DENABLE_HDF5=ON ..
+            make -j 16 all install
+          '''
+          executeSteps_two( '/opt/pgi/linux86-64/18.4/bin/', '/opt/pgi/linux86-64/2018/mpi/openmpi-2.1.2/bin/' )
+        }
+      }
       stage('Intel Compiler Tests (1/2)') {
         agent {
           docker {
