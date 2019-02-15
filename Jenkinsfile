@@ -1074,80 +1074,80 @@ def cmakesteps(list) {
 pipeline {
   agent none
     stages {
-      //stage('Cmake Versions Test') {
-      //  agent {
-      //    docker {
-      //      image 'kellekai/archlinuxopenmpi1.10'
-      //    }
-      //  }
-      //  steps {
-      //    cmakesteps(versions)
-      //  }
-      //}
-      //stage('GCC Compiler Tests (1/2)') {
-      //  agent {
-      //    docker {
-      //      image 'kellekai/archlinuxopenmpi1.10:stable'
-      //    }
-      //  }
-      //  steps {
-      //    sh '''
-      //      mkdir build; cd build
-      //      cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
-      //      make -j 16 all install
-      //    '''
-      //    executeSteps_one( '', '' )
-      //  }
-      //}
-      //stage('GCC Compiler Tests (2/2)') {
-      //  agent {
-      //    docker {
-      //      image 'kellekai/archlinuxopenmpi1.10:stable'
-      //    }
-      //  }
-      //  steps {
-      //    sh '''
-      //      mkdir build; cd build
-      //      cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
-      //      make -j 16 all install
-      //    '''
-      //    executeSteps_two( '', '' )
-      //  }
-      //}
-      //stage('Clang Compiler Tests (1/2)') {
-      //  agent {
-      //    docker {
-      //      image 'kellekai/archlinuxopenmpi1.10:stable'
-      //    }
-      //  }
-      //  steps {
-      //    sh '''
-      //      mkdir build; cd build
-      //      export OMPI_MPICC=clang
-      //      export OMPI_CXX=clang++
-      //      CC=clang FC=gfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
-      //      VERBOSE=1 make -j 16 all install
-      //    '''
-      //    executeSteps_one( '', '' )
-      //  }
-      //}
-      //stage('Clang Compiler Tests (2/2)') {
-      //  agent {
-      //    docker {
-      //      image 'kellekai/archlinuxopenmpi1.10:stable'
-      //    }
-      //  }
-      //  steps {
-      //    sh '''
-      //      mkdir build; cd build
-      //      export OMPI_MPICC=clang
-      //      export OMPI_CXX=clang++
-      //      CC=clang FC=gfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
-      //      VERBOSE=1 make -j 16 all install
-      //    '''
-      //    executeSteps_two( '', '' )
-      //  }
-      //}
+      stage('Cmake Versions Test') {
+        agent {
+          docker {
+            image 'kellekai/archlinuxopenmpi1.10'
+          }
+        }
+        steps {
+          cmakesteps(versions)
+        }
+      }
+      stage('GCC Compiler Tests (1/2)') {
+        agent {
+          docker {
+            image 'kellekai/archlinuxopenmpi1.10:stable'
+          }
+        }
+        steps {
+          sh '''
+            mkdir build; cd build
+            cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
+            make -j 16 all install
+          '''
+          executeSteps_one( '', '' )
+        }
+      }
+      stage('GCC Compiler Tests (2/2)') {
+        agent {
+          docker {
+            image 'kellekai/archlinuxopenmpi1.10:stable'
+          }
+        }
+        steps {
+          sh '''
+            mkdir build; cd build
+            cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
+            make -j 16 all install
+          '''
+          executeSteps_two( '', '' )
+        }
+      }
+      stage('Clang Compiler Tests (1/2)') {
+        agent {
+          docker {
+            image 'kellekai/archlinuxopenmpi1.10:stable'
+          }
+        }
+        steps {
+          sh '''
+            mkdir build; cd build
+            export OMPI_MPICC=clang
+            export OMPI_CXX=clang++
+            CC=clang FC=gfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
+            VERBOSE=1 make -j 16 all install
+          '''
+          executeSteps_one( '', '' )
+        }
+      }
+      stage('Clang Compiler Tests (2/2)') {
+        agent {
+          docker {
+            image 'kellekai/archlinuxopenmpi1.10:stable'
+          }
+        }
+        steps {
+          sh '''
+            mkdir build; cd build
+            export OMPI_MPICC=clang
+            export OMPI_CXX=clang++
+            CC=clang FC=gfortran cmake -DCMAKE_INSTALL_PREFIX=`pwd`/RELEASE -DENABLE_HDF5=ON ..
+            VERBOSE=1 make -j 16 all install
+          '''
+          executeSteps_two( '', '' )
+        }
+      }
       stage('PGI Compiler Tests (1/2)') {
         agent {
           docker {
