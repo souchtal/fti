@@ -315,7 +315,11 @@ int FTI_TestConfig()
     int L2req = (FTI_Ckpt[2].ckptIntv > 0) ? 1 : 0;
     int RSreq = (FTI_Ckpt[3].ckptIntv > 0) ? 1 : 0;
     if (FTI_Topo.groupSize < 2 && (L2req || RSreq)) {
-        FTI_Print("The group size must be at least 2", FTI_WARN);
+        FTI_Print("The group size must be at least 2 for partner or encoding levels", FTI_WARN);
+        return FTI_NSCS;
+    }
+    if (FTI_Topo.nbProc < 2 && (L2req || RSreq)) {
+        FTI_Print("Number of processes must be at least 2 for partner or encoding levels", FTI_WARN);
         return FTI_NSCS;
     }
     if (FTI_Topo.groupSize >= 32 && RSreq) {
