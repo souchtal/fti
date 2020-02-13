@@ -2450,7 +2450,6 @@ FTIT_allConfiguration FTI_GetConfig(const char* configFile, MPI_Comm globalComm)
         FTI_allconf.execution.globalComm = globalComm;
         MPI_Comm_rank(FTI_allconf.execution.globalComm, &FTI_allconf.topology.myRank);
         MPI_Comm_size(FTI_allconf.execution.globalComm, &FTI_allconf.topology.nbProc);
-        //snprintf(FTI_Conf.cfgFile, FTI_BUFS, "%s", configFile);
         snprintf(FTI_allconf.configuration.cfgFile, FTI_BUFS, "%s", configFile);
         //int res = FTI_Try(FTI_ReadConf(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, &FTI_Inje), "read configuration.");
         res = FTI_Try(FTI_ReadConf(&(FTI_allconf.configuration), &(FTI_allconf.execution), &(FTI_allconf.topology), 
