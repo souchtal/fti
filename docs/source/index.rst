@@ -21,4 +21,4 @@ Indices and tables
 
 .. Everthing below here is customization
 .. doxygenfunction:: FTI_Init
-   :project: Fault Tolerance Library
+   :project: Fault Tolerance Library 
