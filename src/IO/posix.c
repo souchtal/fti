@@ -300,3 +300,68 @@ void FTI_PosixMD5(unsigned char *dest, void *md5)
     WritePosixInfo_t *write_info =(WritePosixInfo_t *) md5;
     MD5_Final(dest,&(write_info->integrity));
 }
+
+/**
+  @brief      Initializes variable recovery for POSIX mode
+  @param      fn                        ckpt file                 
+  @return     FILE*                     File handle 
+                                        
+ **/
+/*-------------------------------------------------------------------------*/
+FILE* FTI_RecoverVarInitPOSIX(char* fn)//should be in src/IO/posix.c
+{
+    FILE* fd = fopen(fn, "rb");
+    if (fd == NULL) {
+        FTI_Print("Could not open FTI checkpoint file.", FTI_EROR);
+    }
+    return fd;
+}
+
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Finalizes variable recovery for MPI-Io mode
+  @param      id                  variable id                
+  @param      FILE*               file handle
+  @return     Integer             FTI_SCES if successful
+                                        
+ **/
+/*-------------------------------------------------------------------------*/
+int FTI_RecoverVarPOSIX(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, 
+FTIT_topology* FTI_Topo, FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data, int id, FILE* fd)//should be in src/IO/posix.c
+{
+    int res = FTI_NSCS; 
+    int activeID, oldID;
+
+    if (FTI_FindVarInMeta(&FTI_Exec, FTI_Data, id, &activeID, &oldID) != FTI_NSCS){
+        long filePos = FTI_Exec->meta[FTI_Exec->ckptLvel].filePos[oldID];
+        if(fseek(fd, filePos, SEEK_SET) == 0){
+            fread(FTI_Data[activeID].ptr, 1, FTI_Data[activeID].size, fd); //returns number of elements read
+            if (ferror(fd)) {
+                FTI_Print("Could not read FTI checkpoint file.", FTI_EROR);
+            }else{
+                res = FTI_SCES;
+            }
+        }
+    }
+    return res;
+}
+
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Finalizes variable recovery for POSIX mode
+  @param      FILE*                     File handle                
+  @return     Integer                   FTI_SCES if successful 
+                                        
+ **/
+/*-------------------------------------------------------------------------*/
+int FTI_RecoverVarFinalizePOSIX(FILE *fileH)//should be in src/IO/posix.c
+{
+    int res = FTI_NSCS;
+    //fclose() : 0 if successful
+    if (fclose(fileH) != 0) {
+        FTI_Print("Could not close FTI checkpoint file.", FTI_EROR);
+    }else{
+        res = FTI_SCES;
+    }
+    return res;
+}

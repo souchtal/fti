@@ -2405,90 +2405,128 @@ int FTI_Finalize()
      **/
     /*-------------------------------------------------------------------------*/
     int FTI_RecoverVar(int id)
-    {
-        char str[2*FTI_BUFS];
+{
+    int res = FTI_NSCS;
 
-        if (FTI_Exec.initSCES == 0) {
-            FTI_Print("FTI is not initialized.", FTI_WARN);
-            return FTI_NSCS;
-        }
+    //int activeID, oldID;
+    char fn[FTI_BUFS];
 
-        if(FTI_Exec.reco==0){
-            /* This is not a restart: no actions performed */
-            return FTI_SCES;
-        }
+    if (FTI_Exec.initSCES == 0) {
+        FTI_Print("FTI is not initialized.", FTI_WARN);
+        return FTI_NSCS;
+    }
 
-        if (FTI_Exec.initSCES == 2) {
-            FTI_Print("No checkpoint files to make recovery.", FTI_WARN);
-            return FTI_NSCS;
-        }
-
-        int activeID, oldID;
-        if ( FTI_FindVarInMeta(&FTI_Exec, FTI_Data, id, &activeID, &oldID) != FTI_SCES){
-            return FTI_NREC;
-        }
-
-        if (FTI_Conf.ioMode == FTI_IO_FTIFF) {
-            return FTIFF_RecoverVar( id, &FTI_Exec, FTI_Data, FTI_Ckpt );
-        }
-
-        sprintf(str, "Variable with id is stored in %d and information is stored in %d", activeID, oldID);
-        FTI_Print(str,FTI_DBUG);
-
-
-#ifdef ENABLE_HDF5 //If HDF5 is installed
-        if (FTI_Conf.ioMode == FTI_IO_HDF5) {
-            return FTI_RecoverVarHDF5(&FTI_Conf, &FTI_Exec, FTI_Ckpt, FTI_Data, id);
-        }
-#endif
-
-        char fn[FTI_BUFS]; //Path to the checkpoint file
-
-        //Recovering from local for L4 case in FTI_Recover
-        if (FTI_Exec.ckptLvel == 4) {
-            if( FTI_Ckpt[4].recoIsDcp && FTI_Conf.dcpPosix ) {
-                return FTI_RecoverVarDcpPosix(&FTI_Conf, &FTI_Exec, FTI_Ckpt, FTI_Data, id);
-            } else {
-                snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[1].dir, FTI_Exec.meta[1].ckptFile);
-            }
-        }
-        else {
-            snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec.ckptLvel].dir, FTI_Exec.meta[FTI_Exec.ckptLvel].ckptFile);
-        }
-
-
-
-        sprintf(str, "Trying to load FTI checkpoint file (%s)...", fn);
-        FTI_Print(str, FTI_DBUG);
-
-        FILE* fd = fopen(fn, "rb");
-        if (fd == NULL) {
-            FTI_Print("Could not open FTI checkpoint file.", FTI_EROR);
-            return FTI_NREC;
-        }
-
-
-        sprintf(str, "Recovering var %d ", id);
-        FTI_Print(str, FTI_DBUG);
-        long filePos = FTI_Exec.meta[FTI_Exec.ckptLvel].filePos[oldID];
-        fseek(fd,filePos, SEEK_SET);
-        fread(FTI_Data[activeID].ptr, 1, FTI_Data[activeID].size, fd);
-
-        strncpy(FTI_Data[activeID].idChar, &(FTI_Exec.meta[FTI_Exec.ckptLvel].idChar[oldID*FTI_BUFS]), FTI_BUFS);
-
-        if (ferror(fd)) {
-            FTI_Print("Could not read FTI checkpoint file.", FTI_EROR);
-            fclose(fd);
-            return FTI_NREC;
-        }
-
-        if (fclose(fd) != 0) {
-            FTI_Print("Could not close FTI checkpoint file.", FTI_EROR);
-            return FTI_NREC;
-        }
-
+    if(FTI_Exec.reco==0){
+        /* This is not a restart: no actions performed */
         return FTI_SCES;
     }
+
+    if (FTI_Exec.initSCES == 2) {
+        FTI_Print("No checkpoint files to make recovery.", FTI_WARN);
+        return FTI_NSCS;
+    }
+
+
+    //snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec->ckptLvel].dir, FTI_Exec->meta[FTI_Exec->ckptLvel].ckptFile);
+    snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec.ckptLvel].dir, FTI_Exec.meta[FTI_Exec.ckptLvel].ckptFile);
+
+    switch(FTI_Conf.ioMode){
+
+        case FTI_IO_HDF5:
+#ifdef ENABLE_HDF5 // --> If HDF5 is installed
+            hid_t _file_id = FTI_RecoverVarInitHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, fn);
+            if(_file_id != -1){
+                if(FTI_RecoverVarHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, id) != -1){//evaluate recovery
+                    res = FTI_RecoverVarFinalizeHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, _file_id);
+                }
+            }
+#else
+            FTI_Print("Selected Ckpt I/O is HDF5, but HDF5 is not enabled.", FTI_WARN);
+#endif
+            break;
+
+#ifdef ENABLE_SIONLIB // --> If SIONlib is installed
+
+        case FTI_IO_SIONLIB:
+            /*int filehandle = FTI_RecoverVarInitSION(fn);
+            if(filehandle > 0){
+                if(FTI_RecoverVarSION(filehandle) != FTI_NSCS){
+                    res = FTI_RecoverVarFinalizeSION(filehandle);              
+                }
+            }*/
+            //call posix 
+            FILE* file;
+            file = FTI_RecoverVarInitPOSIX(fn);
+            if(file == NULL){
+                res = FTI_NSCS;
+            }else{
+                res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, file);
+                if(res != FTI_NSCS){
+                    res = FTI_RecoverVarFinalizePOSIX(file);
+                }
+            }
+#else
+            FTI_Print("Selected Ckpt I/O is SION, but SION is not enabled.", FTI_WARN);
+#endif
+            break;
+
+        case FTI_IO_POSIX:
+            {
+                FILE* file;
+                file = FTI_RecoverVarInitPOSIX(fn);
+                if(file == NULL){
+                    res = FTI_NSCS;
+                }else{
+                    res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, file);
+                    if(res != FTI_NSCS){
+                        res = FTI_RecoverVarFinalizePOSIX(file);
+                    }
+                }
+                break;
+            }
+
+        case FTI_IO_MPI:
+            /*MPI_File mpf ;
+            mpf = FTI_RecoverVarInitMPIIO(fn);
+            res = FTI_RecoverVarMPIIO(mpf);
+            if(res != FTI_NSCS){
+                res = FTI_RecoverVarFinalizeMPIIO(mpf);
+            }*/
+            //call posix 
+            {
+                FILE* file;
+                file = FTI_RecoverVarInitPOSIX(fn);
+                if(file == NULL){
+                    res = FTI_NSCS;
+                }else{
+                    res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, file);
+                    if(res != FTI_NSCS){
+                        res = FTI_RecoverVarFinalizePOSIX(file);
+                    }
+                }
+                break;
+            }
+
+        case FTI_IO_FTIFF:
+            {
+                char *fmmap = NULL;
+                struct stat st;
+
+                if(FTI_RecoverVarInitFTIFF(fn, fmmap, st) != FTI_NSCS){
+                    if(FTIFF_RecoverVar(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, fmmap, st) != FTI_NSCS){
+                        res = FTI_RecoverVarFinalizeFTIFF(fmmap, st);
+                    }
+                }
+                break;
+            }
+
+        default: 
+            FTI_Print("Unknown I/O mode.", FTI_EROR);
+            res = FTI_NSCS;
+    }
+
+    return res; 
+}
 
     /*-------------------------------------------------------------------------*/
     /**

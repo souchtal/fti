@@ -15,6 +15,10 @@ int FTI_PosixSeek(size_t pos, void *fileDesc);
 int FTI_PosixWrite(void *src, size_t size, void *fileDesc);
 int FTI_PosixClose(void *fileDesc);
 int FTI_PosixOpen(char *fn, void *fileDesc);
+FILE* FTI_RecoverVarInitPOSIX(char* fn);
+int FTI_RecoverVarPOSIX(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, 
+FTIT_topology* FTI_Topo, FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data, int id, FILE* fd);
+int FTI_RecoverVarFinalizePOSIX(FILE *fileH);
 
 #ifdef __cplusplus
 }
