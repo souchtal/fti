@@ -62,4 +62,4 @@ breathe_projects= {"Fault Tolerance Library": "../../doc/Doxygen/xml"}
 #enable when building on ReadTheDocs server
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 if read_the_docs_build:
-	subprocess.call('cd ../../doc/Doxygen; doxygen Doxyfile', shell=True)
+	subprocess.call('cd ../../doc/Doxygen; doxygen Doxyfile.in', shell=True)
