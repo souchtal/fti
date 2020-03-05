@@ -58,7 +58,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /home/bscuser/Documents/test/fti/doc/Doxygen 
+OUTPUT_DIRECTORY       = /home/bscuser/Documents/release/dev/fti/doc/Doxygen 
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -743,17 +743,17 @@ WARN_LOGFILE           =
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-#CMAKE_SOURCE_DIR 		= /home/bscuser/Documents/test/fti
-CMAKE_CURRENT_SOURCE_DIR= /home/bscuser/Documents/test/fti/doc/Doxygen
+#CMAKE_SOURCE_DIR 		= /home/bscuser/Documents/release/dev/fti
+CMAKE_CURRENT_SOURCE_DIR= /home/bscuser/Documents/release/dev/fti/doc/Doxygen
 
-INPUT                   =/home/bscuser/Documents/test/fti/README.md \
-                         /home/bscuser/Documents/test/fti/include/ \
-                         /home/bscuser/Documents/test/fti/src \
+INPUT                   = /home/bscuser/Documents/release/dev/fti/README.md \
+                         /home/bscuser/Documents/release/dev/fti/include/ \
+                         /home/bscuser/Documents/release/dev/fti/src \
                       
-                         /home/bscuser/Documents/test/fti/doc/Doxygen/cmake.md \
-                         /home/bscuser/Documents/test/fti/doc/Doxygen/config.md \
-                         /home/bscuser/Documents/test/fti/doc/Doxygen/make.md \
-                         /home/bscuser/Documents/test/fti/doc/Doxygen/ftiff.md
+                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/cmake.md \
+                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/config.md \
+                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/make.md \
+                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/ftiff.md
                          
 
 # This tag can be used to specify the character encoding of the source files
