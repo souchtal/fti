@@ -6,32 +6,24 @@
 Welcome to Fault Tolerance Library's documentation!
 ===================================================
 
-.. .. toctree::
-..    :maxdepth: 2
-..    :caption: Contents:
-
-
-
-.. Indices and tables
-.. ==================
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+Content on the main page
 
 .. toctree::
+   :hidden:
    :caption: Introduction
    :maxdepth: 1
 
    introduction
    
 .. toctree::
+   :hidden:
    :caption: Multi-level Checkpointing
    :maxdepth: 1
 
    multi-level-ckpt
 
 .. toctree::
+   :hidden:
    :caption: Compilation
    :maxdepth: 1
 
@@ -39,6 +31,7 @@ Welcome to Fault Tolerance Library's documentation!
 
 
 .. toctree::
+   :hidden:
    :caption: API Reference
    :maxdepth: 2
 
