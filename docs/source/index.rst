@@ -44,7 +44,7 @@ Fault Tolerance Library
    openchk
 
 
-.. sectionauthor:: Dr. Leonardo Bautista-Gomez (Leo) <leonardo.bautista@bsc.es>
+.. codeauthor:: Dr. Leonardo Bautista-Gomez (Leo) <leonardo.bautista@bsc.es>
 
 Barcelona Supercomputing Center
 Carrer de Jordi Girona, 29-31, 08034 Barcelona, SPAIN
