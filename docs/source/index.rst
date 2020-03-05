@@ -21,10 +21,16 @@ Welcome to Fault Tolerance Library's documentation!
 
 .. toctree::
    :caption: Introduction
-   :maxdepth: 2
+   :maxdepth: 1
 
    introduction
    
+.. toctree::
+   :caption: Compilation
+   :maxdepth: 1
+
+   compilation
+
 
 .. Everthing below here is customization
 .. doxygenfunction:: FTI_Init
