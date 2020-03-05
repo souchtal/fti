@@ -1,4 +1,0 @@
-<map id="FTI_InitDevices" name="FTI_InitDevices">
-<area shape="rect" id="node1" title="Allocates Host buffers which will be used for asynchronous communication with the GPU." alt="" coords="5,5,120,33"/>
-<area shape="rect" id="node2" href="$api_8c.html#a691a9e560e92286bb5bc1b5cf2f7b199" title="Prints FTI messages." alt="" coords="168,5,245,33"/>
-</map>

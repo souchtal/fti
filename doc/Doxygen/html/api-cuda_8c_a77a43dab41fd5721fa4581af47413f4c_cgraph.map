@@ -1,4 +1,0 @@
-<map id="FTI_get_pointer_info" name="FTI_get_pointer_info">
-<area shape="rect" id="node1" title="It gets the information of this pointer (CPU or GPU, which device, etc.)." alt="" coords="5,5,149,33"/>
-<area shape="rect" id="node2" href="$api_8c.html#a691a9e560e92286bb5bc1b5cf2f7b199" title="Prints FTI messages." alt="" coords="197,5,275,33"/>
-</map>

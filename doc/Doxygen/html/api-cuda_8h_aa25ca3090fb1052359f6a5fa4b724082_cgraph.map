@@ -1,4 +1,0 @@
-<map id="FTI_TransferFileToDeviceAsync" name="FTI_TransferFileToDeviceAsync">
-<area shape="rect" id="node1" title="Copies data from a file to the GPU asynchronously." alt="" coords="5,5,179,49"/>
-<area shape="rect" id="node2" href="$api_8c.html#a691a9e560e92286bb5bc1b5cf2f7b199" title="Prints FTI messages." alt="" coords="227,13,304,41"/>
-</map>

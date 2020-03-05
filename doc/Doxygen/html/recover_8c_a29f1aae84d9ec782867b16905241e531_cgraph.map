@@ -1,5 +1,0 @@
-<map id="FTI_CheckFile" name="FTI_CheckFile">
-<area shape="rect" id="node1" title="It checks if a file exist and that its size is &#39;correct&#39;." alt="" coords="5,5,113,33"/>
-<area shape="rect" id="node2" href="$api_8c.html#a691a9e560e92286bb5bc1b5cf2f7b199" title="Prints FTI messages." alt="" coords="356,5,433,33"/>
-<area shape="rect" id="node3" href="$tools_8c.html#a0abe7d90a75d724af67071b5a672785d" title="It compares checksum of the checkpoint file." alt="" coords="161,31,308,59"/>
-</map>
