@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Fault Tolerance Library's documentation!
+Fault Tolerance Library
 ===================================================
 
 .. toctree::
@@ -35,11 +35,20 @@ Welcome to Fault Tolerance Library's documentation!
 
    api-reference
 
+
+.. toctree::
+   :hidden:
+   :caption: OpenCHK
+   :maxdepth: 2
+
+   openchk
+
 Contact:
 .. sectionauthor:: Dr. Leonardo Bautista-Gomez (Leo) <leonardo.bautista@bsc.es>
 
 Barcelona Supercomputing Center
 Carrer de Jordi Girona, 29-31, 08034 Barcelona, SPAIN
+
 Phone : +34 934 13 77 16
 
 
