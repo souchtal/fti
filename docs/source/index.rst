@@ -6,23 +6,6 @@
 Welcome to Fault Tolerance Library's documentation!
 ===================================================
 
-
-Contact:
-Dr. Leonardo Bautista-Gomez (Leo) - leonardo.bautista@bsc.es
-Barcelona Supercomputing Center
-Carrer de Jordi Girona, 29-31, 08034 Barcelona, SPAIN
-Phone : +34 934 13 77 16
-
-
-.. image:: _static/fti_pic.jpeg
-   :width: 600
-
-
-
-Authors: Kai Keller, Tomasz Paluszkiewicz, Karol Sierocinski
-
-
-..List of Content
 .. toctree::
    :hidden:
    :caption: Introduction
@@ -51,3 +34,19 @@ Authors: Kai Keller, Tomasz Paluszkiewicz, Karol Sierocinski
    :maxdepth: 2
 
    api-reference
+
+Contact:
+.. sectionauthor:: Dr. Leonardo Bautista-Gomez (Leo) <leonardo.bautista@bsc.es>
+
+Barcelona Supercomputing Center
+Carrer de Jordi Girona, 29-31, 08034 Barcelona, SPAIN
+Phone : +34 934 13 77 16
+
+
+.. image:: _static/fti_pic.jpeg
+   :width: 600
+
+
+
+Authors: Kai Keller, Tomasz Paluszkiewicz, Karol Sierocinski
+
