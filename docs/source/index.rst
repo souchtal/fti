@@ -26,11 +26,23 @@ Welcome to Fault Tolerance Library's documentation!
    introduction
    
 .. toctree::
+   :caption: Multi-level Checkpointing
+   :maxdepth: 1
+
+   multi-level-ckpt
+
+.. toctree::
    :caption: Compilation
    :maxdepth: 1
 
    compilation
 
+
+.. toctree::
+   :caption: API Reference
+   :maxdepth: 2
+
+   api-reference
 
 .. Everthing below here is customization
 .. doxygenfunction:: FTI_Init

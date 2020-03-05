@@ -11,4 +11,4 @@ Default The default configuration builds the FTI library with Fortran and MPI-IO
 .. code-block:: cmake
 
    cmake -DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti ..
-	make all install
+   make all install
