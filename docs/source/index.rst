@@ -6,18 +6,25 @@
 Welcome to Fault Tolerance Library's documentation!
 ===================================================
 
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: Contents:
+
+
+
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
 .. toctree::
+   :caption: Introduction
    :maxdepth: 2
-   :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   introduction
+   
 
 .. Everthing below here is customization
 .. doxygenfunction:: FTI_Init
