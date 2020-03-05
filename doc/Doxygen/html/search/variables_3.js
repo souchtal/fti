@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['datadiffhash_874',['dataDiffHash',['../structFTIFF__dbvar.html#a01d450e6230cf0770e143ce265de006e',1,'FTIFF_dbvar']]],
+  ['dataset_875',['dataset',['../structFTIT__sharedData.html#ab0853dbe65ce5963c588e0f4dbaa1712',1,'FTIT_sharedData']]],
+  ['datasetinfo_876',['datasetInfo',['../structFTIT__dcpExecutionPosix.html#a23f59d5fce406a0f93e8f8476a24603c',1,'FTIT_dcpExecutionPosix']]],
+  ['datasize_877',['dataSize',['../structFTIT__dcpExecutionPosix.html#abcf766ef7f738705f5dac1f42aeaa0e7',1,'FTIT_dcpExecutionPosix::dataSize()'],['../structFTIFF__metaInfo.html#a05166809cf795ff0c9fbfce2d0ae3b0c',1,'FTIFF_metaInfo::dataSize()']]],
+  ['dbsize_878',['dbsize',['../structFTIFF__db.html#a3082dec5c3f31b3ce3e82e7470fe48ec',1,'FTIFF_db']]],
+  ['dbvars_879',['dbvars',['../structFTIFF__db.html#a901aa55818fed9df513fe669d4ef3ca2',1,'FTIFF_db']]],
+  ['dcpblocksize_880',['dcpBlockSize',['../structFTIT__configuration.html#aa8a2db7e0136811397e03f5a3c64beb0',1,'FTIT_configuration']]],
+  ['dcpdir_881',['dcpDir',['../structFTIT__checkpoint.html#a34d13ab543f5cdb47f0c5285cc048f54',1,'FTIT_checkpoint']]],
+  ['dcpftiff_882',['dcpFtiff',['../structFTIT__configuration.html#aae6a605160c14bd0f0174d9aa94b4183',1,'FTIT_configuration']]],
+  ['dcpinfoposix_883',['dcpInfoPosix',['../structFTIT__dataset.html#af582d52ac7f4f2d56df03232cc0c6cb6',1,'FTIT_dataset::dcpInfoPosix()'],['../structFTIT__configuration.html#a082b3136afb25beb45f0c9ece72ddca7',1,'FTIT_configuration::dcpInfoPosix()'],['../structFTIT__execution.html#a2989b4148c5ef93b8ae18bfe84c3cc59',1,'FTIT_execution::dcpInfoPosix()']]],
+  ['dcpmode_884',['dcpMode',['../structFTIT__configuration.html#a845ba793089f5cb9c7e5037ea8c8d1be',1,'FTIT_configuration']]],
+  ['dcpname_885',['dcpName',['../structFTIT__checkpoint.html#a6b4c276ac4ceb69463ec0b73d8e9c855',1,'FTIT_checkpoint']]],
+  ['dcpposix_886',['dcpPosix',['../structFTIT__configuration.html#a5e319b258138bbb03d5da9917f99acd6',1,'FTIT_configuration']]],
+  ['dcpsize_887',['dcpSize',['../structFTIT__dcpExecutionPosix.html#abf959bf358b8122c0ac01aa3fa945bdc',1,'FTIT_dcpExecutionPosix::dcpSize()'],['../structFTIFF__metaInfo.html#a48a91b60de626495c80f26096bbb6c97',1,'FTIFF_metaInfo::dcpSize()']]],
+  ['deviceid_888',['deviceID',['../structFTIT__ptrinfo.html#a1cadbdc42a8942d807b500b9cb2fe78f',1,'FTIT_ptrinfo']]],
+  ['deviceptr_889',['devicePtr',['../structFTIT__dataset.html#a02c90a2a92a7de7cc2407c228053d173',1,'FTIT_dataset']]],
+  ['digestwidth_890',['digestWidth',['../structFTIT__dcpConfigurationPosix.html#acdd6ef88f5b22e3c29dda4b7929ef866',1,'FTIT_dcpConfigurationPosix']]],
+  ['dimlength_891',['dimLength',['../structFTIT__typeField.html#af0e311f38f7f6b7ab7ff04e3897f6c37',1,'FTIT_typeField::dimLength()'],['../structFTIT__dataset.html#ad0a974da814771e2f244bef0542c9d25',1,'FTIT_dataset::dimLength()']]],
+  ['dir_892',['dir',['../structFTIT__checkpoint.html#a98f4f26f6e99e7a07d4fde76b23515ea',1,'FTIT_checkpoint']]],
+  ['dptr_893',['dptr',['../structFTIFF__dbvar.html#a88a4bfa7de62ff82a3f9d2b2347eeee0',1,'FTIFF_dbvar::dptr()'],['../structFTIT__data__prefetch.html#a21dc6418d75e7775ba744cc83ce55a9d',1,'FTIT_data_prefetch::dptr()']]]
+];

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__complexType" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_complexType</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__complexType_1a072814c3eb0fd1f8d47c7c64fa34c41d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_complexType::name[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the complex type. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="404" column="29" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__complexType_1a83307bb041927b502b49d9e69ae5af9a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_complexType::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of types in complex type. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="405" column="29" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__complexType_1abbb9d041a59fd4972244d8c62e78dbaa" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__typeField" kindref="compound">FTIT_typeField</ref></type>
+        <definition>FTIT_typeField FTIT_complexType::field[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>field</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fields of the complex type. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="406" column="29" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>FTIT_typeField</label>
+        <link refid="structFTIT__typeField"/>
+      </node>
+      <node id="1">
+        <label>FTIT_complexType</label>
+        <link refid="structFTIT__complexType"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>field</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="403" column="35" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="403" bodyend="407"/>
+    <listofallmembers>
+      <member refid="structFTIT__complexType_1abbb9d041a59fd4972244d8c62e78dbaa" prot="public" virt="non-virtual"><scope>FTIT_complexType</scope><name>field</name></member>
+      <member refid="structFTIT__complexType_1a83307bb041927b502b49d9e69ae5af9a" prot="public" virt="non-virtual"><scope>FTIT_complexType</scope><name>length</name></member>
+      <member refid="structFTIT__complexType_1a072814c3eb0fd1f8d47c7c64fa34c41d" prot="public" virt="non-virtual"><scope>FTIT_complexType</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

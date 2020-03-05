@@ -1,0 +1,163 @@
+\hypertarget{structFTIT__dataset}{}\doxysection{F\+T\+I\+T\+\_\+dataset Struct Reference}
+\label{structFTIT__dataset}\index{FTIT\_dataset@{FTIT\_dataset}}
+
+
+{\ttfamily \#include $<$fti-\/intern.\+h$>$}
+
+
+
+Collaboration diagram for F\+T\+I\+T\+\_\+dataset\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structFTIT__dataset_ac9c58324a5f443f1ea5804b530f7dab2}{id}}
+\item 
+void $\ast$ \mbox{\hyperlink{structFTIT__dataset_a36ee086d6d8ddace556bdbdbd142acbb}{ptr}}
+\item 
+long \mbox{\hyperlink{structFTIT__dataset_abc07f32e21abf951afcae67f9636e65c}{count}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$ \mbox{\hyperlink{structFTIT__dataset_a564e1a87d53b7b4e834ea0ece45c35fb}{type}}
+\item 
+int \mbox{\hyperlink{structFTIT__dataset_aa0f368e577ef8f2b564d2607cdb958d1}{ele\+Size}}
+\item 
+long \mbox{\hyperlink{structFTIT__dataset_a112f9319765938eba3339d86c0e140c9}{size}}
+\item 
+int \mbox{\hyperlink{structFTIT__dataset_abc5e19eb9d5f9ab72fd1cc4e2c6c4f8f}{rank}}
+\item 
+int \mbox{\hyperlink{structFTIT__dataset_ad0a974da814771e2f244bef0542c9d25}{dim\+Length}} \mbox{[}32\mbox{]}
+\item 
+char \mbox{\hyperlink{structFTIT__dataset_a487d5e46155d0f9d961993521eef41f6}{name}} \mbox{[}\mbox{\hyperlink{fti_8h_a4da53a2ca9ef19b414ca7e2522c4864a}{F\+T\+I\+\_\+\+B\+U\+FS}}\mbox{]}
+\item 
+\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$ \mbox{\hyperlink{structFTIT__dataset_a45ceca28ab7961bd174fb418d3bf406a}{h5group}}
+\item 
+bool \mbox{\hyperlink{structFTIT__dataset_af5787410c1a17d552c402533a95afebd}{is\+Device\+Ptr}}
+\item 
+void $\ast$ \mbox{\hyperlink{structFTIT__dataset_a02c90a2a92a7de7cc2407c228053d173}{device\+Ptr}}
+\item 
+\mbox{\hyperlink{structFTIT__sharedData}{F\+T\+I\+T\+\_\+shared\+Data}} \mbox{\hyperlink{structFTIT__dataset_ae7848aea95a9ee1857e0510c5aa61700}{shared\+Data}}
+\item 
+\mbox{\hyperlink{structFTIT__dcpDatasetPosix}{F\+T\+I\+T\+\_\+dcp\+Dataset\+Posix}} \mbox{\hyperlink{structFTIT__dataset_af582d52ac7f4f2d56df03232cc0c6cb6}{dcp\+Info\+Posix}}
+\item 
+char \mbox{\hyperlink{structFTIT__dataset_a682b7ca95540127162a55c520f3a5e50}{id\+Char}} \mbox{[}\mbox{\hyperlink{fti_8h_a4da53a2ca9ef19b414ca7e2522c4864a}{F\+T\+I\+\_\+\+B\+U\+FS}}\mbox{]}
+\item 
+size\+\_\+t \mbox{\hyperlink{structFTIT__dataset_a2aa75b596c209d3d715b3e98efe5b2e4}{file\+Pos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structFTIT__dataset_abc07f32e21abf951afcae67f9636e65c}\label{structFTIT__dataset_abc07f32e21abf951afcae67f9636e65c}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!count@{count}}
+\index{count@{count}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily long F\+T\+I\+T\+\_\+dataset\+::count}
+
+Number of elements in dataset. ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_af582d52ac7f4f2d56df03232cc0c6cb6}\label{structFTIT__dataset_af582d52ac7f4f2d56df03232cc0c6cb6}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!dcpInfoPosix@{dcpInfoPosix}}
+\index{dcpInfoPosix@{dcpInfoPosix}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{dcpInfoPosix}{dcpInfoPosix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__dcpDatasetPosix}{F\+T\+I\+T\+\_\+dcp\+Dataset\+Posix}} F\+T\+I\+T\+\_\+dataset\+::dcp\+Info\+Posix}
+
+d\+CP info for posix I/O ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_a02c90a2a92a7de7cc2407c228053d173}\label{structFTIT__dataset_a02c90a2a92a7de7cc2407c228053d173}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!devicePtr@{devicePtr}}
+\index{devicePtr@{devicePtr}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{devicePtr}{devicePtr}}
+{\footnotesize\ttfamily void$\ast$ F\+T\+I\+T\+\_\+dataset\+::device\+Ptr}
+
+Pointer to data in the device ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_ad0a974da814771e2f244bef0542c9d25}\label{structFTIT__dataset_ad0a974da814771e2f244bef0542c9d25}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!dimLength@{dimLength}}
+\index{dimLength@{dimLength}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{dimLength}{dimLength}}
+{\footnotesize\ttfamily int F\+T\+I\+T\+\_\+dataset\+::dim\+Length\mbox{[}32\mbox{]}}
+
+Lenght of each dimention. ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_aa0f368e577ef8f2b564d2607cdb958d1}\label{structFTIT__dataset_aa0f368e577ef8f2b564d2607cdb958d1}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!eleSize@{eleSize}}
+\index{eleSize@{eleSize}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{eleSize}{eleSize}}
+{\footnotesize\ttfamily int F\+T\+I\+T\+\_\+dataset\+::ele\+Size}
+
+Element size for the dataset. ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_a2aa75b596c209d3d715b3e98efe5b2e4}\label{structFTIT__dataset_a2aa75b596c209d3d715b3e98efe5b2e4}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!filePos@{filePos}}
+\index{filePos@{filePos}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{filePos}{filePos}}
+{\footnotesize\ttfamily size\+\_\+t F\+T\+I\+T\+\_\+dataset\+::file\+Pos}
+
+\mbox{\Hypertarget{structFTIT__dataset_a45ceca28ab7961bd174fb418d3bf406a}\label{structFTIT__dataset_a45ceca28ab7961bd174fb418d3bf406a}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!h5group@{h5group}}
+\index{h5group@{h5group}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{h5group}{h5group}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}}$\ast$ F\+T\+I\+T\+\_\+dataset\+::h5group}
+
+Group of this dataset ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_ac9c58324a5f443f1ea5804b530f7dab2}\label{structFTIT__dataset_ac9c58324a5f443f1ea5804b530f7dab2}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!id@{id}}
+\index{id@{id}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int F\+T\+I\+T\+\_\+dataset\+::id}
+
+ID to search/update dataset. ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_a682b7ca95540127162a55c520f3a5e50}\label{structFTIT__dataset_a682b7ca95540127162a55c520f3a5e50}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!idChar@{idChar}}
+\index{idChar@{idChar}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{idChar}{idChar}}
+{\footnotesize\ttfamily char F\+T\+I\+T\+\_\+dataset\+::id\+Char\mbox{[}\mbox{\hyperlink{fti_8h_a4da53a2ca9ef19b414ca7e2522c4864a}{F\+T\+I\+\_\+\+B\+U\+FS}}\mbox{]}}
+
+T\+His is glue for A\+L\+YA ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_af5787410c1a17d552c402533a95afebd}\label{structFTIT__dataset_af5787410c1a17d552c402533a95afebd}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!isDevicePtr@{isDevicePtr}}
+\index{isDevicePtr@{isDevicePtr}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{isDevicePtr}{isDevicePtr}}
+{\footnotesize\ttfamily bool F\+T\+I\+T\+\_\+dataset\+::is\+Device\+Ptr}
+
+True if this data are stored in a device memory \mbox{\Hypertarget{structFTIT__dataset_a487d5e46155d0f9d961993521eef41f6}\label{structFTIT__dataset_a487d5e46155d0f9d961993521eef41f6}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!name@{name}}
+\index{name@{name}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char F\+T\+I\+T\+\_\+dataset\+::name\mbox{[}\mbox{\hyperlink{fti_8h_a4da53a2ca9ef19b414ca7e2522c4864a}{F\+T\+I\+\_\+\+B\+U\+FS}}\mbox{]}}
+
+Name of the dataset. ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_a36ee086d6d8ddace556bdbdbd142acbb}\label{structFTIT__dataset_a36ee086d6d8ddace556bdbdbd142acbb}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!ptr@{ptr}}
+\index{ptr@{ptr}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily void$\ast$ F\+T\+I\+T\+\_\+dataset\+::ptr}
+
+Pointer to the dataset. ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_abc5e19eb9d5f9ab72fd1cc4e2c6c4f8f}\label{structFTIT__dataset_abc5e19eb9d5f9ab72fd1cc4e2c6c4f8f}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!rank@{rank}}
+\index{rank@{rank}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{rank}{rank}}
+{\footnotesize\ttfamily int F\+T\+I\+T\+\_\+dataset\+::rank}
+
+Rank of dataset (for H\+D\+F5). ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_ae7848aea95a9ee1857e0510c5aa61700}\label{structFTIT__dataset_ae7848aea95a9ee1857e0510c5aa61700}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!sharedData@{sharedData}}
+\index{sharedData@{sharedData}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{sharedData}{sharedData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__sharedData}{F\+T\+I\+T\+\_\+shared\+Data}} F\+T\+I\+T\+\_\+dataset\+::shared\+Data}
+
+Info if dataset is sub-\/set (V\+PR) ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_a112f9319765938eba3339d86c0e140c9}\label{structFTIT__dataset_a112f9319765938eba3339d86c0e140c9}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!size@{size}}
+\index{size@{size}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily long F\+T\+I\+T\+\_\+dataset\+::size}
+
+Total size of the dataset. ~\newline
+ \mbox{\Hypertarget{structFTIT__dataset_a564e1a87d53b7b4e834ea0ece45c35fb}\label{structFTIT__dataset_a564e1a87d53b7b4e834ea0ece45c35fb}} 
+\index{FTIT\_dataset@{FTIT\_dataset}!type@{type}}
+\index{type@{type}!FTIT\_dataset@{FTIT\_dataset}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}}$\ast$ F\+T\+I\+T\+\_\+dataset\+::type}
+
+Data type for the dataset. ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/bscuser/\+Documents/release/dev/fti/include/\mbox{\hyperlink{fti-intern_8h}{fti-\/intern.\+h}}\end{DoxyCompactItemize}

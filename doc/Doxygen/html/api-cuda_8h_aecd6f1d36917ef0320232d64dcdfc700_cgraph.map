@@ -1,0 +1,7 @@
+<map id="FTI_InitPrefetcher" name="FTI_InitPrefetcher">
+<area shape="rect" id="node1" title="Initializes a Prefetcher." alt="" coords="5,84,135,112"/>
+<area shape="rect" id="node2" href="$api-cuda_8c.html#abb1ca3c8e8cbff17fdcba133ca6a344d" title="De&#45;allocates Host buffers which will be used for asynchronous communication with the GPU." alt="" coords="183,5,325,33"/>
+<area shape="rect" id="node3" href="$api-cuda_8c.html#acd3640ea0b47f0f4b34b9e11294290e1" title="Allocates Host buffers which will be used for asynchronous communication with the GPU." alt="" coords="197,57,311,85"/>
+<area shape="rect" id="node4" href="$api_8c.html#a691a9e560e92286bb5bc1b5cf2f7b199" title="Prints FTI messages." alt="" coords="373,109,451,137"/>
+<area shape="rect" id="node5" href="$tools_8c.html#a950803008f7cef4892fbba9b2069928e" title="It receives the return code of a function and prints a message." alt="" coords="220,161,288,189"/>
+</map>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structftit__io" kind="struct" language="C++" prot="public">
+    <compoundname>ftit_io</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* ftit_io::initCKPT) (FTIT_configuration *, FTIT_execution *, FTIT_topology *, FTIT_checkpoint *, FTIT_dataset *)</definition>
+        <argsstring>)(FTIT_configuration *, FTIT_execution *, FTIT_topology *, FTIT_checkpoint *, FTIT_dataset *)</argsstring>
+        <name>initCKPT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="578" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="578" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* ftit_io::WriteData) (FTIT_dataset *, void *write_info)</definition>
+        <argsstring>)(FTIT_dataset *, void *write_info)</argsstring>
+        <name>WriteData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="584" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* ftit_io::finCKPT) (void *fileDesc)</definition>
+        <argsstring>)(void *fileDesc)</argsstring>
+        <name>finCKPT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="586" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" prot="public" static="no" mutable="no">
+        <type>size_t(*</type>
+        <definition>size_t(* ftit_io::getPos) (void *fileDesc)</definition>
+        <argsstring>)(void *fileDesc)</argsstring>
+        <name>getPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="587" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structftit__io_1af63411130b0b0760d573e757c8fdeffa" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* ftit_io::finIntegrity) (unsigned char *, void *)</definition>
+        <argsstring>)(unsigned char *, void *)</argsstring>
+        <name>finIntegrity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="588" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="588" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="577" column="26" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="577" bodyend="591"/>
+    <listofallmembers>
+      <member refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" prot="public" virt="non-virtual"><scope>ftit_io</scope><name>finCKPT</name></member>
+      <member refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" prot="public" virt="non-virtual"><scope>ftit_io</scope><name>finIntegrity</name></member>
+      <member refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" prot="public" virt="non-virtual"><scope>ftit_io</scope><name>getPos</name></member>
+      <member refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" prot="public" virt="non-virtual"><scope>ftit_io</scope><name>initCKPT</name></member>
+      <member refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" prot="public" virt="non-virtual"><scope>ftit_io</scope><name>WriteData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

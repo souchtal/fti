@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__DataDiffHash" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_DataDiffHash</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1aa130b0d4209597cd5e1a1266537d1842" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* FTIT_DataDiffHash::md5hash[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>md5hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MD5 digest <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="226" column="32" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1a84e29059cfe4c61fb0bdecef30a1d246" prot="public" static="no" mutable="no">
+        <type>uint32_t *</type>
+        <definition>uint32_t* FTIT_DataDiffHash::bit32hash[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>bit32hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CRC32 digest <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="227" column="32" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1af76de785fd59a025ef10c4efbe808095" prot="public" static="no" mutable="no">
+        <type>unsigned short *</type>
+        <definition>unsigned short* FTIT_DataDiffHash::blockSize</definition>
+        <argsstring></argsstring>
+        <name>blockSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>data block size <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="228" column="32" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1aceab59e5954b9e8d15568bddede41d0e" prot="public" static="no" mutable="no">
+        <type>bool *</type>
+        <definition>bool* FTIT_DataDiffHash::isValid</definition>
+        <argsstring></argsstring>
+        <name>isValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>indicates if data block is valid </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="229" column="32" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1a1a8f24ef6cc24a410573a626605a30c6" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long FTIT_DataDiffHash::nbHashes</definition>
+        <argsstring></argsstring>
+        <name>nbHashes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>holds the number of hashes for the data chunk <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="230" column="33" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1a1d904ccd4417ffa148b8b9a2711f1d04" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_DataDiffHash::currentId</definition>
+        <argsstring></argsstring>
+        <name>currentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="231" column="33" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1a7b31f7e687df7735989c6e0d7c4d49dc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_DataDiffHash::creationType</definition>
+        <argsstring></argsstring>
+        <name>creationType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="232" column="33" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__DataDiffHash_1ae51a7a1c2ad090f66ddff4848ad72446" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_DataDiffHash::lifetime</definition>
+        <argsstring></argsstring>
+        <name>lifetime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="233" column="33" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="225" column="1" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="224" bodyend="234"/>
+    <listofallmembers>
+      <member refid="structFTIT__DataDiffHash_1a84e29059cfe4c61fb0bdecef30a1d246" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>bit32hash</name></member>
+      <member refid="structFTIT__DataDiffHash_1af76de785fd59a025ef10c4efbe808095" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>blockSize</name></member>
+      <member refid="structFTIT__DataDiffHash_1a7b31f7e687df7735989c6e0d7c4d49dc" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>creationType</name></member>
+      <member refid="structFTIT__DataDiffHash_1a1d904ccd4417ffa148b8b9a2711f1d04" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>currentId</name></member>
+      <member refid="structFTIT__DataDiffHash_1aceab59e5954b9e8d15568bddede41d0e" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>isValid</name></member>
+      <member refid="structFTIT__DataDiffHash_1ae51a7a1c2ad090f66ddff4848ad72446" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>lifetime</name></member>
+      <member refid="structFTIT__DataDiffHash_1aa130b0d4209597cd5e1a1266537d1842" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>md5hash</name></member>
+      <member refid="structFTIT__DataDiffHash_1a1a8f24ef6cc24a410573a626605a30c6" prot="public" virt="non-virtual"><scope>FTIT_DataDiffHash</scope><name>nbHashes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

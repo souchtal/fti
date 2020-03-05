@@ -1,0 +1,81 @@
+\hypertarget{failure-injection_8c}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/failure-\/injection.c File Reference}
+\label{failure-injection_8c}\index{/home/bscuser/Documents/release/dev/fti/src/failure-\/injection.c@{/home/bscuser/Documents/release/dev/fti/src/failure-\/injection.c}}
+{\ttfamily \#include \char`\"{}interface.\+h\char`\"{}}\newline
+Include dependency graph for failure-\/injection.c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{failure-injection_8c_a42d6575e31a765c4780cba60cb923c91}{P\+R\+O\+B\+A\+B\+I\+L\+I\+TY}} ()
+\item 
+unsigned int \mbox{\hyperlink{failure-injection_8c_a0917c864ec34200ecfbb1dd974658547}{F\+U\+N\+C\+T\+I\+ON}} (const char $\ast$test\+Function)
+\item 
+void \mbox{\hyperlink{failure-injection_8c_a7acbcfc49eb071c72fcd452dbf00c197}{F\+T\+I\+\_\+\+Init\+F\+I\+IO}} ()
+\item 
+int \mbox{\hyperlink{failure-injection_8c_a791fd93b18d6c214cef5d6b934dcbd55}{F\+T\+I\+\_\+\+Float\+Bit\+Flip}} (float $\ast$target, int bit)
+\begin{DoxyCompactList}\small\item\em It corrupts a bit of the given float. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{failure-injection_8c_acd287cd3e5911bb2d8266c0d8219c861}{F\+T\+I\+\_\+\+Double\+Bit\+Flip}} (double $\ast$target, int bit)
+\begin{DoxyCompactList}\small\item\em It corrupts a bit of the given float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{failure-injection_8c_acd287cd3e5911bb2d8266c0d8219c861}\label{failure-injection_8c_acd287cd3e5911bb2d8266c0d8219c861}} 
+\index{failure-\/injection.c@{failure-\/injection.c}!FTI\_DoubleBitFlip@{FTI\_DoubleBitFlip}}
+\index{FTI\_DoubleBitFlip@{FTI\_DoubleBitFlip}!failure-\/injection.c@{failure-\/injection.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_DoubleBitFlip()}{FTI\_DoubleBitFlip()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Double\+Bit\+Flip (\begin{DoxyParamCaption}\item[{double $\ast$}]{target,  }\item[{int}]{bit }\end{DoxyParamCaption})}
+
+
+
+It corrupts a bit of the given float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Pointer to the float to corrupt. \\
+\hline
+{\em bit} & Position of the bit to corrupt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function filps the bit of the target float. Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{failure-injection_8c_a791fd93b18d6c214cef5d6b934dcbd55}\label{failure-injection_8c_a791fd93b18d6c214cef5d6b934dcbd55}} 
+\index{failure-\/injection.c@{failure-\/injection.c}!FTI\_FloatBitFlip@{FTI\_FloatBitFlip}}
+\index{FTI\_FloatBitFlip@{FTI\_FloatBitFlip}!failure-\/injection.c@{failure-\/injection.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_FloatBitFlip()}{FTI\_FloatBitFlip()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Float\+Bit\+Flip (\begin{DoxyParamCaption}\item[{float $\ast$}]{target,  }\item[{int}]{bit }\end{DoxyParamCaption})}
+
+
+
+It corrupts a bit of the given float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Pointer to the float to corrupt. \\
+\hline
+{\em bit} & Position of the bit to corrupt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function filps the bit of the target float. \mbox{\Hypertarget{failure-injection_8c_a7acbcfc49eb071c72fcd452dbf00c197}\label{failure-injection_8c_a7acbcfc49eb071c72fcd452dbf00c197}} 
+\index{failure-\/injection.c@{failure-\/injection.c}!FTI\_InitFIIO@{FTI\_InitFIIO}}
+\index{FTI\_InitFIIO@{FTI\_InitFIIO}!failure-\/injection.c@{failure-\/injection.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitFIIO()}{FTI\_InitFIIO()}}
+{\footnotesize\ttfamily void F\+T\+I\+\_\+\+Init\+F\+I\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{failure-injection_8c_a0917c864ec34200ecfbb1dd974658547}\label{failure-injection_8c_a0917c864ec34200ecfbb1dd974658547}} 
+\index{failure-\/injection.c@{failure-\/injection.c}!FUNCTION@{FUNCTION}}
+\index{FUNCTION@{FUNCTION}!failure-\/injection.c@{failure-\/injection.c}}
+\doxysubsubsection{\texorpdfstring{FUNCTION()}{FUNCTION()}}
+{\footnotesize\ttfamily unsigned int F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{const char $\ast$}]{test\+Function }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{failure-injection_8c_a42d6575e31a765c4780cba60cb923c91}\label{failure-injection_8c_a42d6575e31a765c4780cba60cb923c91}} 
+\index{failure-\/injection.c@{failure-\/injection.c}!PROBABILITY@{PROBABILITY}}
+\index{PROBABILITY@{PROBABILITY}!failure-\/injection.c@{failure-\/injection.c}}
+\doxysubsubsection{\texorpdfstring{PROBABILITY()}{PROBABILITY()}}
+{\footnotesize\ttfamily float P\+R\+O\+B\+A\+B\+I\+L\+I\+TY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

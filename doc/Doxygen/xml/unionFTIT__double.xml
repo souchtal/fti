@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="unionFTIT__double" kind="union" language="C++" prot="public">
+    <compoundname>FTIT_double</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionFTIT__double_1acd4afd0055313efa11db8c5ce3269212" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTIT_double::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Double floating point value. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="305" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionFTIT__double_1aee22cb8601afc60c43bb8b2cd4e22e00" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FTIT_double::floatval[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>floatval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Float mapped to do bit edits. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="306" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionFTIT__double_1a3088c1495976f450b275205542933a06" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_double::intval[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>intval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integer mapped to do bit edits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="307" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionFTIT__double_1a1e7d9226af45caec2fea39320d906df1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_double::byte[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Byte array for coarser control. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="308" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="304" column="30" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="304" bodyend="309"/>
+    <listofallmembers>
+      <member refid="unionFTIT__double_1a1e7d9226af45caec2fea39320d906df1" prot="public" virt="non-virtual"><scope>FTIT_double</scope><name>byte</name></member>
+      <member refid="unionFTIT__double_1aee22cb8601afc60c43bb8b2cd4e22e00" prot="public" virt="non-virtual"><scope>FTIT_double</scope><name>floatval</name></member>
+      <member refid="unionFTIT__double_1a3088c1495976f450b275205542933a06" prot="public" virt="non-virtual"><scope>FTIT_double</scope><name>intval</name></member>
+      <member refid="unionFTIT__double_1acd4afd0055313efa11db8c5ce3269212" prot="public" virt="non-virtual"><scope>FTIT_double</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

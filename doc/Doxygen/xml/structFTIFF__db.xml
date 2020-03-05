@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIFF__db" kind="struct" language="C++" prot="public">
+    <compoundname>FTIFF_db</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIFF__db_1adf6ace3fc9f2341c0b469fbf6a643637" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIFF_db::numvars</definition>
+        <argsstring></argsstring>
+        <name>numvars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of protected variables in datablock <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="270" column="13" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIFF__db_1a3082dec5c3f31b3ce3e82e7470fe48ec" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long FTIFF_db::dbsize</definition>
+        <argsstring></argsstring>
+        <name>dbsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>size of metadata + data for block in bytes <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="271" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIFF__db_1aeacdc3bdf3a22f36e95caf5ecf2bd89f" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char FTIFF_db::myhash[MD5_DIGEST_LENGTH]</definition>
+        <argsstring>[MD5_DIGEST_LENGTH]</argsstring>
+        <name>myhash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hash of variable chunk <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="272" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIFF__db_1a5446f53de6daab13561ed2b937ed466f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIFF_db::update</definition>
+        <argsstring></argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if struct needs to be updated in ckpt file <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="273" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIFF__db_1a99a01f691c366240cab1aec85d9e6c40" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIFF_db::finalized</definition>
+        <argsstring></argsstring>
+        <name>finalized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if block is stored in cp file <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="274" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIFF__db_1a901aa55818fed9df513fe669d4ef3ca2" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIFF__dbvar" kindref="compound">FTIFF_dbvar</ref> *</type>
+        <definition>FTIFF_dbvar* FTIFF_db::dbvars</definition>
+        <argsstring></argsstring>
+        <name>dbvars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to related dbvar array <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="275" column="21" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIFF__db_1a21fdc67220f708c989d856a199831e6c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structFTIFF__db" kindref="compound">FTIFF_db</ref> *</type>
+        <definition>struct FTIFF_db* FTIFF_db::previous</definition>
+        <argsstring></argsstring>
+        <name>previous</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>link to previous datablock <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="276" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIFF__db_1ab18464ef5dbebde3a4ae39d9125d7151" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structFTIFF__db" kindref="compound">FTIFF_db</ref> *</type>
+        <definition>struct FTIFF_db* FTIFF_db::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>link to next datablock <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="277" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>FTIFF_dbvar</label>
+        <link refid="structFTIFF__dbvar"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dataDiffHash</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FTIT_DataDiffHash</label>
+        <link refid="structFTIT__DataDiffHash"/>
+      </node>
+      <node id="1">
+        <label>FTIFF_db</label>
+        <link refid="structFTIFF__db"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>previous</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dbvars</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="269" column="27" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="269" bodyend="278"/>
+    <listofallmembers>
+      <member refid="structFTIFF__db_1a3082dec5c3f31b3ce3e82e7470fe48ec" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>dbsize</name></member>
+      <member refid="structFTIFF__db_1a901aa55818fed9df513fe669d4ef3ca2" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>dbvars</name></member>
+      <member refid="structFTIFF__db_1a99a01f691c366240cab1aec85d9e6c40" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>finalized</name></member>
+      <member refid="structFTIFF__db_1aeacdc3bdf3a22f36e95caf5ecf2bd89f" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>myhash</name></member>
+      <member refid="structFTIFF__db_1ab18464ef5dbebde3a4ae39d9125d7151" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>next</name></member>
+      <member refid="structFTIFF__db_1adf6ace3fc9f2341c0b469fbf6a643637" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>numvars</name></member>
+      <member refid="structFTIFF__db_1a21fdc67220f708c989d856a199831e6c" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>previous</name></member>
+      <member refid="structFTIFF__db_1a5446f53de6daab13561ed2b937ed466f" prot="public" virt="non-virtual"><scope>FTIFF_db</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

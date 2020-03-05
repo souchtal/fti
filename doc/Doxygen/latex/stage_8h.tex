@@ -1,0 +1,561 @@
+\hypertarget{stage_8h}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/stage.h File Reference}
+\label{stage_8h}\index{/home/bscuser/Documents/release/dev/fti/src/stage.h@{/home/bscuser/Documents/release/dev/fti/src/stage.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structFTIT__StageHeadInfo}{F\+T\+I\+T\+\_\+\+Stage\+Head\+Info}}
+\item 
+struct \mbox{\hyperlink{structFTIT__StageAppInfo}{F\+T\+I\+T\+\_\+\+Stage\+App\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stage_8h_ad88cc2c7bdc825945e93832f0d294ae9}{F\+T\+I\+\_\+\+S\+I\+\_\+\+M\+A\+X\+\_\+\+N\+UM}}~(512L$\ast$1024L)
+\item 
+\#define \mbox{\hyperlink{stage_8h_aed3bf8a3f1451c28fdf8f7c0d6f80a3f}{F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+A\+VL}}~0x1
+\item 
+\#define \mbox{\hyperlink{stage_8h_a801ee3b0f00dfbfb2c72f17666565fa8}{F\+T\+I\+\_\+\+S\+I\+\_\+\+I\+A\+VL}}~0x0
+\item 
+\#define \mbox{\hyperlink{stage_8h_a885359d6b9b087342e57256a345e8ca0}{F\+T\+I\+\_\+\+S\+I\+\_\+\+I\+A\+LL}}~0x1
+\item 
+\#define \mbox{\hyperlink{stage_8h_a4cb2768f435a67134365643365af27f7}{F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+A\+LL}}~0x0
+\item 
+\#define \mbox{\hyperlink{stage_8h_ac2bb11c3f5f891e1e161b6b5c4f517e0}{F\+T\+I\+\_\+\+S\+I\+\_\+\+A\+P\+TR}}(ptr)~((\mbox{\hyperlink{structFTIT__StageAppInfo}{F\+T\+I\+T\+\_\+\+Stage\+App\+Info}}$\ast$)ptr)
+\item 
+\#define \mbox{\hyperlink{stage_8h_afa3c2ff5007ff6d4e2159653fa2bffbd}{F\+T\+I\+\_\+\+S\+I\+\_\+\+H\+P\+TR}}(ptr)~((\mbox{\hyperlink{structFTIT__StageHeadInfo}{F\+T\+I\+T\+\_\+\+Stage\+Head\+Info}}$\ast$)ptr)
+\item 
+\#define \mbox{\hyperlink{stage_8h_a1de8469fed78e2cafab8f93bd1b2b870}{F\+T\+I\+\_\+\+S\+I\+\_\+\+M\+A\+X\+\_\+\+ID}}~(0x7ffff)
+\item 
+\#define \mbox{\hyperlink{stage_8h_a699d27699d4a8a419f9d643d8a74aa38}{F\+T\+I\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+S\+T\+A\+G\+I\+NG}}~do\{$\ast$enable\+Staging\+Ptr = false;\} while(0)
+\item 
+\#define \mbox{\hyperlink{stage_8h_aa81d3d5a8f468c54e216747e4937c77c}{F\+T\+I\+\_\+\+S\+I\+\_\+\+E\+N\+A\+B\+L\+ED}}~($\ast$(bool$\ast$)enable\+Staging\+Ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__StageHeadInfo}{F\+T\+I\+T\+\_\+\+Stage\+Head\+Info}} \mbox{\hyperlink{stage_8h_a0ace2903bf808b32a8bc91aae9fb93a2}{F\+T\+I\+T\+\_\+\+Stage\+Head\+Info}}
+\begin{DoxyCompactList}\small\item\em Head rank staging meta info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__StageAppInfo}{F\+T\+I\+T\+\_\+\+Stage\+App\+Info}} \mbox{\hyperlink{stage_8h_a4c4836845c1d522c6c26852c27d53a67}{F\+T\+I\+T\+\_\+\+Stage\+App\+Info}}
+\begin{DoxyCompactList}\small\item\em Application rank staging meta info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}{F\+T\+I\+T\+\_\+\+Status\+Field}} \{ \mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887a3c0c80cbe8e4a14370a8a47f2a54b6ba}{F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+A\+VL}} = 0, 
+\mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887a18a6215a6b91702735bbfb1f211d814c}{F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+V\+AL}}
+ \}
+\begin{DoxyCompactList}\small\item\em valid fields of \textquotesingle{}status\textquotesingle{}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}{F\+T\+I\+T\+\_\+\+Request\+Field}} \{ \mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7}{F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+A\+LL}} = 0, 
+\mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8}{F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+I\+DX}}
+ \}
+\begin{DoxyCompactList}\small\item\em valid fields of \textquotesingle{}idx\+Request\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{stage_8h_af704cfca36ed0ca9ab685a838518c114}{F\+T\+I\+\_\+\+Get\+Request\+ID}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo)
+\begin{DoxyCompactList}\small\item\em Returns unique \textquotesingle{}ID\textquotesingle{} for staging request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a46b8c1f1c37f48eb4261fc646e460478}{F\+T\+I\+\_\+\+Init\+Stage}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo)
+\begin{DoxyCompactList}\small\item\em Initializes the F\+TI staging feature. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_add93ac9ae93c0bc729d2d68f1617341c}{F\+T\+I\+\_\+\+Init\+Stage\+Request\+App}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, uint32\+\_\+t ID)
+\begin{DoxyCompactList}\small\item\em Initializes new stage meta info element (application rank) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a61d6e550d9f80163986a523bc8f2d33d}{F\+T\+I\+\_\+\+Async\+Stage}} (char $\ast$lpath, char $\ast$rpath, \mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int ID)
+\begin{DoxyCompactList}\small\item\em This function triggers the asynchronous stage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_ae4b37a2f01edc58f583e828993eda152}{F\+T\+I\+\_\+\+Init\+Stage\+Request\+Head}} (char $\ast$lpath, char $\ast$rpath, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int source, uint32\+\_\+t ID)
+\begin{DoxyCompactList}\small\item\em Initializes new stage meta info element (head rank) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a182f1f60a5374160a724cee0034c572d}{F\+T\+I\+\_\+\+Sync\+Stage}} (char $\ast$lpath, char $\ast$rpath, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, uint32\+\_\+t ID)
+\begin{DoxyCompactList}\small\item\em This function synchronously stages the local file to the P\+FS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a7e59d3bafaa826d69a91493c80a417e3}{F\+T\+I\+\_\+\+Handle\+Stage\+Request}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$F\+T\+I\+\_\+\+Ckpt, int source)
+\begin{DoxyCompactList}\small\item\em This function asynchronously stages the local file to the P\+FS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a03ebd25f6254d11bc790e70e9aabd9eb}{F\+T\+I\+\_\+\+Get\+Status\+Field}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int ID, \mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}{F\+T\+I\+T\+\_\+\+Status\+Field}} val, int source)
+\begin{DoxyCompactList}\small\item\em Returns value from the \textquotesingle{}status\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_ab210803902592adb2ebb22b9a9a28dda}{F\+T\+I\+\_\+\+Set\+Status\+Field}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int ID, uint8\+\_\+t entry, \mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}{F\+T\+I\+T\+\_\+\+Status\+Field}} val, int source)
+\begin{DoxyCompactList}\small\item\em Sets value from the \textquotesingle{}status\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a1b29cd8c8e9446f2dbd8dafac4d07f05}{F\+T\+I\+\_\+\+Get\+Request\+Field}} (int ID, \mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}{F\+T\+I\+T\+\_\+\+Request\+Field}} val)
+\begin{DoxyCompactList}\small\item\em Returns value from the \textquotesingle{}idx\+Request\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a35eb6e7616b99b2d7713d802327fe061}{F\+T\+I\+\_\+\+Set\+Request\+Field}} (int ID, uint32\+\_\+t entry, \mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}{F\+T\+I\+T\+\_\+\+Request\+Field}} val)
+\begin{DoxyCompactList}\small\item\em Sets value of the \textquotesingle{}idx\+Request\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{stage_8h_a6e74aba3e759272cbdb8db6ccbb879f2}{F\+T\+I\+\_\+\+Free\+Stage\+Request}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int ID, int source)
+\begin{DoxyCompactList}\small\item\em frees stage meta info element (head/application rank) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stage_8h_a11011f5e2b91e35d66c5c39d33aa0aae}{F\+T\+I\+\_\+\+Print\+Stage\+Status}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int ID, int source)
+\item 
+int \mbox{\hyperlink{stage_8h_a0c5a2182e719ef3336289bd24f8fd312}{F\+T\+I\+\_\+\+Get\+Request\+Idx}} (int ID)
+\begin{DoxyCompactList}\small\item\em returns the index of desired stage meta info element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stage_8h_acf6cca854e653c7c23d24011f5b3afc4}{F\+T\+I\+\_\+\+Finalize\+Stage}} (\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf)
+\begin{DoxyCompactList}\small\item\em Finalizes staging feature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stage_8h_a699d27699d4a8a419f9d643d8a74aa38}\label{stage_8h_a699d27699d4a8a419f9d643d8a74aa38}} 
+\index{stage.h@{stage.h}!FTI\_DISABLE\_STAGING@{FTI\_DISABLE\_STAGING}}
+\index{FTI\_DISABLE\_STAGING@{FTI\_DISABLE\_STAGING}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_DISABLE\_STAGING}{FTI\_DISABLE\_STAGING}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+S\+T\+A\+G\+I\+NG~do\{$\ast$enable\+Staging\+Ptr = false;\} while(0)}
+
+\mbox{\Hypertarget{stage_8h_ac2bb11c3f5f891e1e161b6b5c4f517e0}\label{stage_8h_ac2bb11c3f5f891e1e161b6b5c4f517e0}} 
+\index{stage.h@{stage.h}!FTI\_SI\_APTR@{FTI\_SI\_APTR}}
+\index{FTI\_SI\_APTR@{FTI\_SI\_APTR}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_APTR}{FTI\_SI\_APTR}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+A\+P\+TR(\begin{DoxyParamCaption}\item[{}]{ptr }\end{DoxyParamCaption})~((\mbox{\hyperlink{structFTIT__StageAppInfo}{F\+T\+I\+T\+\_\+\+Stage\+App\+Info}}$\ast$)ptr)}
+
+\mbox{\Hypertarget{stage_8h_aa81d3d5a8f468c54e216747e4937c77c}\label{stage_8h_aa81d3d5a8f468c54e216747e4937c77c}} 
+\index{stage.h@{stage.h}!FTI\_SI\_ENABLED@{FTI\_SI\_ENABLED}}
+\index{FTI\_SI\_ENABLED@{FTI\_SI\_ENABLED}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_ENABLED}{FTI\_SI\_ENABLED}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+E\+N\+A\+B\+L\+ED~($\ast$(bool$\ast$)enable\+Staging\+Ptr)}
+
+\mbox{\Hypertarget{stage_8h_afa3c2ff5007ff6d4e2159653fa2bffbd}\label{stage_8h_afa3c2ff5007ff6d4e2159653fa2bffbd}} 
+\index{stage.h@{stage.h}!FTI\_SI\_HPTR@{FTI\_SI\_HPTR}}
+\index{FTI\_SI\_HPTR@{FTI\_SI\_HPTR}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_HPTR}{FTI\_SI\_HPTR}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+H\+P\+TR(\begin{DoxyParamCaption}\item[{}]{ptr }\end{DoxyParamCaption})~((\mbox{\hyperlink{structFTIT__StageHeadInfo}{F\+T\+I\+T\+\_\+\+Stage\+Head\+Info}}$\ast$)ptr)}
+
+\mbox{\Hypertarget{stage_8h_a885359d6b9b087342e57256a345e8ca0}\label{stage_8h_a885359d6b9b087342e57256a345e8ca0}} 
+\index{stage.h@{stage.h}!FTI\_SI\_IALL@{FTI\_SI\_IALL}}
+\index{FTI\_SI\_IALL@{FTI\_SI\_IALL}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_IALL}{FTI\_SI\_IALL}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+I\+A\+LL~0x1}
+
+\mbox{\Hypertarget{stage_8h_a801ee3b0f00dfbfb2c72f17666565fa8}\label{stage_8h_a801ee3b0f00dfbfb2c72f17666565fa8}} 
+\index{stage.h@{stage.h}!FTI\_SI\_IAVL@{FTI\_SI\_IAVL}}
+\index{FTI\_SI\_IAVL@{FTI\_SI\_IAVL}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_IAVL}{FTI\_SI\_IAVL}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+I\+A\+VL~0x0}
+
+\mbox{\Hypertarget{stage_8h_a1de8469fed78e2cafab8f93bd1b2b870}\label{stage_8h_a1de8469fed78e2cafab8f93bd1b2b870}} 
+\index{stage.h@{stage.h}!FTI\_SI\_MAX\_ID@{FTI\_SI\_MAX\_ID}}
+\index{FTI\_SI\_MAX\_ID@{FTI\_SI\_MAX\_ID}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_MAX\_ID}{FTI\_SI\_MAX\_ID}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+M\+A\+X\+\_\+\+ID~(0x7ffff)}
+
+\mbox{\Hypertarget{stage_8h_ad88cc2c7bdc825945e93832f0d294ae9}\label{stage_8h_ad88cc2c7bdc825945e93832f0d294ae9}} 
+\index{stage.h@{stage.h}!FTI\_SI\_MAX\_NUM@{FTI\_SI\_MAX\_NUM}}
+\index{FTI\_SI\_MAX\_NUM@{FTI\_SI\_MAX\_NUM}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_MAX\_NUM}{FTI\_SI\_MAX\_NUM}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+M\+A\+X\+\_\+\+N\+UM~(512L$\ast$1024L)}
+
+Maximum amount of concurrent active staging requests ~\newline
+ \begin{DoxyNote}{Note}
+leads to 2.\+5\+MB for the application processes as minimum memory allocated 
+\end{DoxyNote}
+\mbox{\Hypertarget{stage_8h_a4cb2768f435a67134365643365af27f7}\label{stage_8h_a4cb2768f435a67134365643365af27f7}} 
+\index{stage.h@{stage.h}!FTI\_SI\_NALL@{FTI\_SI\_NALL}}
+\index{FTI\_SI\_NALL@{FTI\_SI\_NALL}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_NALL}{FTI\_SI\_NALL}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+A\+LL~0x0}
+
+\mbox{\Hypertarget{stage_8h_aed3bf8a3f1451c28fdf8f7c0d6f80a3f}\label{stage_8h_aed3bf8a3f1451c28fdf8f7c0d6f80a3f}} 
+\index{stage.h@{stage.h}!FTI\_SI\_NAVL@{FTI\_SI\_NAVL}}
+\index{FTI\_SI\_NAVL@{FTI\_SI\_NAVL}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_NAVL}{FTI\_SI\_NAVL}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+A\+VL~0x1}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{stage_8h_a4c4836845c1d522c6c26852c27d53a67}\label{stage_8h_a4c4836845c1d522c6c26852c27d53a67}} 
+\index{stage.h@{stage.h}!FTIT\_StageAppInfo@{FTIT\_StageAppInfo}}
+\index{FTIT\_StageAppInfo@{FTIT\_StageAppInfo}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_StageAppInfo}{FTIT\_StageAppInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__StageAppInfo}{F\+T\+I\+T\+\_\+\+Stage\+App\+Info}}}
+
+
+
+Application rank staging meta info. 
+
+\mbox{\Hypertarget{stage_8h_a0ace2903bf808b32a8bc91aae9fb93a2}\label{stage_8h_a0ace2903bf808b32a8bc91aae9fb93a2}} 
+\index{stage.h@{stage.h}!FTIT\_StageHeadInfo@{FTIT\_StageHeadInfo}}
+\index{FTIT\_StageHeadInfo@{FTIT\_StageHeadInfo}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_StageHeadInfo}{FTIT\_StageHeadInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__StageHeadInfo}{F\+T\+I\+T\+\_\+\+Stage\+Head\+Info}}}
+
+
+
+Head rank staging meta info. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}\label{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}} 
+\index{stage.h@{stage.h}!FTIT\_RequestField@{FTIT\_RequestField}}
+\index{FTIT\_RequestField@{FTIT\_RequestField}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_RequestField}{FTIT\_RequestField}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}{F\+T\+I\+T\+\_\+\+Request\+Field}}}
+
+
+
+valid fields of \textquotesingle{}idx\+Request\textquotesingle{}. 
+
+enum that keeps the particular field identifiers for the \textquotesingle{}idx\+Request\textquotesingle{} field. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_SIF\_ALL@{FTI\_SIF\_ALL}!stage.h@{stage.h}}\index{stage.h@{stage.h}!FTI\_SIF\_ALL@{FTI\_SIF\_ALL}}}\mbox{\Hypertarget{stage_8h_a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7}\label{stage_8h_a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7}} 
+F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+A\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_SIF\_IDX@{FTI\_SIF\_IDX}!stage.h@{stage.h}}\index{stage.h@{stage.h}!FTI\_SIF\_IDX@{FTI\_SIF\_IDX}}}\mbox{\Hypertarget{stage_8h_a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8}\label{stage_8h_a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8}} 
+F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+I\+DX&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}\label{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}} 
+\index{stage.h@{stage.h}!FTIT\_StatusField@{FTIT\_StatusField}}
+\index{FTIT\_StatusField@{FTIT\_StatusField}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_StatusField}{FTIT\_StatusField}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}{F\+T\+I\+T\+\_\+\+Status\+Field}}}
+
+
+
+valid fields of \textquotesingle{}status\textquotesingle{}. 
+
+enum that keeps the particular field identifiers for the \textquotesingle{}status\textquotesingle{} field. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_SIF\_AVL@{FTI\_SIF\_AVL}!stage.h@{stage.h}}\index{stage.h@{stage.h}!FTI\_SIF\_AVL@{FTI\_SIF\_AVL}}}\mbox{\Hypertarget{stage_8h_a90a1c70f104f770eff8ba0b2febc7887a3c0c80cbe8e4a14370a8a47f2a54b6ba}\label{stage_8h_a90a1c70f104f770eff8ba0b2febc7887a3c0c80cbe8e4a14370a8a47f2a54b6ba}} 
+F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+A\+VL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_SIF\_VAL@{FTI\_SIF\_VAL}!stage.h@{stage.h}}\index{stage.h@{stage.h}!FTI\_SIF\_VAL@{FTI\_SIF\_VAL}}}\mbox{\Hypertarget{stage_8h_a90a1c70f104f770eff8ba0b2febc7887a18a6215a6b91702735bbfb1f211d814c}\label{stage_8h_a90a1c70f104f770eff8ba0b2febc7887a18a6215a6b91702735bbfb1f211d814c}} 
+F\+T\+I\+\_\+\+S\+I\+F\+\_\+\+V\+AL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stage_8h_a61d6e550d9f80163986a523bc8f2d33d}\label{stage_8h_a61d6e550d9f80163986a523bc8f2d33d}} 
+\index{stage.h@{stage.h}!FTI\_AsyncStage@{FTI\_AsyncStage}}
+\index{FTI\_AsyncStage@{FTI\_AsyncStage}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_AsyncStage()}{FTI\_AsyncStage()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Async\+Stage (\begin{DoxyParamCaption}\item[{char $\ast$}]{lpath,  }\item[{char $\ast$}]{rpath,  }\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+This function triggers the asynchronous stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \textquotesingle{}lpath\textquotesingle{}, absolute path of local file \\
+\hline
+{\em string} & \textquotesingle{}rpath\textquotesingle{}, absolute path of remote file \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}F\+T\+I\+\_\+\+S\+C\+ES\textquotesingle{} on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else.
+\end{DoxyReturn}
+This function uses a non-\/blocking send (M\+P\+I\+\_\+\+Isend) in order to pass the information that is needed by the head process to perform an asynchronous staging of the local file to the P\+FS. \mbox{\Hypertarget{stage_8h_acf6cca854e653c7c23d24011f5b3afc4}\label{stage_8h_acf6cca854e653c7c23d24011f5b3afc4}} 
+\index{stage.h@{stage.h}!FTI\_FinalizeStage@{FTI\_FinalizeStage}}
+\index{FTI\_FinalizeStage@{FTI\_FinalizeStage}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_FinalizeStage()}{FTI\_FinalizeStage()}}
+{\footnotesize\ttfamily void F\+T\+I\+\_\+\+Finalize\+Stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf }\end{DoxyParamCaption})}
+
+
+
+Finalizes staging feature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata.\\
+\hline
+\end{DoxyParams}
+This function frees allocated ressources, removes local staging files and the staging directory and destroys the node communicator \mbox{\Hypertarget{stage_8h_a6e74aba3e759272cbdb8db6ccbb879f2}\label{stage_8h_a6e74aba3e759272cbdb8db6ccbb879f2}} 
+\index{stage.h@{stage.h}!FTI\_FreeStageRequest@{FTI\_FreeStageRequest}}
+\index{FTI\_FreeStageRequest@{FTI\_FreeStageRequest}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_FreeStageRequest()}{FTI\_FreeStageRequest()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Free\+Stage\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int}]{ID,  }\item[{int}]{source }\end{DoxyParamCaption})}
+
+
+
+frees stage meta info element (head/application rank) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+{\em integer} & \textquotesingle{}source\textquotesingle{}, application rank of stage request\\
+\hline
+\end{DoxyParams}
+This function eliminates the \textquotesingle{}ID\textquotesingle{} corresponding element from the stage meta info array and frees the corresponding memory. In the application ranks it also reorders the index information in the \textquotesingle{}idx\+RequestÄ array corresponding to \textquotesingle{}ID\textquotesingle{}. \mbox{\Hypertarget{stage_8h_a1b29cd8c8e9446f2dbd8dafac4d07f05}\label{stage_8h_a1b29cd8c8e9446f2dbd8dafac4d07f05}} 
+\index{stage.h@{stage.h}!FTI\_GetRequestField@{FTI\_GetRequestField}}
+\index{FTI\_GetRequestField@{FTI\_GetRequestField}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetRequestField()}{FTI\_GetRequestField()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Get\+Request\+Field (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}{F\+T\+I\+T\+\_\+\+Request\+Field}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Returns value from the \textquotesingle{}idx\+Request\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+{\em F\+T\+I\+T\+\_\+\+Status\+Field} & requested field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Field value on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{stage_8h_af704cfca36ed0ca9ab685a838518c114}\label{stage_8h_af704cfca36ed0ca9ab685a838518c114}} 
+\index{stage.h@{stage.h}!FTI\_GetRequestID@{FTI\_GetRequestID}}
+\index{FTI\_GetRequestID@{FTI\_GetRequestID}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetRequestID()}{FTI\_GetRequestID()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Get\+Request\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo }\end{DoxyParamCaption})}
+
+
+
+Returns unique \textquotesingle{}ID\textquotesingle{} for staging request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}ID\textquotesingle{} on success, -\/1 else. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stage_8h_a0c5a2182e719ef3336289bd24f8fd312}\label{stage_8h_a0c5a2182e719ef3336289bd24f8fd312}} 
+\index{stage.h@{stage.h}!FTI\_GetRequestIdx@{FTI\_GetRequestIdx}}
+\index{FTI\_GetRequestIdx@{FTI\_GetRequestIdx}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetRequestIdx()}{FTI\_GetRequestIdx()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Get\+Request\+Idx (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+returns the index of desired stage meta info element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index if \textquotesingle{}ID\textquotesingle{} corresponding meta info structure was allocated -\/1, else. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{stage_8h_a03ebd25f6254d11bc790e70e9aabd9eb}\label{stage_8h_a03ebd25f6254d11bc790e70e9aabd9eb}} 
+\index{stage.h@{stage.h}!FTI\_GetStatusField@{FTI\_GetStatusField}}
+\index{FTI\_GetStatusField@{FTI\_GetStatusField}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetStatusField()}{FTI\_GetStatusField()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Get\+Status\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int}]{ID,  }\item[{\mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}{F\+T\+I\+T\+\_\+\+Status\+Field}}}]{val,  }\item[{int}]{source }\end{DoxyParamCaption})}
+
+
+
+Returns value from the \textquotesingle{}status\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+{\em F\+T\+I\+T\+\_\+\+Status\+Field} & requested field \\
+\hline
+{\em integer} & \textquotesingle{}source\textquotesingle{}, application rank of stage request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Field value on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stage_8h_a7e59d3bafaa826d69a91493c80a417e3}\label{stage_8h_a7e59d3bafaa826d69a91493c80a417e3}} 
+\index{stage.h@{stage.h}!FTI\_HandleStageRequest@{FTI\_HandleStageRequest}}
+\index{FTI\_HandleStageRequest@{FTI\_HandleStageRequest}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_HandleStageRequest()}{FTI\_HandleStageRequest()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Handle\+Stage\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$}]{F\+T\+I\+\_\+\+Ckpt,  }\item[{int}]{source }\end{DoxyParamCaption})}
+
+
+
+This function asynchronously stages the local file to the P\+FS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \textquotesingle{}lpath\textquotesingle{}, absolute path of local file. \\
+\hline
+{\em string} & \textquotesingle{}rpath\textquotesingle{}, absolute path of remote file. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em integer} & \textquotesingle{}source\textquotesingle{}, application rank of stage request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}F\+T\+I\+\_\+\+S\+C\+ES\textquotesingle{} on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stage_8h_a46b8c1f1c37f48eb4261fc646e460478}\label{stage_8h_a46b8c1f1c37f48eb4261fc646e460478}} 
+\index{stage.h@{stage.h}!FTI\_InitStage@{FTI\_InitStage}}
+\index{FTI\_InitStage@{FTI\_InitStage}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitStage()}{FTI\_InitStage()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo }\end{DoxyParamCaption})}
+
+
+
+Initializes the F\+TI staging feature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata.\\
+\hline
+\end{DoxyParams}
+This function allocates memory for the \textquotesingle{}idx\+Request\textquotesingle{} and \textquotesingle{}status\textquotesingle{} fields, creates a node communicator and an M\+PI shared memory window. \mbox{\Hypertarget{stage_8h_add93ac9ae93c0bc729d2d68f1617341c}\label{stage_8h_add93ac9ae93c0bc729d2d68f1617341c}} 
+\index{stage.h@{stage.h}!FTI\_InitStageRequestApp@{FTI\_InitStageRequestApp}}
+\index{FTI\_InitStageRequestApp@{FTI\_InitStageRequestApp}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitStageRequestApp()}{FTI\_InitStageRequestApp()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Stage\+Request\+App (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{uint32\+\_\+t}]{ID }\end{DoxyParamCaption})}
+
+
+
+Initializes new stage meta info element (application rank) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request\\
+\hline
+\end{DoxyParams}
+This function appends a new staging meta info element for the application ranks to \textquotesingle{}F\+T\+I\+\_\+\+Exec-\/$>$stage\+Info-\/$>$request\textquotesingle{}. Beside that it also initializes the status field (status -\/$>$ pending) corresponding to \textquotesingle{}ID\textquotesingle{} and assigns the proper index of the meta info element to the \textquotesingle{}ID\textquotesingle{} corresponding \textquotesingle{}idx\+Request\textquotesingle{} field. \mbox{\Hypertarget{stage_8h_ae4b37a2f01edc58f583e828993eda152}\label{stage_8h_ae4b37a2f01edc58f583e828993eda152}} 
+\index{stage.h@{stage.h}!FTI\_InitStageRequestHead@{FTI\_InitStageRequestHead}}
+\index{FTI\_InitStageRequestHead@{FTI\_InitStageRequestHead}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitStageRequestHead()}{FTI\_InitStageRequestHead()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Stage\+Request\+Head (\begin{DoxyParamCaption}\item[{char $\ast$}]{lpath,  }\item[{char $\ast$}]{rpath,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int}]{source,  }\item[{uint32\+\_\+t}]{ID }\end{DoxyParamCaption})}
+
+
+
+Initializes new stage meta info element (head rank) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \textquotesingle{}lpath\textquotesingle{}, absolute path of local file \\
+\hline
+{\em string} & \textquotesingle{}rpath\textquotesingle{}, absolute path of remote file \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em integer} & \textquotesingle{}source\textquotesingle{}, application rank of stage request \\
+\hline
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}F\+T\+I\+\_\+\+S\+C\+ES\textquotesingle{} on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else. ~\newline
+
+\end{DoxyReturn}
+This function appends a new staging meta info element for the head ranks to \textquotesingle{}F\+T\+I\+\_\+\+Exec-\/$>$stage\+Info-\/$>$request\textquotesingle{}. Beside that it also changes the status field corresponding to \textquotesingle{}ID\textquotesingle{} (status -\/$>$ active). \mbox{\Hypertarget{stage_8h_a11011f5e2b91e35d66c5c39d33aa0aae}\label{stage_8h_a11011f5e2b91e35d66c5c39d33aa0aae}} 
+\index{stage.h@{stage.h}!FTI\_PrintStageStatus@{FTI\_PrintStageStatus}}
+\index{FTI\_PrintStageStatus@{FTI\_PrintStageStatus}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_PrintStageStatus()}{FTI\_PrintStageStatus()}}
+{\footnotesize\ttfamily void F\+T\+I\+\_\+\+Print\+Stage\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int}]{ID,  }\item[{int}]{source }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stage_8h_a35eb6e7616b99b2d7713d802327fe061}\label{stage_8h_a35eb6e7616b99b2d7713d802327fe061}} 
+\index{stage.h@{stage.h}!FTI\_SetRequestField@{FTI\_SetRequestField}}
+\index{FTI\_SetRequestField@{FTI\_SetRequestField}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SetRequestField()}{FTI\_SetRequestField()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Set\+Request\+Field (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{uint32\+\_\+t}]{entry,  }\item[{\mbox{\hyperlink{stage_8h_a05ee3f86e04233d44812d99f1ce02f98}{F\+T\+I\+T\+\_\+\+Request\+Field}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sets value of the \textquotesingle{}idx\+Request\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+{\em integer} & \textquotesingle{}entry\textquotesingle{}, new value of field \\
+\hline
+{\em F\+T\+I\+T\+\_\+\+Status\+Field} & requested field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}entry\textquotesingle{} on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{stage_8h_ab210803902592adb2ebb22b9a9a28dda}\label{stage_8h_ab210803902592adb2ebb22b9a9a28dda}} 
+\index{stage.h@{stage.h}!FTI\_SetStatusField@{FTI\_SetStatusField}}
+\index{FTI\_SetStatusField@{FTI\_SetStatusField}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SetStatusField()}{FTI\_SetStatusField()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Set\+Status\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int}]{ID,  }\item[{uint8\+\_\+t}]{entry,  }\item[{\mbox{\hyperlink{stage_8h_a90a1c70f104f770eff8ba0b2febc7887}{F\+T\+I\+T\+\_\+\+Status\+Field}}}]{val,  }\item[{int}]{source }\end{DoxyParamCaption})}
+
+
+
+Sets value from the \textquotesingle{}status\textquotesingle{} field array at \textquotesingle{}ID\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+{\em integer} & \textquotesingle{}entry\textquotesingle{}, new value of field \\
+\hline
+{\em F\+T\+I\+T\+\_\+\+Status\+Field} & requested field \\
+\hline
+{\em integer} & \textquotesingle{}source\textquotesingle{}, application rank of stage request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}entry\textquotesingle{} value on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stage_8h_a182f1f60a5374160a724cee0034c572d}\label{stage_8h_a182f1f60a5374160a724cee0034c572d}} 
+\index{stage.h@{stage.h}!FTI\_SyncStage@{FTI\_SyncStage}}
+\index{FTI\_SyncStage@{FTI\_SyncStage}!stage.h@{stage.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SyncStage()}{FTI\_SyncStage()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Sync\+Stage (\begin{DoxyParamCaption}\item[{char $\ast$}]{lpath,  }\item[{char $\ast$}]{rpath,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{uint32\+\_\+t}]{ID }\end{DoxyParamCaption})}
+
+
+
+This function synchronously stages the local file to the P\+FS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \textquotesingle{}lpath\textquotesingle{}, absolute path of local file \\
+\hline
+{\em string} & \textquotesingle{}rpath\textquotesingle{}, absolute path of remote file \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em integer} & \textquotesingle{}ID\textquotesingle{} of staging request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}F\+T\+I\+\_\+\+S\+C\+ES\textquotesingle{} on success, \textquotesingle{}F\+T\+I\+\_\+\+N\+S\+CS\textquotesingle{} else. ~\newline
+
+\end{DoxyReturn}
+This function should be called only if the staging feature is enabled without the head process being enabled. 

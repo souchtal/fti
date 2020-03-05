@@ -1,0 +1,143 @@
+\hypertarget{topo_8h}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/topo.h File Reference}
+\label{topo_8h}\index{/home/bscuser/Documents/release/dev/fti/src/topo.h@{/home/bscuser/Documents/release/dev/fti/src/topo.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{topo_8h_a23d88a13c6359b801a14789fe13f245a}{F\+T\+I\+\_\+\+Save\+Topo}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, char $\ast$name\+List)
+\begin{DoxyCompactList}\small\item\em It writes the topology in a file for recovery. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{topo_8h_a8b39f445072e18cec2fa531d36e22dc1}{F\+T\+I\+\_\+\+Reorder\+Nodes}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int $\ast$node\+List, char $\ast$name\+List)
+\begin{DoxyCompactList}\small\item\em It reorders the nodes following the previous topology. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{topo_8h_a39b796a67f541fd75aeaa73a9b29025a}{F\+T\+I\+\_\+\+Build\+Node\+List}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int $\ast$node\+List, char $\ast$name\+List)
+\begin{DoxyCompactList}\small\item\em It builds the list of nodes in the current execution. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{topo_8h_a1f57d69148df779a939b4b9a48223d67}{F\+T\+I\+\_\+\+Create\+Comms}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, int $\ast$user\+Proc\+List, int $\ast$dist\+Proc\+List, int $\ast$node\+List)
+\begin{DoxyCompactList}\small\item\em It builds the list of nodes in the current execution. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{topo_8h_aeff729c7cc86f39b20d320ead76aa2b6}{F\+T\+I\+\_\+\+Topology}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo)
+\begin{DoxyCompactList}\small\item\em It builds and saves the topology of the current execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{topo_8h_a39b796a67f541fd75aeaa73a9b29025a}\label{topo_8h_a39b796a67f541fd75aeaa73a9b29025a}} 
+\index{topo.h@{topo.h}!FTI\_BuildNodeList@{FTI\_BuildNodeList}}
+\index{FTI\_BuildNodeList@{FTI\_BuildNodeList}!topo.h@{topo.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_BuildNodeList()}{FTI\_BuildNodeList()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Build\+Node\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int $\ast$}]{node\+List,  }\item[{char $\ast$}]{name\+List }\end{DoxyParamCaption})}
+
+
+
+It builds the list of nodes in the current execution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em node\+List} & The list of the nodes to fill. \\
+\hline
+{\em name\+List} & The list of the node names to fill. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function makes all the processes to detect in which node are they located and distributes the information globally to create an uniform mapping structure between processes and nodes. \mbox{\Hypertarget{topo_8h_a1f57d69148df779a939b4b9a48223d67}\label{topo_8h_a1f57d69148df779a939b4b9a48223d67}} 
+\index{topo.h@{topo.h}!FTI\_CreateComms@{FTI\_CreateComms}}
+\index{FTI\_CreateComms@{FTI\_CreateComms}!topo.h@{topo.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_CreateComms()}{FTI\_CreateComms()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Create\+Comms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int $\ast$}]{user\+Proc\+List,  }\item[{int $\ast$}]{dist\+Proc\+List,  }\item[{int $\ast$}]{node\+List }\end{DoxyParamCaption})}
+
+
+
+It builds the list of nodes in the current execution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em user\+Proc\+List} & The list of the app. processess. \\
+\hline
+{\em dist\+Proc\+List} & The list of the distributed processes. \\
+\hline
+{\em node\+List} & The list of the nodes to fill. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function makes all the processes to detect in which node are they located and distributes the information globally to create an uniform mapping structure between processes and nodes. \mbox{\Hypertarget{topo_8h_a8b39f445072e18cec2fa531d36e22dc1}\label{topo_8h_a8b39f445072e18cec2fa531d36e22dc1}} 
+\index{topo.h@{topo.h}!FTI\_ReorderNodes@{FTI\_ReorderNodes}}
+\index{FTI\_ReorderNodes@{FTI\_ReorderNodes}!topo.h@{topo.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_ReorderNodes()}{FTI\_ReorderNodes()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Reorder\+Nodes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{int $\ast$}]{node\+List,  }\item[{char $\ast$}]{name\+List }\end{DoxyParamCaption})}
+
+
+
+It reorders the nodes following the previous topology. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em node\+List} & The list of the nodes. \\
+\hline
+{\em name\+List} & The list of the node names. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function writes the topology of the system (List of nodes and their ID) in a topology file that will be read during recovery to detect which nodes (and therefore checkpoit files) are missing in the new topology. \mbox{\Hypertarget{topo_8h_a23d88a13c6359b801a14789fe13f245a}\label{topo_8h_a23d88a13c6359b801a14789fe13f245a}} 
+\index{topo.h@{topo.h}!FTI\_SaveTopo@{FTI\_SaveTopo}}
+\index{FTI\_SaveTopo@{FTI\_SaveTopo}!topo.h@{topo.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SaveTopo()}{FTI\_SaveTopo()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Save\+Topo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{char $\ast$}]{name\+List }\end{DoxyParamCaption})}
+
+
+
+It writes the topology in a file for recovery. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em name\+List} & The list of the node names. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function writes the topology of the system (List of nodes and their ID) in a topology file that will be read during recovery to detect which nodes (and therefore checkpoit files) are missing in the new topology. \mbox{\Hypertarget{topo_8h_aeff729c7cc86f39b20d320ead76aa2b6}\label{topo_8h_aeff729c7cc86f39b20d320ead76aa2b6}} 
+\index{topo.h@{topo.h}!FTI\_Topology@{FTI\_Topology}}
+\index{FTI\_Topology@{FTI\_Topology}!topo.h@{topo.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Topology()}{FTI\_Topology()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Topology (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo }\end{DoxyParamCaption})}
+
+
+
+It builds and saves the topology of the current execution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function builds the topology of the system, detects and replaces missing nodes in case of recovery and creates the communicators required for F\+TI to work. It stores all required information in F\+T\+I\+\_\+\+Topo. 

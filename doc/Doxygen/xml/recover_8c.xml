@@ -1,0 +1,809 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="recover_8c" kind="file" language="C++">
+    <compoundname>recover.c</compoundname>
+    <includes refid="interface_8h" local="yes">interface.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="28">
+        <label>IO/ftiff.h</label>
+      </node>
+      <node id="13">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>fti.h</label>
+        <link refid="fti_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdarg.h</label>
+      </node>
+      <node id="30">
+        <label>failure-injection.h</label>
+        <link refid="failure-injection_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>../deps/jerasure/include/galois.h</label>
+      </node>
+      <node id="17">
+        <label>postreco.h</label>
+        <link refid="postreco_8h"/>
+      </node>
+      <node id="2">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>errno.h</label>
+      </node>
+      <node id="38">
+        <label>icp.h</label>
+        <link refid="icp_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>fcntl.h</label>
+      </node>
+      <node id="20">
+        <label>conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="35">
+        <label>postckpt.h</label>
+        <link refid="postckpt_8h"/>
+      </node>
+      <node id="43">
+        <label>../deps/iniparser/iniparser.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="27">
+        <label>IO/hdf5-fti.h</label>
+      </node>
+      <node id="15">
+        <label>meta.h</label>
+        <link refid="meta_8h"/>
+      </node>
+      <node id="34">
+        <label>limits.h</label>
+      </node>
+      <node id="21">
+        <label>checkpoint.h</label>
+        <link refid="checkpoint_8h"/>
+      </node>
+      <node id="19">
+        <label>dcp.h</label>
+        <link refid="dcp_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/recover.c</label>
+        <link refid="recover_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>recover.h</label>
+        <link refid="recover_8h"/>
+      </node>
+      <node id="31">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="40">
+        <label>utility.h</label>
+        <link refid="utility_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>tools.h</label>
+        <link refid="tools_8h"/>
+      </node>
+      <node id="22">
+        <label>stage.h</label>
+        <link refid="stage_8h"/>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="23">
+        <label>fti-io.h</label>
+        <link refid="fti-io_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fti-intern.h</label>
+        <link refid="fti-intern_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>../deps/md5/md5.h</label>
+      </node>
+      <node id="44">
+        <label>../deps/iniparser/dictionary.h</label>
+      </node>
+      <node id="26">
+        <label>IO/posix-dcp.h</label>
+      </node>
+      <node id="25">
+        <label>IO/posix.h</label>
+      </node>
+      <node id="46">
+        <label>../deps/jerasure/include/jerasure.h</label>
+      </node>
+      <node id="14">
+        <label>mpi.h</label>
+      </node>
+      <node id="29">
+        <label>IO/ftiff-dcp.h</label>
+      </node>
+      <node id="42">
+        <label>sion.h</label>
+      </node>
+      <node id="39">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+      </node>
+      <node id="37">
+        <label>fortran/ftif.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="24">
+        <label>topo.h</label>
+        <link refid="topo_8h"/>
+      </node>
+      <node id="16">
+        <label>api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="recover_8c_1a29f1aae84d9ec782867b16905241e531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_CheckFile</definition>
+        <argsstring>(char *fn, long fs, char *checksum)</argsstring>
+        <name>FTI_CheckFile</name>
+        <param>
+          <type>char *</type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>fs</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+<para>It checks if a file exist and that its size is &apos;correct&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ckpt. file name to check. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ckpt. file size to check. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file checksum to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer 0 if file exists, 1 if not or wrong size.</para>
+</simplesect>
+This function checks whether a file exist or not and if its size is the expected one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/recover.c" line="54" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/recover.c" bodystart="54" bodyend="92"/>
+        <references refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" compoundref="fti_8h" startline="12">FTI_BUFS</references>
+        <references refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" compoundref="api_8c" startline="2545" endline="2573">FTI_Print</references>
+        <references refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" compoundref="fti_8h" startline="18">FTI_SCES</references>
+        <references refid="tools_8c_1a0abe7d90a75d724af67071b5a672785d" compoundref="tools_8c" startline="278" endline="321">FTI_VerifyChecksum</references>
+        <references refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" compoundref="fti-intern_8h" startline="59">FTI_WARN</references>
+      </memberdef>
+      <memberdef kind="function" id="recover_8c_1a0d67927230e5cfb7848475129aa3b97c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_CheckErasures</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt, int *erased)</argsstring>
+        <name>FTI_CheckErasures</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>erased</declname>
+        </param>
+        <briefdescription>
+<para>It detects all the erasures for a particular level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Ckpt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>erased</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of erasures to fill. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function detects all the erasures for L1, L2 and L3. It return the results in the erased array. The search for erasures is done at the three levels independently on the current recovery level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/recover.c" line="110" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/recover.c" bodystart="110" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="recover_8c_1aa5ca92e3168d5b1ee7830507f8847dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_RecoverFiles</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt)</argsstring>
+        <name>FTI_RecoverFiles</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <briefdescription>
+<para>It decides wich action take depending on the restart level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Ckpt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function launches the required action depending on the recovery level. The recovery level is detected from the checkpoint ID of the last checkpoint taken. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/recover.c" line="202" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/recover.c" bodystart="202" bodyend="380"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Recovery functions for the FTI library. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (c) 2017 Leonardo A. Bautista-Gomez All rights reserved</para>
+<para>FTI - A multi-level checkpointing library for C/C++/Fortran applications</para>
+<para>Revision 1.0 : Fault Tolerance Interface (FTI)</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem><para>Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+<para><simplesect kind="date"><para>October, 2017 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="39"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="recover_8h_1a29f1aae84d9ec782867b16905241e531" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="recover_8c_1a29f1aae84d9ec782867b16905241e531" kindref="member">FTI_CheckFile</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fn,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>fs,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>checksum)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>str[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(access(fn,<sp/>F_OK)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/>fileStatus;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat(fn,<sp/>&amp;fileStatus)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fileStatus.st_size<sp/>==<sp/>fs)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen(checksum))<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/><ref refid="tools_8c_1a0abe7d90a75d724af67071b5a672785d" kindref="member">FTI_VerifyChecksum</ref>(fn,<sp/>checksum);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res<sp/>!=<sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(str,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>file:<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,<sp/>fn);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" kindref="member">FTI_WARN</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(str,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>file:<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,<sp/>fn);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" kindref="member">FTI_WARN</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(str,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>file:<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,<sp/>fn);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" kindref="member">FTI_WARN</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>str[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(str,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>file:<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,<sp/>fn);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" kindref="member">FTI_WARN</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="recover_8h_1a0d67927230e5cfb7848475129aa3b97c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="recover_8c_1a0d67927230e5cfb7848475129aa3b97c" kindref="member">FTI_CheckErasures</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*erased)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>fs<sp/>=<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[level].<ref refid="structFTIT__metadata_1a72b83c40554bb8606cabdb3e09d21f1a" kindref="member">fs</ref>[0];</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pfs<sp/>=<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[level].<ref refid="structFTIT__metadata_1a6fa6fc30c05438be2be4e7bf9d8aa2bf" kindref="member">pfs</ref>[0];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>maxFs<sp/>=<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[level].<ref refid="structFTIT__metadata_1ac9e4d9a5ea424695911cbad861ad207b" kindref="member">maxFs</ref>[0];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ckptFile[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>strncpy(ckptFile,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[level].<ref refid="structFTIT__metadata_1af649446726d9d2147f208dee79a75a75" kindref="member">ckptFile</ref>,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>checksum[<ref refid="fti-intern_8h_1ab7d658b118c653d9a61ef6adde6a80c7" kindref="member">MD5_DIGEST_STRING_LENGTH</ref>],<sp/>ptnerChecksum[<ref refid="fti-intern_8h_1ab7d658b118c653d9a61ef6adde6a80c7" kindref="member">MD5_DIGEST_STRING_LENGTH</ref>],<sp/>rsChecksum[<ref refid="fti-intern_8h_1ab7d658b118c653d9a61ef6adde6a80c7" kindref="member">MD5_DIGEST_STRING_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="meta_8c_1aca5c277b6c86b50f182cfa1326ebb6e1" kindref="member">FTI_GetChecksums</ref>(FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt,<sp/>checksum,<sp/>ptnerChecksum,<sp/>rsChecksum);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>str[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(str,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Checking<sp/>file<sp/>%s<sp/>and<sp/>its<sp/>erasures<sp/>%d.&quot;</highlight><highlight class="normal">,<sp/>ckptFile,level);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a299db837571db9e73119d159b3428fe0" kindref="member">FTI_DBUG</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>fn[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];<sp/></highlight><highlight class="comment">//Path<sp/>to<sp/>the<sp/>checkpoint/partner<sp/>file<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buf;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ckptID,<sp/>rank;<sp/></highlight><highlight class="comment">//Variables<sp/>for<sp/>proper<sp/>partner<sp/>file<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*consistency)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>long<sp/>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_HDF5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5853fc734fbdc50680125595e6cc4f74" kindref="member">ioMode</ref><sp/>==<sp/><ref refid="fti-intern_8h_1ace2ba9a1f6bf621481f19d0ac9aaf839" kindref="member">FTI_IO_HDF5</ref>)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>consistency<sp/>=<sp/>&amp;FTI_CheckHDF5File;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Ckpt[FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref>].<ref refid="structFTIT__checkpoint_1acc3a5b7f60cd9828620e01745c9d4350" kindref="member">recoIsDcp</ref><sp/>&amp;&amp;<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5e319b258138bbb03d5da9917f99acd6" kindref="member">dcpPosix</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_DcpPosixRecoverRuntimeInfo(<sp/>DCP_POSIX_INIT_TAG,<sp/>FTI_Exec,<sp/>FTI_Conf<sp/>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>consistency<sp/>=<sp/>&amp;FTI_CheckFileDcpPosix;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>consistency<sp/>=<sp/>&amp;<ref refid="recover_8c_1a29f1aae84d9ec782867b16905241e531" kindref="member">FTI_CheckFile</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Ckpt[FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref>].<ref refid="structFTIT__checkpoint_1acc3a5b7f60cd9828620e01745c9d4350" kindref="member">recoIsDcp</ref><sp/>&amp;&amp;<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5e319b258138bbb03d5da9917f99acd6" kindref="member">dcpPosix</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_DcpPosixRecoverRuntimeInfo(<sp/>DCP_POSIX_INIT_TAG,<sp/>FTI_Exec,<sp/>FTI_Conf<sp/>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>consistency<sp/>=<sp/>&amp;FTI_CheckFileDcpPosix;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>consistency<sp/>=<sp/>&amp;<ref refid="recover_8c_1a29f1aae84d9ec782867b16905241e531" kindref="member">FTI_CheckFile</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(level)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(fn,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/%s&quot;</highlight><highlight class="normal">,<sp/>FTI_Ckpt[1].dir,<sp/>ckptFile);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>consistency(fn,<sp/>fs,<sp/>checksum);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allgather(&amp;buf,<sp/>1,<sp/>MPI_INT,<sp/>erased,<sp/>1,<sp/>MPI_INT,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" kindref="member">groupComm</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(fn,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/%s&quot;</highlight><highlight class="normal">,<sp/>FTI_Ckpt[2].dir,<sp/>ckptFile);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>consistency(fn,<sp/>fs,<sp/>checksum);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allgather(&amp;buf,<sp/>1,<sp/>MPI_INT,<sp/>erased,<sp/>1,<sp/>MPI_INT,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" kindref="member">groupComm</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sscanf(ckptFile,<sp/></highlight><highlight class="stringliteral">&quot;Ckpt%d-Rank%d.fti&quot;</highlight><highlight class="normal">,<sp/>&amp;ckptID,<sp/>&amp;rank);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(fn,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/Ckpt%d-Pcof%d.fti&quot;</highlight><highlight class="normal">,<sp/>FTI_Ckpt[2].dir,<sp/>ckptID,<sp/>rank);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>consistency(fn,<sp/>pfs,<sp/>ptnerChecksum);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allgather(&amp;buf,<sp/>1,<sp/>MPI_INT,<sp/>erased<sp/>+<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1a3b3935614c24137493f43615cd8b4f8b" kindref="member">groupSize</ref>,<sp/>1,<sp/>MPI_INT,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" kindref="member">groupComm</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(fn,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/%s&quot;</highlight><highlight class="normal">,<sp/>FTI_Ckpt[3].dir,<sp/>ckptFile);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>consistency(fn,<sp/>fs,<sp/>checksum);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allgather(&amp;buf,<sp/>1,<sp/>MPI_INT,<sp/>erased,<sp/>1,<sp/>MPI_INT,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" kindref="member">groupComm</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sscanf(ckptFile,<sp/></highlight><highlight class="stringliteral">&quot;Ckpt%d-Rank%d.fti&quot;</highlight><highlight class="normal">,<sp/>&amp;ckptID,<sp/>&amp;rank);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(fn,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/Ckpt%d-RSed%d.fti&quot;</highlight><highlight class="normal">,<sp/>FTI_Ckpt[3].dir,<sp/>ckptID,<sp/>rank);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/><ref refid="recover_8c_1a29f1aae84d9ec782867b16905241e531" kindref="member">FTI_CheckFile</ref>(fn,<sp/>maxFs,<sp/>rsChecksum);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allgather(&amp;buf,<sp/>1,<sp/>MPI_INT,<sp/>erased<sp/>+<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1a3b3935614c24137493f43615cd8b4f8b" kindref="member">groupSize</ref>,<sp/>1,<sp/>MPI_INT,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" kindref="member">groupComm</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Ckpt[FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref>].<ref refid="structFTIT__checkpoint_1acc3a5b7f60cd9828620e01745c9d4350" kindref="member">recoIsDcp</ref><sp/>&amp;&amp;<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5e319b258138bbb03d5da9917f99acd6" kindref="member">dcpPosix</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(fn,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/%s&quot;</highlight><highlight class="normal">,<sp/>FTI_Ckpt[4].dcpDir,<sp/>ckptFile);<sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(fn,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/%s&quot;</highlight><highlight class="normal">,<sp/>FTI_Ckpt[4].dir,<sp/>ckptFile);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>consistency(fn,<sp/>fs,<sp/>checksum);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allgather(&amp;buf,<sp/>1,<sp/>MPI_INT,<sp/>erased,<sp/>1,<sp/>MPI_INT,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" kindref="member">groupComm</ref>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="201"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="recover_8h_1aa5ca92e3168d5b1ee7830507f8847dec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="recover_8c_1aa5ca92e3168d5b1ee7830507f8847dec" kindref="member">FTI_RecoverFiles</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1aae6a605160c14bd0f0174d9aa94b4183" kindref="member">dcpFtiff</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="meta_8c_1aa7721e19ddfc87db2b9f661d738cf23f" kindref="member">FTI_LoadCkptMetaData</ref>(<sp/>FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt<sp/>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!FTI_Topo-&gt;<ref refid="structFTIT__topology_1ad44da908f25f84e0dc29086b77b37d8d" kindref="member">amIaHead</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a061085b1c93b22c4fafbe527e7b1f165" kindref="member">reco</ref><sp/>==<sp/>3<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1ab72c57178235b8d749f88350ea2e248f" kindref="member">h5SingleFileEnable</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>allRes<sp/>=<sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_HDF5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ckptID,<sp/>res<sp/>=<sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1a3d4083051c43d031972d83cffb242a38" kindref="member">splitRank</ref><sp/>==<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/>FTI_H5CheckSingleFile(<sp/>FTI_Conf,<sp/>&amp;ckptID<sp/>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allreduce(&amp;res,<sp/>&amp;allRes,<sp/>1,<sp/>MPI_INT,<sp/>MPI_SUM,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" kindref="member">globalComm</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>allRes<sp/>==<sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>str[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;VPR<sp/>recovery<sp/>successfull<sp/>from<sp/>file<sp/>&apos;%s/%s-ID%08d.h5&apos;&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1aa35c9a2a099d119adb02950d8a4621d7" kindref="member">h5SingleFileDir</ref>,<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a83219c702b2a39a05939f102e27300fe" kindref="member">h5SingleFilePrefix</ref>,<sp/>ckptID<sp/>);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a26a561f0e03eec3d15541c85a2a21ffd" kindref="member">FTI_INFO</ref>);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a18192d9c04546cfdbb41d3472be77946" kindref="member">h5SingleFile</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Bcast(<sp/>&amp;ckptID,<sp/>1,<sp/>MPI_INT,<sp/>0,<sp/><ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref><sp/>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref><sp/>=<sp/>ckptID;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(FTI_Exec-&gt;<ref refid="structFTIT__execution_1a8cd3cee6e7fd29ee3ea43882a3438623" kindref="member">h5SingleFileReco</ref>,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s/%s-ID%08d.h5&quot;</highlight><highlight class="normal">,<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1aa35c9a2a099d119adb02950d8a4621d7" kindref="member">h5SingleFileDir</ref>,<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a83219c702b2a39a05939f102e27300fe" kindref="member">h5SingleFilePrefix</ref>,<sp/>ckptID);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(</highlight><highlight class="stringliteral">&quot;VPR<sp/>recovery<sp/>failed!&quot;</highlight><highlight class="normal">,<sp/><ref refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" kindref="member">FTI_WARN</ref>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a18192d9c04546cfdbb41d3472be77946" kindref="member">h5SingleFile</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(</highlight><highlight class="stringliteral">&quot;FTI<sp/>is<sp/>not<sp/>compiled<sp/>with<sp/>HDF5<sp/>support!&quot;</highlight><highlight class="normal">,<sp/><ref refid="fti-intern_8h_1a5cb1252ae17ef4ac13b3dbe5a8b1ab13" kindref="member">FTI_EROR</ref>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>allRes;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(</highlight><highlight class="stringliteral">&quot;VPR<sp/>is<sp/>disabled.<sp/>Please<sp/>enable<sp/>with<sp/>&apos;h5_single_file_enable=1&apos;!&quot;</highlight><highlight class="normal">,<sp/><ref refid="fti-intern_8h_1a5cb1252ae17ef4ac13b3dbe5a8b1ab13" kindref="member">FTI_EROR</ref>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//FTI_LoadMeta(FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(level<sp/>=<sp/>0;<sp/>level<sp/>&lt;<sp/>5;<sp/>level++)<sp/>{<sp/></highlight><highlight class="comment">//For<sp/>every<sp/>level<sp/>(from<sp/>1<sp/>to<sp/>4,<sp/>because<sp/>of<sp/>reliability)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[level].<ref refid="structFTIT__metadata_1aaf2a9825676bec1a95a6ce6a1ea5dc06" kindref="member">exists</ref>[0]<sp/>||<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5853fc734fbdc50680125595e6cc4f74" kindref="member">ioMode</ref><sp/>==<sp/><ref refid="fti-intern_8h_1a2b6ae4a8dc77345c8aa9497f8cb9291b" kindref="member">FTI_IO_FTIFF</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>ckptID<sp/>from<sp/>checkpoint<sp/>file<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ckptID;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5853fc734fbdc50680125595e6cc4f74" kindref="member">ioMode</ref><sp/>!=<sp/><ref refid="fti-intern_8h_1a2b6ae4a8dc77345c8aa9497f8cb9291b" kindref="member">FTI_IO_FTIFF</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sscanf(FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[level].<ref refid="structFTIT__metadata_1af649446726d9d2147f208dee79a75a75" kindref="member">ckptFile</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Ckpt%d&quot;</highlight><highlight class="normal">,<sp/>&amp;ckptID);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Temporary<sp/>for<sp/>Recover<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref><sp/>=<sp/>ckptID;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ckptID<sp/>=<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>str[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Trying<sp/>recovery<sp/>with<sp/>Ckpt.<sp/>%d<sp/>at<sp/>level<sp/>%d.&quot;</highlight><highlight class="normal">,<sp/>ckptID,<sp/>level);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a299db837571db9e73119d159b3428fe0" kindref="member">FTI_DBUG</ref>);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(level)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FTI_Ckpt[4].recoIsDcp<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="postreco_8c_1aaaa733e3e06a982a2708d44127b910cc" kindref="member">FTI_RecoverL4</ref>(FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1aae6a605160c14bd0f0174d9aa94b4183" kindref="member">dcpFtiff</ref><sp/>)<sp/>FTI_Ckpt[4].<ref refid="structFTIT__checkpoint_1acc3a5b7f60cd9828620e01745c9d4350" kindref="member">recoIsDcp</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res<sp/>==<sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>level<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Recover<sp/>failed<sp/>from<sp/>level<sp/>%d_dCP<sp/>with<sp/>Ckpt.<sp/>%d.&quot;</highlight><highlight class="normal">,<sp/>level,<sp/>ckptID);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a26a561f0e03eec3d15541c85a2a21ffd" kindref="member">FTI_INFO</ref>);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="postreco_8c_1aaaa733e3e06a982a2708d44127b910cc" kindref="member">FTI_RecoverL4</ref>(FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="postreco_8c_1aea4c42a08ca465deaeb0c76623082288" kindref="member">FTI_RecoverL3</ref>(FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="postreco_8c_1a0a4241a43154efa7c39cfecfc32e9783" kindref="member">FTI_RecoverL2</ref>(FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="postreco_8c_1ae513de18753ddba0cc2c35607cf4c063" kindref="member">FTI_RecoverL1</ref>(FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>allRes;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allreduce(&amp;res,<sp/>&amp;allRes,<sp/>1,<sp/>MPI_INT,<sp/>MPI_SUM,<sp/><ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref>);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(allRes<sp/>==<sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Inform<sp/>heads<sp/>that<sp/>recovered<sp/>successfully</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allreduce(&amp;res,<sp/>&amp;allRes,<sp/>1,<sp/>MPI_INT,<sp/>MPI_SUM,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" kindref="member">globalComm</ref>);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FTI-FF:<sp/>ckptID<sp/>is<sp/>already<sp/>set<sp/>properly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5853fc734fbdc50680125595e6cc4f74" kindref="member">ioMode</ref><sp/>==<sp/><ref refid="fti-intern_8h_1a2b6ae4a8dc77345c8aa9497f8cb9291b" kindref="member">FTI_IO_FTIFF</ref>)<sp/>||<sp/>(FTI_Ckpt[4].<ref refid="structFTIT__checkpoint_1acc3a5b7f60cd9828620e01745c9d4350" kindref="member">recoIsDcp</ref><sp/>&amp;&amp;<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a5e319b258138bbb03d5da9917f99acd6" kindref="member">dcpPosix</ref>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ckptID<sp/>=<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>level<sp/>==<sp/>4<sp/>&amp;&amp;<sp/>!FTI_Ckpt[4].recoIsDcp<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tools_8c_1a09811bb56f318eab67b3d37bff86cf7f" kindref="member">FTI_Clean</ref>(FTI_Conf,<sp/>FTI_Topo,<sp/>FTI_Ckpt,<sp/>1);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Barrier(<ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref>);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!(FTI_Topo-&gt;<ref refid="structFTIT__topology_1a39761a9bc4ad6d0ca46b7ca82593c175" kindref="member">nodeRank</ref><sp/>-<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1ae6c9d66ebe7506e56262bfdd65628ac8" kindref="member">nbHeads</ref>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a1d81d949ec5e13d1eea8d5c287b7312c" kindref="member">RENAME</ref>(FTI_Conf-&gt;<ref refid="structFTIT__configuration_1a06bfe0fcd4a7ad1e247e1b3d235bfe01" kindref="member">lTmpDir</ref>,<sp/>FTI_Ckpt[1].<ref refid="structFTIT__checkpoint_1a98f4f26f6e99e7a07d4fde76b23515ea" kindref="member">dir</ref>);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Barrier(<ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Recovering<sp/>successfully<sp/>from<sp/>level<sp/>%d<sp/>with<sp/>Ckpt.<sp/>%d.&quot;</highlight><highlight class="normal">,<sp/>level,<sp/>ckptID);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a26a561f0e03eec3d15541c85a2a21ffd" kindref="member">FTI_INFO</ref>);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>ckptID<sp/>and<sp/>ckptLevel<sp/>and<sp/>lastCkptLvel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref><sp/>=<sp/>ckptID;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a92ac9b3e26177d2e59ecfc83a4e460b9" kindref="member">lastCkptLvel</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1aade25d97154976c2efbf75f1343fada5" kindref="member">keepL4Ckpt</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ckptID<sp/>=<sp/><ref refid="meta_8c_1ab085ec4982c28053c8a0c158e83da34d" kindref="member">FTI_LoadL4CkptMetaData</ref>(<sp/>FTI_Conf,<sp/>FTI_Exec,<sp/>FTI_Topo,<sp/>FTI_Ckpt<sp/>);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hasL4Ckpt<sp/>=<sp/>(<sp/>ckptID<sp/>&gt;=<sp/>0<sp/>)<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(FTI_Topo-&gt;<ref refid="structFTIT__topology_1ae6c9d66ebe7506e56262bfdd65628ac8" kindref="member">nbHeads</ref><sp/>&gt;<sp/>0<sp/>)<sp/>&amp;&amp;<sp/>(FTI_Topo-&gt;<ref refid="structFTIT__topology_1a39761a9bc4ad6d0ca46b7ca82593c175" kindref="member">nodeRank</ref><sp/>==<sp/>1)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>level<sp/>and<sp/>ckpt<sp/>ID<sp/>to<sp/>head<sp/>process<sp/>in<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sendBuf[2]<sp/>=<sp/>{<sp/>hasL4Ckpt,<sp/>ckptID<sp/>};</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Send(<sp/>sendBuf,<sp/>2,<sp/>MPI_INT,<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1ad6b000c681a3230febbc5829c6ad9247" kindref="member">headRank</ref>,<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1ae11893be3341d992d9722a21c00eddd4" kindref="member">generalTag</ref>,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" kindref="member">globalComm</ref><sp/>);<sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>hasL4Ckpt<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[0].<ref refid="structFTIT__metadata_1abfd4b28cb351b43f5f0d83d06c12c699" kindref="member">currentL4CkptFile</ref>,<sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Ckpt%d-Rank%d.fti&quot;</highlight><highlight class="normal">,<sp/>ckptID,<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1afd9e834e60e98abbce232192a38a7d58" kindref="member">myRank</ref><sp/>);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Ckpt[4].<ref refid="structFTIT__checkpoint_1a0dbcc461ba3263ccbcca067746159f59" kindref="member">hasCkpt</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Ckpt[4].<ref refid="structFTIT__checkpoint_1ac94d2c40ae08809348eeb7f8daa48165" kindref="member">ckptID</ref>=<sp/>ckptID;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;<sp/></highlight><highlight class="comment">//Recovered<sp/>successfully</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(str,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Recover<sp/>failed<sp/>from<sp/>level<sp/>%d<sp/>with<sp/>Ckpt.<sp/>%d.&quot;</highlight><highlight class="normal">,<sp/>level,<sp/>ckptID);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(str,<sp/><ref refid="fti-intern_8h_1a26a561f0e03eec3d15541c85a2a21ffd" kindref="member">FTI_INFO</ref>);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Looped<sp/>all<sp/>levels<sp/>with<sp/>no<sp/>success</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" kindref="member">FTI_Print</ref>(</highlight><highlight class="stringliteral">&quot;Cannot<sp/>recover<sp/>from<sp/>any<sp/>checkpoint<sp/>level.&quot;</highlight><highlight class="normal">,<sp/><ref refid="fti-intern_8h_1a26a561f0e03eec3d15541c85a2a21ffd" kindref="member">FTI_INFO</ref>);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Inform<sp/>heads<sp/>that<sp/>cannot<sp/>recover</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>,<sp/>allRes;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allreduce(&amp;res,<sp/>&amp;allRes,<sp/>1,<sp/>MPI_INT,<sp/>MPI_SUM,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" kindref="member">globalComm</ref>);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Reset<sp/>ckptID<sp/>and<sp/>ckptLevel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">//Head<sp/>processes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>,<sp/>allRes;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allreduce(&amp;res,<sp/>&amp;allRes,<sp/>1,<sp/>MPI_INT,<sp/>MPI_SUM,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" kindref="member">globalComm</ref>);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(allRes<sp/>!=<sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Recover<sp/>not<sp/>successful</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1aade25d97154976c2efbf75f1343fada5" kindref="member">keepL4Ckpt</ref><sp/>&amp;&amp;<sp/>!(FTI_Exec-&gt;<ref refid="structFTIT__execution_1a061085b1c93b22c4fafbe527e7b1f165" kindref="member">reco</ref><sp/>==<sp/>3)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>receive<sp/>level<sp/>and<sp/>ckpt<sp/>ID<sp/>from<sp/>first<sp/>application<sp/>process<sp/>in<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recvBuf[2];</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Recv(<sp/>recvBuf,<sp/>2,<sp/>MPI_INT,<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1a2f5a76c767d70a27b5741fd08582c839" kindref="member">body</ref>[0],<sp/>FTI_Conf-&gt;<ref refid="structFTIT__configuration_1ae11893be3341d992d9722a21c00eddd4" kindref="member">generalTag</ref>,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" kindref="member">globalComm</ref>,<sp/>MPI_STATUS_IGNORE<sp/>);<sp/></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>recvBuf[0]<sp/>==<sp/>4<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Ckpt[4].<ref refid="structFTIT__checkpoint_1a0dbcc461ba3263ccbcca067746159f59" kindref="member">hasCkpt</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" kindref="member">ckptLvel</ref><sp/>=<sp/>recvBuf[0];</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref><sp/>=<sp/>recvBuf[1];</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;<sp/></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i=1;<sp/>i&lt;FTI_Topo-&gt;<ref refid="structFTIT__topology_1ab25ad2efd2edfe685bf3a5c8db4a4275" kindref="member">nodeSize</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(&amp;FTI_Exec-&gt;<ref refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" kindref="member">meta</ref>[0].<ref refid="structFTIT__metadata_1abfd4b28cb351b43f5f0d83d06c12c699" kindref="member">currentL4CkptFile</ref>[i<sp/>*<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>],<sp/></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Ckpt%d-Rank%d.fti&quot;</highlight><highlight class="normal">,<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" kindref="member">ckptID</ref>,<sp/>FTI_Topo-&gt;<ref refid="structFTIT__topology_1a2f5a76c767d70a27b5741fd08582c839" kindref="member">body</ref>[i-1]<sp/>);<sp/></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/recover.c"/>
+  </compounddef>
+</doxygen>

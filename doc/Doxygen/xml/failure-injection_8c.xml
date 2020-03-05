@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="failure-injection_8c" kind="file" language="C++">
+    <compoundname>failure-injection.c</compoundname>
+    <includes refid="interface_8h" local="yes">interface.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="28">
+        <label>IO/ftiff.h</label>
+      </node>
+      <node id="13">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>fti.h</label>
+        <link refid="fti_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.c</label>
+        <link refid="failure-injection_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdarg.h</label>
+      </node>
+      <node id="30">
+        <label>failure-injection.h</label>
+        <link refid="failure-injection_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>../deps/jerasure/include/galois.h</label>
+      </node>
+      <node id="17">
+        <label>postreco.h</label>
+        <link refid="postreco_8h"/>
+      </node>
+      <node id="2">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>errno.h</label>
+      </node>
+      <node id="38">
+        <label>icp.h</label>
+        <link refid="icp_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>fcntl.h</label>
+      </node>
+      <node id="20">
+        <label>conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="35">
+        <label>postckpt.h</label>
+        <link refid="postckpt_8h"/>
+      </node>
+      <node id="43">
+        <label>../deps/iniparser/iniparser.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="27">
+        <label>IO/hdf5-fti.h</label>
+      </node>
+      <node id="15">
+        <label>meta.h</label>
+        <link refid="meta_8h"/>
+      </node>
+      <node id="34">
+        <label>limits.h</label>
+      </node>
+      <node id="21">
+        <label>checkpoint.h</label>
+        <link refid="checkpoint_8h"/>
+      </node>
+      <node id="19">
+        <label>dcp.h</label>
+        <link refid="dcp_8h"/>
+      </node>
+      <node id="36">
+        <label>recover.h</label>
+        <link refid="recover_8h"/>
+      </node>
+      <node id="31">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="40">
+        <label>utility.h</label>
+        <link refid="utility_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>tools.h</label>
+        <link refid="tools_8h"/>
+      </node>
+      <node id="22">
+        <label>stage.h</label>
+        <link refid="stage_8h"/>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="23">
+        <label>fti-io.h</label>
+        <link refid="fti-io_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fti-intern.h</label>
+        <link refid="fti-intern_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>../deps/md5/md5.h</label>
+      </node>
+      <node id="44">
+        <label>../deps/iniparser/dictionary.h</label>
+      </node>
+      <node id="26">
+        <label>IO/posix-dcp.h</label>
+      </node>
+      <node id="25">
+        <label>IO/posix.h</label>
+      </node>
+      <node id="46">
+        <label>../deps/jerasure/include/jerasure.h</label>
+      </node>
+      <node id="14">
+        <label>mpi.h</label>
+      </node>
+      <node id="29">
+        <label>IO/ftiff-dcp.h</label>
+      </node>
+      <node id="42">
+        <label>sion.h</label>
+      </node>
+      <node id="39">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+      </node>
+      <node id="37">
+        <label>fortran/ftif.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="24">
+        <label>topo.h</label>
+        <link refid="topo_8h"/>
+      </node>
+      <node id="16">
+        <label>api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="failure-injection_8c_1aabe2eade977582823167b3b8e6d5029e" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float _PROBABILITY</definition>
+        <argsstring></argsstring>
+        <name>_PROBABILITY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" line="3" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="failure-injection_8c_1aa90d08d00dc631ec4806e3de52b905c8" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char _FUNCTION[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>_FUNCTION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" line="4" column="13" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="failure-injection_8c_1a42d6575e31a765c4780cba60cb923c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PROBABILITY</definition>
+        <argsstring>()</argsstring>
+        <name>PROBABILITY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" line="6" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8c_1a0917c864ec34200ecfbb1dd974658547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int FUNCTION</definition>
+        <argsstring>(const char *testFunction)</argsstring>
+        <name>FUNCTION</name>
+        <param>
+          <type>const char *</type>
+          <declname>testFunction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" line="10" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="10" bodyend="14"/>
+        <references refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" compoundref="fti_8h" startline="12">FTI_BUFS</references>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8c_1a7acbcfc49eb071c72fcd452dbf00c197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FTI_InitFIIO</definition>
+        <argsstring>()</argsstring>
+        <name>FTI_InitFIIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" line="16" column="6" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="16" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8c_1a791fd93b18d6c214cef5d6b934dcbd55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_FloatBitFlip</definition>
+        <argsstring>(float *target, int bit)</argsstring>
+        <name>FTI_FloatBitFlip</name>
+        <param>
+          <type>float *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+<para>It corrupts a bit of the given float. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the float to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the bit to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function filps the bit of the target float. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" line="44" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="44" bodyend="56"/>
+        <references refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" compoundref="fti_8h" startline="20">FTI_NSCS</references>
+        <references refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" compoundref="fti_8h" startline="18">FTI_SCES</references>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8c_1acd287cd3e5911bb2d8266c0d8219c861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_DoubleBitFlip</definition>
+        <argsstring>(double *target, int bit)</argsstring>
+        <name>FTI_DoubleBitFlip</name>
+        <param>
+          <type>double *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+<para>It corrupts a bit of the given float. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the float to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the bit to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function filps the bit of the target float. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" line="69" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="69" bodyend="81"/>
+        <references refid="unionFTIT__double_1aee22cb8601afc60c43bb8b2cd4e22e00" compoundref="fti-intern_8h" startline="306">FTIT_double::floatval</references>
+        <references refid="failure-injection_8c_1a791fd93b18d6c214cef5d6b934dcbd55" compoundref="failure-injection_8c" startline="44" endline="56">FTI_FloatBitFlip</references>
+        <references refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" compoundref="fti_8h" startline="20">FTI_NSCS</references>
+        <references refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" compoundref="fti_8h" startline="18">FTI_SCES</references>
+        <references refid="unionFTIT__double_1acd4afd0055313efa11db8c5ce3269212" compoundref="fti-intern_8h" startline="305">FTIT_double::value</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_PROBABILITY<sp/>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>_FUNCTION[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="failure-injection_8h_1a42d6575e31a765c4780cba60cb923c91" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8c_1a42d6575e31a765c4780cba60cb923c91" kindref="member">PROBABILITY</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_PROBABILITY;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="failure-injection_8h_1a0917c864ec34200ecfbb1dd974658547" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8c_1a0917c864ec34200ecfbb1dd974658547" kindref="member">FUNCTION</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*testFunction<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>(<sp/>strlen(testFunction)<sp/>&gt;<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref><sp/>)<sp/>?<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref><sp/>:<sp/>strlen(testFunction);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>strncmp(<sp/>testFunction,<sp/>_FUNCTION,<sp/>len<sp/>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!res;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="failure-injection_8h_1a7acbcfc49eb071c72fcd452dbf00c197" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8c_1a7acbcfc49eb071c72fcd452dbf00c197" kindref="member">FTI_InitFIIO</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*env;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(env<sp/>=<sp/>getenv(</highlight><highlight class="stringliteral">&quot;FTI_FI_PROBABILITY&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>NULL<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_PROBABILITY<sp/>=<sp/>atof(env);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_PROBABILITY<sp/>=<sp/>0.01;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(env<sp/>=<sp/>getenv(</highlight><highlight class="stringliteral">&quot;FTI_FI_FUNCTION&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>NULL<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(<sp/>_FUNCTION,<sp/>env,<sp/><ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>-1<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_FUNCTION[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>-1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_FUNCTION[0]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="failure-injection_8h_1a791fd93b18d6c214cef5d6b934dcbd55" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8c_1a791fd93b18d6c214cef5d6b934dcbd55" kindref="member">FTI_FloatBitFlip</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>target,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bit<sp/>&gt;=<sp/>32<sp/>||<sp/>bit<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>corIntPtr<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)target;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>corInt<sp/>=<sp/>*corIntPtr;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>corInt<sp/>=<sp/>corInt<sp/>^<sp/>(1<sp/>&lt;&lt;<sp/>bit);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>corIntPtr<sp/>=<sp/>&amp;corInt;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>fp<sp/>=<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*)corIntPtr;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>*target<sp/>=<sp/>*fp;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="failure-injection_8h_1acd287cd3e5911bb2d8266c0d8219c861" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8c_1acd287cd3e5911bb2d8266c0d8219c861" kindref="member">FTI_DoubleBitFlip</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>target,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bit<sp/>&gt;=<sp/>64<sp/>||<sp/>bit<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" kindref="member">FTI_NSCS</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFTIT__double" kindref="compound">FTIT_double</ref><sp/>myDouble;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>myDouble.<ref refid="unionFTIT__double_1acd4afd0055313efa11db8c5ce3269212" kindref="member">value</ref><sp/>=<sp/>*target;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bitf<sp/>=<sp/>(bit<sp/>&gt;=<sp/>32)<sp/>?<sp/>bit<sp/>-<sp/>32<sp/>:<sp/>bit;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>half<sp/>=<sp/>(bit<sp/>&gt;=<sp/>32)<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="failure-injection_8c_1a791fd93b18d6c214cef5d6b934dcbd55" kindref="member">FTI_FloatBitFlip</ref>(&amp;(myDouble.<ref refid="unionFTIT__double_1aee22cb8601afc60c43bb8b2cd4e22e00" kindref="member">floatval</ref>[half]),<sp/>bitf);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>*target<sp/>=<sp/>myDouble.<ref refid="unionFTIT__double_1acd4afd0055313efa11db8c5ce3269212" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c"/>
+  </compounddef>
+</doxygen>

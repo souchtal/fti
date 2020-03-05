@@ -1,0 +1,1021 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__execution" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_execution</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__execution_1aec5756dc8e79d7d68ad0033c604ec423" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_execution::id[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Execution ID. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="600" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a752b91211397ec95434a69c45751c38e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::ckpt</definition>
+        <argsstring></argsstring>
+        <name>ckpt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint flag. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="601" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a061085b1c93b22c4fafbe527e7b1f165" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::reco</definition>
+        <argsstring></argsstring>
+        <name>reco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recovery flag. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="602" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="602" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::ckptLvel</definition>
+        <argsstring></argsstring>
+        <name>ckptLvel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint level. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="603" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="603" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a7e235bbde55b64b0d2e02ec4b6a0385b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::ckptIntv</definition>
+        <argsstring></argsstring>
+        <name>ckptIntv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ckpt. interval in minutes. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="604" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="604" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a92ac9b3e26177d2e59ecfc83a4e460b9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::lastCkptLvel</definition>
+        <argsstring></argsstring>
+        <name>lastCkptLvel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Last checkpoint level. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="605" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="605" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a5f9c804789b75f8a3cab11fb1685c106" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::wasLastOffline</definition>
+        <argsstring></argsstring>
+        <name>wasLastOffline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if last ckpt. offline. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="606" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="606" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1ae9be8c33108533c9cd149d2d5adc6d24" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTIT_execution::iterTime</definition>
+        <argsstring></argsstring>
+        <name>iterTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current wall time. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="607" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="607" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a1c67a1709692a2b474a481ab3641fd8c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTIT_execution::lastIterTime</definition>
+        <argsstring></argsstring>
+        <name>lastIterTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time spent in the last iter. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="608" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="608" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1acdd557ecfd65eaebfbee74ea0a1a1a02" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTIT_execution::meanIterTime</definition>
+        <argsstring></argsstring>
+        <name>meanIterTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mean iteration time. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="609" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="609" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a8b37e551e657be4102f47d2362ffe712" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTIT_execution::globMeanIter</definition>
+        <argsstring></argsstring>
+        <name>globMeanIter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global mean iteration time. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="610" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="610" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a1a0ae3ba0820ef65eb3a877d770f1140" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTIT_execution::totalIterTime</definition>
+        <argsstring></argsstring>
+        <name>totalIterTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total main loop time spent. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="611" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="611" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a192a80b7776855ab4e720c4ea08d67e8" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::syncIter</definition>
+        <argsstring></argsstring>
+        <name>syncIter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To check mean iter. time. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="612" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="612" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1ac29bc3aae18a933e29e3168d7c23f750" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::syncIterMax</definition>
+        <argsstring></argsstring>
+        <name>syncIterMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximal synch. intervall. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="613" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="613" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a92de914c1975228186170ee0a2ab650a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::minuteCnt</definition>
+        <argsstring></argsstring>
+        <name>minuteCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint minute counter. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="614" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="614" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a6b8b6b1922b2561d237b1097a2ea14ef" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIT_execution::hasCkpt</definition>
+        <argsstring></argsstring>
+        <name>hasCkpt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicator that ckpt exists <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="615" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="615" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a18192d9c04546cfdbb41d3472be77946" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIT_execution::h5SingleFile</definition>
+        <argsstring></argsstring>
+        <name>h5SingleFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicator if HDF5 single file <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="616" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="616" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a590db72f82171781a3ac02de59b350f6" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::ckptCnt</definition>
+        <argsstring></argsstring>
+        <name>ckptCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint number counter. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="617" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="617" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1ab2c8d7fc648d2fc4f9812da6bbf45c6f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::ckptIcnt</definition>
+        <argsstring></argsstring>
+        <name>ckptIcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iteration loop counter. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="618" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::ckptID</definition>
+        <argsstring></argsstring>
+        <name>ckptID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint ID. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="619" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a753ca607f3813ca1fa4e24f6c50c8902" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::ckptNext</definition>
+        <argsstring></argsstring>
+        <name>ckptNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iteration for next checkpoint. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="620" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1ad624914e1aea7eceb3d6217a5ced3114" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::ckptLast</definition>
+        <argsstring></argsstring>
+        <name>ckptLast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iteration for last checkpoint. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="621" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="621" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a19693c7f3a31b31d90a40dcf7fc34183" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long FTIT_execution::ckptSize</definition>
+        <argsstring></argsstring>
+        <name>ckptSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint size. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="622" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="622" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a97f8b8aebedb2904ad10a18a5a90574f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::nbVar</definition>
+        <argsstring></argsstring>
+        <name>nbVar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of protected variables. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="623" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a71e5e8245d74f582eaf9442d2c4dcfe6" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::nbVarStored</definition>
+        <argsstring></argsstring>
+        <name>nbVarStored</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nr. prot. var. stored in file <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="624" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="624" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1ae9e0a0b1ee8bd41e2b6251a597b47d26" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_execution::nbType</definition>
+        <argsstring></argsstring>
+        <name>nbType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of data types. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="625" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="625" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a2c780326f5e9cefc7f2b5904eca1d318" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::nbGroup</definition>
+        <argsstring></argsstring>
+        <name>nbGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of protected groups. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="626" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1adac530c5483b2c64d1553918e2d59e39" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::metaAlloc</definition>
+        <argsstring></argsstring>
+        <name>metaAlloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if meta allocated. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="627" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="627" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a5ff8dd064b2a4cc4b7272abddacb8cc1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_execution::initSCES</definition>
+        <argsstring></argsstring>
+        <name>initSCES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if FTI initialized. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="628" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="628" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a5bd4a354d5e78ee925f8b69a94ed2812" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_execution::h5SingleFileLast[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>h5SingleFileLast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Last HDF5 single file name <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="629" column="17" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a8cd3cee6e7fd29ee3ea43882a3438623" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_execution::h5SingleFileReco[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>h5SingleFileReco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HDF5 single fn from recovery <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="630" column="17" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="630" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a93b6915ba940fb8ac055bd5eb5882d60" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char FTIT_execution::integrity[MD5_DIGEST_LENGTH]</definition>
+        <argsstring>[MD5_DIGEST_LENGTH]</argsstring>
+        <name>integrity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="631" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="631" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__metadata" kindref="compound">FTIT_metadata</ref></type>
+        <definition>FTIT_metadata FTIT_execution::meta[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>meta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Metadata for each ckpt level <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="632" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="632" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1af70b8d16318e9a3dad800a84bf2d686c" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIFF__db" kindref="compound">FTIFF_db</ref> *</type>
+        <definition>FTIFF_db* FTIT_execution::firstdb</definition>
+        <argsstring></argsstring>
+        <name>firstdb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to first datablock <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="633" column="26" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="633" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1ad59b01935dd4a0b4f6766cc4aa26aeb8" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIFF__db" kindref="compound">FTIFF_db</ref> *</type>
+        <definition>FTIFF_db* FTIT_execution::lastdb</definition>
+        <argsstring></argsstring>
+        <name>lastdb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to first datablock <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="634" column="26" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="634" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a4516e35484d3cf4777b95303f3948f03" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIFF__metaInfo" kindref="compound">FTIFF_metaInfo</ref></type>
+        <definition>FTIFF_metaInfo FTIT_execution::FTIFFMeta</definition>
+        <argsstring></argsstring>
+        <name>FTIFFMeta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File meta data for FTI-FF <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="635" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="635" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a6cbf8f36622f495540e6af68525013d6" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref> **</type>
+        <definition>FTIT_type** FTIT_execution::FTI_Type</definition>
+        <argsstring></argsstring>
+        <name>FTI_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to FTI_Types <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="636" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a896039ee736e3c0676fe13df8b1ac345" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref> **</type>
+        <definition>FTIT_H5Group** FTIT_execution::H5groups</definition>
+        <argsstring></argsstring>
+        <name>H5groups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HDF5 root group. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="637" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="637" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1ab742b517dd48ed019f0629f231cf70c4" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__globalDataset" kindref="compound">FTIT_globalDataset</ref> *</type>
+        <definition>FTIT_globalDataset* FTIT_execution::globalDatasets</definition>
+        <argsstring></argsstring>
+        <name>globalDatasets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to first global dataset </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="638" column="28" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a375349b5e9e834a60929b760443e9425" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__StageInfo" kindref="compound">FTIT_StageInfo</ref> *</type>
+        <definition>FTIT_StageInfo* FTIT_execution::stageInfo</definition>
+        <argsstring></argsstring>
+        <name>stageInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>root of staging requests <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="639" column="24" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a60384be16093e9c57bed8078cc5b7b2b" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__iCPInfo" kindref="compound">FTIT_iCPInfo</ref></type>
+        <definition>FTIT_iCPInfo FTIT_execution::iCPInfo</definition>
+        <argsstring></argsstring>
+        <name>iCPInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>meta info iCP <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="640" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" prot="public" static="no" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm FTIT_execution::globalComm</definition>
+        <argsstring></argsstring>
+        <name>globalComm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global communicator. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="641" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" prot="public" static="no" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm FTIT_execution::groupComm</definition>
+        <argsstring></argsstring>
+        <name>groupComm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Group communicator. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="642" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1abbb23501615ec870e650aad5f26b85d3" prot="public" static="no" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm FTIT_execution::nodeComm</definition>
+        <argsstring></argsstring>
+        <name>nodeComm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="643" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__execution_1a2989b4148c5ef93b8ae18bfe84c3cc59" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__dcpExecutionPosix" kindref="compound">FTIT_dcpExecutionPosix</ref></type>
+        <definition>FTIT_dcpExecutionPosix FTIT_execution::dcpInfoPosix</definition>
+        <argsstring></argsstring>
+        <name>dcpInfoPosix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dCP info for posix I/O <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="644" column="32" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="644" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTIT_execution::ckptFunc</definition>
+        <argsstring>(FTIT_configuration *, struct FTIT_execution *, FTIT_topology *, FTIT_checkpoint *, FTIT_dataset *, FTIT_IO *)</argsstring>
+        <name>ckptFunc</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+        </param>
+        <param>
+          <type>struct <ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1ae83015b55c5ff7c80ed77ba8a7cb6de4" kindref="member">FTIT_IO</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function pointer pointing to <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="645" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTIT_execution::initICPFunc</definition>
+        <argsstring>(FTIT_configuration *, struct FTIT_execution *, FTIT_topology *, FTIT_checkpoint *, FTIT_dataset *, FTIT_IO *)</argsstring>
+        <name>initICPFunc</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+        </param>
+        <param>
+          <type>struct <ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1ae83015b55c5ff7c80ed77ba8a7cb6de4" kindref="member">FTIT_IO</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function pointer pointing to <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="653" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTIT_execution::writeVarICPFunc</definition>
+        <argsstring>(int, FTIT_configuration *, struct FTIT_execution *, FTIT_topology *, FTIT_checkpoint *, FTIT_dataset *, FTIT_IO *)</argsstring>
+        <name>writeVarICPFunc</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+        </param>
+        <param>
+          <type>struct <ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1ae83015b55c5ff7c80ed77ba8a7cb6de4" kindref="member">FTIT_IO</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function pointer pointing to <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="661" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTIT_execution::finalizeICPFunc</definition>
+        <argsstring>(FTIT_configuration *, struct FTIT_execution *, FTIT_topology *, FTIT_checkpoint *, FTIT_dataset *, FTIT_IO *)</argsstring>
+        <name>finalizeICPFunc</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+        </param>
+        <param>
+          <type>struct <ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1ae83015b55c5ff7c80ed77ba8a7cb6de4" kindref="member">FTIT_IO</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function pointer pointing to <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="670" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structFTIT__execution_1a5dba7e9abb06346b040c3e74370f879f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTIT_execution::activateHeads</definition>
+        <argsstring>(FTIT_configuration *, struct FTIT_execution *, FTIT_topology *, FTIT_checkpoint *, int)</argsstring>
+        <name>activateHeads</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+        </param>
+        <param>
+          <type>struct <ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function pointer pointing to <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="678" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>FTIT_iCPInfo</label>
+        <link refid="structFTIT__iCPInfo"/>
+      </node>
+      <node id="1">
+        <label>FTIT_execution</label>
+        <link refid="structFTIT__execution"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>iCPInfo</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dcpInfoPosix</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>FTIFFMeta</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>H5groups</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>globalDatasets</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>lastdb</edgelabel>
+          <edgelabel>firstdb</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>FTI_Type</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>stageInfo</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>meta</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>FTIFF_dbvar</label>
+        <link refid="structFTIFF__dbvar"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>dataDiffHash</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FTIT_H5Group</label>
+        <link refid="structFTIT__H5Group"/>
+      </node>
+      <node id="13">
+        <label>FTIT_DataDiffHash</label>
+        <link refid="structFTIT__DataDiffHash"/>
+      </node>
+      <node id="14">
+        <label>FTIT_StageInfo</label>
+        <link refid="structFTIT__StageInfo"/>
+      </node>
+      <node id="15">
+        <label>FTIT_metadata</label>
+        <link refid="structFTIT__metadata"/>
+      </node>
+      <node id="3">
+        <label>FTIT_dcpExecutionPosix</label>
+        <link refid="structFTIT__dcpExecutionPosix"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>datasetInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>FTIT_type</label>
+        <link refid="structFTIT__type"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>h5group</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>structure</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>FTIT_globalDataset</label>
+        <link refid="structFTIT__globalDataset"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>FTIT_typeField</label>
+        <link refid="structFTIT__typeField"/>
+      </node>
+      <node id="4">
+        <label>FTIT_datasetInfo</label>
+        <link refid="structFTIT__datasetInfo"/>
+      </node>
+      <node id="11">
+        <label>FTIFF_db</label>
+        <link refid="structFTIFF__db"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>previous</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>dbvars</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FTIFF_metaInfo</label>
+        <link refid="structFTIFF__metaInfo"/>
+      </node>
+      <node id="9">
+        <label>FTIT_complexType</label>
+        <link refid="structFTIT__complexType"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>field</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="599" column="33" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="599" bodyend="686"/>
+    <listofallmembers>
+      <member refid="structFTIT__execution_1a5dba7e9abb06346b040c3e74370f879f" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>activateHeads</name></member>
+      <member refid="structFTIT__execution_1a752b91211397ec95434a69c45751c38e" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckpt</name></member>
+      <member refid="structFTIT__execution_1a590db72f82171781a3ac02de59b350f6" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptCnt</name></member>
+      <member refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptFunc</name></member>
+      <member refid="structFTIT__execution_1ab2c8d7fc648d2fc4f9812da6bbf45c6f" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptIcnt</name></member>
+      <member refid="structFTIT__execution_1afe4ababcb4c2ea0a21a87b237f8d7a00" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptID</name></member>
+      <member refid="structFTIT__execution_1a7e235bbde55b64b0d2e02ec4b6a0385b" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptIntv</name></member>
+      <member refid="structFTIT__execution_1ad624914e1aea7eceb3d6217a5ced3114" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptLast</name></member>
+      <member refid="structFTIT__execution_1a19a4f92c1d8dd2c86350f59eb7372ca8" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptLvel</name></member>
+      <member refid="structFTIT__execution_1a753ca607f3813ca1fa4e24f6c50c8902" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptNext</name></member>
+      <member refid="structFTIT__execution_1a19693c7f3a31b31d90a40dcf7fc34183" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>ckptSize</name></member>
+      <member refid="structFTIT__execution_1a2989b4148c5ef93b8ae18bfe84c3cc59" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>dcpInfoPosix</name></member>
+      <member refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>finalizeICPFunc</name></member>
+      <member refid="structFTIT__execution_1af70b8d16318e9a3dad800a84bf2d686c" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>firstdb</name></member>
+      <member refid="structFTIT__execution_1a6cbf8f36622f495540e6af68525013d6" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>FTI_Type</name></member>
+      <member refid="structFTIT__execution_1a4516e35484d3cf4777b95303f3948f03" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>FTIFFMeta</name></member>
+      <member refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>globalComm</name></member>
+      <member refid="structFTIT__execution_1ab742b517dd48ed019f0629f231cf70c4" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>globalDatasets</name></member>
+      <member refid="structFTIT__execution_1a8b37e551e657be4102f47d2362ffe712" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>globMeanIter</name></member>
+      <member refid="structFTIT__execution_1a309b3da6e358cb96e736d392a56327dd" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>groupComm</name></member>
+      <member refid="structFTIT__execution_1a896039ee736e3c0676fe13df8b1ac345" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>H5groups</name></member>
+      <member refid="structFTIT__execution_1a18192d9c04546cfdbb41d3472be77946" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>h5SingleFile</name></member>
+      <member refid="structFTIT__execution_1a5bd4a354d5e78ee925f8b69a94ed2812" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>h5SingleFileLast</name></member>
+      <member refid="structFTIT__execution_1a8cd3cee6e7fd29ee3ea43882a3438623" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>h5SingleFileReco</name></member>
+      <member refid="structFTIT__execution_1a6b8b6b1922b2561d237b1097a2ea14ef" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>hasCkpt</name></member>
+      <member refid="structFTIT__execution_1a60384be16093e9c57bed8078cc5b7b2b" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>iCPInfo</name></member>
+      <member refid="structFTIT__execution_1aec5756dc8e79d7d68ad0033c604ec423" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>id</name></member>
+      <member refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>initICPFunc</name></member>
+      <member refid="structFTIT__execution_1a5ff8dd064b2a4cc4b7272abddacb8cc1" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>initSCES</name></member>
+      <member refid="structFTIT__execution_1a93b6915ba940fb8ac055bd5eb5882d60" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>integrity</name></member>
+      <member refid="structFTIT__execution_1ae9be8c33108533c9cd149d2d5adc6d24" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>iterTime</name></member>
+      <member refid="structFTIT__execution_1a92ac9b3e26177d2e59ecfc83a4e460b9" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>lastCkptLvel</name></member>
+      <member refid="structFTIT__execution_1ad59b01935dd4a0b4f6766cc4aa26aeb8" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>lastdb</name></member>
+      <member refid="structFTIT__execution_1a1c67a1709692a2b474a481ab3641fd8c" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>lastIterTime</name></member>
+      <member refid="structFTIT__execution_1acdd557ecfd65eaebfbee74ea0a1a1a02" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>meanIterTime</name></member>
+      <member refid="structFTIT__execution_1a800c2671725989e4b600fb8a62e4145e" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>meta</name></member>
+      <member refid="structFTIT__execution_1adac530c5483b2c64d1553918e2d59e39" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>metaAlloc</name></member>
+      <member refid="structFTIT__execution_1a92de914c1975228186170ee0a2ab650a" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>minuteCnt</name></member>
+      <member refid="structFTIT__execution_1a2c780326f5e9cefc7f2b5904eca1d318" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>nbGroup</name></member>
+      <member refid="structFTIT__execution_1ae9e0a0b1ee8bd41e2b6251a597b47d26" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>nbType</name></member>
+      <member refid="structFTIT__execution_1a97f8b8aebedb2904ad10a18a5a90574f" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>nbVar</name></member>
+      <member refid="structFTIT__execution_1a71e5e8245d74f582eaf9442d2c4dcfe6" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>nbVarStored</name></member>
+      <member refid="structFTIT__execution_1abbb23501615ec870e650aad5f26b85d3" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>nodeComm</name></member>
+      <member refid="structFTIT__execution_1a061085b1c93b22c4fafbe527e7b1f165" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>reco</name></member>
+      <member refid="structFTIT__execution_1a375349b5e9e834a60929b760443e9425" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>stageInfo</name></member>
+      <member refid="structFTIT__execution_1a192a80b7776855ab4e720c4ea08d67e8" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>syncIter</name></member>
+      <member refid="structFTIT__execution_1ac29bc3aae18a933e29e3168d7c23f750" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>syncIterMax</name></member>
+      <member refid="structFTIT__execution_1a1a0ae3ba0820ef65eb3a877d770f1140" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>totalIterTime</name></member>
+      <member refid="structFTIT__execution_1a5f9c804789b75f8a3cab11fb1685c106" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>wasLastOffline</name></member>
+      <member refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" prot="public" virt="non-virtual"><scope>FTIT_execution</scope><name>writeVarICPFunc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

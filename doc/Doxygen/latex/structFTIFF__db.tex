@@ -1,0 +1,93 @@
+\hypertarget{structFTIFF__db}{}\doxysection{F\+T\+I\+F\+F\+\_\+db Struct Reference}
+\label{structFTIFF__db}\index{FTIFF\_db@{FTIFF\_db}}
+
+
+{\ttfamily \#include $<$fti-\/intern.\+h$>$}
+
+
+
+Collaboration diagram for F\+T\+I\+F\+F\+\_\+db\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structFTIFF__db_adf6ace3fc9f2341c0b469fbf6a643637}{numvars}}
+\item 
+long \mbox{\hyperlink{structFTIFF__db_a3082dec5c3f31b3ce3e82e7470fe48ec}{dbsize}}
+\item 
+unsigned char \mbox{\hyperlink{structFTIFF__db_aeacdc3bdf3a22f36e95caf5ecf2bd89f}{myhash}} \mbox{[}\mbox{\hyperlink{fti-intern_8h_a09a4f4b2f28cbe522d9b80153666029c}{M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+L\+E\+N\+G\+TH}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{structFTIFF__db_a5446f53de6daab13561ed2b937ed466f}{update}}
+\item 
+bool \mbox{\hyperlink{structFTIFF__db_a99a01f691c366240cab1aec85d9e6c40}{finalized}}
+\item 
+\mbox{\hyperlink{structFTIFF__dbvar}{F\+T\+I\+F\+F\+\_\+dbvar}} $\ast$ \mbox{\hyperlink{structFTIFF__db_a901aa55818fed9df513fe669d4ef3ca2}{dbvars}}
+\item 
+struct \mbox{\hyperlink{structFTIFF__db}{F\+T\+I\+F\+F\+\_\+db}} $\ast$ \mbox{\hyperlink{structFTIFF__db_a21fdc67220f708c989d856a199831e6c}{previous}}
+\item 
+struct \mbox{\hyperlink{structFTIFF__db}{F\+T\+I\+F\+F\+\_\+db}} $\ast$ \mbox{\hyperlink{structFTIFF__db_ab18464ef5dbebde3a4ae39d9125d7151}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structFTIFF__db_a3082dec5c3f31b3ce3e82e7470fe48ec}\label{structFTIFF__db_a3082dec5c3f31b3ce3e82e7470fe48ec}} 
+\index{FTIFF\_db@{FTIFF\_db}!dbsize@{dbsize}}
+\index{dbsize@{dbsize}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{dbsize}{dbsize}}
+{\footnotesize\ttfamily long F\+T\+I\+F\+F\+\_\+db\+::dbsize}
+
+size of metadata + data for block in bytes ~\newline
+ \mbox{\Hypertarget{structFTIFF__db_a901aa55818fed9df513fe669d4ef3ca2}\label{structFTIFF__db_a901aa55818fed9df513fe669d4ef3ca2}} 
+\index{FTIFF\_db@{FTIFF\_db}!dbvars@{dbvars}}
+\index{dbvars@{dbvars}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{dbvars}{dbvars}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIFF__dbvar}{F\+T\+I\+F\+F\+\_\+dbvar}}$\ast$ F\+T\+I\+F\+F\+\_\+db\+::dbvars}
+
+pointer to related dbvar array ~\newline
+ \mbox{\Hypertarget{structFTIFF__db_a99a01f691c366240cab1aec85d9e6c40}\label{structFTIFF__db_a99a01f691c366240cab1aec85d9e6c40}} 
+\index{FTIFF\_db@{FTIFF\_db}!finalized@{finalized}}
+\index{finalized@{finalized}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{finalized}{finalized}}
+{\footnotesize\ttfamily bool F\+T\+I\+F\+F\+\_\+db\+::finalized}
+
+T\+R\+UE if block is stored in cp file ~\newline
+ \mbox{\Hypertarget{structFTIFF__db_aeacdc3bdf3a22f36e95caf5ecf2bd89f}\label{structFTIFF__db_aeacdc3bdf3a22f36e95caf5ecf2bd89f}} 
+\index{FTIFF\_db@{FTIFF\_db}!myhash@{myhash}}
+\index{myhash@{myhash}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{myhash}{myhash}}
+{\footnotesize\ttfamily unsigned char F\+T\+I\+F\+F\+\_\+db\+::myhash\mbox{[}\mbox{\hyperlink{fti-intern_8h_a09a4f4b2f28cbe522d9b80153666029c}{M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+L\+E\+N\+G\+TH}}\mbox{]}}
+
+hash of variable chunk ~\newline
+ \mbox{\Hypertarget{structFTIFF__db_ab18464ef5dbebde3a4ae39d9125d7151}\label{structFTIFF__db_ab18464ef5dbebde3a4ae39d9125d7151}} 
+\index{FTIFF\_db@{FTIFF\_db}!next@{next}}
+\index{next@{next}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structFTIFF__db}{F\+T\+I\+F\+F\+\_\+db}}$\ast$ F\+T\+I\+F\+F\+\_\+db\+::next}
+
+link to next datablock ~\newline
+ \mbox{\Hypertarget{structFTIFF__db_adf6ace3fc9f2341c0b469fbf6a643637}\label{structFTIFF__db_adf6ace3fc9f2341c0b469fbf6a643637}} 
+\index{FTIFF\_db@{FTIFF\_db}!numvars@{numvars}}
+\index{numvars@{numvars}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{numvars}{numvars}}
+{\footnotesize\ttfamily int F\+T\+I\+F\+F\+\_\+db\+::numvars}
+
+number of protected variables in datablock ~\newline
+ \mbox{\Hypertarget{structFTIFF__db_a21fdc67220f708c989d856a199831e6c}\label{structFTIFF__db_a21fdc67220f708c989d856a199831e6c}} 
+\index{FTIFF\_db@{FTIFF\_db}!previous@{previous}}
+\index{previous@{previous}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{previous}{previous}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structFTIFF__db}{F\+T\+I\+F\+F\+\_\+db}}$\ast$ F\+T\+I\+F\+F\+\_\+db\+::previous}
+
+link to previous datablock ~\newline
+ \mbox{\Hypertarget{structFTIFF__db_a5446f53de6daab13561ed2b937ed466f}\label{structFTIFF__db_a5446f53de6daab13561ed2b937ed466f}} 
+\index{FTIFF\_db@{FTIFF\_db}!update@{update}}
+\index{update@{update}!FTIFF\_db@{FTIFF\_db}}
+\doxysubsubsection{\texorpdfstring{update}{update}}
+{\footnotesize\ttfamily bool F\+T\+I\+F\+F\+\_\+db\+::update}
+
+T\+R\+UE if struct needs to be updated in ckpt file ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/bscuser/\+Documents/release/dev/fti/include/\mbox{\hyperlink{fti-intern_8h}{fti-\/intern.\+h}}\end{DoxyCompactItemize}

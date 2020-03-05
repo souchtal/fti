@@ -1,0 +1,580 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="fti-io_8c" kind="file" language="C++">
+    <compoundname>fti-io.c</compoundname>
+    <includes refid="interface_8h" local="yes">interface.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="28">
+        <label>IO/ftiff.h</label>
+      </node>
+      <node id="13">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>fti.h</label>
+        <link refid="fti_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdarg.h</label>
+      </node>
+      <node id="30">
+        <label>failure-injection.h</label>
+        <link refid="failure-injection_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>../deps/jerasure/include/galois.h</label>
+      </node>
+      <node id="17">
+        <label>postreco.h</label>
+        <link refid="postreco_8h"/>
+      </node>
+      <node id="2">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>errno.h</label>
+      </node>
+      <node id="38">
+        <label>icp.h</label>
+        <link refid="icp_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>fcntl.h</label>
+      </node>
+      <node id="20">
+        <label>conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="35">
+        <label>postckpt.h</label>
+        <link refid="postckpt_8h"/>
+      </node>
+      <node id="43">
+        <label>../deps/iniparser/iniparser.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="27">
+        <label>IO/hdf5-fti.h</label>
+      </node>
+      <node id="15">
+        <label>meta.h</label>
+        <link refid="meta_8h"/>
+      </node>
+      <node id="34">
+        <label>limits.h</label>
+      </node>
+      <node id="21">
+        <label>checkpoint.h</label>
+        <link refid="checkpoint_8h"/>
+      </node>
+      <node id="19">
+        <label>dcp.h</label>
+        <link refid="dcp_8h"/>
+      </node>
+      <node id="36">
+        <label>recover.h</label>
+        <link refid="recover_8h"/>
+      </node>
+      <node id="31">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="40">
+        <label>utility.h</label>
+        <link refid="utility_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>tools.h</label>
+        <link refid="tools_8h"/>
+      </node>
+      <node id="22">
+        <label>stage.h</label>
+        <link refid="stage_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/fti-io.c</label>
+        <link refid="fti-io_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="23">
+        <label>fti-io.h</label>
+        <link refid="fti-io_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fti-intern.h</label>
+        <link refid="fti-intern_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>../deps/md5/md5.h</label>
+      </node>
+      <node id="44">
+        <label>../deps/iniparser/dictionary.h</label>
+      </node>
+      <node id="26">
+        <label>IO/posix-dcp.h</label>
+      </node>
+      <node id="25">
+        <label>IO/posix.h</label>
+      </node>
+      <node id="46">
+        <label>../deps/jerasure/include/jerasure.h</label>
+      </node>
+      <node id="14">
+        <label>mpi.h</label>
+      </node>
+      <node id="29">
+        <label>IO/ftiff-dcp.h</label>
+      </node>
+      <node id="42">
+        <label>sion.h</label>
+      </node>
+      <node id="39">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+      </node>
+      <node id="37">
+        <label>fortran/ftif.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="24">
+        <label>topo.h</label>
+        <link refid="topo_8h"/>
+      </node>
+      <node id="16">
+        <label>api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" prot="public" static="no" mutable="no">
+        <type><ref refid="fti-intern_8h_1ae83015b55c5ff7c80ed77ba8a7cb6de4" kindref="member">FTIT_IO</ref></type>
+        <definition>FTIT_IO ftiIO[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>ftiIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure that stores the function pointer wrappers to perform the IO </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/fti-io.c" line="44" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/fti-io.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FTI_dummy</definition>
+        <argsstring>(unsigned char *data, void *a)</argsstring>
+        <name>FTI_dummy</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Place holder function, it is used when the file format does not support integrity checksums. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Does not matter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>does not matter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void.</para>
+</simplesect>
+THis function is passed as a reference when different file formats do not actually compute an integrity checksum. It helps to avoid if statements in the code and provides a more stream line code format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/fti-io.c" line="60" column="6" bodyfile="/home/bscuser/Documents/release/dev/fti/src/fti-io.c" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="fti-io_8c_1a82389b45effbf23533c3377f24d8956c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitFunctionPointers</definition>
+        <argsstring>(int ckptIO, FTIT_execution *FTI_Exec)</argsstring>
+        <name>FTI_InitFunctionPointers</name>
+        <param>
+          <type>int</type>
+          <declname>ckptIO</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the FTI_IO structure with the functions that write the ckpt file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ckptIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File format selected by the user in the configuration file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution environment of the FTI. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int On success FTI_SCES</para>
+</simplesect>
+This function actually initializes the execution paths of the write checkpoint function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/fti-io.c" line="74" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/fti-io.c" bodystart="74" bodyend="252"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="41"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="fti-io_8h_1a28a33d94e22f56316d3cc558fbc22ea2" refkind="member"><highlight class="normal"><ref refid="structftit__io" kindref="compound">FTIT_IO</ref><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[4];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>a){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="fti-io_8h_1a82389b45effbf23533c3377f24d8956c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti-io_8c_1a82389b45effbf23533c3377f24d8956c" kindref="member">FTI_InitFunctionPointers</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ckptIO,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*<sp/>FTI_Exec<sp/>){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>Local<sp/>and<sp/>Global<sp/>writers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ckptIO)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="fti-intern_8h_1ab4185f9b1ad1804d6d89182627205923" kindref="member">FTI_IO_POSIX</ref>:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitPosix;<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WritePosixData;<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_PosixClose;<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/>=<sp/>FTI_GetPosixFilePos;<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/>FTI_PosixMD5;<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitPosix;<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WritePosixData;<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_PosixClose;<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>FTI_GetPosixFilePos;<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/>FTI_PosixMD5;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/><ref refid="utility_8h_1a6617f62432c4165f1778235ea8dea812" kindref="member">FTI_InitDCPPosix</ref>;<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/><ref refid="utility_8h_1a0e32976424466a1e711a7dfaadb0fa37" kindref="member">FTI_WritePosixDCPData</ref>;<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/><ref refid="utility_8h_1aa09d9fdbecca39f6eb8c5d5d5b071a0f" kindref="member">FTI_PosixDCPClose</ref>;<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="utility_8h_1ac3690fea767a6eea4ce2fd17a4b997f1" kindref="member">FTI_GetDCPPosixFilePos</ref>;<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/><ref refid="utility_8h_1a6617f62432c4165f1778235ea8dea812" kindref="member">FTI_InitDCPPosix</ref>;<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/><ref refid="utility_8h_1a0e32976424466a1e711a7dfaadb0fa37" kindref="member">FTI_WritePosixDCPData</ref>;<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/><ref refid="utility_8h_1aa09d9fdbecca39f6eb8c5d5d5b071a0f" kindref="member">FTI_PosixDCPClose</ref>;<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="utility_8h_1ac3690fea767a6eea4ce2fd17a4b997f1" kindref="member">FTI_GetDCPPosixFilePos</ref>;<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5dba7e9abb06346b040c3e74370f879f" kindref="member">activateHeads</ref><sp/>=<sp/>FTI_ActivateHeadsPosix;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="fti-intern_8h_1aabd1aaea4c0ca8933c8e3035f5506c29" kindref="member">FTI_IO_MPI</ref>:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitPosix;<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WritePosixData;<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_PosixClose;<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/>=<sp/>FTI_GetPosixFilePos;<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/>FTI_PosixMD5;<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/><ref refid="utility_8h_1ad740bf69596c15a2e44cda239ac89d77" kindref="member">FTI_InitMPIO</ref>;<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/><ref refid="utility_8h_1a8d2149d78917f83b4ae8f1f68ae14fce" kindref="member">FTI_WriteMPIOData</ref>;<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/><ref refid="utility_8h_1a1194dcd36df9b9d6cae305611f83a257" kindref="member">FTI_MPIOClose</ref>;<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="utility_8h_1afe6235bdbb3c21a85d790fd9dcaabc7a" kindref="member">FTI_GetMPIOFilePos</ref>;<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;<sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5dba7e9abb06346b040c3e74370f879f" kindref="member">activateHeads</ref><sp/>=<sp/>FTI_ActivateHeadsPosix;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_SIONLIB<sp/>//If<sp/>SIONlib<sp/>is<sp/>installed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="fti-intern_8h_1acbdad0be6e3192a3a6e7c0326f486047" kindref="member">FTI_IO_SIONLIB</ref>:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitPosix;<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WritePosixData;<sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_PosixClose;<sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/>=<sp/>FTI_GetPosixFilePos;<sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/>FTI_PosixMD5;<sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/><ref refid="utility_8h_1a77e6f3fe616d7246043c2ce0c8c2a314" kindref="member">FTI_InitSion</ref>;<sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/><ref refid="utility_8h_1af9a3fc679b87b4354f5cbaae67dd7a5e" kindref="member">FTI_WriteSionData</ref>;<sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/><ref refid="utility_8h_1a263d9d142c7440f555fd89d397b20d29" kindref="member">FTI_SionClose</ref>;<sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="utility_8h_1a58cfe019961a71433ed45714eb516464" kindref="member">FTI_GetSionFilePos</ref>;<sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5dba7e9abb06346b040c3e74370f879f" kindref="member">activateHeads</ref><sp/>=<sp/>FTI_ActivateHeadsPosix;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="fti-intern_8h_1a2b6ae4a8dc77345c8aa9497f8cb9291b" kindref="member">FTI_IO_FTIFF</ref>:</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitFtiff;<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WriteFtiffData;<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_FinalizeFtiff;<sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/>=<sp/>FTI_DummyFilePos;<sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitFtiff;<sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WriteFtiffData;<sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_FinalizeFtiff;<sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>FTI_DummyFilePos;<sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitFtiff;<sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WriteFtiffData;<sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_FinalizeFtiff;<sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>FTI_DummyFilePos;<sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitFtiff;<sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WriteFtiffData;<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_FinalizeFtiff;<sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/>=<sp/>FTI_DummyFilePos;<sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[2<sp/>+<sp/><ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;<sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5dba7e9abb06346b040c3e74370f879f" kindref="member">activateHeads</ref><sp/>=<sp/>FTI_ActivateHeadsFTIFF;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_HDF5<sp/>//If<sp/>HDF5<sp/>is<sp/>installed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="fti-intern_8h_1ace2ba9a1f6bf621481f19d0ac9aaf839" kindref="member">FTI_IO_HDF5</ref>:</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitHDF5;<sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WriteHDF5Data;<sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_HDF5Close;<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/>=<sp/>FTI_GetHDF5FilePos;<sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1ad4f564a95fdf186098a75d52671b4c4e" kindref="member">initCKPT</ref><sp/>=<sp/>FTI_InitHDF5;<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a8e59b78e5ef08ee4b6c45090f4baaaf1" kindref="member">WriteData</ref><sp/>=<sp/>FTI_WriteHDF5Data;<sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a4b7c306c46be2d8e3932152cd8c2e36f" kindref="member">finCKPT</ref>=<sp/>FTI_HDF5Close;<sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1a9fc14b618b9ded640342bb0d9deee62f" kindref="member">getPos</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>FTI_GetHDF5FilePos;<sp/></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fti-io_8c_1a28a33d94e22f56316d3cc558fbc22ea2" kindref="member">ftiIO</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>].<ref refid="structftit__io_1af63411130b0b0760d573e757c8fdeffa" kindref="member">finIntegrity</ref><sp/>=<sp/><ref refid="fti-io_8c_1a8889373132577527f58806fc9ad1dd39" kindref="member">FTI_dummy</ref>;<sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5d1e2c657b31ffe8300efd0bcce29a09" kindref="member">ckptFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="checkpoint_8c_1adbb8641fcc1a169c4ea882f204f77bfd" kindref="member">FTI_Write</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;<sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1aae9a4203fa8dc35b854360b02ba315f5" kindref="member">initICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1a5c1583dd96556d332e6436acb56bcf53" kindref="member">FTI_startICP</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a36029e63668d480ed0b4bf8f9f4ae6da" kindref="member">writeVarICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1aac0a13de8c91314c7f2c3c6897374a8d" kindref="member">FTI_WriteVar</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3758dd5d300a594312c95bc393378df0" kindref="member">LOCAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1ad6add7b6d971d0601513da0e5034588e" kindref="member">finalizeICPFunc</ref>[<ref refid="fti-intern_8h_1a3de33738fd3c7e77bffbcfaefc3e7645" kindref="member">GLOBAL</ref>]<sp/>=<sp/><ref refid="icp_8c_1af1108c31dee17ede82257c14284a945e" kindref="member">FTI_FinishICP</ref>;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a5dba7e9abb06346b040c3e74370f879f" kindref="member">activateHeads</ref><sp/>=<sp/>FTI_ActivateHeadsPosix;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/fti-io.c"/>
+  </compounddef>
+</doxygen>

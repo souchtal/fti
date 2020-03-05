@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="checkpoint_8h" kind="file" language="C++">
+    <compoundname>checkpoint.h</compoundname>
+    <includedby refid="interface_8h" local="yes">/home/bscuser/Documents/release/dev/fti/src/interface.h</includedby>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.c</label>
+        <link refid="failure-injection_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postreco.c</label>
+        <link refid="postreco_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/bscuser/Documents/release/dev/fti/src/interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/bscuser/Documents/release/dev/fti/src/icp.c</label>
+        <link refid="icp_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/bscuser/Documents/release/dev/fti/src/conf.c</label>
+        <link refid="conf_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postckpt.c</label>
+        <link refid="postckpt_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api.c</label>
+        <link refid="api_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/bscuser/Documents/release/dev/fti/src/meta.c</label>
+        <link refid="meta_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/bscuser/Documents/release/dev/fti/src/checkpoint.c</label>
+        <link refid="checkpoint_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/checkpoint.h</label>
+        <link refid="checkpoint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/bscuser/Documents/release/dev/fti/src/dcp.c</label>
+        <link refid="dcp_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/bscuser/Documents/release/dev/fti/src/recover.c</label>
+        <link refid="recover_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/bscuser/Documents/release/dev/fti/src/utility.c</label>
+        <link refid="utility_8c"/>
+      </node>
+      <node id="18">
+        <label>/home/bscuser/Documents/release/dev/fti/src/tools.c</label>
+        <link refid="tools_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/bscuser/Documents/release/dev/fti/src/stage.c</label>
+        <link refid="stage_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/bscuser/Documents/release/dev/fti/src/fti-io.c</label>
+        <link refid="fti-io_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/bscuser/Documents/release/dev/fti/src/macros.c</label>
+        <link refid="macros_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/bscuser/Documents/release/dev/fti/src/topo.c</label>
+        <link refid="topo_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.c</label>
+        <link refid="api-cuda_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="checkpoint_8h_1a8479ea8ec8132ae55da9a6573f3d7440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_UpdateIterTime</definition>
+        <argsstring>(FTIT_execution *FTI_Exec)</argsstring>
+        <name>FTI_UpdateIterTime</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <briefdescription>
+<para>It updates the local and global mean iteration time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function updates the local and global mean iteration time. It also recomputes the checkpoint interval in iterations and corrects the next checkpointing iteration based on the observed mean iteration duration. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" line="4" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.c" bodystart="61" bodyend="106" declfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" declline="4" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8h_1a656858362954a335040262a54a0235ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_WriteCkpt</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data)</argsstring>
+        <name>FTI_WriteCkpt</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+          <declname>FTI_Data</declname>
+        </param>
+        <briefdescription>
+<para>It writes the checkpoint data in the target file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Ckpt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dataset metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function checks whether the checkpoint needs to be local or remote, opens the target file and writes dataset per dataset, the checkpoint data, it finally flushes and closes the checkpoint file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" line="5" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.c" bodystart="124" bodyend="183" declfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" declline="5" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8h_1a7f20285e1ca49847b7764bdd8ec21a9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_WriteSionlib</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_dataset *FTI_Data)</argsstring>
+        <name>FTI_WriteSionlib</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+          <declname>FTI_Data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" line="9" column="5" declfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" declline="9" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8h_1a304411ac19756871bac1eec1517bc57b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_PostCkpt</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt)</argsstring>
+        <name>FTI_PostCkpt</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <briefdescription>
+<para>Decides wich action start depending on the ckpt. level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Ckpt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function launches the required action dependeing on the ckpt. level. It does that for each group (application process in the node) if executed by the head, or only locally if executed by an application process. The parameter pr determines if the for loops have 1 or number of App. procs. iterations. The group parameter helps determine the groupID in both cases. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" line="12" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.c" bodystart="202" bodyend="295" declfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" declline="12" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8h_1a305fb1ae4c686e64fe62c9429d2f4f4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Listen</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt)</argsstring>
+        <name>FTI_Listen</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <briefdescription>
+<para>It listens for checkpoint notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Ckpt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful. This function listens for notifications from the application processes and takes the required actions after notification. This function is only executed by the head of the nodes and its complementary with the FTI_Checkpoint function in terms of communications. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" line="14" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.c" bodystart="311" bodyend="386" declfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" declline="14" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8h_1a5fa0457202662dc64ce0194d6a205ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_HandleCkptRequest</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt)</argsstring>
+        <name>FTI_HandleCkptRequest</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <briefdescription>
+<para>handles checkpoint requests from application ranks (if head). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Ckpt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" line="16" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.c" bodystart="398" bodyend="490" declfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" declline="16" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8h_1af2639ac1591855cf76492628f74c07eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Write</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data, FTIT_IO *FTI_IO)</argsstring>
+        <name>FTI_Write</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+          <declname>FTI_Data</declname>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1ae83015b55c5ff7c80ed77ba8a7cb6de4" kindref="member">FTIT_IO</ref> *</type>
+          <declname>FTI_IO</declname>
+          <defname>io</defname>
+        </param>
+        <briefdescription>
+<para>Writes ckpt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Ckpt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dataset metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>io</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IO function pointers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function performs a normal checkpoint by calling the respective file format procedures, initalize ckpt, write data, compute integrity and finalize files. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" line="18" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.c" bodystart="507" bodyend="526" declfile="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h" declline="18" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__CHECKPOINT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CHECKPOINT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="checkpoint_8h_1a8479ea8ec8132ae55da9a6573f3d7440" kindref="member">FTI_UpdateIterTime</ref>(<ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="checkpoint_8h_1a656858362954a335040262a54a0235ce" kindref="member">FTI_WriteCkpt</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref>*<sp/>FTI_Data);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_SIONLIB<sp/>//<sp/>--&gt;<sp/>If<sp/>SIONlib<sp/>is<sp/>installed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="checkpoint_8h_1a7f20285e1ca49847b7764bdd8ec21a9a" kindref="member">FTI_WriteSionlib</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref>*<sp/>FTI_Data);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="checkpoint_8h_1a304411ac19756871bac1eec1517bc57b" kindref="member">FTI_PostCkpt</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="checkpoint_8h_1a305fb1ae4c686e64fe62c9429d2f4f4c" kindref="member">FTI_Listen</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="checkpoint_8h_1a5fa0457202662dc64ce0194d6a205ba8" kindref="member">FTI_HandleCkptRequest</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="checkpoint_8h_1af2639ac1591855cf76492628f74c07eb" kindref="member">FTI_Write</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref>*<sp/>FTI_Data,<sp/><ref refid="structftit__io" kindref="compound">FTIT_IO</ref><sp/>*FTI_IO);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__CHECKPOINT_H__</highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/checkpoint.h"/>
+  </compounddef>
+</doxygen>

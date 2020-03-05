@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structblockMetaInfo__t" kind="struct" language="C++" prot="public">
+    <compoundname>blockMetaInfo_t</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structblockMetaInfo__t_1a45eadf5aaae509e706eebee57dd431c0" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long blockMetaInfo_t::varId</definition>
+        <argsstring></argsstring>
+        <name>varId</name>
+        <bitfield> 18</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="147" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structblockMetaInfo__t_1a1b2cbbd7aa53a2fdbecf47b57311d214" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long blockMetaInfo_t::blockId</definition>
+        <argsstring></argsstring>
+        <name>blockId</name>
+        <bitfield> 30</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="148" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="146" column="1" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="145" bodyend="150"/>
+    <listofallmembers>
+      <member refid="structblockMetaInfo__t_1a1b2cbbd7aa53a2fdbecf47b57311d214" prot="public" virt="non-virtual"><scope>blockMetaInfo_t</scope><name>blockId</name></member>
+      <member refid="structblockMetaInfo__t_1a45eadf5aaae509e706eebee57dd431c0" prot="public" virt="non-virtual"><scope>blockMetaInfo_t</scope><name>varId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
