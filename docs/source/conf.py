@@ -15,12 +15,6 @@ import sys
 import sphinx_rtd_theme
 # sys.path.insert(0, os.path.abspath('.'))
 
-read_the_docs_build = os.environ.get('READTHEDOCS') == 'True'
-
-if read_the_docs_build:
-	#print ("We are in ReadTheDocs server")
-	project = "FTI building on server"
-	subprocess.call('cd ../../doc/Doxygen; doxygen Doxyfile.in', shell=True)
 
 # -- Project information -----------------------------------------------------
 
@@ -63,6 +57,15 @@ html_static_path = ['_static']
 
 #everyting below is customization
 breathe_default_project = "Fault Tolerance Library"
+
+read_the_docs_build = os.environ.get('READTHEDOCS') == 'True'
+
+if read_the_docs_build:
+	#print ("We are in ReadTheDocs server")
+	project = "FTI building on server"
+	subprocess.call('cd ../../doc/Doxygen; doxygen Doxyfile.in', shell=True)
+
+
 breathe_projects= {"Fault Tolerance Library": "../../doc/Doxygen/xml"}
 
 #enable when building on ReadTheDocs server
