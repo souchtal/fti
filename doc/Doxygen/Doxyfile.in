@@ -744,16 +744,16 @@ WARN_LOGFILE           =
 # Note: If this tag is empty the current directory is searched.
 
 #CMAKE_SOURCE_DIR 		= /home/bscuser/Documents/release/dev/fti
-CMAKE_CURRENT_SOURCE_DIR= /home/bscuser/Documents/release/dev/fti/doc/Doxygen
+#CMAKE_CURRENT_SOURCE_DIR= /home/bscuser/Documents/release/dev/fti/doc/Doxygen
 
-INPUT                   = /home/bscuser/Documents/release/dev/fti/README.md \
-                         /home/bscuser/Documents/release/dev/fti/include/ \
-                         /home/bscuser/Documents/release/dev/fti/src \
+INPUT                   = ../../README.md \
+                         ../../include/ \
+                         ../../src \
                       
-                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/cmake.md \
-                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/config.md \
-                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/make.md \
-                         /home/bscuser/Documents/release/dev/fti/doc/Doxygen/ftiff.md
+                         cmake.md \
+                         config.md \
+                         make.md \
+                         ftiff.md
                          
 
 # This tag can be used to specify the character encoding of the source files
