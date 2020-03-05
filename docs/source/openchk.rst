@@ -7,5 +7,4 @@ OpenCHK is a pragma based interface that facilitates the implementation of check
 
 Where to get OpenCHK?
 ===================================================
-OpenCHK is developed and maintained at the BSC. It is open-source and can be downloaded from:
-<https://github.com/bsc-pm/OpenCHK-model>
+OpenCHK is developed and maintained at the BSC. It is open-source and can be downloaded from: https://github.com/bsc-pm/OpenCHK-model

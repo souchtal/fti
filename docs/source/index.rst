@@ -43,7 +43,7 @@ Fault Tolerance Library
 
    openchk
 
-Contact:
+
 .. sectionauthor:: Dr. Leonardo Bautista-Gomez (Leo) <leonardo.bautista@bsc.es>
 
 Barcelona Supercomputing Center
