@@ -73,7 +73,7 @@ Build FTI
 
 Executables, tutorial source code, and fti library files
 ---------------------------------------------------
-The library is installed at the $FTI_INSTALL_DIR the source code of the FTI library is in ${FTI_ROOT}/src and the source code of the tutorial is under ${FTI_ROOT}/tutorial, the executables of the tutorial are under ${FTI_ROOT}/build/tutorial/. For conveniency on the rest of the tutorial set also the following variables:
+The library is installed at the $FTI_INSTALL_DIR the source code of the FTI library is in ${FTI_ROOT}/src and the source code of the tutorial is under ${FTI_ROOT}/tutorial, the executables of the tutorial are under ${FTI_ROOT}/build/tutorial/. For conveniency on the rest of the tutorial set also the following variables
 
 
 .. code-block:: bash
@@ -94,7 +94,7 @@ To demonstrate the various safety levels of FTI, we will execute an example whic
 L1 - Local checkpoint on the nodes
 ---------------------------------------------------
 
-Change into folder ${TUTORIAL_EXEC}/L1 and run the execution with ‘make hdl1’. While the program is running, you may follow the events by observing the contents in the ‘local’ folder. In order to do that you can use the commands:
+Change into folder ${TUTORIAL_EXEC}/L1 and run the execution with ‘make hdl1’. While the program is running, you may follow the events by observing the contents in the ‘local’ folder. In order to do that you can use the commands
 
 .. code-block:: bash
 	watch -n 1 $(find local)
