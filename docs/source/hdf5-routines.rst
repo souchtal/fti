@@ -5,14 +5,11 @@
 some text
 
 
-
-
-
 FTI File Format 
 ===================================================
 
-insert ftiff image here
-
+.. image:: _static/FTIT_complexType.png
+   :width: 600
 
 
 
