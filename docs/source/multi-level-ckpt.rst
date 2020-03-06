@@ -1,10 +1,6 @@
 .. Fault Tolerance Library documentation Multi-level Ckpt file
 
 
-Multi-level Checkpointing
-===================================================
-
-
 L1
 ===================================================
 L1 denotes the first safety level in the multilevel checkpointing strategy of FTI. The checkpoint of each process is written on the local SSD of the respective node. This is fast but possesses the drawback, that in case of a data loss and corrupted checkpoint data even in only one node, the execution cannot successfully restarted.
