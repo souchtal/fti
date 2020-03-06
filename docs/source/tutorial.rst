@@ -11,34 +11,40 @@ Preparation
 Create FTI directory
 
 .. code-block:: bash
+
    mkdir FTI
    cd FTI
 
 Create Installation Directory
 
 .. code-block:: bash
-   mkdir install-fti
+
+	mkdir install-fti
 
 Set enviromental variable to installation path
 
 .. code-block:: bash
+
 	export FTI_INSTALL_DIR=$PWD/install-fti
 
 Download FTI
 
 .. code-block:: bash
-   git clone https://github.com/leobago/fti 
+
+	git clone https://github.com/leobago/fti 
 
 
 Change into base directory
 
 .. code-block:: bash
-   cd fti
+
+	cd fti
 
 
 Set Enviroment Variable to FTI root
 
 .. code-block:: bash
+
 	export FTI_ROOT=$PWD
 
 
@@ -49,8 +55,8 @@ Configure and Install
 Create build directory and change into it
 
 .. code-block:: bash
-   mkdir build
-   cd build
+	mkdir build
+	cd build
 
 
 Build FTI
@@ -159,6 +165,7 @@ Practice
 In the ‘${TUTORIAL_SRC}/practice’ folder you will find the source code of the program we used to demonstrate the FTI features. In this case without FTI being implemented. Try to implement FTI. You can use either the ‘FTI_Snapshot’ or ‘FTI_Checkpoint’ function to cause FTI taking a checkpoint. To build the code changes you implemented you can :
 
 .. code-block:: bash
+
 	cd $FTI_ROOT/build
 	make
 
@@ -167,6 +174,7 @@ To execute your implementation change directory to ${TUTORIAL_EXEC}/practice and
 Besides implementing the source code you need also to create an appropriate configuration file. Information about the options in the configuration file can be found here and example configuration files can be found here.(link missing)
 
 .. code-block:: bash
+
 	cd $TUTORIAL_EXEC/practice
 	make
 	mpirun -n 4 ./hdp.exe GRID_SIZE
