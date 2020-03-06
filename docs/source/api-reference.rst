@@ -8,3 +8,30 @@ Enum(s)
 
 
 
+File(s)
+===================================================
+.. doxygenfile:: tools.c
+	:project: Fault Tolerance Library 
+
+
+Function(s)
+===================================================
+
+.. doxygenfunction:: FTI_Init
+	:project: Fault Tolerance Library 
+
+
+
+Struct(s)
+===================================================
+.. doxygenstruct:: FTIFF_dbvar
+	:project: Fault Tolerance Library 
+
+
+
+Typedef(s)
+===================================================
+.. doxygentypedef:: FTIT_hsize_t
+	:project: Fault Tolerance Library 
+
+

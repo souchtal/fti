@@ -34,6 +34,18 @@ Fault Tolerance Library
 
    api-reference
 
+.. toctree::
+   :hidden:
+   :caption: Fortran API
+
+   fortran-api
+
+.. toctree::
+   :hidden:
+   :caption: HDF5 Routines
+
+   hdf5-routines
+
 
 .. toctree::
    :hidden:
