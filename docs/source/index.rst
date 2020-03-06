@@ -46,6 +46,11 @@ Fault Tolerance Library
 
    hdf5-routines
 
+.. toctree::
+   :hidden:
+   :caption: Tutorial
+
+   tutorial
 
 .. toctree::
    :hidden:
