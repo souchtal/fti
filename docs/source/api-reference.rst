@@ -23,7 +23,7 @@ Function(s)
 
 Struct(s)
 ===================================================
-.. doxygenstruct:: FTIFF_dbvar
+.. doxygenstruct:: FTI::FTIFF_dbvar
 	:project: Fault Tolerance Library 
 
 
