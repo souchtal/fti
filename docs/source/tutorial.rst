@@ -5,12 +5,19 @@ I this page we present a tutorial of FTI. The purpose of the practice section is
 Installation
 ===================================================
 
-1. Create FTI directory
 .. code-block:: cmake
 
    mkdir FTI
    cd FTI
 
+.. code-block:: bash
 
+   mkdir FTI
+   cd FTI
+
+.. code-block:: console
+
+   mkdir FTI
+   cd FTI
 lmao i m just testing 
 
