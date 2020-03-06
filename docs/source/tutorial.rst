@@ -11,40 +11,35 @@ Preparation
 Create FTI directory
 
 .. code-block:: bash
-
    mkdir FTI
    cd FTI
 
 Create Installation Directory
 
 .. code-block:: bash
-
    mkdir install-fti
 
 Set enviromental variable to installation path
 
 .. code-block:: bash
-
+	export FTI_INSTALL_DIR=$PWD/install-fti
 
 Download FTI
 
 .. code-block:: bash
-
    git clone https://github.com/leobago/fti 
 
 
 Change into base directory
 
 .. code-block:: bash
-
    cd fti
 
 
 Set Enviroment Variable to FTI root
 
 .. code-block:: bash
-
-   export FTI_ROOT=$PWD
+	export FTI_ROOT=$PWD
 
 
 Configure and Install
@@ -54,9 +49,8 @@ Configure and Install
 Create build directory and change into it
 
 .. code-block:: bash
-
    mkdir build
-	cd build
+   cd build
 
 
 Build FTI
