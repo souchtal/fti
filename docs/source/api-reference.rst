@@ -2,7 +2,7 @@
 
 Define(s)
 ===================================================
-..doxygendefine:: FTI_DEFAULT_CHOSTBUF_SIZE_MB
+.. doxygendefine:: FTI_DEFAULT_CHOSTBUF_SIZE_MB
 	:project: Fault Tolerance Library 
 
 
