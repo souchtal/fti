@@ -6,15 +6,11 @@ Installation
 ===================================================
 
 1. Create FTI directory
-.. code-block:: bash
+.. code-block:: cmake
 
    mkdir FTI
    cd FTI
 
-1. Create FTI directory::
-
-   mkdir FTI
-   cd FTI
 
 lmao i m just testing 
 
