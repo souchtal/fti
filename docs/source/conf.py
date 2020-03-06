@@ -62,7 +62,7 @@ read_the_docs_build = os.environ.get('READTHEDOCS') == 'True'
 
 if read_the_docs_build:
 	#print ("We are in ReadTheDocs server")
-	project = "FTI building on server"
+	#project = "FTI building on server"
 	subprocess.call('cd ../../doc/Doxygen; doxygen Doxyfile.in', shell=True)
 
 

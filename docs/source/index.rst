@@ -31,7 +31,6 @@ Fault Tolerance Library
 .. toctree::
    :hidden:
    :caption: API Reference
-   :maxdepth: 2
 
    api-reference
 

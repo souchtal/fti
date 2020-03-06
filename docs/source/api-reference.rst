@@ -4,6 +4,7 @@
 Enum(s)
 ===================================================
 .. doxygenenum:: FTIT_StatusField
+	:project: Fault Tolerance Library 
 
 
 
