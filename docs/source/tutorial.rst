@@ -9,39 +9,39 @@ Preparation
 -----------
 
 
-#. Create FTI directory
+1. Create FTI directory
 
 .. code-block:: bash
 
    mkdir FTI
    cd FTI
 
-#. Create Installation Directory
+2. Create Installation Directory
 
 .. code-block:: bash
 
    mkdir install-fti
 
-#. Set environmental variable to installation path
+3. Set environmental variable to installation path
 
 .. code-block:: bash
 
    export FTI_INSTALL_DIR=$PWD/install-fti
 
 
-#. Download FTI.
+4. Download FTI.
 
 .. code-block:: bash
 
    git clone https://github.com/leobago/fti 
 
-#. Change into base directory
+5. Change into base directory
 
 .. code-block:: bash
 
    cd fti
 
-#. Set Enviroment Variable to FTI root
+6. Set Environment Variable to FTI root
 
 .. code-block:: bash
 
@@ -51,14 +51,14 @@ Configure and Install
 ---------------------
 
 
-#. Create build directory and change into it
+1. Create build directory and change into it
 
 .. code-block:: bash
 
    mkdir build
    cd build
 
-#. Build FTI
+2. Build FTI
 
 .. code-block:: bash
 
@@ -161,7 +161,7 @@ Practice
 ========
 
 
-#. In the ‘${TUTORIAL_SRC}/practice’ folder you will find the source code of the program we used to demonstrate the FTI features. In this case without FTI being implemented. Try to implement FTI. You can use either the ‘FTI_Snapshot’ or ‘FTI_Checkpoint’ function to cause FTI taking a checkpoint. To build the code changes you implemented you can :
+1. In the ‘${TUTORIAL_SRC}/practice’ folder you will find the source code of the program we used to demonstrate the FTI features. In this case without FTI being implemented. Try to implement FTI. You can use either the ‘FTI_Snapshot’ or ‘FTI_Checkpoint’ function to cause FTI taking a checkpoint. To build the code changes you implemented you can :
 
 .. code-block:: bash
 
@@ -181,5 +181,5 @@ Besides implementing the source code you need also to create an appropriate conf
 GRID_SIZE is an integer number defining the size of the grid to be solved in Mb. 
 
 
-#. Change into the folder ‘${TUTORIAL_EXEC}/tutorial/experiment’ and play with the settings of the configuration file. To run the program, type: ‘mpirun -n 8 
+2. Change into the folder ‘${TUTORIAL_EXEC}/tutorial/experiment’ and play with the settings of the configuration file. To run the program, type: ‘mpirun -n 8 
    hdex.exe   `<GRIDSIZE>` config.fti’. Perform executions with ‘Head=0’ and ‘Head=1’, do you notice any difference in the execution duration? (Note: You may take frequent L3 checkpointing and a gridsize of 256 or higher. In that case you will most likely see a difference). (Remark:  denotes the dynamic memory of each mpi process in MB)
