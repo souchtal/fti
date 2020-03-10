@@ -1,4 +1,4 @@
-
+.. Fault Tolerance Library documentation tutorial file
 
 In this page we present a tutorial of FTI. The purpose of the practice section is for you to get familiar with the FTI API as well as with the configuration file. Therefore there is limited information on how you should proceed.  
 
@@ -9,27 +9,27 @@ Preparation
 -----------
 
 
-Create FTI directory
+#. Create FTI directory
 
 .. code-block:: bash
 
    mkdir FTI
    cd FTI
 
-Create Installation Directory
+#. Create Installation Directory
 
 .. code-block:: bash
 
    mkdir install-fti
 
-Set environmental variable to installation path
+#. Set environmental variable to installation path
 
 .. code-block:: bash
 
    export FTI_INSTALL_DIR=$PWD/install-fti
 
 
-Download FTI.
+#. Download FTI.
 
 .. code-block:: bash
 
@@ -43,9 +43,9 @@ Download FTI.
 
 #. Set Enviroment Variable to FTI root
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      export FTI_ROOT=$PWD
+  export FTI_ROOT=$PWD
 
 Configure and Install
 ---------------------
@@ -55,15 +55,16 @@ Configure and Install
 
 .. code-block:: bash
 
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+   mkdir build
+   cd build
 
 #. Build FTI
 
 .. code-block:: bash
 
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+   cmake -DCMAKE_INSTALL_PREFIX:PATH=$FTI_INSTALL_DIR -DENABLE_TUTORIAL=1 ..
+   make
+   make install
 
 The flag -DENABLE_TUTORIAL=1 besides building FTI, will also build the tutorial files
 
@@ -104,7 +105,7 @@ or
 
 After interrupting the execution, run again ‘make hdl1’. The execution will (hopefully) resume from where the checkpoint was taken.
 
-After the successful restart, interrupt the execution and delete one of the checkpoint files. The files are stored as (you can also simply delete the whole node directory): ${TUTORIAL_EXEC}/L1//local/\ :raw-html-m2r:`<NODE>`\ /\ :raw-html-m2r:`<EXEC-ID>`\ /l1/ckpt\ :raw-html-m2r:`<ID>`\ -Rank\ :raw-html-m2r:`<RANK>`.fti. You will notice, that in that case the program won’t be able to resume the execution.
+After the successful restart, interrupt the execution and delete one of the checkpoint files. The files are stored as (you can also simply delete the whole node directory): xxx.fti. You will notice, that in that case the program won’t be able to resume the execution.
 
 L2 – local checkpoint on the nodes + copy to the neighbor node:
 ---------------------------------------------------------------
@@ -181,4 +182,4 @@ GRID_SIZE is an integer number defining the size of the grid to be solved in Mb.
 
 
 #. Change into the folder ‘${TUTORIAL_EXEC}/tutorial/experiment’ and play with the settings of the configuration file. To run the program, type: ‘mpirun -n 8 
-   hdex.exe  :raw-html-m2r:`<GRIDSIZE>` config.fti’. Perform executions with ‘Head=0’ and ‘Head=1’, do you notice any difference in the execution duration? (Note: You may take frequent L3 checkpointing and a gridsize of 256 or higher. In that case you will most likely see a difference). (Remark: :raw-html-m2r:`<GRIDSIZE>` denotes the dynamic memory of each mpi process in MB)
+   hdex.exe   `<GRIDSIZE>` config.fti’. Perform executions with ‘Head=0’ and ‘Head=1’, do you notice any difference in the execution duration? (Note: You may take frequent L3 checkpointing and a gridsize of 256 or higher. In that case you will most likely see a difference). (Remark:  denotes the dynamic memory of each mpi process in MB)
