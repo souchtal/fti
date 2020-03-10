@@ -23,11 +23,16 @@ Create Installation Directory
 	  mkdir install-fti
 
 Set enviromental variable to installation path
+
 	.. code-block:: bash
 
       export FTI_INSTALL_DIR=$PWD/install-fti
 
+Set enviromental variable to installation path
 
+	.. code-block:: bash
+
+      export chihaja
 
 #. Download FTI.
    .. code-block:: bash
