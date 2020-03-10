@@ -11,13 +11,13 @@ Preparation
 -----------
 
 
-#. Create FTI directory
+1. Create FTI directory
 	.. code:: bash
 
 	  mkdir FTI
 	  cd FTI
 
-#. Create Installation Directory
+2. Create Installation Directory
     .. code:: bash
 
       mkdir install-fti
