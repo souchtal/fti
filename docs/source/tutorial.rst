@@ -10,13 +10,13 @@ Preparation
 -----------
 
 
-#. Create FTI directory
+one Create FTI directory
 .. code-block:: bash
 
   mkdir FTI
   cd FTI
 
-#. Create Installation Directory
+two Create Installation Directory
 .. code-block:: bash
 
   mkdir install-fti
@@ -174,4 +174,4 @@ GRID_SIZE is an integer number defining the size of the grid to be solved in Mb.
 
 
 #. Change into the folder ‘${TUTORIAL_EXEC}/tutorial/experiment’ and play with the settings of the configuration file. To run the program, type: ‘mpirun -n 8 
-   hdex.exe  :raw-html-m2r:`<GRIDSIZE>` config.fti’. Perform executions with ‘Head=0’ and ‘Head=1’, do you notice any difference in the execution duration? (Note: You may take frequent L3 checkpointing and a gridsize of 256 or higher. In that case you will most likely see a difference). (Remark: :raw-html-m2r:`<GRIDSIZE>` denotes the dynamic memory of each mpi process in MB)
+   hdex.exe  gridsize config.fti’. Perform executions with ‘Head=0’ and ‘Head=1’, do you notice any difference in the execution duration? (Note: You may take frequent L3 checkpointing and a gridsize of 256 or higher. In that case you will most likely see a difference). (Remark: :raw-html-m2r:`<GRIDSIZE>` denotes the dynamic memory of each mpi process in MB)
