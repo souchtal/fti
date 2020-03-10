@@ -11,15 +11,15 @@ Preparation
 
 
 #. Create FTI directory
-   .. code-block:: bash
+.. code-block:: bash
 
-      mkdir FTI
-      cd FTI
+  mkdir FTI
+  cd FTI
 
 #. Create Installation Directory
-   .. code-block:: bash
+.. code-block:: bash
 
-      mkdir install-fti
+  mkdir install-fti
 
 #. Set enviromental variable to installation path
    .. code-block:: bash
@@ -97,7 +97,7 @@ or
 
 After interrupting the execution, run again ‘make hdl1’. The execution will (hopefully) resume from where the checkpoint was taken.
 
-After the successful restart, interrupt the execution and delete one of the checkpoint files. The files are stored as (you can also simply delete the whole node directory): ${TUTORIAL_EXEC}/L1//local/\ :raw-html-m2r:`<NODE>`\ /\ :raw-html-m2r:`<EXEC-ID>`\ /l1/ckpt\ :raw-html-m2r:`<ID>`\ -Rank\ :raw-html-m2r:`<RANK>`.fti. You will notice, that in that case the program won’t be able to resume the execution.
+After the successful restart, interrupt the execution and delete one of the checkpoint files. The files are stored as (you can also simply delete the whole node directory): xxx.fti. You will notice, that in that case the program won’t be able to resume the execution.
 
 L2 – local checkpoint on the nodes + copy to the neighbor node:
 ---------------------------------------------------------------
