@@ -10,15 +10,17 @@ Preparation
 
 
 Create FTI directory
+
 	.. code:: bash
 
 	  mkdir FTI
 	  cd FTI
 
 Create Installation Directory
-.. code:: bash
 
-  mkdir install-fti
+	.. code:: bash
+
+	  mkdir install-fti
 
 #. Set enviromental variable to installation path
    .. code-block:: bash
