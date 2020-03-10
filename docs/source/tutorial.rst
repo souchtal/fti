@@ -1,8 +1,6 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
 
 
-I this page we present a tutorial of FTI. The purpose of the practice section is for you to get familiar with the FTI API as well as with the configuration file. Therefore there is limited information on how you should proceed.  
+In this page we present a tutorial of FTI. The purpose of the practice section is for you to get familiar with the FTI API as well as with the configuration file. Therefore there is limited information on how you should proceed.  
 
 Installation
 ============
@@ -11,16 +9,16 @@ Preparation
 -----------
 
 
-1. Create FTI directory
+Create FTI directory
 	.. code:: bash
 
 	  mkdir FTI
 	  cd FTI
 
-2. Create Installation Directory
-    .. code:: bash
+Create Installation Directory
+.. code:: bash
 
-      mkdir install-fti
+  mkdir install-fti
 
 #. Set enviromental variable to installation path
    .. code-block:: bash
