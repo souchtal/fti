@@ -11,38 +11,44 @@ Preparation
 
 Create FTI directory
 
-	.. code:: bash
+.. code-block:: bash
 
-	  mkdir FTI
-	  cd FTI
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
 
 Create Installation Directory
 
-	.. code-block:: bash
+.. code-block:: bash
 
-	  mkdir install-fti
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+
+Set environmental variable to installation path
+
+.. code-block:: bash
+
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
 
 Set enviromental variable to installation path
 
-	.. code-block:: bash
+.. code-block:: bash
 
-      export FTI_INSTALL_DIR=$PWD/install-fti
-
-Set enviromental variable to installation path
-
-	.. code-block:: bash
-
-      export chihaja
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
 
 #. Download FTI.
-   .. code-block:: bash
+.. code-block:: bash
 
-      git clone https://github.com/leobago/fti
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
 
 #. Change into base directory
-   .. code-block:: bash
 
-      cd fti
+.. code-block:: bash
+
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
 
 #. Set Enviroment Variable to FTI root
    .. code-block:: bash
@@ -54,17 +60,18 @@ Configure and Install
 
 
 #. Create build directory and change into it
-   .. code-block:: bash
 
-      mkdir build
-      cd build
+.. code-block:: bash
+
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
 
 #. Build FTI
-   .. code-block:: bash
 
-      cmake -DCMAKE_INSTALL_PREFIX:PATH=$FTI_INSTALL_DIR -DENABLE_TUTORIAL=1 ..
-      make
-      make install
+.. code-block:: bash
+
+   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
+   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
 
 The flag -DENABLE_TUTORIAL=1 besides building FTI, will also build the tutorial files
 
