@@ -12,13 +12,13 @@ Preparation
 
 
 #. Create FTI directory
-.. code-block:: bash
+	.. code:: bash
 
-  mkdir FTI
-  cd FTI
+	  mkdir FTI
+	  cd FTI
 
 #. Create Installation Directory
-   .. code-block:: bash
+    .. code:: bash
 
       mkdir install-fti
 
