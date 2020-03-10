@@ -13,44 +13,36 @@ Create FTI directory
 
 .. code-block:: bash
 
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+   mkdir FTI
+   cd FTI
 
 Create Installation Directory
 
 .. code-block:: bash
 
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+   mkdir install-fti
 
 Set environmental variable to installation path
 
 .. code-block:: bash
 
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+   export FTI_INSTALL_DIR=$PWD/install-fti
 
-Set enviromental variable to installation path
+
+Download FTI.
 
 .. code-block:: bash
 
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
-
-#. Download FTI.
-.. code-block:: bash
-
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+   git clone https://github.com/leobago/fti 
 
 #. Change into base directory
 
 .. code-block:: bash
 
-   export TUTORIAL_EXEC=${FTI_ROOT}/build/tutorial/
-   export TUTORIAL_SRC=${FTI_ROOT}/tutorial/
+   cd fti
 
 #. Set Enviroment Variable to FTI root
+
    .. code-block:: bash
 
       export FTI_ROOT=$PWD
