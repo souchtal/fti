@@ -1,6 +1,9 @@
 .. Fault Tolerance Library documentation FTIFF file
 .. _ftiff:
 
+FTI File Format
+==========================
+
 FTI-FF Structure
 --------------------------
 

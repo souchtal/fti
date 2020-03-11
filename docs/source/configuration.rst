@@ -1,6 +1,8 @@
 .. Fault Tolerance Library documentation Configuration file
 .. _configuration:
 
+Configuration
+=================
 
 [Basic]
 -------
