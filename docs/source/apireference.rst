@@ -1,6 +1,7 @@
 .. Fault Tolerance Library documentation API Reference file
+.. _apireference:
 
-Define(s)
+APIs
 ===================================================
 .. doxygendefine:: FTI_DEFAULT_CHOSTBUF_SIZE_MB
 	:project: Fault Tolerance Library 
