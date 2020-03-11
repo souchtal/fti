@@ -1,84 +1,104 @@
-.. Fault Tolerance Library documentation API Reference file
+.. Fault Tolerance Library documentation public API Reference file
 .. _apireference:
 
 APIs
-===================================================
-.. doxygendefine:: FTI_DEFAULT_CHOSTBUF_SIZE_MB
-	:project: Fault Tolerance Library 
-
-
-Enum(s)
-===================================================
-.. doxygenenum:: FTIT_level
-	:project: Fault Tolerance Library 
-
-.. doxygenenum:: FTIT_ptrtype
-	:project: Fault Tolerance Library 
-
-.. doxygenenum:: FTIT_StatusField
-	:project: Fault Tolerance Library 
-
-.. doxygenenum:: FTIT_RequestField
-	:project: Fault Tolerance Library 
-
-
-Function(s)
-===================================================
+========
 
 .. doxygenfunction:: FTI_Init
-	:project: Fault Tolerance Library 
-
-.. doxygenfunction:: FTI_InitExecVars
-	:project: Fault Tolerance Library 
-
-.. doxygenfunction:: FTI_Checksum
-	:project: Fault Tolerance Library 
-
-.. doxygenfunction:: FTI_Try
-	:project: Fault Tolerance Library 
-
-.. doxygenfunction:: FTI_MallocMeta
-	:project: Fault Tolerance Library 
-
-.. doxygenfunction:: FTI_Clean
-	:project: Fault Tolerance Library 
-
-.. doxygenfunction:: FTI_Print
 	:project: Fault Tolerance Library 
 
 .. doxygenfunction:: FTI_Status
 	:project: Fault Tolerance Library 
 
+.. doxygenfunction:: FTI_InitType
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_InitComplexType
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_AddSimpleField
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_AddComplexField
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_GetStageDir
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_GetStageStatus
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_SendFile
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_InitGroup
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_setIDFromString
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_getIDFromString
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_RenameGroup
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_Protect
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_DefineGlobalDataset
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_AddSubset
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_UpdateGlobalDataset
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_GetDatasetRank
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_GetDatasetSpan
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_RecoverDatasetDimension
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_DefineDataset
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_GetStoredSize
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_Realloc
+	:project: Fault Tolerance Library 
+
+.. doxygenfunction:: FTI_BitFlip
+	:project: Fault Tolerance Library 
+
 .. doxygenfunction:: FTI_Checkpoint
 	:project: Fault Tolerance Library 
 
-
-Struct(s)
-===================================================
-
-
-
-Typedef(s)
-===================================================
-.. doxygentypedef:: FTIT_hsize_t
+.. doxygenfunction:: FTI_InitICP
 	:project: Fault Tolerance Library 
 
-.. doxygentypedef:: FTI_ADDRVAL
+.. doxygenfunction:: FTI_AddVarICP
 	:project: Fault Tolerance Library 
 
-.. doxygentypedef:: FTIT_dcpConfigurationPosix
+.. doxygenfunction:: FTI_FinalizeICP
 	:project: Fault Tolerance Library 
 
-.. doxygentypedef:: blockMetaInfo_t
+.. doxygenfunction:: FTI_Recover
 	:project: Fault Tolerance Library 
 
-.. doxygentypedef:: FTIT_double
+.. doxygenfunction:: FTI_Snapshot
 	:project: Fault Tolerance Library 
 
-
-Variable(s)
-===================================================
-.. doxygenvariable:: FTI_COMM_WORLD
+.. doxygenfunction:: FTI_Finalize
 	:project: Fault Tolerance Library 
 
+.. doxygenfunction:: FTI_RecoverVar
+	:project: Fault Tolerance Library 
 
+.. doxygenfunction:: FTI_Print
+	:project: Fault Tolerance Library 
