@@ -1,6 +1,6 @@
 .. Fault Tolerance Library documentation Configuration examples file
 
-Test 
+Configuration Examples
 =================================
 
 Default Configuration
@@ -53,3 +53,9 @@ Default Configuration
 	lustre_striping_unit           = 4194304
 	lustre_striping_factor         = -1
 	lustre_striping_offset         = -1
+
+**DESCRIPTION**  
+
+..
+
+   This configuration is made of default values (see: 5). FTI processes are not created (\ ``head = 0``\ , notice: if there is no FTI processes, all post-checkpoints must be done by application processes, thus ``inline_L2``\ , ``inline_L3`` and ``inline_L4`` are set to 1), last checkpoint won’t be kept (\ ``keep_last_ckpt = 0``\ ), ``FTI_Snapshot()`` will take L1 checkpoint every 3 min,L2 - every 5 min, L3 - every 7 min and L4 - every 11 min, FTI will print errors and some few important information (\ ``verbosity = 2``\ ) and IO mode is set to POSIX (\ ``ckpt_io = 1``\ ). This is a normal launch of a job, because failure is set to 0 and ``exec_id`` is ``NULL``. ``local_test = 1`` makes this a local test.  
