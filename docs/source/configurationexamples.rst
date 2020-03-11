@@ -63,7 +63,6 @@ Default Configuration
    Using FTI Processes
 -------------------
 
-`:arrow_up: Top <configuration-examples>`_  
 
 .. code-block::
 
@@ -107,7 +106,6 @@ Default Configuration
 Using only selected ckpt level with FTI_Snapshot
 ------------------------------------------------
 
-`:arrow_up: Top <configuration-examples>`_  
 
 .. code-block::
 
@@ -151,7 +149,6 @@ Using only selected ckpt level with FTI_Snapshot
 Keeping last checkpoint
 -----------------------
 
-`:arrow_up: Top <configuration-examples>`_  
 
 .. code-block::
 
@@ -195,7 +192,6 @@ Keeping last checkpoint
 Using different IO mode
 -----------------------
 
-`:arrow_up: Top <configuration-examples>`_  
 
 For instance MPI-I/O:  
 
@@ -241,7 +237,6 @@ For instance MPI-I/O:
 Restart after a failure
 -----------------------
 
-`:arrow_up: Top <configuration-examples>`_  
 
 .. code-block::
 
