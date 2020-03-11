@@ -1,5 +1,5 @@
 .. Fault Tolerance Library documentation Introduction file
-
+.. _introduction:
 
 Introduction
 ===================================================
