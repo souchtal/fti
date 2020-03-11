@@ -21,7 +21,7 @@ head
      - Meaning
    * - 0
      - The checkpoint postprocessing work is covered by the application processes
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - The HEAD process accomplishes the checkpoint postprocessing work (notice: In this case, the number of application processes will be (n-1)/node)
 
 
@@ -41,7 +41,7 @@ node_size
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>ppn (int > 0)</b></code></pre>`
+   * - ppn (int > 0)
      - Number of processing units within each node (notice: The total number of processes must be a multiple of ``group_size*node_size``\ )
 
 
@@ -61,7 +61,7 @@ ckpt_dir
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>string</b></code>`
+   * - string
      - Path to the local hard drive on the nodes
 
 
@@ -81,7 +81,7 @@ glbl_dir
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>string</b></code>`
+   * - string
      - Path to the checkpoint directory on the PFS
 
 
@@ -101,7 +101,7 @@ meta_dir
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>string</b></code>`
+   * - string
      - Path to the meta files directory
 
 
@@ -121,9 +121,9 @@ ckpt_L1
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>L1 intv. (int \>= 0)</b></code></pre>`
+   * - L1 intv. (int \>= 0)
      - L1 checkpointing interval in minutes
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Disable L1 checkpointing
 
 
@@ -143,9 +143,9 @@ ckpt_L2
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>L2 intv. (int \>= 0)</b></code></pre>`
+   * - L2 intv. (int \>= 0)
      - L2 checkpointing interval in minutes
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Disable L2 checkpointing
 
 
@@ -165,9 +165,9 @@ ckpt_L3
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>L3 intv. (int \>= 0)</b></code></pre>`
+   * - L3 intv. (int \>= 0)
      - L3 checkpointing interval in minutes
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Disable L3 checkpointing
 
 
@@ -187,9 +187,9 @@ ckpt_L4
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>L4 intv. (int \>= 0)</b></code></pre>`
+   * - L4 intv. (int \>= 0)
      - L4 checkpointing interval in minutes
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Disable L4 checkpointing
 
 
@@ -209,9 +209,9 @@ dcp_L4
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>L4 dCP intv. (int \>= 0)</b></code></pre>`
+   * - L4 dCP intv. (int \>= 0)
      - L4 dCP checkpointing interval in minutes
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Disable L4 dCP checkpointing
 
 
@@ -231,9 +231,9 @@ inline_L2
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - The post-processing work of the L2 checkpoints is done by an FTI process (notice: This setting is only alowed if head = 1)
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - The post-processing work of the L2 checkpoints is done by the application process
 
 
@@ -253,9 +253,9 @@ inline_L3
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - The post-processing work of the L3 checkpoints is done by an FTI process (notice: This setting is only alowed if head = 1)
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - The post-processing work of the L3 checkpoints is done by the application process
 
 
@@ -275,9 +275,9 @@ inline_L4
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - The post-processing work of the L4 checkpoints is done by an FTI process (notice: This setting is only alowed if head = 1)
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - The post-processing work of the L4 checkpoints is done by the application process
 
 
@@ -297,9 +297,9 @@ keep_last_ckpt
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - During ``FTI_Finalize()``\ , all checkpoints will be removed (except case 'keep_l4_ckpt=1')
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - After ``FTI_Finalize()``\ , the last checkpoint will be kept and stored on the PFS as a L4 checkpoint (notice: Additionally, the setting failure in the configuration file is set to 2. This will lead to a restart from the last checkpoint if the application is executed again)
 
 
@@ -319,9 +319,9 @@ keep_l4_ckpt
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - During ``FTI_Finalize()``\ , all checkpoints will be removed (except case 'keep_last_ckpt=1')
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - All level 4 checkpoints taken during the execution, will be stored under ``glbl_dir/l4_archive``. This folder will not be deleted during the ``FTI_Finalize()`` call.
 
 
@@ -341,7 +341,7 @@ group_size
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>int i (2 \<= i \<= 32)</b></code></pre>`
+   * - int i (2 \<= i \<= 32)
      - Number of nodes contained in a group (notice: The total number of processes must be a multiple of ``group_size*node_size``\ )
 
 
@@ -361,9 +361,9 @@ max_sync_intv
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>int i (0 \<= i \<= INT_MAX )</b></code></pre>`
+   * - int i (0 \<= i \<= INT_MAX )
      - maximum number of iterations between measurements of the global mean iteration time (\ ``MPI_Allreduce`` call)
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Sets the value to 512, the default value for FTI
 
 
@@ -383,15 +383,15 @@ ckpt_io
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - POSIX I/O mode
-   * - :raw-html-m2r:`<code><b>2</b></code>`
+   * - 2
      - MPI-IO I/O mode
-   * - :raw-html-m2r:`<code><b>3</b></code>`
+   * - 3
      - FTI-FF I/O mode
-   * - :raw-html-m2r:`<code><b>4</b></code>`
+   * - 4
      - SIONLib I/O mode
-   * - :raw-html-m2r:`<code><b>5</b></code>`
+   * - 5
      - HDF5 I/O mode
 
 
@@ -410,9 +410,9 @@ enable_staging
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Staging disabled
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - Stagin enabled (creation of the staging directory in folde 'ckpt_dir')
 
 
@@ -432,9 +432,9 @@ enable_dcp
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - dCP disabled
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - dCP enabled
 
 
@@ -452,9 +452,9 @@ dcp_mode
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - MD5
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - CRC32
 
 
@@ -474,7 +474,7 @@ dcp_block_size
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>b (512 \<= i \<= USHRT_MAX)</b></code></pre>`
+   * - b (512 \<= i \<= USHRT_MAX)
      - block size for dataset partition for dCP
 
 
@@ -494,13 +494,13 @@ verbosity
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - Debug sensitive. Beside warnings, errors and information, FTI debugging information will be printed
-   * - :raw-html-m2r:`<code><b>2</b></code>`
+   * - 2
      - Information sensitive. FTI prints warnings, errors and information
-   * - :raw-html-m2r:`<code><b>3</b></code>`
+   * - 3
      - FTI prints only warnings and errors
-   * - :raw-html-m2r:`<code><b>4</b></code>`
+   * - 4
      - FTI prints only errors
 
 
@@ -530,11 +530,11 @@ failure
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - The application starts with its initial conditions (notice: In order to force a clean start, the value may be set to 0 manually. In this case the user has to take care about removing the checkpoint data from the last execution)
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - FTI is searching for checkpoints and starts from the highest checkpoint level (notice: If no readable checkpoints are found, the execution stops)
-   * - :raw-html-m2r:`<code><b>2</b></code>`
+   * - 2
      - FTI is searching for the last L4 checkpoint and restarts the execution from there (notice: If checkpoint is not L4 or checkpoint is not readable, the execution stops)
 
 
@@ -554,7 +554,7 @@ exec_id
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>yyyy-mm-dd_hh-mm-ss</b></code></pre>`
+   * - yyyy-mm-dd_hh-mm-ss
      - Execution ID (notice: If variate checkpoint data is available, the execution ID may set by the user to assign the desired starting point)
 
 
@@ -579,7 +579,7 @@ block_size
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>int</b></code>`
+   * - int
      - Size in KB of the data blocks send by FTI through MPI for the checkpoint levels L2 and L3
 
 
@@ -599,7 +599,7 @@ transfer_size
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>int</b></code>`
+   * - int
      - Size in MB of the chunks send by FTI from local to PFS
 
 
@@ -619,7 +619,7 @@ general_tag
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>int</b></code>`
+   * - int
      - Tag, used for general MPI messages within FTI
 
 
@@ -639,7 +639,7 @@ ckpt_tag
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>int</b></code>`
+   * - int
      - Tag, used for MPI messages related to a checkpoint context within FTI
 
 
@@ -659,7 +659,7 @@ stage_tag
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>int</b></code>`
+   * - int
      - Tag, used for MPI messages related to a staging context within FTI
 
 
@@ -679,7 +679,7 @@ final_tag
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>int</b></code>`
+   * - int
      - Tag, used for the MPI message that marks the end of the execution send from application processes to the heads within FTI
 
 
@@ -699,9 +699,9 @@ lustre_striping_unit
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>int i (0 \<= i \<= INT_MAX )</b></code></pre>`
+   * - int i (0 \<= i \<= INT_MAX )
      - Striping size in Bytes. The default in Lustre systems is 1MB (1048576 Bytes), FTI uses 4MB (4194304 Bytes) as the dafault value
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Assigns the Lustre default value
 
 
@@ -721,11 +721,11 @@ lustre_striping_factor
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>int i (0 \<= i \<= INT_MAX )</b></code></pre>`
+   * - int i (0 \<= i \<= INT_MAX )
      - Striping factor. The striping factor determines the number of OST’s to use for striping.
-   * - :raw-html-m2r:`<code><b>-1</b></code>`
+   * - -1
      - Stripe over all available OST’s. This is the default in FTI.
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Assigns the Lustre default value
 
 
@@ -745,9 +745,9 @@ lustre_striping_offset
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<pre><code><b>int i (0 \<= i \<= INT_MAX )</b></code></pre>`
+   * - int i (0 \<= i \<= INT_MAX )
      - Striping offset. The striping offset selects a particular OST to begin striping at.
-   * - :raw-html-m2r:`<code><b>-1</b></code>`
+   * - -1
      - Assigns the Lustre default value
 
 
@@ -767,9 +767,9 @@ local_test
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - Local test is disabled. FTI will simulate the situation set in the configuration
-   * - :raw-html-m2r:`<code><b>1</b></code>`
+   * - 1
      - Local test is enabled (notice: FTI will check if the settings are correct on initialization and if necessary stop the execution)
 
 
