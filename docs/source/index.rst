@@ -78,17 +78,10 @@ Fault Tolerance Library
 
 .. toctree::
    :hidden:
-   :caption: OpenCHK
+   :caption: Advanced
    :maxdepth: 2
 
-   openchk
-
-.. toctree::
-   :hidden:
-   :caption: Acknowledgement
-   :maxdepth: 2
-
-   acknowledgements
+   doxy
 
 
 .. codeauthor:: Dr. Leonardo Bautista-Gomez (Leo) <leonardo.bautista@bsc.es>
