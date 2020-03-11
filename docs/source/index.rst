@@ -54,9 +54,21 @@ Fault Tolerance Library
 
 .. toctree::
    :hidden:
+   :caption: Configuration
+
+   configuration
+
+.. toctree::
+   :hidden:
    :caption: Configuration Examples
 
    configurationexamples
+
+.. toctree::
+   :hidden:
+   :caption: Examples
+
+   examples
 
 .. toctree::
    :hidden:
