@@ -1,3 +1,6 @@
+<a href='https://fti.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/fti/badge/?version=latest' alt='Documentation Status' />
+</a>
 What is FTI?
 ===
 
