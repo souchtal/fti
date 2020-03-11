@@ -1,5 +1,5 @@
 .. Fault Tolerance Library documentation Configuration file
-.. _my-reference-configuration:
+.. _configuration:
 
 
 [Basic]

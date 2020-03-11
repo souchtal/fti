@@ -170,7 +170,7 @@ Practice
 
 To execute your implementation change directory to ${TUTORIAL_EXEC}/practice and execute the binary hdp.exe. 
 
-Besides implementing the source code you need also to create an appropriate configuration file. Information about the options in the configuration file can be found here :ref:`_my-reference-configuration` and example configuration files can be found `here <Configuration-Examples>`_.  
+Besides implementing the source code you need also to create an appropriate configuration file. Information about the options in the configuration file can be found here :ref:`configuration` and example configuration files can be found `here <Configuration-Examples>`_.  
 
 .. code-block:: bash
 
