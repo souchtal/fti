@@ -72,6 +72,12 @@ Fault Tolerance Library
 
 .. toctree::
    :hidden:
+   :caption: FTI File Format
+
+   ftiff
+
+.. toctree::
+   :hidden:
    :caption: OpenCHK
    :maxdepth: 2
 
