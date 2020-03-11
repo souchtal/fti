@@ -54,6 +54,12 @@ Fault Tolerance Library
 
 .. toctree::
    :hidden:
+   :caption: Configuration Examples
+
+   configurationexamples
+
+.. toctree::
+   :hidden:
    :caption: OpenCHK
    :maxdepth: 2
 
