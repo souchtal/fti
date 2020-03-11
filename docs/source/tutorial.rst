@@ -1,9 +1,12 @@
 .. Fault Tolerance Library documentation tutorial file
 
+Tutorial
+====================
+
 In this page we present a tutorial of FTI. The purpose of the practice section is for you to get familiar with the FTI API as well as with the configuration file. Therefore there is limited information on how you should proceed.  
 
 Installation
-============
+-----------------
 
 Preparation
 -----------
@@ -81,7 +84,7 @@ The library is installed at the $FTI_INSTALL_DIR the source code of the FTI libr
 You should always export this variables every time you try to start/continue the tutorial. Under the ${TUTORIAL_SRC} directory you can find various directories, each directory corresponds to a step presented in the tutorial. 
 
 Demonstration of FTI
-====================
+---------------------
 
 To demonstrate the various safety levels of FTI, we will execute an example which uses the API function ‘FTI_Snapshot()’. Run the example in each case for at least one minute and interrupt the execution after that time by pressing ‘ctrl+c’. In some systems 'ctrl+c' does not kill all executing MPI processes, to kill all processes just killall 'executable'.
 
@@ -158,7 +161,7 @@ Delete all files under ./local, ./global/ ./meta/ and open file config.DCP.fti w
 The first option changes the file format and the second option indicates that we will do a fresh run (not a recovery). Run the execution with ‘make hdDCP’, do you observe any difference in the timings of the checkpoints?
 
 Practice
-========
+--------------
 
 
 1. In the ‘${TUTORIAL_SRC}/practice’ folder you will find the source code of the program we used to demonstrate the FTI features. In this case without FTI being implemented. Try to implement FTI. You can use either the ‘FTI_Snapshot’ or ‘FTI_Checkpoint’ function to cause FTI taking a checkpoint. To build the code changes you implemented you can :
