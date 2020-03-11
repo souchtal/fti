@@ -8,7 +8,6 @@
 head
 ^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -20,7 +19,7 @@ head
 
    * - Value
      - Meaning
-   * - :raw-html-m2r:`<code><b>0</b></code>`
+   * - 0
      - The checkpoint postprocessing work is covered by the application processes
    * - :raw-html-m2r:`<code><b>1</b></code>`
      - The HEAD process accomplishes the checkpoint postprocessing work (notice: In this case, the number of application processes will be (n-1)/node)
@@ -31,7 +30,6 @@ head
 node_size
 ^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -52,7 +50,6 @@ node_size
 ckpt_dir
 ^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -73,7 +70,6 @@ ckpt_dir
 glbl_dir
 ^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -94,7 +90,6 @@ glbl_dir
 meta_dir
 ^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -115,7 +110,6 @@ meta_dir
 ckpt_L1
 ^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -138,7 +132,6 @@ ckpt_L1
 ckpt_L2
 ^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -161,7 +154,6 @@ ckpt_L2
 ckpt_L3
 ^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -184,7 +176,6 @@ ckpt_L3
 ckpt_L4
 ^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -207,7 +198,6 @@ ckpt_L4
 dcp_L4
 ^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -230,7 +220,6 @@ dcp_L4
 inline_L2
 ^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -253,7 +242,6 @@ inline_L2
 inline_L3
 ^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -276,7 +264,6 @@ inline_L3
 inline_L4
 ^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -299,7 +286,6 @@ inline_L4
 keep_last_ckpt
 ^^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -322,7 +308,6 @@ keep_last_ckpt
 keep_l4_ckpt
 ^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -345,7 +330,6 @@ keep_l4_ckpt
 group_size
 ^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -366,7 +350,6 @@ group_size
 max_sync_intv
 ^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -389,7 +372,6 @@ max_sync_intv
 ckpt_io
 ^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -418,8 +400,6 @@ ckpt_io
 enable_staging
 ^^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
-
 ..
 
    Enable the staging feature. This feature allows to stage files asynchronously from local (e.g. node local NVMe storage) to the PFS. FTI offers the API functions `FTI_SendFile <API-Reference#fti_sendfile>`_\ , `FTI_GetStageDir <API-Reference#fti_getstagedir>`_ and `FTI_GetStageStatus <API-Reference#FTI_getstagestatus>`_ for that.
@@ -441,7 +421,6 @@ enable_staging
 enable_dcp
 ^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -462,7 +441,6 @@ enable_dcp
 dcp_mode
 ^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -485,7 +463,6 @@ dcp_mode
 dcp_block_size
 ^^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -506,7 +483,6 @@ dcp_block_size
 verbosity
 ^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -536,7 +512,6 @@ verbosity
 failure
 ^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -568,7 +543,6 @@ failure
 exec_id
 ^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -594,7 +568,6 @@ The settings in this section, should **ONLY** be changed by advanced users.
 block_size
 ^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -615,7 +588,6 @@ block_size
 transfer_size
 ^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -636,7 +608,6 @@ transfer_size
 general_tag
 ^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -657,7 +628,6 @@ general_tag
 ckpt_tag
 ^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -678,7 +648,6 @@ ckpt_tag
 stage_tag
 ^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -699,7 +668,6 @@ stage_tag
 final_tag
 ^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -720,7 +688,6 @@ final_tag
 lustre_striping_unit
 ^^^^^^^^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -743,7 +710,6 @@ lustre_striping_unit
 lustre_striping_factor
 ^^^^^^^^^^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -768,7 +734,6 @@ lustre_striping_factor
 lustre_striping_offset
 ^^^^^^^^^^^^^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
@@ -791,7 +756,6 @@ lustre_striping_offset
 local_test
 ^^^^^^^^^^
 
-`:arrow_up: Top <configuration>`_  
 
 ..
 
