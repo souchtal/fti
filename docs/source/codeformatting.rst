@@ -16,11 +16,28 @@ To enhance the code quality of FTI, we use the following open source code checke
    * - Language
      - Code Checker
    * - C
-     - cpplint
+     - cpplint_
    * - Fortran
-     - fprettify
+     - fprettify_
    * - CMake
-     - cmakelint
+     - cmakelint_
+
+.. _cpplint: https://github.com/cpplint/cpplint
+.. _fprettify: https://github.com/pseewald/fprettify
+.. _cmakelint: https://github.com/cheshirekow/cmake_format
+
+
+Coding Style
+-----------------------
+
+Here goes a list of the options
+the description of Google C++ coding style options
++ fprettify
++ cmake lint
+
+possibly a table with the options class and the option's value
+
++ examples
 
 
 Implementation
@@ -30,14 +47,20 @@ Code checking is integrated in FTI through a script that traverses any added/mod
 
 Examples of the execution on FTI s code
 
+.. image:: _static/pre-commit-fails.png
+   :width: 600
 
 Contributing
 ----------------------
 
-
 ..
 
 	To make use of the pre-commit hook, after cloning the repository, one should initialize their branch through ``git init`` command.
+
+..
+
+	This should port the pre-commit hook, along with the default git hooks, to your ``GIT_DIR``
+
 
 
 .. note::
