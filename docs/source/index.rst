@@ -15,7 +15,7 @@ Fault Tolerance Library
    introduction
    tutorial
    compilation
-   api-reference
+   apireference
    configuration
    configurationexamples
    examples
