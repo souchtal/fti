@@ -1,6 +1,6 @@
 .. Fault Tolerance Library documentation Examples file
 
-Examples
+FTI Examples
 ==================
 
 

@@ -5,10 +5,16 @@ APIs
 ========
 
 .. doxygenfunction:: FTI_Init
+	:project: Fault Tolerance Library 
+
+.. add link to the examples page
+:ref:`examples`
 
 .. doxygenfunction:: FTI_Status
+	:project: Fault Tolerance Library 
 
 .. doxygenfunction:: FTI_InitType
+	:project: Fault Tolerance Library 
 
 .. doxygenfunction:: FTI_InitComplexType
 	:project: Fault Tolerance Library 
