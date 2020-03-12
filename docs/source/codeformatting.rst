@@ -4,12 +4,12 @@
 FTI Code Format
 ======================
 
-
+.. _checkers:
 Code Checkers
 ----------------------
-.. _webpages: 
 
 To enhance the code quality of FTI, we use the following open source code checkers:
+
 .. list-table::
    :header-rows: 1
 
@@ -56,7 +56,7 @@ Contributing
 **Prerequisites**
 
 Before you will be able to contribute to FTI, you need to have the code checkers installed so that your code is checked prior to any commit.
-The checkers are easy to install if you have pip. Please visit the checkers :ref:`webpages` for the latest guide. 
+The checkers are easy to install if you have pip. For the latest installation steps, please visit the checkers' :ref:`checkers`. 
 
 ..
 
