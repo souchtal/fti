@@ -29,15 +29,14 @@ To enhance the code quality of FTI, we use the following open source code checke
 Coding Style
 -----------------------
 
-cpplint checks C/C++ files style issues following googlecppstyle_. 
+cpplint checks C/C++ files style issues following Google C/C++ style guide_. 
 
 Fortran's and CMake style checkers have a plenty of formatting options, as their websites lists. For FTI, we choose to adopt the following style rules: 
 
 **Table for formatting options per lang**
 
 
-.. _googlecppstyle: http://google.github.io/styleguide/cppguide.html
-
+.. _guide: http://google.github.io/styleguide/cppguide.html
 
 
 **Examples**
@@ -60,6 +59,9 @@ Contributing
 
 Before you will be able to contribute to FTI, you need to have the code checkers installed so that your code is checked prior to any commit.
 The checkers are easy to install if you have pip. For the latest installation steps, please visit the :ref:`Code Checkers`. 
+
+The following table describes the code formatting used for FTI and its meaning. 
+
 
 ..
 
