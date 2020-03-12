@@ -92,7 +92,7 @@ FTIT_type FTI_LDBE;
 
 /*-------------------------------------------------------------------------*/
 /**
-  @brief      Initializes FTI.
+  @brief      Initializes FTI. //testttt
   @param      configFile      FTI configuration file.
   @param      globalComm      Main MPI communicator of the application.
   @return     integer         FTI_SCES if successful.
