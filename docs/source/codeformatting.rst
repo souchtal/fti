@@ -29,14 +29,18 @@ To enhance the code quality of FTI, we use the following open source code checke
 Coding Style
 -----------------------
 
-Here goes a list of the options
-the description of Google C++ coding style options
-+ fprettify
-+ cmake lint
+cpplint checks C/C++ files style issues following googlecppstyle_. 
 
-possibly a table with the options class and the option's value
+Fortran's and CMake style checkers have a plenty of formatting options, as their websites lists. For FTI, we choose to adopt the following style rules: 
 
-+ examples
+**Table for formatting options per lang**
+
+
+.. _googlecppstyle: http://google.github.io/styleguide/cppguide.html
+
+
+
+**Examples**
 
 
 Implementation
