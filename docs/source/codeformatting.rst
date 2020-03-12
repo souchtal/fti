@@ -53,6 +53,23 @@ Examples of the execution on FTI s code
 Contributing
 ----------------------
 
+**Prerequisites**
+
+Before you will be able to contribute to FTI, you need to have the code checkers installed so that your code is checked prior to any commit.
+The checkers are easy to install if you have pip. 
+
+.. list-table::
+   :header-rows: 1
+
+   * - Code Checker
+     - Install with
+   * - C - cpplint
+     - .. code-block:: bash
+
+   * - Fortran - fprettify
+     - pip install fprettify
+   * - CMake - cmakelint
+     - pip install cmake-format
 ..
 
 	To make use of the pre-commit hook, after cloning the repository, one should initialize their branch through ``git init`` command.
