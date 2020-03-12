@@ -7,6 +7,8 @@ FTI Code Format
 Code Checkers
 ----------------------
 
+.. _my-reference-label:
+
 To enhance the code quality of FTI, we use the following open source code checkers:
 
 .. list-table::
@@ -55,7 +57,7 @@ Contributing
 **Prerequisites**
 
 Before you will be able to contribute to FTI, you need to have the code checkers installed so that your code is checked prior to any commit.
-The checkers are easy to install if you have pip. For the latest installation steps, please visit the :ref:`Code Checkers`. 
+The checkers are easy to install if you have pip. For the latest installation steps, please visit the :ref:`my-reference-label`. 
 
 ..
 
