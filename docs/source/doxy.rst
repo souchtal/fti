@@ -9,3 +9,16 @@ For a deeper dive into FTI's members, you can explore the documentation through 
 
 .. _page: http://leobago.github.io/fti/
 
+Contributing 
+-------------------------------
+
+..
+	Upon contributing to FTI with a new API, it is recommended to have it show on the APIs pag. To do so, add the following lines ``FTI_ROOT/docs/source/apireferences.rst``
+
+.. code-block::
+	
+	.. doxygenfunction:: FTI_API
+	:project: Fault Tolerance Library 
+
+..
+	where ``FTI_API`` is the name of your function.
