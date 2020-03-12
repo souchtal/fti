@@ -9,7 +9,7 @@ Code Checkers
 ----------------------
 
 To enhance the code quality of FTI, we use the following open source code checkers:
-
+.. _webpages: 
 .. list-table::
    :header-rows: 1
 
@@ -56,20 +56,8 @@ Contributing
 **Prerequisites**
 
 Before you will be able to contribute to FTI, you need to have the code checkers installed so that your code is checked prior to any commit.
-The checkers are easy to install if you have pip. 
+The checkers are easy to install if you have pip. Please visit the checkers webpages_ for the latest guide. 
 
-.. list-table::
-   :header-rows: 1
-
-   * - Code Checker
-     - Install with
-   * - C - cpplint
-     - .. code-block:: bash
-
-   * - Fortran - fprettify
-     - pip install fprettify
-   * - CMake - cmakelint
-     - pip install cmake-format
 ..
 
 	To make use of the pre-commit hook, after cloning the repository, one should initialize their branch through ``git init`` command.
