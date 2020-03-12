@@ -92,7 +92,7 @@ FTIT_type FTI_LDBE;
 
 /*-------------------------------------------------------------------------*/
 /**
-  @brief      Initializes FTI. //testttt
+  @brief      Initializes FTI.
   @param      configFile      FTI configuration file.
   @param      globalComm      Main MPI communicator of the application.
   @return     integer         FTI_SCES if successful.
@@ -102,6 +102,7 @@ FTIT_type FTI_LDBE;
   case of a restart, checkpoint files should be recovered and in place at the
   end of this function.
 
+  \example example1.c
  **/
 /*-------------------------------------------------------------------------*/
 int FTI_Init(const char* configFile, MPI_Comm globalComm)

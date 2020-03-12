@@ -8,7 +8,7 @@ APIs
 	:project: Fault Tolerance Library 
 
 .. add link to the examples page
-:ref:`examples`
+.. :ref:`examples`
 
 .. doxygenfunction:: FTI_Status
 	:project: Fault Tolerance Library 
