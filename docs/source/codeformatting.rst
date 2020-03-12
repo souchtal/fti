@@ -4,7 +4,6 @@
 FTI Code Format
 ======================
 
-.. _checkers:
 Code Checkers
 ----------------------
 
@@ -56,7 +55,7 @@ Contributing
 **Prerequisites**
 
 Before you will be able to contribute to FTI, you need to have the code checkers installed so that your code is checked prior to any commit.
-The checkers are easy to install if you have pip. For the latest installation steps, please visit the :ref:`checkers`. 
+The checkers are easy to install if you have pip. For the latest installation steps, please visit the :ref:`Code Checkers`. 
 
 ..
 
