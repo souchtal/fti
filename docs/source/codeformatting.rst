@@ -1,8 +1,6 @@
 .. Fault Tolerance Library documentation Code Formatting file
 .. _codeformatting:
 
-FTI Code Format
-======================
 
 Code Checkers
 ----------------------
