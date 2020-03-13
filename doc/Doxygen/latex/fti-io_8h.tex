@@ -1,0 +1,50 @@
+\hypertarget{fti-io_8h}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/fti-\/io.h File Reference}
+\label{fti-io_8h}\index{/home/bscuser/Documents/release/dev/fti/src/fti-\/io.h@{/home/bscuser/Documents/release/dev/fti/src/fti-\/io.h}}
+{\ttfamily \#include \char`\"{}fti.\+h\char`\"{}}\newline
+Include dependency graph for fti-\/io.h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fti-io_8h_a82389b45effbf23533c3377f24d8956c}{F\+T\+I\+\_\+\+Init\+Function\+Pointers}} (int ckpt\+IO, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec)
+\begin{DoxyCompactList}\small\item\em This function initializes the F\+T\+I\+\_\+\+IO structure with the functions that write the ckpt file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}{F\+T\+I\+T\+\_\+\+IO}} \mbox{\hyperlink{fti-io_8h_a28a33d94e22f56316d3cc558fbc22ea2}{fti\+IO}} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fti-io_8h_a82389b45effbf23533c3377f24d8956c}\label{fti-io_8h_a82389b45effbf23533c3377f24d8956c}} 
+\index{fti-\/io.h@{fti-\/io.h}!FTI\_InitFunctionPointers@{FTI\_InitFunctionPointers}}
+\index{FTI\_InitFunctionPointers@{FTI\_InitFunctionPointers}!fti-\/io.h@{fti-\/io.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitFunctionPointers()}{FTI\_InitFunctionPointers()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Function\+Pointers (\begin{DoxyParamCaption}\item[{int}]{ckpt\+IO,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec }\end{DoxyParamCaption})}
+
+
+
+This function initializes the F\+T\+I\+\_\+\+IO structure with the functions that write the ckpt file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ckpt\+IO} & File format selected by the user in the configuration file. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution environment of the F\+TI. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int On success F\+T\+I\+\_\+\+S\+C\+ES
+\end{DoxyReturn}
+This function actually initializes the execution paths of the write checkpoint function. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{fti-io_8h_a28a33d94e22f56316d3cc558fbc22ea2}\label{fti-io_8h_a28a33d94e22f56316d3cc558fbc22ea2}} 
+\index{fti-\/io.h@{fti-\/io.h}!ftiIO@{ftiIO}}
+\index{ftiIO@{ftiIO}!fti-\/io.h@{fti-\/io.h}}
+\doxysubsubsection{\texorpdfstring{ftiIO}{ftiIO}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}{F\+T\+I\+T\+\_\+\+IO}} fti\+IO\mbox{[}4\mbox{]}}
+
+Structure that stores the function pointer wrappers to perform the IO 

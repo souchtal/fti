@@ -1,0 +1,144 @@
+\hypertarget{macros_8h}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/macros.h File Reference}
+\label{macros_8h}\index{/home/bscuser/Documents/release/dev/fti/src/macros.h@{/home/bscuser/Documents/release/dev/fti/src/macros.h}}
+
+
+A\+PI functions for the F\+TI library.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a2bf44344e285663ad0b0b7bb001ac4fd}{M\+K\+D\+IR}}(a,  b)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a1d81d949ec5e13d1eea8d5c287b7312c}{R\+E\+N\+A\+ME}}(a,  b)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a0bb9ad8e7b95deee3622e03b2c06767b}{F\+R\+E\+AD}}(error\+Code,  bytes,  buff,  size,  number,  fd,  format, ...)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a2ebf8370bb114f25a3c7e2aa1910c062}{F\+W\+R\+I\+TE}}(error\+Code,  bytes,  buff,  size,  number,  fd,  format, ...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{macros_8h_aa4227fb2998e422f4ccf2a829ab8229b}{cleanup}} (char $\ast$pattern,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI functions for the F\+TI library. 
+
+Copyright (c) 2017 Leonardo A. Bautista-\/\+Gomez All rights reserved
+
+F\+TI -\/ A multi-\/level checkpointing library for C/\+C++/\+Fortran applications
+
+Revision 1.\+0 \+: Fault Tolerance Interface (F\+TI)
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+\begin{DoxyDate}{Date}
+May, 2019 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{macros_8h_a0bb9ad8e7b95deee3622e03b2c06767b}\label{macros_8h_a0bb9ad8e7b95deee3622e03b2c06767b}} 
+\index{macros.h@{macros.h}!FREAD@{FREAD}}
+\index{FREAD@{FREAD}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{FREAD}{FREAD}}
+{\footnotesize\ttfamily \#define F\+R\+E\+AD(\begin{DoxyParamCaption}\item[{}]{error\+Code,  }\item[{}]{bytes,  }\item[{}]{buff,  }\item[{}]{size,  }\item[{}]{number,  }\item[{}]{fd,  }\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}\{                                                                                                                                                                                                         \(\backslash\)}
+\DoxyCodeLine{        bytes = fread(buff, size, number, fd);                                                                                                                          \(\backslash\)}
+\DoxyCodeLine{        if (ferror(fd)) \{                                                                                                                                                                       \(\backslash\)}
+\DoxyCodeLine{            char ErrorString[400];                                                                                                                                                      \(\backslash\)}
+\DoxyCodeLine{            sprintf(ErrorString,\textcolor{stringliteral}{"FILE \%s FUNC \%s:\%d Error Reading File Bytes Read : \%ld"},\_\_FILE\_\_,\_\_FUNCTION\_\_,\_\_LINE\_\_, (\textcolor{keywordtype}{long})bytes);  \(\backslash\)}
+\DoxyCodeLine{            FTI\_Print(ErrorString, \mbox{\hyperlink{fti-intern_8h_a5cb1252ae17ef4ac13b3dbe5a8b1ab13}{FTI\_EROR}});                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{            cleanup(format,\_\_VA\_ARGS\_\_,NULL);                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{            fclose(fd);                                                                                                                                                                         \(\backslash\)}
+\DoxyCodeLine{            return errorCode;                                                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                                                                                                                       \(\backslash\)}
+\DoxyCodeLine{    \}\textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macros_8h_a2ebf8370bb114f25a3c7e2aa1910c062}\label{macros_8h_a2ebf8370bb114f25a3c7e2aa1910c062}} 
+\index{macros.h@{macros.h}!FWRITE@{FWRITE}}
+\index{FWRITE@{FWRITE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{FWRITE}{FWRITE}}
+{\footnotesize\ttfamily \#define F\+W\+R\+I\+TE(\begin{DoxyParamCaption}\item[{}]{error\+Code,  }\item[{}]{bytes,  }\item[{}]{buff,  }\item[{}]{size,  }\item[{}]{number,  }\item[{}]{fd,  }\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}\{                                                                                                                                                                                                         \(\backslash\)}
+\DoxyCodeLine{        bytes = fwrite(buff, size, number, fd);                                                                                                                         \(\backslash\)}
+\DoxyCodeLine{        if (ferror(fd)) \{                                                                                                                                                                       \(\backslash\)}
+\DoxyCodeLine{            char ErrorString[400];                                                                                                                                                      \(\backslash\)}
+\DoxyCodeLine{            sprintf(ErrorString,\textcolor{stringliteral}{"FILE \%s FUNC \%s:\%d Error Writing File Bytes Written : \%ld"},\_\_FILE\_\_,\_\_FUNCTION\_\_,\_\_LINE\_\_,(\textcolor{keywordtype}{long})bytes);        \(\backslash\)}
+\DoxyCodeLine{            FTI\_Print(ErrorString, \mbox{\hyperlink{fti-intern_8h_a5cb1252ae17ef4ac13b3dbe5a8b1ab13}{FTI\_EROR}});                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{            cleanup(format,\_\_VA\_ARGS\_\_,NULL);                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{            fclose(fd);                                                                                                                                                                         \(\backslash\)}
+\DoxyCodeLine{            return errorCode;                                                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                                                                                                                       \(\backslash\)}
+\DoxyCodeLine{    \}\textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macros_8h_a2bf44344e285663ad0b0b7bb001ac4fd}\label{macros_8h_a2bf44344e285663ad0b0b7bb001ac4fd}} 
+\index{macros.h@{macros.h}!MKDIR@{MKDIR}}
+\index{MKDIR@{MKDIR}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{MKDIR}{MKDIR}}
+{\footnotesize\ttfamily \#define M\+K\+D\+IR(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}\{                         \(\backslash\)}
+\DoxyCodeLine{        if (mkdir(a,b) == -\/1) \{                                                                                                                                 \(\backslash\)}
+\DoxyCodeLine{            if (errno != EEXIST) \{                                                                                                                                                                      \(\backslash\)}
+\DoxyCodeLine{                char ErrorString[400];                                                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{                sprintf(ErrorString,\textcolor{stringliteral}{"FILE \%s FUNC \%s:\%d Cannot create directory: \%s"},\_\_FILE\_\_,\_\_FUNCTION\_\_,\_\_LINE\_\_,a); \(\backslash\)}
+\DoxyCodeLine{                FTI\_Print(ErrorString, \mbox{\hyperlink{fti-intern_8h_a5cb1252ae17ef4ac13b3dbe5a8b1ab13}{FTI\_EROR}});                                                                                                                                       \(\backslash\)}
+\DoxyCodeLine{                return \mbox{\hyperlink{fti_8h_a06d23a2210e17078a6a8862bb6ed3dbd}{FTI\_NSCS}};                                                                                                                                                                        \(\backslash\)}
+\DoxyCodeLine{            \}                                                                                                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                                                                                                                                       \(\backslash\)}
+\DoxyCodeLine{    \}\textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macros_8h_a1d81d949ec5e13d1eea8d5c287b7312c}\label{macros_8h_a1d81d949ec5e13d1eea8d5c287b7312c}} 
+\index{macros.h@{macros.h}!RENAME@{RENAME}}
+\index{RENAME@{RENAME}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{RENAME}{RENAME}}
+{\footnotesize\ttfamily \#define R\+E\+N\+A\+ME(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}\{                                                                                                                                                                                                         \(\backslash\)}
+\DoxyCodeLine{        errno = 0;                                                                                                                                                                                      \(\backslash\)}
+\DoxyCodeLine{        if ( rename(a,b) != 0 )\{                                                                                                                                                        \(\backslash\)}
+\DoxyCodeLine{            char ErrorString[600];                                                                                                                                                      \(\backslash\)}
+\DoxyCodeLine{            sprintf(ErrorString,\textcolor{stringliteral}{"FILE \%s FUNC \%s:\%d Cannot rename : \%s to \%s"},\_\_FILE\_\_,\_\_FUNCTION\_\_,\_\_LINE\_\_,a, b);     \(\backslash\)}
+\DoxyCodeLine{            FTI\_Print(ErrorString, \mbox{\hyperlink{fti-intern_8h_a5cb1252ae17ef4ac13b3dbe5a8b1ab13}{FTI\_EROR}});                                                                                                                                   \(\backslash\)}
+\DoxyCodeLine{            errno = 0;                                                                                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{            return \mbox{\hyperlink{fti_8h_a06d23a2210e17078a6a8862bb6ed3dbd}{FTI\_NSCS}};                                                                                                                                                                    \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                                                                                                                               \(\backslash\)}
+\DoxyCodeLine{    \}\textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{macros_8h_aa4227fb2998e422f4ccf2a829ab8229b}\label{macros_8h_aa4227fb2998e422f4ccf2a829ab8229b}} 
+\index{macros.h@{macros.h}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void cleanup (\begin{DoxyParamCaption}\item[{char $\ast$}]{pattern,  }\item[{}]{... }\end{DoxyParamCaption})}
+

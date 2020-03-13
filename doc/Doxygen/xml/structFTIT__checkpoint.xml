@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__checkpoint" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_checkpoint</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a98f4f26f6e99e7a07d4fde76b23515ea" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_checkpoint::dir[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint directory. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="534" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a34d13ab543f5cdb47f0c5285cc048f54" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_checkpoint::dcpDir[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>dcpDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dCP directory. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="535" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a044b3defabd8ec83bc59bd71c2f19817" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_checkpoint::archDir[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>archDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint directory. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="536" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a75a3832ff20e37d64f715ca4864c40d1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_checkpoint::archMeta[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>archMeta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>.Directory storing archieved meta <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="537" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a98a696506a947071885b4d375029939d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_checkpoint::metaDir[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>metaDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Metadata directory. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="538" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a6b4c276ac4ceb69463ec0b73d8e9c855" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_checkpoint::dcpName[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>dcpName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dCP file name. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="539" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a2e5377d7aa3c3342b6d633bb1f3afb70" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIT_checkpoint::isDcp</definition>
+        <argsstring></argsstring>
+        <name>isDcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if dCP requested <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="540" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="540" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1acc3a5b7f60cd9828620e01745c9d4350" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIT_checkpoint::recoIsDcp</definition>
+        <argsstring></argsstring>
+        <name>recoIsDcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if dCP requested <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="541" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a8336518289c762d2a480a45b5f28a5af" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIT_checkpoint::hasDcp</definition>
+        <argsstring></argsstring>
+        <name>hasDcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if execution has already a dCP <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="542" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="542" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a0dbcc461ba3263ccbcca067746159f59" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FTIT_checkpoint::hasCkpt</definition>
+        <argsstring></argsstring>
+        <name>hasCkpt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if level has ckpt <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="543" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="543" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a3759ecf0747658a49b8d4e1715092b12" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_checkpoint::isInline</definition>
+        <argsstring></argsstring>
+        <name>isInline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if work is inline. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="544" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="544" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a621b1318efb4ec40077c6f9dc24c7ff5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_checkpoint::ckptIntv</definition>
+        <argsstring></argsstring>
+        <name>ckptIntv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint interval. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="545" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="545" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a1871c770167dad43a41f1b64adbbf53b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_checkpoint::ckptCnt</definition>
+        <argsstring></argsstring>
+        <name>ckptCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint counter. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="546" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1aa704831ea3ad4d17e37e7a5f310ded04" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_checkpoint::ckptDcpIntv</definition>
+        <argsstring></argsstring>
+        <name>ckptDcpIntv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint interval. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="547" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="547" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1a77515c8a3f343d7b73ac7e63df0000e9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_checkpoint::ckptDcpCnt</definition>
+        <argsstring></argsstring>
+        <name>ckptDcpCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checkpoint counter. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="548" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="548" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__checkpoint_1ac94d2c40ae08809348eeb7f8daa48165" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_checkpoint::ckptID</definition>
+        <argsstring></argsstring>
+        <name>ckptID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Id of the checkpoint stored in this leve </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="549" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="549" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="533" column="34" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="533" bodyend="550"/>
+    <listofallmembers>
+      <member refid="structFTIT__checkpoint_1a044b3defabd8ec83bc59bd71c2f19817" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>archDir</name></member>
+      <member refid="structFTIT__checkpoint_1a75a3832ff20e37d64f715ca4864c40d1" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>archMeta</name></member>
+      <member refid="structFTIT__checkpoint_1a1871c770167dad43a41f1b64adbbf53b" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>ckptCnt</name></member>
+      <member refid="structFTIT__checkpoint_1a77515c8a3f343d7b73ac7e63df0000e9" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>ckptDcpCnt</name></member>
+      <member refid="structFTIT__checkpoint_1aa704831ea3ad4d17e37e7a5f310ded04" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>ckptDcpIntv</name></member>
+      <member refid="structFTIT__checkpoint_1ac94d2c40ae08809348eeb7f8daa48165" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>ckptID</name></member>
+      <member refid="structFTIT__checkpoint_1a621b1318efb4ec40077c6f9dc24c7ff5" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>ckptIntv</name></member>
+      <member refid="structFTIT__checkpoint_1a34d13ab543f5cdb47f0c5285cc048f54" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>dcpDir</name></member>
+      <member refid="structFTIT__checkpoint_1a6b4c276ac4ceb69463ec0b73d8e9c855" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>dcpName</name></member>
+      <member refid="structFTIT__checkpoint_1a98f4f26f6e99e7a07d4fde76b23515ea" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>dir</name></member>
+      <member refid="structFTIT__checkpoint_1a0dbcc461ba3263ccbcca067746159f59" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>hasCkpt</name></member>
+      <member refid="structFTIT__checkpoint_1a8336518289c762d2a480a45b5f28a5af" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>hasDcp</name></member>
+      <member refid="structFTIT__checkpoint_1a2e5377d7aa3c3342b6d633bb1f3afb70" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>isDcp</name></member>
+      <member refid="structFTIT__checkpoint_1a3759ecf0747658a49b8d4e1715092b12" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>isInline</name></member>
+      <member refid="structFTIT__checkpoint_1a98a696506a947071885b4d375029939d" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>metaDir</name></member>
+      <member refid="structFTIT__checkpoint_1acc3a5b7f60cd9828620e01745c9d4350" prot="public" virt="non-virtual"><scope>FTIT_checkpoint</scope><name>recoIsDcp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

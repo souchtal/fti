@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md_config" kind="page">
+    <compoundname>md_config</compoundname>
+    <title>Default Configuration File</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">##############<sp/><sp/><sp/>FTI<sp/>CONFIGURATION<sp/>FILE<sp/><sp/><sp/>###############</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>***<sp/>Here<sp/>are<sp/>the<sp/>main<sp/>parameters<sp/>you<sp/>should<sp/>provide<sp/>to<sp/>FTI<sp/>******</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline><highlight class="normal">[Basic]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>to<sp/>1<sp/>if<sp/>you<sp/>want<sp/>to<sp/>dedicate<sp/>1<sp/>MPI<sp/>rank<sp/>per<sp/>node<sp/>to<sp/>FTI</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>set<sp/>to<sp/>0<sp/>if<sp/>you<sp/>want<sp/>ALL<sp/>ckpt.<sp/>post-processing<sp/>to<sp/>be<sp/>done<sp/>inline</highlight></codeline>
+<codeline><highlight class="normal">Head<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>number<sp/>of<sp/>processes<sp/>launched<sp/>per<sp/>node<sp/>(Same<sp/>for<sp/>every<sp/>node)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>including<sp/>FTI-dedicated<sp/>process.</highlight></codeline>
+<codeline><highlight class="normal">Node_size<sp/>=<sp/>2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>LOCAL<sp/>directory<sp/>where<sp/>the<sp/>local<sp/>checkpoints<sp/>will<sp/>be<sp/>stored</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>directory<sp/>MUST<sp/>exist<sp/>and<sp/>have<sp/>write<sp/>access</highlight></codeline>
+<codeline><highlight class="normal">Ckpt_dir<sp/>=<sp/>./Local<sp/><sp/>#/path/to/local/storage/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>GLOBAL<sp/>directory<sp/>where<sp/>the<sp/>global<sp/>checkpoints<sp/>will<sp/>be<sp/>stored</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>directory<sp/>MUST<sp/>exist<sp/>and<sp/>have<sp/>write<sp/>access</highlight></codeline>
+<codeline><highlight class="normal">Glbl_dir<sp/>=<sp/>./Global<sp/><sp/><sp/><sp/><sp/>#/path/to/global/storage/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>GLOBAL<sp/>directory<sp/>where<sp/>the<sp/>FTI<sp/>metadata<sp/>will<sp/>be<sp/>stored</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>directory<sp/>MUST<sp/>exist<sp/>and<sp/>have<sp/>write<sp/>access</highlight></codeline>
+<codeline><highlight class="normal">Meta_dir<sp/>=<sp/>./Meta<sp/><sp/><sp/>#/home/username/.fti</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Level<sp/>1<sp/>ckpt<sp/>interval<sp/>in<sp/>minutes<sp/>of<sp/>L1<sp/>ckpts<sp/>(Local<sp/>write)</highlight></codeline>
+<codeline><highlight class="normal">Ckpt_L1<sp/>=<sp/>3</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Level<sp/>2<sp/>ckpt<sp/>interval<sp/>in<sp/>minutes<sp/>of<sp/>L2<sp/>ckpts<sp/>(Partner<sp/>copy)</highlight></codeline>
+<codeline><highlight class="normal">Ckpt_L2<sp/>=<sp/>5</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Level<sp/>3<sp/>ckpt<sp/>interval<sp/>in<sp/>minutes<sp/>of<sp/>L3<sp/>ckpts<sp/>(Reed-Solomon)</highlight></codeline>
+<codeline><highlight class="normal">Ckpt_L3<sp/>=<sp/>7</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Level<sp/>4<sp/>ckpt<sp/>interval<sp/>in<sp/>minutes<sp/>of<sp/>L4<sp/>ckpts<sp/>(PFS<sp/>write)</highlight></codeline>
+<codeline><highlight class="normal">Ckpt_L4<sp/>=<sp/>11</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>dCP<sp/>interval<sp/>in<sp/>minutes<sp/>for<sp/>level<sp/>4<sp/>checkpoints</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>dCP<sp/>-<sp/>differential<sp/>checkpointing</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>setting<sp/>requires<sp/>io_mode=3<sp/>(FTI-FF)<sp/>and<sp/>dcp_enabled=1</highlight></codeline>
+<codeline><highlight class="normal">Dcp_L4<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>1<sp/>if<sp/>Level<sp/>2<sp/>ckpt<sp/>is<sp/>inline<sp/>(synchronous)<sp/>0<sp/>if<sp/>not<sp/>(asynchronous)</highlight></codeline>
+<codeline><highlight class="normal">Inline_L2<sp/>=<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>1<sp/>if<sp/>Level<sp/>3<sp/>ckpt<sp/>is<sp/>inline<sp/>(synchronous)<sp/>0<sp/>if<sp/>not<sp/>(asynchronous)</highlight></codeline>
+<codeline><highlight class="normal">Inline_L3<sp/>=<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>1<sp/>if<sp/>Level<sp/>4<sp/>ckpt<sp/>is<sp/>inline<sp/>(synchronous)<sp/>0<sp/>if<sp/>not<sp/>(asynchronous)</highlight></codeline>
+<codeline><highlight class="normal">Inline_L4<sp/>=<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>to<sp/>1<sp/>if<sp/>you<sp/>want<sp/>to<sp/>save<sp/>the<sp/>last<sp/>checkpoint<sp/>taken<sp/>before<sp/>finalize</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>to<sp/>0<sp/>if<sp/>you<sp/>want<sp/>to<sp/>erase<sp/>all<sp/>checkpoints<sp/>after<sp/>finalize</highlight></codeline>
+<codeline><highlight class="normal">keep_last_ckpt<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Enabled,<sp/>all<sp/>level<sp/>4<sp/>checkpoints<sp/>of<sp/>the<sp/>execution<sp/>will<sp/>be<sp/>kept<sp/>in<sp/>&apos;Glbl_dir/l4_archive&apos;</highlight></codeline>
+<codeline><highlight class="normal">keep_l4_ckpt<sp/><sp/><sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>size<sp/>of<sp/>the<sp/>encoding<sp/>groups<sp/>(Something<sp/>between<sp/>4<sp/>and<sp/>16)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>total<sp/>number<sp/>of<sp/>nodes<sp/>MUST<sp/>be<sp/>multiple<sp/>of<sp/>this<sp/>parameter</highlight></codeline>
+<codeline><highlight class="normal">Group_size<sp/>=<sp/>4</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Number<sp/>of<sp/>iterations<sp/>between<sp/>iteration<sp/>length<sp/>sync<sp/>(0<sp/>=&gt;<sp/>512<sp/>iterations)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>If<sp/>you<sp/>app<sp/>has<sp/>iterations<sp/>of<sp/>varying<sp/>length<sp/>set<sp/>this<sp/>value<sp/>between<sp/>(1<sp/>and<sp/>10)</highlight></codeline>
+<codeline><highlight class="normal">max_sync_intv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>to:<sp/></highlight></codeline>
+<codeline><highlight class="normal">#<sp/>1<sp/>-&gt;<sp/>POSIX<sp/></highlight></codeline>
+<codeline><highlight class="normal">#<sp/>2<sp/>-&gt;<sp/>MPI-IO</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>3<sp/>-&gt;<sp/>FTI-FF</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>4<sp/>-&gt;<sp/>SIONLib</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>5<sp/>-&gt;<sp/>HDF5.</highlight></codeline>
+<codeline><highlight class="normal">ckpt_io<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Enable<sp/>staging<sp/>feature</highlight></codeline>
+<codeline><highlight class="normal">Enable_Staging<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Enable<sp/>differential<sp/>checkpointing<sp/>(dCP)</highlight></codeline>
+<codeline><highlight class="normal">Enable_dCP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Select<sp/>dCP<sp/>hashing<sp/>algorithm:</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>1<sp/>-&gt;<sp/>MD5</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>2<sp/>-&gt;<sp/>CRC32</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>modes<sp/>may<sp/>be<sp/>set<sp/>as<sp/>well<sp/>by<sp/>the<sp/>environment<sp/>variable<sp/>&apos;FTI_DCP_HASH_MODE=[0|1]&apos;</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>will<sp/>overwrite<sp/>the<sp/>setting<sp/>from<sp/>the<sp/>configuration<sp/>file!</highlight></codeline>
+<codeline><highlight class="normal">dCP_Mode<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>hash-partition<sp/>block<sp/>size</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>partition<sp/>block<sp/>size,<sp/>b,<sp/><sp/>must<sp/>be:<sp/>512<sp/>&lt;<sp/>b<sp/>&lt;<sp/>USHRT_MAX<sp/>(Bytes)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>b<sp/>may<sp/>be<sp/>set<sp/>as<sp/>well<sp/>by<sp/>the<sp/>environment<sp/>variable<sp/>&apos;FTI_DCP_BLOCK_SIZE=b<sp/>(in<sp/>bytes)&apos;</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>will<sp/>overwrite<sp/>the<sp/>setting<sp/>from<sp/>the<sp/>configuration<sp/>file!</highlight></codeline>
+<codeline><highlight class="normal">dCP_Block_Size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16384</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>verbosity<sp/>of<sp/>FTI.<sp/>(2<sp/>is<sp/>recommended)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>3<sp/>(Print<sp/>only<sp/>errors,<sp/>silent<sp/>mode)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>2<sp/>(Print<sp/>errors<sp/>and<sp/>some<sp/>few<sp/>important<sp/>information)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>1<sp/>(Print<sp/>debug<sp/>messages,<sp/>very<sp/>verbose)</highlight></codeline>
+<codeline><highlight class="normal">Verbosity<sp/>=<sp/>2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>***<sp/>Change<sp/>these<sp/>parameters<sp/>ONLY<sp/>in<sp/>case<sp/>of<sp/>restart<sp/><sp/><sp/>***********</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Restart]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>this<sp/>to<sp/>0<sp/>if<sp/>you<sp/>are<sp/>launching<sp/>this<sp/>job<sp/>for<sp/>the<sp/>first<sp/>time</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>this<sp/>to<sp/>1<sp/>if<sp/>you<sp/>are<sp/>recovering<sp/>this<sp/>job<sp/>after<sp/>a<sp/>failure</highlight></codeline>
+<codeline><highlight class="normal">Failure<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>with<sp/>the<sp/>execution<sp/>ID<sp/>in<sp/>case<sp/>of<sp/>restart<sp/>after<sp/>failure</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>to<sp/>NULL<sp/>if<sp/>normal<sp/>execution</highlight></codeline>
+<codeline><highlight class="normal">Exec_ID<sp/>=<sp/>XXXX-XX-XX_XX-XX-XX</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>***<sp/>Change<sp/>these<sp/>parameters<sp/>to<sp/>inject<sp/>failures.<sp/><sp/><sp/><sp/><sp/><sp/><sp/>***********</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Injection]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Rank<sp/>of<sp/>the<sp/>process<sp/>that<sp/>injects<sp/>the<sp/>failures</highlight></codeline>
+<codeline><highlight class="normal">rank<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Total<sp/>number<sp/>of<sp/>bit-flips<sp/>to<sp/>inject</highlight></codeline>
+<codeline><highlight class="normal">number<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Bit<sp/>position<sp/>of<sp/>the<sp/>injection</highlight></codeline>
+<codeline><highlight class="normal">position<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Injection<sp/>frequency<sp/>in<sp/>seconds</highlight></codeline>
+<codeline><highlight class="normal">frequency<sp/>=<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>***<sp/>Change<sp/>something<sp/>here<sp/>ONLY<sp/>if<sp/>you<sp/>know<sp/>what<sp/>you<sp/>are<sp/>doing<sp/>***</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>*****************************************************************</highlight></codeline>
+<codeline><highlight class="normal">[Advanced]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>ckpt<sp/>files<sp/>are<sp/>decomposed<sp/>in<sp/>blocks<sp/>of<sp/>size<sp/>Block_size<sp/>KB</highlight></codeline>
+<codeline><highlight class="normal">Block_size<sp/>=<sp/>1024</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>ckpt<sp/>files<sp/>are<sp/>transfered<sp/>in<sp/>chunks<sp/>of<sp/>size<sp/>Transfer_size<sp/>MB</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>from<sp/>local<sp/>to<sp/>PFS</highlight></codeline>
+<codeline><highlight class="normal">Transfer_size<sp/>=<sp/>16</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>tags<sp/>for<sp/>MPI<sp/>communications<sp/>done<sp/>within<sp/>the<sp/>FTI<sp/>library</highlight></codeline>
+<codeline><highlight class="normal">general_tag<sp/>=<sp/>2612</highlight></codeline>
+<codeline><highlight class="normal">ckpt_tag<sp/>=<sp/>711<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">stage_tag<sp/>=<sp/>406</highlight></codeline>
+<codeline><highlight class="normal">final_tag<sp/>=<sp/>3107</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>to<sp/>1<sp/>if<sp/>you<sp/>are<sp/>doing<sp/>a<sp/>test<sp/>in<sp/>local<sp/>in<sp/>a<sp/>single<sp/>computer</highlight></codeline>
+<codeline><highlight class="normal">Local_test<sp/>=<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#This<sp/>option<sp/>only<sp/>impacts<sp/>if<sp/>-DENABLE_LUSTRE<sp/>was<sp/>added<sp/>to<sp/>the<sp/>Cmake<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">#It<sp/>sets<sp/>the<sp/>striping<sp/>unit<sp/>for<sp/>the<sp/>MPI-IO<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal">lustre_striping_unit<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4194304</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#This<sp/>option<sp/>only<sp/>impacts<sp/>if<sp/>-DENABLE_LUSTRE<sp/>was<sp/>added<sp/>to<sp/>the<sp/>Cmake<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">#It<sp/>sets<sp/>the<sp/>striping<sp/>factor<sp/>for<sp/>the<sp/>MPI-IO<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal">lustre_striping_factor<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>-1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#This<sp/>option<sp/>only<sp/>impacts<sp/>if<sp/>-DENABLE_LUSTRE<sp/>was<sp/>added<sp/>to<sp/>the<sp/>Cmake<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">#It<sp/>sets<sp/>the<sp/>striping<sp/>offset<sp/>for<sp/>the<sp/>MPI-IO<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal">lustre_striping_offset<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>-1</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

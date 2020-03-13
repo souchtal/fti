@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__injection" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_injection</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__injection_1aba75a38cd410b415bfb78121f30435e7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_injection::rank</definition>
+        <argsstring></argsstring>
+        <name>rank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rank of proc. that injects <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="558" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="558" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__injection_1a12000c498bf27c5e8f3872467eeeff86" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_injection::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array index of the bit-flip. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="559" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="559" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__injection_1a68feabeb9e29d210543ec154ad3951e8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_injection::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit position of the bit-flip. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="560" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="560" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__injection_1ab439efe2f6c7d28edd01c048801e2352" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_injection::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of bit-flips to inject. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="561" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="561" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__injection_1a7a07c6bf9162ec57e49de446b1f9fb02" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_injection::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Injection frequency (in min.) <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="562" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="562" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__injection_1ab12d3237041b7c64f040763fd8f2b399" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_injection::counter</definition>
+        <argsstring></argsstring>
+        <name>counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Injection counter. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="563" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__injection_1a95bf2ff87b433ce58c6a228b9baf164a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTIT_injection::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer to measure frequency <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="564" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="564" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="557" column="33" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="557" bodyend="565"/>
+    <listofallmembers>
+      <member refid="structFTIT__injection_1ab12d3237041b7c64f040763fd8f2b399" prot="public" virt="non-virtual"><scope>FTIT_injection</scope><name>counter</name></member>
+      <member refid="structFTIT__injection_1a7a07c6bf9162ec57e49de446b1f9fb02" prot="public" virt="non-virtual"><scope>FTIT_injection</scope><name>frequency</name></member>
+      <member refid="structFTIT__injection_1a12000c498bf27c5e8f3872467eeeff86" prot="public" virt="non-virtual"><scope>FTIT_injection</scope><name>index</name></member>
+      <member refid="structFTIT__injection_1ab439efe2f6c7d28edd01c048801e2352" prot="public" virt="non-virtual"><scope>FTIT_injection</scope><name>number</name></member>
+      <member refid="structFTIT__injection_1a68feabeb9e29d210543ec154ad3951e8" prot="public" virt="non-virtual"><scope>FTIT_injection</scope><name>position</name></member>
+      <member refid="structFTIT__injection_1aba75a38cd410b415bfb78121f30435e7" prot="public" virt="non-virtual"><scope>FTIT_injection</scope><name>rank</name></member>
+      <member refid="structFTIT__injection_1a95bf2ff87b433ce58c6a228b9baf164a" prot="public" virt="non-virtual"><scope>FTIT_injection</scope><name>timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

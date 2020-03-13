@@ -1,0 +1,758 @@
+\hypertarget{fti-intern_8h}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/include/fti-\/intern.h File Reference}
+\label{fti-intern_8h}\index{/home/bscuser/Documents/release/dev/fti/include/fti-\/intern.h@{/home/bscuser/Documents/release/dev/fti/include/fti-\/intern.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$mpi.\+h$>$}\newline
+Include dependency graph for fti-\/intern.h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structFTIT__datasetInfo}{F\+T\+I\+T\+\_\+dataset\+Info}}
+\item 
+struct \mbox{\hyperlink{structFTIT__dcpConfigurationPosix}{F\+T\+I\+T\+\_\+dcp\+Configuration\+Posix}}
+\item 
+struct \mbox{\hyperlink{structFTIT__dcpExecutionPosix}{F\+T\+I\+T\+\_\+dcp\+Execution\+Posix}}
+\item 
+struct \mbox{\hyperlink{structFTIT__dcpDatasetPosix}{F\+T\+I\+T\+\_\+dcp\+Dataset\+Posix}}
+\item 
+struct \mbox{\hyperlink{structblockMetaInfo__t}{block\+Meta\+Info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structFTIT__iCPInfo}{F\+T\+I\+T\+\_\+i\+C\+P\+Info}}
+\item 
+struct \mbox{\hyperlink{structFTIFF__metaInfo}{F\+T\+I\+F\+F\+\_\+meta\+Info}}
+\item 
+struct \mbox{\hyperlink{structFTIT__DataDiffHash}{F\+T\+I\+T\+\_\+\+Data\+Diff\+Hash}}
+\item 
+struct \mbox{\hyperlink{structFTIFF__dbvar}{F\+T\+I\+F\+F\+\_\+dbvar}}
+\item 
+struct \mbox{\hyperlink{structFTIFF__db}{F\+T\+I\+F\+F\+\_\+db}}
+\item 
+struct \mbox{\hyperlink{structFTIT__StageInfo}{F\+T\+I\+T\+\_\+\+Stage\+Info}}
+\item 
+union \mbox{\hyperlink{unionFTIT__double}{F\+T\+I\+T\+\_\+double}}
+\item 
+union \mbox{\hyperlink{unionFTIT__float}{F\+T\+I\+T\+\_\+float}}
+\item 
+struct \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}}
+\item 
+struct \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structFTIT__globalDataset}{F\+T\+I\+T\+\_\+global\+Dataset}}
+\item 
+struct \mbox{\hyperlink{structFTIT__sharedData}{F\+T\+I\+T\+\_\+shared\+Data}}
+\item 
+struct \mbox{\hyperlink{structFTIT__typeField}{F\+T\+I\+T\+\_\+type\+Field}}
+\item 
+struct \mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}}
+\item 
+struct \mbox{\hyperlink{structFTIT__dataset}{F\+T\+I\+T\+\_\+dataset}}
+\item 
+struct \mbox{\hyperlink{structFTIT__metadata}{F\+T\+I\+T\+\_\+metadata}}
+\item 
+struct \mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}}
+\item 
+struct \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}}
+\item 
+struct \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}}
+\item 
+struct \mbox{\hyperlink{structFTIT__injection}{F\+T\+I\+T\+\_\+injection}}
+\item 
+struct \mbox{\hyperlink{structftit__io}{ftit\+\_\+io}}
+\item 
+struct \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a952a72cead1356661549e3e8c699d699}{talloc}}(type,  num)~(type $\ast$)malloc(sizeof(type) $\ast$ (num))
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}}~0
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a3de33738fd3c7e77bffbcfaefc3e7645}{G\+L\+O\+B\+AL}}~1
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a5fccb4fc71e44089a1b1a77fc76c0b68}{\+\_\+\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+\_\+}}~(strrchr(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \textquotesingle{}/\textquotesingle{}) ? strrchr(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \textquotesingle{}/\textquotesingle{}) + 1 \+: \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_aa98b567f2c0a1039c9490472975ce96d}{D\+B\+G\+\_\+\+M\+SG}}(M\+SG,  R\+A\+NK, ...)
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a09a4f4b2f28cbe522d9b80153666029c}{M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+L\+E\+N\+G\+TH}}~16
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_ab7d658b118c653d9a61ef6adde6a80c7}{M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}}~33
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_ac3683454d173eb7760cb1522546edd6f}{F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED}}~\char`\"{}\textbackslash{}x1B\mbox{[}31m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a7e585d7d07971244e02b7611e13a6ede}{F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+O\+RG}}~\char`\"{}\textbackslash{}x1B\mbox{[}38;5;202m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a88c5836e3bd4a15e42940f9c3ccd2650}{F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+RN}}~\char`\"{}\textbackslash{}x1B\mbox{[}32m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_acd37e039b072d4aaa9b0f29ed4e981f3}{F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+LU}}~\char`\"{}\textbackslash{}x1B\mbox{[}34m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_acd80acb4bfaa1876873074dc16523949}{F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET}}~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a5cb1252ae17ef4ac13b3dbe5a8b1ab13}{F\+T\+I\+\_\+\+E\+R\+OR}}~4
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a93eeeef1e283517099194859e3811ea3}{F\+T\+I\+\_\+\+W\+A\+RN}}~3
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a1f830f16990f67e20896cef5e40e949d}{F\+T\+I\+\_\+\+I\+D\+CP}}~5
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a26a561f0e03eec3d15541c85a2a21ffd}{F\+T\+I\+\_\+\+I\+N\+FO}}~2
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a299db837571db9e73119d159b3428fe0}{F\+T\+I\+\_\+\+D\+B\+UG}}~1
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a8072c73e48c25b82d8a0dc35794586c3}{F\+T\+I\+\_\+\+B\+A\+SE}}~990
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a1a04a57d0f3b61c859216eece8a6b63d}{F\+T\+I\+\_\+\+C\+K\+TW}}~991
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_ab1bc75941383c2905d8a7acbeb0356fb}{F\+T\+I\+\_\+\+X\+O\+RW}}~992
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a14dbbf452c5c45108584515b439d9cca}{F\+T\+I\+\_\+\+R\+S\+EW}}~993
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_ac46706cf994d026c8e1214442c672abe}{F\+T\+I\+\_\+\+P\+F\+SW}}~994
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a9d4e7a150970f56378722be0262d1abb}{F\+T\+I\+\_\+\+E\+N\+DW}}~995
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_aeb28ad968c769903d39cec8d41690f3c}{F\+T\+I\+\_\+\+R\+E\+JW}}~996
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_ab4185f9b1ad1804d6d89182627205923}{F\+T\+I\+\_\+\+I\+O\+\_\+\+P\+O\+S\+IX}}~1001
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_aabd1aaea4c0ca8933c8e3035f5506c29}{F\+T\+I\+\_\+\+I\+O\+\_\+\+M\+PI}}~1002
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_a2b6ae4a8dc77345c8aa9497f8cb9291b}{F\+T\+I\+\_\+\+I\+O\+\_\+\+F\+T\+I\+FF}}~1003
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_ace2ba9a1f6bf621481f19d0ac9aaf839}{F\+T\+I\+\_\+\+I\+O\+\_\+\+H\+D\+F5}}~1005
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_acbdad0be6e3192a3a6e7c0326f486047}{F\+T\+I\+\_\+\+I\+O\+\_\+\+S\+I\+O\+N\+L\+IB}}~1004
+\item 
+\#define \mbox{\hyperlink{fti-intern_8h_accbb358028675c83675d8b34c386268d}{M\+A\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned long long \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}}
+\item 
+typedef uintptr\+\_\+t \mbox{\hyperlink{fti-intern_8h_a4a8e652d8c6a4a9757fb7e0bf5c06185}{F\+T\+I\+\_\+\+A\+D\+D\+R\+V\+AL}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{fti-intern_8h_acc3d872af836642286053fd405c2f2df}{F\+T\+I\+\_\+\+A\+D\+D\+R\+P\+TR}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__datasetInfo}{F\+T\+I\+T\+\_\+dataset\+Info}} \mbox{\hyperlink{fti-intern_8h_a7216b00ef5b5481c4e4fd16340be11bb}{F\+T\+I\+T\+\_\+dataset\+Info}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__dcpConfigurationPosix}{F\+T\+I\+T\+\_\+dcp\+Configuration\+Posix}} \mbox{\hyperlink{fti-intern_8h_aaf3bc1e73c1e562e010b31951d08185b}{F\+T\+I\+T\+\_\+dcp\+Configuration\+Posix}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__dcpExecutionPosix}{F\+T\+I\+T\+\_\+dcp\+Execution\+Posix}} \mbox{\hyperlink{fti-intern_8h_a0e0d29a49ca518e0f3fc3745722386b5}{F\+T\+I\+T\+\_\+dcp\+Execution\+Posix}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__dcpDatasetPosix}{F\+T\+I\+T\+\_\+dcp\+Dataset\+Posix}} \mbox{\hyperlink{fti-intern_8h_a65be85f14025ef1dfa1ecf418632234c}{F\+T\+I\+T\+\_\+dcp\+Dataset\+Posix}}
+\item 
+typedef struct \mbox{\hyperlink{structblockMetaInfo__t}{block\+Meta\+Info\+\_\+t}} \mbox{\hyperlink{fti-intern_8h_a79fd63f0f5ec74c80bc694f4a1c70326}{block\+Meta\+Info\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__iCPInfo}{F\+T\+I\+T\+\_\+i\+C\+P\+Info}} \mbox{\hyperlink{fti-intern_8h_a2f01ad30104f1174686b520232f2995b}{F\+T\+I\+T\+\_\+i\+C\+P\+Info}}
+\begin{DoxyCompactList}\small\item\em Meta Information needed for i\+CP. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIFF__metaInfo}{F\+T\+I\+F\+F\+\_\+meta\+Info}} \mbox{\hyperlink{fti-intern_8h_a57716db38c321a9507e936a513d28c70}{F\+T\+I\+F\+F\+\_\+meta\+Info}}
+\begin{DoxyCompactList}\small\item\em Meta Information about file. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__DataDiffHash}{F\+T\+I\+T\+\_\+\+Data\+Diff\+Hash}} \mbox{\hyperlink{fti-intern_8h_a662d2b56feae40de98d7648ef762126a}{F\+T\+I\+T\+\_\+\+Data\+Diff\+Hash}}
+\begin{DoxyCompactList}\small\item\em d\+CP information about data block. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIFF__dbvar}{F\+T\+I\+F\+F\+\_\+dbvar}} \mbox{\hyperlink{fti-intern_8h_acc290d8a5cd4af1206da08a6b65d87b4}{F\+T\+I\+F\+F\+\_\+dbvar}}
+\begin{DoxyCompactList}\small\item\em Information about protected variable in datablock. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIFF__db}{F\+T\+I\+F\+F\+\_\+db}} \mbox{\hyperlink{fti-intern_8h_af59fb4cf38ff93e9c70cba90c08fbdc7}{F\+T\+I\+F\+F\+\_\+db}}
+\begin{DoxyCompactList}\small\item\em Information about current datablock. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__StageInfo}{F\+T\+I\+T\+\_\+\+Stage\+Info}} \mbox{\hyperlink{fti-intern_8h_afca0fa25bdee126ee2f2a18b9a626e82}{F\+T\+I\+T\+\_\+\+Stage\+Info}}
+\begin{DoxyCompactList}\small\item\em Staging meta info. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionFTIT__double}{F\+T\+I\+T\+\_\+double}} \mbox{\hyperlink{fti-intern_8h_a01767fd248979ae43ba53d22d9c7d49d}{F\+T\+I\+T\+\_\+double}}
+\begin{DoxyCompactList}\small\item\em Double mapped as two integers to allow bit-\/wise operations. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionFTIT__float}{F\+T\+I\+T\+\_\+float}} \mbox{\hyperlink{fti-intern_8h_a30f1133cdf607220164fdd82e292b457}{F\+T\+I\+T\+\_\+float}}
+\begin{DoxyCompactList}\small\item\em Float mapped as integer to allow bit-\/wise operations. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} \mbox{\hyperlink{fti-intern_8h_af1717bd7e8d59b9691d8329e298a87a7}{F\+T\+I\+T\+\_\+complex\+Type}}
+\begin{DoxyCompactList}\small\item\em Type that consists of other F\+TI types. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} \mbox{\hyperlink{fti-intern_8h_a4cd05a90e2fbf93c95983801f60a6971}{F\+T\+I\+T\+\_\+\+H5\+Group}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti-intern_8h_a62806a36798329957594bc7eab512a22}{F\+T\+I\+T\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type recognized by F\+TI. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__globalDataset}{F\+T\+I\+T\+\_\+global\+Dataset}} \mbox{\hyperlink{fti-intern_8h_adcb4c6a39807f17cedbcd1901e650d0f}{F\+T\+I\+T\+\_\+global\+Dataset}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__sharedData}{F\+T\+I\+T\+\_\+shared\+Data}} \mbox{\hyperlink{fti-intern_8h_a98b7625d998e471fcd1b53fa3ac2c502}{F\+T\+I\+T\+\_\+shared\+Data}}
+\item 
+typedef struct \mbox{\hyperlink{structFTIT__typeField}{F\+T\+I\+T\+\_\+type\+Field}} \mbox{\hyperlink{fti-intern_8h_ae27e6a30d4fea0a448109df482365058}{F\+T\+I\+T\+\_\+type\+Field}}
+\begin{DoxyCompactList}\small\item\em Holds info about field in complex type. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__dataset}{F\+T\+I\+T\+\_\+dataset}} \mbox{\hyperlink{fti-intern_8h_a3ea0a8ec06932526000f0b844cebff39}{F\+T\+I\+T\+\_\+dataset}}
+\begin{DoxyCompactList}\small\item\em Dataset metadata. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__metadata}{F\+T\+I\+T\+\_\+metadata}} \mbox{\hyperlink{fti-intern_8h_ae4aac63cb3a011d97a7c3e36e23829d8}{F\+T\+I\+T\+\_\+metadata}}
+\begin{DoxyCompactList}\small\item\em Metadata for restart. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} \mbox{\hyperlink{fti-intern_8h_ae95e23860e293f77167d39ad7c986d61}{F\+T\+I\+T\+\_\+configuration}}
+\begin{DoxyCompactList}\small\item\em Configuration metadata. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} \mbox{\hyperlink{fti-intern_8h_a5f67ab9d2016f57524c565df70051e88}{F\+T\+I\+T\+\_\+topology}}
+\begin{DoxyCompactList}\small\item\em Topology metadata. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} \mbox{\hyperlink{fti-intern_8h_a723d1cd99e21dc19c6dbf2f91eb4f096}{F\+T\+I\+T\+\_\+checkpoint}}
+\begin{DoxyCompactList}\small\item\em Checkpoint metadata. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__injection}{F\+T\+I\+T\+\_\+injection}} \mbox{\hyperlink{fti-intern_8h_a038e1ad3619d86c43cdf839e133c30c7}{F\+T\+I\+T\+\_\+injection}}
+\begin{DoxyCompactList}\small\item\em Type to describe failure injections in F\+TI. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} \mbox{\hyperlink{fti-intern_8h_a685d0580bbf5f30a79373ca8abcb684b}{F\+T\+I\+T\+\_\+execution}}
+\begin{DoxyCompactList}\small\item\em Execution metadata. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structftit__io}{ftit\+\_\+io}} \mbox{\hyperlink{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}{F\+T\+I\+T\+\_\+\+IO}}
+\begin{DoxyCompactList}\small\item\em Pointer to functions which are used to write the checkpoint file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4}{F\+T\+I\+T\+\_\+level}} \{ \newline
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a982f7962ca8c7a34cb4d49979cc8c78e}{F\+T\+I\+\_\+\+L1}} = 1, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a2b3c663cd6b58535cb0b4ae317ba7497}{F\+T\+I\+\_\+\+L2}}, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4af067ebe3ef9f1f8decdaf2c157aaaf32}{F\+T\+I\+\_\+\+L3}}, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a044a75c265db7e345d4956e38e6995ea}{F\+T\+I\+\_\+\+L4}}, 
+\newline
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a28a71962b3b4cb07d8c5a0390195ac92}{F\+T\+I\+\_\+\+L1\+\_\+\+D\+CP}}, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a19d523e2c95669081c451965bc65c56a}{F\+T\+I\+\_\+\+L2\+\_\+\+D\+CP}}, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a87a84a11f223afa174a5379fd405315a}{F\+T\+I\+\_\+\+L3\+\_\+\+D\+CP}}, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a3de1f9de3351ddb6abef7e1dbe78a09b}{F\+T\+I\+\_\+\+L4\+\_\+\+D\+CP}}, 
+\newline
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4ae9c52da9e0311d08b9fedaaf366695b5}{F\+T\+I\+\_\+\+L4\+\_\+\+H5\+\_\+\+S\+I\+N\+G\+LE}}, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4afa5ca9b682c8e8fa119abba8fdb7958a}{F\+T\+I\+\_\+\+M\+I\+N\+\_\+\+L\+E\+V\+E\+L\+\_\+\+ID}} = F\+T\+I\+\_\+\+L1, 
+\mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4ad426aae8372aad979bfbae2273344098}{F\+T\+I\+\_\+\+M\+A\+X\+\_\+\+L\+E\+V\+E\+L\+\_\+\+ID}} = F\+T\+I\+\_\+\+L4\+\_\+\+H5\+\_\+\+S\+I\+N\+G\+LE
+ \}
+\begin{DoxyCompactList}\small\item\em holds the level id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fti-intern_8h_a5fccb4fc71e44089a1b1a77fc76c0b68}\label{fti-intern_8h_a5fccb4fc71e44089a1b1a77fc76c0b68}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!\_\_FILENAME\_\_@{\_\_FILENAME\_\_}}
+\index{\_\_FILENAME\_\_@{\_\_FILENAME\_\_}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{\_\_FILENAME\_\_}{\_\_FILENAME\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+\_\+~(strrchr(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \textquotesingle{}/\textquotesingle{}) ? strrchr(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \textquotesingle{}/\textquotesingle{}) + 1 \+: \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{fti-intern_8h_aa98b567f2c0a1039c9490472975ce96d}\label{fti-intern_8h_aa98b567f2c0a1039c9490472975ce96d}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!DBG\_MSG@{DBG\_MSG}}
+\index{DBG\_MSG@{DBG\_MSG}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{DBG\_MSG}{DBG\_MSG}}
+{\footnotesize\ttfamily \#define D\+B\+G\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{M\+SG,  }\item[{}]{R\+A\+NK,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    int rank; \(\backslash\)}
+\DoxyCodeLine{    MPI\_Comm\_rank(MPI\_COMM\_WORLD,\&rank); \(\backslash\)}
+\DoxyCodeLine{    if ( rank == RANK ) \(\backslash\)}
+\DoxyCodeLine{        printf( \textcolor{stringliteral}{"\%s:\%d[DEBUG-\/\%d] "} MSG \textcolor{stringliteral}{"\(\backslash\)n"}, \mbox{\hyperlink{fti-intern_8h_a5fccb4fc71e44089a1b1a77fc76c0b68}{\_\_FILENAME\_\_}},\_\_LINE\_\_,rank, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    if ( RANK == -\/1 ) \(\backslash\)}
+\DoxyCodeLine{        printf( \textcolor{stringliteral}{"\%s:\%d[DEBUG-\/\%d] "} MSG \textcolor{stringliteral}{"\(\backslash\)n"}, \mbox{\hyperlink{fti-intern_8h_a5fccb4fc71e44089a1b1a77fc76c0b68}{\_\_FILENAME\_\_}},\_\_LINE\_\_,rank, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fti-intern_8h_a8072c73e48c25b82d8a0dc35794586c3}\label{fti-intern_8h_a8072c73e48c25b82d8a0dc35794586c3}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_BASE@{FTI\_BASE}}
+\index{FTI\_BASE@{FTI\_BASE}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_BASE}{FTI\_BASE}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+B\+A\+SE~990}
+
+Token for checkpoint Baseline. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a1a04a57d0f3b61c859216eece8a6b63d}\label{fti-intern_8h_a1a04a57d0f3b61c859216eece8a6b63d}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_CKTW@{FTI\_CKTW}}
+\index{FTI\_CKTW@{FTI\_CKTW}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_CKTW}{FTI\_CKTW}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+C\+K\+TW~991}
+
+Token for checkpoint Level 1. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_acd37e039b072d4aaa9b0f29ed4e981f3}\label{fti-intern_8h_acd37e039b072d4aaa9b0f29ed4e981f3}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_COLOR\_BLU@{FTI\_COLOR\_BLU}}
+\index{FTI\_COLOR\_BLU@{FTI\_COLOR\_BLU}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_COLOR\_BLU}{FTI\_COLOR\_BLU}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+LU~\char`\"{}\textbackslash{}x1B\mbox{[}34m\char`\"{}}
+
+Define B\+L\+UE color for F\+TI output. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a88c5836e3bd4a15e42940f9c3ccd2650}\label{fti-intern_8h_a88c5836e3bd4a15e42940f9c3ccd2650}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_COLOR\_GRN@{FTI\_COLOR\_GRN}}
+\index{FTI\_COLOR\_GRN@{FTI\_COLOR\_GRN}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_COLOR\_GRN}{FTI\_COLOR\_GRN}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+RN~\char`\"{}\textbackslash{}x1B\mbox{[}32m\char`\"{}}
+
+Define G\+R\+E\+EN color for F\+TI output. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a7e585d7d07971244e02b7611e13a6ede}\label{fti-intern_8h_a7e585d7d07971244e02b7611e13a6ede}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_COLOR\_ORG@{FTI\_COLOR\_ORG}}
+\index{FTI\_COLOR\_ORG@{FTI\_COLOR\_ORG}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_COLOR\_ORG}{FTI\_COLOR\_ORG}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+O\+RG~\char`\"{}\textbackslash{}x1B\mbox{[}38;5;202m\char`\"{}}
+
+Define O\+R\+A\+N\+GE color for F\+TI output. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_ac3683454d173eb7760cb1522546edd6f}\label{fti-intern_8h_ac3683454d173eb7760cb1522546edd6f}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_COLOR\_RED@{FTI\_COLOR\_RED}}
+\index{FTI\_COLOR\_RED@{FTI\_COLOR\_RED}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_COLOR\_RED}{FTI\_COLOR\_RED}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED~\char`\"{}\textbackslash{}x1B\mbox{[}31m\char`\"{}}
+
+Define R\+ED color for F\+TI output. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_acd80acb4bfaa1876873074dc16523949}\label{fti-intern_8h_acd80acb4bfaa1876873074dc16523949}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_COLOR\_RESET@{FTI\_COLOR\_RESET}}
+\index{FTI\_COLOR\_RESET@{FTI\_COLOR\_RESET}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_COLOR\_RESET}{FTI\_COLOR\_RESET}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}}
+
+Define color R\+E\+S\+ET for F\+TI output. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a299db837571db9e73119d159b3428fe0}\label{fti-intern_8h_a299db837571db9e73119d159b3428fe0}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_DBUG@{FTI\_DBUG}}
+\index{FTI\_DBUG@{FTI\_DBUG}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_DBUG}{FTI\_DBUG}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+D\+B\+UG~1}
+
+Verbosity level to print debug messages. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a9d4e7a150970f56378722be0262d1abb}\label{fti-intern_8h_a9d4e7a150970f56378722be0262d1abb}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_ENDW@{FTI\_ENDW}}
+\index{FTI\_ENDW@{FTI\_ENDW}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_ENDW}{FTI\_ENDW}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+E\+N\+DW~995}
+
+Token for end of the execution. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a5cb1252ae17ef4ac13b3dbe5a8b1ab13}\label{fti-intern_8h_a5cb1252ae17ef4ac13b3dbe5a8b1ab13}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_EROR@{FTI\_EROR}}
+\index{FTI\_EROR@{FTI\_EROR}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_EROR}{FTI\_EROR}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+E\+R\+OR~4}
+
+Verbosity level to print only errors. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a1f830f16990f67e20896cef5e40e949d}\label{fti-intern_8h_a1f830f16990f67e20896cef5e40e949d}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_IDCP@{FTI\_IDCP}}
+\index{FTI\_IDCP@{FTI\_IDCP}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_IDCP}{FTI\_IDCP}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+I\+D\+CP~5}
+
+Verbosity level to print main information. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a26a561f0e03eec3d15541c85a2a21ffd}\label{fti-intern_8h_a26a561f0e03eec3d15541c85a2a21ffd}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_INFO@{FTI\_INFO}}
+\index{FTI\_INFO@{FTI\_INFO}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_INFO}{FTI\_INFO}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+I\+N\+FO~2}
+
+Verbosity level to print debug messages. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a2b6ae4a8dc77345c8aa9497f8cb9291b}\label{fti-intern_8h_a2b6ae4a8dc77345c8aa9497f8cb9291b}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_IO\_FTIFF@{FTI\_IO\_FTIFF}}
+\index{FTI\_IO\_FTIFF@{FTI\_IO\_FTIFF}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_IO\_FTIFF}{FTI\_IO\_FTIFF}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+I\+O\+\_\+\+F\+T\+I\+FF~1003}
+
+Token for IO mode F\+T\+I-\/\+FF. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_ace2ba9a1f6bf621481f19d0ac9aaf839}\label{fti-intern_8h_ace2ba9a1f6bf621481f19d0ac9aaf839}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_IO\_HDF5@{FTI\_IO\_HDF5}}
+\index{FTI\_IO\_HDF5@{FTI\_IO\_HDF5}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_IO\_HDF5}{FTI\_IO\_HDF5}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+I\+O\+\_\+\+H\+D\+F5~1005}
+
+Token for IO mode H\+D\+F5. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_aabd1aaea4c0ca8933c8e3035f5506c29}\label{fti-intern_8h_aabd1aaea4c0ca8933c8e3035f5506c29}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_IO\_MPI@{FTI\_IO\_MPI}}
+\index{FTI\_IO\_MPI@{FTI\_IO\_MPI}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_IO\_MPI}{FTI\_IO\_MPI}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+I\+O\+\_\+\+M\+PI~1002}
+
+Token for IO mode M\+PI. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_ab4185f9b1ad1804d6d89182627205923}\label{fti-intern_8h_ab4185f9b1ad1804d6d89182627205923}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_IO\_POSIX@{FTI\_IO\_POSIX}}
+\index{FTI\_IO\_POSIX@{FTI\_IO\_POSIX}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_IO\_POSIX}{FTI\_IO\_POSIX}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+I\+O\+\_\+\+P\+O\+S\+IX~1001}
+
+Token for IO mode Posix. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_acbdad0be6e3192a3a6e7c0326f486047}\label{fti-intern_8h_acbdad0be6e3192a3a6e7c0326f486047}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_IO\_SIONLIB@{FTI\_IO\_SIONLIB}}
+\index{FTI\_IO\_SIONLIB@{FTI\_IO\_SIONLIB}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_IO\_SIONLIB}{FTI\_IO\_SIONLIB}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+I\+O\+\_\+\+S\+I\+O\+N\+L\+IB~1004}
+
+Token for IO mode S\+I\+O\+Nlib. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_ac46706cf994d026c8e1214442c672abe}\label{fti-intern_8h_ac46706cf994d026c8e1214442c672abe}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_PFSW@{FTI\_PFSW}}
+\index{FTI\_PFSW@{FTI\_PFSW}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_PFSW}{FTI\_PFSW}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+P\+F\+SW~994}
+
+Token for checkpoint Level 4. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_aeb28ad968c769903d39cec8d41690f3c}\label{fti-intern_8h_aeb28ad968c769903d39cec8d41690f3c}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_REJW@{FTI\_REJW}}
+\index{FTI\_REJW@{FTI\_REJW}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_REJW}{FTI\_REJW}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+R\+E\+JW~996}
+
+Token to reject checkpoint. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a14dbbf452c5c45108584515b439d9cca}\label{fti-intern_8h_a14dbbf452c5c45108584515b439d9cca}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_RSEW@{FTI\_RSEW}}
+\index{FTI\_RSEW@{FTI\_RSEW}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_RSEW}{FTI\_RSEW}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+R\+S\+EW~993}
+
+Token for checkpoint Level 3. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a93eeeef1e283517099194859e3811ea3}\label{fti-intern_8h_a93eeeef1e283517099194859e3811ea3}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_WARN@{FTI\_WARN}}
+\index{FTI\_WARN@{FTI\_WARN}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_WARN}{FTI\_WARN}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+W\+A\+RN~3}
+
+Verbosity level to print only warning and errors. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_ab1bc75941383c2905d8a7acbeb0356fb}\label{fti-intern_8h_ab1bc75941383c2905d8a7acbeb0356fb}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_XORW@{FTI\_XORW}}
+\index{FTI\_XORW@{FTI\_XORW}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_XORW}{FTI\_XORW}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+X\+O\+RW~992}
+
+Token for checkpoint Level 2. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a3de33738fd3c7e77bffbcfaefc3e7645}\label{fti-intern_8h_a3de33738fd3c7e77bffbcfaefc3e7645}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!GLOBAL@{GLOBAL}}
+\index{GLOBAL@{GLOBAL}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{GLOBAL}{GLOBAL}}
+{\footnotesize\ttfamily \#define G\+L\+O\+B\+AL~1}
+
+\mbox{\Hypertarget{fti-intern_8h_a3758dd5d300a594312c95bc393378df0}\label{fti-intern_8h_a3758dd5d300a594312c95bc393378df0}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!LOCAL@{LOCAL}}
+\index{LOCAL@{LOCAL}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{LOCAL}{LOCAL}}
+{\footnotesize\ttfamily \#define L\+O\+C\+AL~0}
+
+\mbox{\Hypertarget{fti-intern_8h_accbb358028675c83675d8b34c386268d}\label{fti-intern_8h_accbb358028675c83675d8b34c386268d}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!MAX\_STACK\_SIZE@{MAX\_STACK\_SIZE}}
+\index{MAX\_STACK\_SIZE@{MAX\_STACK\_SIZE}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_STACK\_SIZE}{MAX\_STACK\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE~10}
+
+\mbox{\Hypertarget{fti-intern_8h_a09a4f4b2f28cbe522d9b80153666029c}\label{fti-intern_8h_a09a4f4b2f28cbe522d9b80153666029c}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!MD5\_DIGEST\_LENGTH@{MD5\_DIGEST\_LENGTH}}
+\index{MD5\_DIGEST\_LENGTH@{MD5\_DIGEST\_LENGTH}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{MD5\_DIGEST\_LENGTH}{MD5\_DIGEST\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+L\+E\+N\+G\+TH~16}
+
+M\+D5-\/hash\+: unsigned char digest length. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_ab7d658b118c653d9a61ef6adde6a80c7}\label{fti-intern_8h_ab7d658b118c653d9a61ef6adde6a80c7}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!MD5\_DIGEST\_STRING\_LENGTH@{MD5\_DIGEST\_STRING\_LENGTH}}
+\index{MD5\_DIGEST\_STRING\_LENGTH@{MD5\_DIGEST\_STRING\_LENGTH}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{MD5\_DIGEST\_STRING\_LENGTH}{MD5\_DIGEST\_STRING\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH~33}
+
+M\+D5-\/hash\+: hex converted char digest length. ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a952a72cead1356661549e3e8c699d699}\label{fti-intern_8h_a952a72cead1356661549e3e8c699d699}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!talloc@{talloc}}
+\index{talloc@{talloc}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{talloc}{talloc}}
+{\footnotesize\ttfamily \#define talloc(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{num }\end{DoxyParamCaption})~(type $\ast$)malloc(sizeof(type) $\ast$ (num))}
+
+Malloc macro. ~\newline
+ 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{fti-intern_8h_a79fd63f0f5ec74c80bc694f4a1c70326}\label{fti-intern_8h_a79fd63f0f5ec74c80bc694f4a1c70326}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!blockMetaInfo\_t@{blockMetaInfo\_t}}
+\index{blockMetaInfo\_t@{blockMetaInfo\_t}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{blockMetaInfo\_t}{blockMetaInfo\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structblockMetaInfo__t}{block\+Meta\+Info\+\_\+t}} \mbox{\hyperlink{structblockMetaInfo__t}{block\+Meta\+Info\+\_\+t}}}
+
+\mbox{\Hypertarget{fti-intern_8h_acc3d872af836642286053fd405c2f2df}\label{fti-intern_8h_acc3d872af836642286053fd405c2f2df}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_ADDRPTR@{FTI\_ADDRPTR}}
+\index{FTI\_ADDRPTR@{FTI\_ADDRPTR}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_ADDRPTR}{FTI\_ADDRPTR}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{fti-intern_8h_acc3d872af836642286053fd405c2f2df}{F\+T\+I\+\_\+\+A\+D\+D\+R\+P\+TR}}}
+
+void ptr type ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_a4a8e652d8c6a4a9757fb7e0bf5c06185}\label{fti-intern_8h_a4a8e652d8c6a4a9757fb7e0bf5c06185}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_ADDRVAL@{FTI\_ADDRVAL}}
+\index{FTI\_ADDRVAL@{FTI\_ADDRVAL}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_ADDRVAL}{FTI\_ADDRVAL}}
+{\footnotesize\ttfamily typedef uintptr\+\_\+t \mbox{\hyperlink{fti-intern_8h_a4a8e652d8c6a4a9757fb7e0bf5c06185}{F\+T\+I\+\_\+\+A\+D\+D\+R\+V\+AL}}}
+
+for ptr manipulation ~\newline
+ \mbox{\Hypertarget{fti-intern_8h_af59fb4cf38ff93e9c70cba90c08fbdc7}\label{fti-intern_8h_af59fb4cf38ff93e9c70cba90c08fbdc7}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIFF\_db@{FTIFF\_db}}
+\index{FTIFF\_db@{FTIFF\_db}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIFF\_db}{FTIFF\_db}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIFF__db}{F\+T\+I\+F\+F\+\_\+db}}}
+
+
+
+Information about current datablock. 
+
+(For F\+T\+I-\/\+FF only) Keeps information about the current datablock in file \mbox{\Hypertarget{fti-intern_8h_acc290d8a5cd4af1206da08a6b65d87b4}\label{fti-intern_8h_acc290d8a5cd4af1206da08a6b65d87b4}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIFF\_dbvar@{FTIFF\_dbvar}}
+\index{FTIFF\_dbvar@{FTIFF\_dbvar}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIFF\_dbvar}{FTIFF\_dbvar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIFF__dbvar}{F\+T\+I\+F\+F\+\_\+dbvar}}}
+
+
+
+Information about protected variable in datablock. 
+
+(For F\+T\+I-\/\+FF only) Keeps information about the chunk of the protected variable with id stored in the current datablock. \textquotesingle{}idx\textquotesingle{} is the index for the array element of \textquotesingle{}F\+T\+I\+T\+\_\+dataset$\ast$ F\+T\+I\+\_\+\+Data\textquotesingle{}, that contains variable with \textquotesingle{}id\textquotesingle{}. \mbox{\Hypertarget{fti-intern_8h_a57716db38c321a9507e936a513d28c70}\label{fti-intern_8h_a57716db38c321a9507e936a513d28c70}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIFF\_metaInfo@{FTIFF\_metaInfo}}
+\index{FTIFF\_metaInfo@{FTIFF\_metaInfo}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIFF\_metaInfo}{FTIFF\_metaInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIFF__metaInfo}{F\+T\+I\+F\+F\+\_\+meta\+Info}}}
+
+
+
+Meta Information about file. 
+
+(For F\+T\+I-\/\+FF only) Keeps information about the file. \textquotesingle{}checksum\textquotesingle{} is the hash of the file excluding the file meta data. \textquotesingle{}my\+Hash\textquotesingle{} is the hash of the file meta data. \mbox{\Hypertarget{fti-intern_8h_a723d1cd99e21dc19c6dbf2f91eb4f096}\label{fti-intern_8h_a723d1cd99e21dc19c6dbf2f91eb4f096}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_checkpoint@{FTIT\_checkpoint}}
+\index{FTIT\_checkpoint@{FTIT\_checkpoint}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_checkpoint}{FTIT\_checkpoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}}}
+
+
+
+Checkpoint metadata. 
+
+This type stores all the checkpoint metadata. \mbox{\Hypertarget{fti-intern_8h_af1717bd7e8d59b9691d8329e298a87a7}\label{fti-intern_8h_af1717bd7e8d59b9691d8329e298a87a7}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_complexType@{FTIT\_complexType}}
+\index{FTIT\_complexType@{FTIT\_complexType}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_complexType}{FTIT\_complexType}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} \mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}}}
+
+
+
+Type that consists of other F\+TI types. 
+
+This type allows creating complex datatypes. \mbox{\Hypertarget{fti-intern_8h_ae95e23860e293f77167d39ad7c986d61}\label{fti-intern_8h_ae95e23860e293f77167d39ad7c986d61}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_configuration@{FTIT\_configuration}}
+\index{FTIT\_configuration@{FTIT\_configuration}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_configuration}{FTIT\_configuration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}}}
+
+
+
+Configuration metadata. 
+
+This type stores the general configuration metadata. \mbox{\Hypertarget{fti-intern_8h_a662d2b56feae40de98d7648ef762126a}\label{fti-intern_8h_a662d2b56feae40de98d7648ef762126a}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_DataDiffHash@{FTIT\_DataDiffHash}}
+\index{FTIT\_DataDiffHash@{FTIT\_DataDiffHash}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_DataDiffHash}{FTIT\_DataDiffHash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__DataDiffHash}{F\+T\+I\+T\+\_\+\+Data\+Diff\+Hash}}}
+
+
+
+d\+CP information about data block. 
+
+Holds information for each data block relevant for the d\+CP mechanism. This structure is a member of \mbox{\hyperlink{structFTIFF__dbvar}{F\+T\+I\+F\+F\+\_\+dbvar}}. It is stored as an array with n elements, where n corresponds to the number of data blocks in that the data chunk is partitioned (depending on the d\+CP block size). \mbox{\Hypertarget{fti-intern_8h_a3ea0a8ec06932526000f0b844cebff39}\label{fti-intern_8h_a3ea0a8ec06932526000f0b844cebff39}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_dataset@{FTIT\_dataset}}
+\index{FTIT\_dataset@{FTIT\_dataset}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_dataset}{FTIT\_dataset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__dataset}{F\+T\+I\+T\+\_\+dataset}}}
+
+
+
+Dataset metadata. 
+
+This type stores the metadata related with a dataset. \mbox{\Hypertarget{fti-intern_8h_a7216b00ef5b5481c4e4fd16340be11bb}\label{fti-intern_8h_a7216b00ef5b5481c4e4fd16340be11bb}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_datasetInfo@{FTIT\_datasetInfo}}
+\index{FTIT\_datasetInfo@{FTIT\_datasetInfo}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_datasetInfo}{FTIT\_datasetInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__datasetInfo}{F\+T\+I\+T\+\_\+dataset\+Info}} \mbox{\hyperlink{structFTIT__datasetInfo}{F\+T\+I\+T\+\_\+dataset\+Info}}}
+
+\mbox{\Hypertarget{fti-intern_8h_aaf3bc1e73c1e562e010b31951d08185b}\label{fti-intern_8h_aaf3bc1e73c1e562e010b31951d08185b}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_dcpConfigurationPosix@{FTIT\_dcpConfigurationPosix}}
+\index{FTIT\_dcpConfigurationPosix@{FTIT\_dcpConfigurationPosix}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_dcpConfigurationPosix}{FTIT\_dcpConfigurationPosix}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__dcpConfigurationPosix}{F\+T\+I\+T\+\_\+dcp\+Configuration\+Posix}} \mbox{\hyperlink{structFTIT__dcpConfigurationPosix}{F\+T\+I\+T\+\_\+dcp\+Configuration\+Posix}}}
+
+\mbox{\Hypertarget{fti-intern_8h_a65be85f14025ef1dfa1ecf418632234c}\label{fti-intern_8h_a65be85f14025ef1dfa1ecf418632234c}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_dcpDatasetPosix@{FTIT\_dcpDatasetPosix}}
+\index{FTIT\_dcpDatasetPosix@{FTIT\_dcpDatasetPosix}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_dcpDatasetPosix}{FTIT\_dcpDatasetPosix}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__dcpDatasetPosix}{F\+T\+I\+T\+\_\+dcp\+Dataset\+Posix}} \mbox{\hyperlink{structFTIT__dcpDatasetPosix}{F\+T\+I\+T\+\_\+dcp\+Dataset\+Posix}}}
+
+\mbox{\Hypertarget{fti-intern_8h_a0e0d29a49ca518e0f3fc3745722386b5}\label{fti-intern_8h_a0e0d29a49ca518e0f3fc3745722386b5}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_dcpExecutionPosix@{FTIT\_dcpExecutionPosix}}
+\index{FTIT\_dcpExecutionPosix@{FTIT\_dcpExecutionPosix}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_dcpExecutionPosix}{FTIT\_dcpExecutionPosix}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__dcpExecutionPosix}{F\+T\+I\+T\+\_\+dcp\+Execution\+Posix}} \mbox{\hyperlink{structFTIT__dcpExecutionPosix}{F\+T\+I\+T\+\_\+dcp\+Execution\+Posix}}}
+
+\mbox{\Hypertarget{fti-intern_8h_a01767fd248979ae43ba53d22d9c7d49d}\label{fti-intern_8h_a01767fd248979ae43ba53d22d9c7d49d}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_double@{FTIT\_double}}
+\index{FTIT\_double@{FTIT\_double}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_double}{FTIT\_double}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionFTIT__double}{F\+T\+I\+T\+\_\+double}}}
+
+
+
+Double mapped as two integers to allow bit-\/wise operations. 
+
+Double mapped as integer and byte array to allow bit-\/wise operators so that we can inject failures on it. \mbox{\Hypertarget{fti-intern_8h_a685d0580bbf5f30a79373ca8abcb684b}\label{fti-intern_8h_a685d0580bbf5f30a79373ca8abcb684b}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_execution@{FTIT\_execution}}
+\index{FTIT\_execution@{FTIT\_execution}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_execution}{FTIT\_execution}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}}}
+
+
+
+Execution metadata. 
+
+This type stores all the dynamic metadata related to the current execution \mbox{\Hypertarget{fti-intern_8h_a30f1133cdf607220164fdd82e292b457}\label{fti-intern_8h_a30f1133cdf607220164fdd82e292b457}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_float@{FTIT\_float}}
+\index{FTIT\_float@{FTIT\_float}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_float}{FTIT\_float}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionFTIT__float}{F\+T\+I\+T\+\_\+float}}}
+
+
+
+Float mapped as integer to allow bit-\/wise operations. 
+
+Float mapped as integer and byte array to allow bit-\/wise operators so that we can inject failures on it. \mbox{\Hypertarget{fti-intern_8h_adcb4c6a39807f17cedbcd1901e650d0f}\label{fti-intern_8h_adcb4c6a39807f17cedbcd1901e650d0f}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_globalDataset@{FTIT\_globalDataset}}
+\index{FTIT\_globalDataset@{FTIT\_globalDataset}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_globalDataset}{FTIT\_globalDataset}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__globalDataset}{F\+T\+I\+T\+\_\+global\+Dataset}} \mbox{\hyperlink{structFTIT__globalDataset}{F\+T\+I\+T\+\_\+global\+Dataset}}}
+
+\mbox{\Hypertarget{fti-intern_8h_a4cd05a90e2fbf93c95983801f60a6971}\label{fti-intern_8h_a4cd05a90e2fbf93c95983801f60a6971}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_H5Group@{FTIT\_H5Group}}
+\index{FTIT\_H5Group@{FTIT\_H5Group}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_H5Group}{FTIT\_H5Group}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}}}
+
+\mbox{\Hypertarget{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}\label{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_hsize\_t@{FTIT\_hsize\_t}}
+\index{FTIT\_hsize\_t@{FTIT\_hsize\_t}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_hsize\_t}{FTIT\_hsize\_t}}
+{\footnotesize\ttfamily typedef unsigned long long \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}}}
+
+\mbox{\Hypertarget{fti-intern_8h_a2f01ad30104f1174686b520232f2995b}\label{fti-intern_8h_a2f01ad30104f1174686b520232f2995b}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_iCPInfo@{FTIT\_iCPInfo}}
+\index{FTIT\_iCPInfo@{FTIT\_iCPInfo}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_iCPInfo}{FTIT\_iCPInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__iCPInfo}{F\+T\+I\+T\+\_\+i\+C\+P\+Info}}}
+
+
+
+Meta Information needed for i\+CP. 
+
+The member fh is a generic file handle container large enough to hold any file handle type of I/O modes that are used within F\+TI. \mbox{\Hypertarget{fti-intern_8h_a038e1ad3619d86c43cdf839e133c30c7}\label{fti-intern_8h_a038e1ad3619d86c43cdf839e133c30c7}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_injection@{FTIT\_injection}}
+\index{FTIT\_injection@{FTIT\_injection}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_injection}{FTIT\_injection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__injection}{F\+T\+I\+T\+\_\+injection}}}
+
+
+
+Type to describe failure injections in F\+TI. 
+
+This type allows users to describe a S\+DC failure injection model. \mbox{\Hypertarget{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}\label{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_IO@{FTIT\_IO}}
+\index{FTIT\_IO@{FTIT\_IO}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_IO}{FTIT\_IO}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}{F\+T\+I\+T\+\_\+\+IO}}}
+
+
+
+Pointer to functions which are used to write the checkpoint file. 
+
+This is a general description of what different file formats need to implement in order to checkpoint. \mbox{\Hypertarget{fti-intern_8h_ae4aac63cb3a011d97a7c3e36e23829d8}\label{fti-intern_8h_ae4aac63cb3a011d97a7c3e36e23829d8}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_metadata@{FTIT\_metadata}}
+\index{FTIT\_metadata@{FTIT\_metadata}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_metadata}{FTIT\_metadata}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__metadata}{F\+T\+I\+T\+\_\+metadata}}}
+
+
+
+Metadata for restart. 
+
+This type stores all the metadata necessary for the restart. \mbox{\Hypertarget{fti-intern_8h_a98b7625d998e471fcd1b53fa3ac2c502}\label{fti-intern_8h_a98b7625d998e471fcd1b53fa3ac2c502}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_sharedData@{FTIT\_sharedData}}
+\index{FTIT\_sharedData@{FTIT\_sharedData}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_sharedData}{FTIT\_sharedData}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structFTIT__sharedData}{F\+T\+I\+T\+\_\+shared\+Data}} \mbox{\hyperlink{structFTIT__sharedData}{F\+T\+I\+T\+\_\+shared\+Data}}}
+
+\mbox{\Hypertarget{fti-intern_8h_afca0fa25bdee126ee2f2a18b9a626e82}\label{fti-intern_8h_afca0fa25bdee126ee2f2a18b9a626e82}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_StageInfo@{FTIT\_StageInfo}}
+\index{FTIT\_StageInfo@{FTIT\_StageInfo}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_StageInfo}{FTIT\_StageInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__StageInfo}{F\+T\+I\+T\+\_\+\+Stage\+Info}}}
+
+
+
+Staging meta info. 
+
+The request pointer is void in order to allow the structure to keep the head rank staging info if used by a head process or the application rank staging info otherwise. The cast is performed via the macros \textquotesingle{}\mbox{\hyperlink{stage_8h_afa3c2ff5007ff6d4e2159653fa2bffbd}{F\+T\+I\+\_\+\+S\+I\+\_\+\+H\+P\+T\+R( ptr )}}\textquotesingle{} for the head processes and \textquotesingle{}\mbox{\hyperlink{stage_8h_ac2bb11c3f5f891e1e161b6b5c4f517e0}{F\+T\+I\+\_\+\+S\+I\+\_\+\+A\+P\+T\+R( ptr )}}\textquotesingle{} for the application processes. \mbox{\Hypertarget{fti-intern_8h_a5f67ab9d2016f57524c565df70051e88}\label{fti-intern_8h_a5f67ab9d2016f57524c565df70051e88}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_topology@{FTIT\_topology}}
+\index{FTIT\_topology@{FTIT\_topology}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_topology}{FTIT\_topology}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}}}
+
+
+
+Topology metadata. 
+
+This type stores the topology metadata. \mbox{\Hypertarget{fti-intern_8h_a62806a36798329957594bc7eab512a22}\label{fti-intern_8h_a62806a36798329957594bc7eab512a22}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_type@{FTIT\_type}}
+\index{FTIT\_type@{FTIT\_type}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_type}{FTIT\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}}}
+
+
+
+Type recognized by F\+TI. 
+
+This type allows handling data structures. \mbox{\Hypertarget{fti-intern_8h_ae27e6a30d4fea0a448109df482365058}\label{fti-intern_8h_ae27e6a30d4fea0a448109df482365058}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_typeField@{FTIT\_typeField}}
+\index{FTIT\_typeField@{FTIT\_typeField}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_typeField}{FTIT\_typeField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__typeField}{F\+T\+I\+T\+\_\+type\+Field}}}
+
+
+
+Holds info about field in complex type. 
+
+This type simplify creating complex datatypes. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4}} 
+\index{fti-\/intern.h@{fti-\/intern.h}!FTIT\_level@{FTIT\_level}}
+\index{FTIT\_level@{FTIT\_level}!fti-\/intern.h@{fti-\/intern.h}}
+\doxysubsubsection{\texorpdfstring{FTIT\_level}{FTIT\_level}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4}{F\+T\+I\+T\+\_\+level}}}
+
+
+
+holds the level id. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L1@{FTI\_L1}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L1@{FTI\_L1}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a982f7962ca8c7a34cb4d49979cc8c78e}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a982f7962ca8c7a34cb4d49979cc8c78e}} 
+F\+T\+I\+\_\+\+L1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L2@{FTI\_L2}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L2@{FTI\_L2}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a2b3c663cd6b58535cb0b4ae317ba7497}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a2b3c663cd6b58535cb0b4ae317ba7497}} 
+F\+T\+I\+\_\+\+L2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L3@{FTI\_L3}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L3@{FTI\_L3}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4af067ebe3ef9f1f8decdaf2c157aaaf32}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4af067ebe3ef9f1f8decdaf2c157aaaf32}} 
+F\+T\+I\+\_\+\+L3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L4@{FTI\_L4}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L4@{FTI\_L4}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a044a75c265db7e345d4956e38e6995ea}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a044a75c265db7e345d4956e38e6995ea}} 
+F\+T\+I\+\_\+\+L4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L1\_DCP@{FTI\_L1\_DCP}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L1\_DCP@{FTI\_L1\_DCP}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a28a71962b3b4cb07d8c5a0390195ac92}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a28a71962b3b4cb07d8c5a0390195ac92}} 
+F\+T\+I\+\_\+\+L1\+\_\+\+D\+CP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L2\_DCP@{FTI\_L2\_DCP}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L2\_DCP@{FTI\_L2\_DCP}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a19d523e2c95669081c451965bc65c56a}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a19d523e2c95669081c451965bc65c56a}} 
+F\+T\+I\+\_\+\+L2\+\_\+\+D\+CP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L3\_DCP@{FTI\_L3\_DCP}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L3\_DCP@{FTI\_L3\_DCP}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a87a84a11f223afa174a5379fd405315a}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a87a84a11f223afa174a5379fd405315a}} 
+F\+T\+I\+\_\+\+L3\+\_\+\+D\+CP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L4\_DCP@{FTI\_L4\_DCP}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L4\_DCP@{FTI\_L4\_DCP}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a3de1f9de3351ddb6abef7e1dbe78a09b}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4a3de1f9de3351ddb6abef7e1dbe78a09b}} 
+F\+T\+I\+\_\+\+L4\+\_\+\+D\+CP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_L4\_H5\_SINGLE@{FTI\_L4\_H5\_SINGLE}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_L4\_H5\_SINGLE@{FTI\_L4\_H5\_SINGLE}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4ae9c52da9e0311d08b9fedaaf366695b5}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4ae9c52da9e0311d08b9fedaaf366695b5}} 
+F\+T\+I\+\_\+\+L4\+\_\+\+H5\+\_\+\+S\+I\+N\+G\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_MIN\_LEVEL\_ID@{FTI\_MIN\_LEVEL\_ID}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_MIN\_LEVEL\_ID@{FTI\_MIN\_LEVEL\_ID}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4afa5ca9b682c8e8fa119abba8fdb7958a}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4afa5ca9b682c8e8fa119abba8fdb7958a}} 
+F\+T\+I\+\_\+\+M\+I\+N\+\_\+\+L\+E\+V\+E\+L\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FTI\_MAX\_LEVEL\_ID@{FTI\_MAX\_LEVEL\_ID}!fti-\/intern.h@{fti-\/intern.h}}\index{fti-\/intern.h@{fti-\/intern.h}!FTI\_MAX\_LEVEL\_ID@{FTI\_MAX\_LEVEL\_ID}}}\mbox{\Hypertarget{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4ad426aae8372aad979bfbae2273344098}\label{fti-intern_8h_ab206d890311c7ccca78bb7220898b3e4ad426aae8372aad979bfbae2273344098}} 
+F\+T\+I\+\_\+\+M\+A\+X\+\_\+\+L\+E\+V\+E\+L\+\_\+\+ID&\\
+\hline
+
+\end{DoxyEnumFields}

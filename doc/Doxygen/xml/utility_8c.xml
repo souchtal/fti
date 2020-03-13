@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="utility_8c" kind="file" language="C++">
+    <compoundname>utility.c</compoundname>
+    <includes refid="interface_8h" local="yes">interface.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="28">
+        <label>IO/ftiff.h</label>
+      </node>
+      <node id="13">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>fti.h</label>
+        <link refid="fti_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdarg.h</label>
+      </node>
+      <node id="30">
+        <label>failure-injection.h</label>
+        <link refid="failure-injection_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>../deps/jerasure/include/galois.h</label>
+      </node>
+      <node id="17">
+        <label>postreco.h</label>
+        <link refid="postreco_8h"/>
+      </node>
+      <node id="2">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>errno.h</label>
+      </node>
+      <node id="38">
+        <label>icp.h</label>
+        <link refid="icp_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>fcntl.h</label>
+      </node>
+      <node id="20">
+        <label>conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="35">
+        <label>postckpt.h</label>
+        <link refid="postckpt_8h"/>
+      </node>
+      <node id="43">
+        <label>../deps/iniparser/iniparser.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="27">
+        <label>IO/hdf5-fti.h</label>
+      </node>
+      <node id="15">
+        <label>meta.h</label>
+        <link refid="meta_8h"/>
+      </node>
+      <node id="34">
+        <label>limits.h</label>
+      </node>
+      <node id="21">
+        <label>checkpoint.h</label>
+        <link refid="checkpoint_8h"/>
+      </node>
+      <node id="19">
+        <label>dcp.h</label>
+        <link refid="dcp_8h"/>
+      </node>
+      <node id="36">
+        <label>recover.h</label>
+        <link refid="recover_8h"/>
+      </node>
+      <node id="31">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/utility.c</label>
+        <link refid="utility_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>utility.h</label>
+        <link refid="utility_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>tools.h</label>
+        <link refid="tools_8h"/>
+      </node>
+      <node id="22">
+        <label>stage.h</label>
+        <link refid="stage_8h"/>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="23">
+        <label>fti-io.h</label>
+        <link refid="fti-io_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fti-intern.h</label>
+        <link refid="fti-intern_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>../deps/md5/md5.h</label>
+      </node>
+      <node id="44">
+        <label>../deps/iniparser/dictionary.h</label>
+      </node>
+      <node id="26">
+        <label>IO/posix-dcp.h</label>
+      </node>
+      <node id="25">
+        <label>IO/posix.h</label>
+      </node>
+      <node id="46">
+        <label>../deps/jerasure/include/jerasure.h</label>
+      </node>
+      <node id="14">
+        <label>mpi.h</label>
+      </node>
+      <node id="29">
+        <label>IO/ftiff-dcp.h</label>
+      </node>
+      <node id="42">
+        <label>sion.h</label>
+      </node>
+      <node id="39">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+      </node>
+      <node id="37">
+        <label>fortran/ftif.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="24">
+        <label>topo.h</label>
+        <link refid="topo_8h"/>
+      </node>
+      <node id="16">
+        <label>api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utility_8c_1ae8c2ae5b7365c5b75b2763fe1a54b8d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int copyDataFromDevive</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_dataset *FTI_Data)</argsstring>
+        <name>copyDataFromDevive</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref> *</type>
+          <declname>FTI_Data</declname>
+        </param>
+        <briefdescription>
+<para>copies all data of GPU variables to a CPU memory location </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution Meta data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dataset metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+Copis data from the GPU side to the CPU memory <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/utility.c" line="56" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/utility.c" bodystart="56" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API functions for the FTI library. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (c) 2017 Leonardo A. Bautista-Gomez All rights reserved</para>
+<para>FTI - A multi-level checkpointing library for C/C++/Fortran applications</para>
+<para>Revision 1.0 : Fault Tolerance Interface (FTI)</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem><para>Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+<para><simplesect kind="date"><para>October, 2017 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="39"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_SIONLIB<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">/*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="utility_8h_1ae8c2ae5b7365c5b75b2763fe1a54b8d6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="utility_8c_1ae8c2ae5b7365c5b75b2763fe1a54b8d6" kindref="member">copyDataFromDevive</ref>(<ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,<sp/><ref refid="structFTIT__dataset" kindref="compound">FTIT_dataset</ref>*<sp/>FTI_Data){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>GPUSUPPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>FTI_Exec-&gt;<ref refid="structFTIT__execution_1a97f8b8aebedb2904ad10a18a5a90574f" kindref="member">nbVar</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FTI_Data[i].isDevicePtr<sp/>){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="api-cuda_8c_1a544c5bac3dc54ef351d1f37a8dcde9d3" kindref="member">FTI_copy_from_device</ref>(<sp/>FTI_Data[i].ptr,<sp/>FTI_Data[i].devicePtr,FTI_Data[i].size,FTI_Exec);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" kindref="member">FTI_SCES</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/utility.c"/>
+  </compounddef>
+</doxygen>

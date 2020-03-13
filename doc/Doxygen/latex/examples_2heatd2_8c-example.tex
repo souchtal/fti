@@ -1,0 +1,186 @@
+\hypertarget{examples_2heatd2_8c-example}{}\doxysection{examples/heatd2.\+c}
+This is an example of how to use the F\+T\+I\+\_\+\+Init More details about this example.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{fti_8h}{fti.h}}>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define ITER\_TIMES  5000}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define ITER\_OUT    500}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define PRECISION   0.001}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define WORKTAG     26}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define GRIDSIZE    4096}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} initData(\textcolor{keywordtype}{int} nbLines, \textcolor{keywordtype}{int} M, \textcolor{keywordtype}{int} rank, \textcolor{keywordtype}{double} *h)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} i, j;}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (i = 0; i < nbLines; i++) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for} (j = 0; j < M; j++) \{}
+\DoxyCodeLine{            h[(i*M)+j] = 0;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank == 0) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for} (j = (M*0.1); j < (M*0.9); j++) \{}
+\DoxyCodeLine{            h[j] = 100;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} print\_solution (\textcolor{keywordtype}{char} *filename, \textcolor{keywordtype}{double} *grid)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} i, j;}
+\DoxyCodeLine{    FILE *outfile;}
+\DoxyCodeLine{    outfile = fopen(filename,\textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (outfile == NULL) \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"Can't open output file."});}
+\DoxyCodeLine{        exit(-\/1);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (i = 0; i < GRIDSIZE; i++) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for} (j = 0; j < GRIDSIZE; j++) \{}
+\DoxyCodeLine{            fprintf (outfile, \textcolor{stringliteral}{"\%6.2f\(\backslash\)n"}, grid[(i*GRIDSIZE)+j]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        fprintf(outfile, \textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    fclose(outfile);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{double} doWork(\textcolor{keywordtype}{int} numprocs, \textcolor{keywordtype}{int} rank, \textcolor{keywordtype}{int} M, \textcolor{keywordtype}{int} nbLines, \textcolor{keywordtype}{double} *g, \textcolor{keywordtype}{double} *h)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} i,j;}
+\DoxyCodeLine{    MPI\_Request req1[2], req2[2];}
+\DoxyCodeLine{    MPI\_Status status1[2], status2[2];}
+\DoxyCodeLine{    \textcolor{keywordtype}{double} localerror, globalerror;}
+\DoxyCodeLine{    localerror = 0;}
+\DoxyCodeLine{    \textcolor{keywordflow}{for}(i = 0; i < nbLines; i++) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for}(j = 0; j < M; j++) \{}
+\DoxyCodeLine{            h[(i*M)+j] = g[(i*M)+j];}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank > 0) \{}
+\DoxyCodeLine{        MPI\_Isend(g+M, M, MPI\_DOUBLE, rank-\/1, WORKTAG, \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&req1[0]);}
+\DoxyCodeLine{        MPI\_Irecv(h,   M, MPI\_DOUBLE, rank-\/1, WORKTAG, \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&req1[1]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank < numprocs-\/1) \{}
+\DoxyCodeLine{        MPI\_Isend(g+((nbLines-\/2)*M), M, MPI\_DOUBLE, rank+1, WORKTAG, \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&req2[0]);}
+\DoxyCodeLine{        MPI\_Irecv(h+((nbLines-\/1)*M), M, MPI\_DOUBLE, rank+1, WORKTAG, \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&req2[1]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank > 0) \{}
+\DoxyCodeLine{        MPI\_Waitall(2,req1,status1);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank < numprocs-\/1) \{}
+\DoxyCodeLine{        MPI\_Waitall(2,req2,status2);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (i = 1; i < (nbLines-\/1); i++) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for} (j = 0; j < M; j++) \{}
+\DoxyCodeLine{            g[(i*M)+j] = 0.25*(h[((i-\/1)*M)+j]+h[((i+1)*M)+j]+h[(i*M)+j-\/1]+h[(i*M)+j+1]);}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (localerror < fabs(g[(i*M)+j] -\/ h[(i*M)+j])) \{}
+\DoxyCodeLine{                localerror = fabs(g[(i*M)+j] -\/ h[(i*M)+j]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank == (numprocs-\/1)) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for}(j = 0; j < M; j++) \{}
+\DoxyCodeLine{            g[((nbLines-\/1)*M)+j] = g[((nbLines-\/2)*M)+j];}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    MPI\_Allreduce(\&localerror, \&globalerror, 1, MPI\_DOUBLE, MPI\_MAX, \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}});}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} globalerror;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} rank, nbProcs, nbLines, i, j, N, M, res;}
+\DoxyCodeLine{    \textcolor{keywordtype}{double} wtime, *h, *g, *grid, globalerror = 1;}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} fn[32];}
+\DoxyCodeLine{}
+\DoxyCodeLine{    MPI\_Init(\&argc, \&argv);}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_abe8c2b202eaab996bbd88eea4cafe51a}{FTI\_Init}}(argv[1], MPI\_COMM\_WORLD);}
+\DoxyCodeLine{    MPI\_Comm\_size(\mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&nbProcs);}
+\DoxyCodeLine{    MPI\_Comm\_rank(\mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&rank);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    M = GRIDSIZE;}
+\DoxyCodeLine{    N = GRIDSIZE;}
+\DoxyCodeLine{    nbLines = (N / nbProcs)+3;}
+\DoxyCodeLine{    h = (\textcolor{keywordtype}{double} *) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double} *) * M * nbLines);}
+\DoxyCodeLine{    g = (\textcolor{keywordtype}{double} *) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double} *) * M * nbLines);}
+\DoxyCodeLine{    grid = (\textcolor{keywordtype}{double} *) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double} *) * M * (nbLines-\/2) * nbProcs);}
+\DoxyCodeLine{    initData(nbLines, M, rank, g);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank == 0) \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"Data initialized. Global grid size is \%d x \%d.\(\backslash\)n"}, M, (nbLines-\/2)*nbProcs);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Create your data structure}}
+\DoxyCodeLine{    \textcolor{keyword}{typedef} \textcolor{keyword}{struct }cInfo \{}
+\DoxyCodeLine{        \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{        \textcolor{keywordtype}{int} level;}
+\DoxyCodeLine{    \} cInfo;}
+\DoxyCodeLine{    \textcolor{comment}{// Define and initialize the datastructure}}
+\DoxyCodeLine{    cInfo myCkpt = \{1,1\};}
+\DoxyCodeLine{    \textcolor{comment}{// Create a new FTI data type}}
+\DoxyCodeLine{    \mbox{\hyperlink{structFTIT__type}{FTIT\_type}} ckptInfo;}
+\DoxyCodeLine{    \textcolor{comment}{// Initialize the new FTI data type}}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a725ffe84dd16beb533e7b4b74fa4e9c4}{FTI\_InitType}}(\&ckptInfo, 2*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{FTI\_Protect}}(0, \&i, 1, \mbox{\hyperlink{fti_8h_ad236df2303494837c97a13741423a51b}{FTI\_INTG}});}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{FTI\_Protect}}(1, \&myCkpt, 1, ckptInfo);}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{FTI\_Protect}}(2, h, M*nbLines, \mbox{\hyperlink{fti_8h_aafb3604bd7ebfae406d1c419890e04d8}{FTI\_DBLE}});}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{FTI\_Protect}}(3, g, M*nbLines, \mbox{\hyperlink{fti_8h_aafb3604bd7ebfae406d1c419890e04d8}{FTI\_DBLE}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    MPI\_Barrier(\mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}});}
+\DoxyCodeLine{    wtime = MPI\_Wtime();}
+\DoxyCodeLine{    \textcolor{keywordflow}{for}(i = 0; i < ITER\_TIMES; i++) \{ \textcolor{comment}{// Check execution status}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\mbox{\hyperlink{fti_8h_a5222b52e6f1d6b737f4ec1b173f362f5}{FTI\_Status}}() != 0) \{}
+\DoxyCodeLine{            res = \mbox{\hyperlink{fti_8h_ab761c55656aab212daf8e6f447ec2214}{FTI\_Recover}}();}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (res != 0) \{}
+\DoxyCodeLine{                exit(1);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            \textcolor{keywordflow}{else} \{ \textcolor{comment}{// Update ckpt. id \& level}}
+\DoxyCodeLine{                myCkpt.level = (myCkpt.level+1)\%5; myCkpt.id++;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (((i+1)\%ITER\_OUT) == 0) \{ \textcolor{comment}{// Checkpoint every ITER\_OUT steps}}
+\DoxyCodeLine{                res = \mbox{\hyperlink{fti_8h_a85ccf559fcbee51bd335ba2c6671eadf}{FTI\_Checkpoint}}(myCkpt.id, myCkpt.level); \textcolor{comment}{// Ckpt ID 5 is ignored because level = 0}}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (res == 0) \{}
+\DoxyCodeLine{                    myCkpt.level = (myCkpt.level+1)\%5; myCkpt.id++;}
+\DoxyCodeLine{                \} \textcolor{comment}{// Update ckpt. id \& level}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        globalerror = doWork(nbProcs, rank, M, nbLines, g, h);}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} ((i\%ITER\_OUT) == 0) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (rank == 0) \{}
+\DoxyCodeLine{                printf(\textcolor{stringliteral}{"Step : \%d, current error = \%f; target = \%f\(\backslash\)n"}, i, globalerror, PRECISION);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            MPI\_Gather(g+M, (nbLines-\/2)*M, MPI\_DOUBLE, grid, (nbLines-\/2)*M, MPI\_DOUBLE, 0, \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}});}
+\DoxyCodeLine{            sprintf(fn, \textcolor{stringliteral}{"results/vis-\/\%d.dat"}, i);}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (rank == 0) \{}
+\DoxyCodeLine{                print\_solution(fn, grid);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (globalerror < PRECISION) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{break};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank == 0) \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"Execution finished in \%lf seconds.\(\backslash\)n"}, MPI\_Wtime() -\/ wtime);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    free(h);}
+\DoxyCodeLine{    free(g);}
+\DoxyCodeLine{    free(grid);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_aa58102aa8540ed35f2efba23cf2dc19b}{FTI\_Finalize}}();}
+\DoxyCodeLine{    MPI\_Finalize();}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCodeInclude}
+ 

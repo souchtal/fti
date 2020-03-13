@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="unionFTIT__float" kind="union" language="C++" prot="public">
+    <compoundname>FTIT_float</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionFTIT__float_1a6e0f110ab7c280686e92ec2ded46c95f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FTIT_float::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Floating point value. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="318" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionFTIT__float_1a0d887bbc71e9bedc66c013cfe09761fa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_float::intval</definition>
+        <argsstring></argsstring>
+        <name>intval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integer mapped to do bit edits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="319" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionFTIT__float_1a26d7c150c6dce3acf0d9604ca19fe225" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_float::byte[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Byte array for coarser control. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="320" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="317" column="29" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="317" bodyend="321"/>
+    <listofallmembers>
+      <member refid="unionFTIT__float_1a26d7c150c6dce3acf0d9604ca19fe225" prot="public" virt="non-virtual"><scope>FTIT_float</scope><name>byte</name></member>
+      <member refid="unionFTIT__float_1a0d887bbc71e9bedc66c013cfe09761fa" prot="public" virt="non-virtual"><scope>FTIT_float</scope><name>intval</name></member>
+      <member refid="unionFTIT__float_1a6e0f110ab7c280686e92ec2ded46c95f" prot="public" virt="non-virtual"><scope>FTIT_float</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

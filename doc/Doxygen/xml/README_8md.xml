@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;a<sp/>href=&apos;https://fti.readthedocs.io/en/latest/?badge=latest&apos;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&apos;https://readthedocs.org/projects/fti/badge/?version=latest&apos;<sp/>alt=&apos;Documentation<sp/>Status&apos;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">What<sp/>is<sp/>FTI?</highlight></codeline>
+<codeline><highlight class="normal">===</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">FTI<sp/>stands<sp/>for<sp/>Fault<sp/>Tolerance<sp/>Interface<sp/>and<sp/>is<sp/>a<sp/>library<sp/>that<sp/>aims<sp/>to<sp/>give</highlight></codeline>
+<codeline><highlight class="normal">computational<sp/>scientists<sp/>the<sp/>means<sp/>to<sp/>perform<sp/>fast<sp/>and<sp/>efficient<sp/>multilevel</highlight></codeline>
+<codeline><highlight class="normal">checkpointing<sp/>in<sp/>large<sp/>scale<sp/>supercomputers.<sp/>FTI<sp/>leverages<sp/>local<sp/>storage<sp/>plus</highlight></codeline>
+<codeline><highlight class="normal">data<sp/>replication<sp/>and<sp/>erasure<sp/>codes<sp/>to<sp/>provide<sp/>several<sp/>levels<sp/>of<sp/>reliability<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">performance.<sp/>FTI<sp/>is<sp/>application-level<sp/>checkpointing<sp/>and<sp/>allows<sp/>users<sp/>to<sp/>select</highlight></codeline>
+<codeline><highlight class="normal">which<sp/>datasets<sp/>needs<sp/>to<sp/>be<sp/>protected,<sp/>in<sp/>order<sp/>to<sp/>improve<sp/>efficiency<sp/>and<sp/>avoid</highlight></codeline>
+<codeline><highlight class="normal">wasting<sp/>space,<sp/>time<sp/>and<sp/>energy.<sp/>In<sp/>addition,<sp/>it<sp/>offers<sp/>a<sp/>direct<sp/>data<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal">so<sp/>that<sp/>users<sp/>do<sp/>not<sp/>need<sp/>to<sp/>deal<sp/>with<sp/>files<sp/>and/or<sp/>directory<sp/>names.<sp/><sp/>All</highlight></codeline>
+<codeline><highlight class="normal">metadata<sp/>is<sp/>managed<sp/>by<sp/>FTI<sp/>in<sp/>a<sp/>transparent<sp/>fashion<sp/>for<sp/>the<sp/>user.<sp/>If<sp/>desired,</highlight></codeline>
+<codeline><highlight class="normal">users<sp/>can<sp/>dedicate<sp/>one<sp/>process<sp/>per<sp/>node<sp/>to<sp/>overlap<sp/>fault<sp/>tolerance<sp/>workload<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">scientific<sp/>computation,<sp/>so<sp/>that<sp/>post-checkpoint<sp/>tasks<sp/>are<sp/>executed</highlight></codeline>
+<codeline><highlight class="normal">asynchronously.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Download,<sp/>compile<sp/>and<sp/>install<sp/>FTI<sp/>(as<sp/>easy<sp/>as<sp/>1,2,3)</highlight></codeline>
+<codeline><highlight class="normal">===</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>1)<sp/>git<sp/>clone<sp/>https://github.com/leobago/fti.git</highlight></codeline>
+<codeline><highlight class="normal"><sp/>2)<sp/>mkdir<sp/>fti/build<sp/>&amp;&amp;<sp/>cd<sp/>fti/build</highlight></codeline>
+<codeline><highlight class="normal"><sp/>3)<sp/>cmake<sp/>-DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti<sp/>..<sp/>&amp;&amp;<sp/>make<sp/>all<sp/>install</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>**REMARK<sp/>1**<sp/>(Intel<sp/>and<sp/>GCC)</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>For<sp/>the<sp/>case<sp/>that<sp/>both,<sp/>**Intel<sp/>and<sp/>GCC**,<sp/>compilers<sp/>are<sp/>installed,<sp/>please<sp/>configure<sp/>using:</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`cmake<sp/>-C<sp/>../intel.cmake<sp/>-DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti<sp/>..`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>**REMARK<sp/>2**<sp/>(OpenSSL)</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>To<sp/>use<sp/>the<sp/>built-in<sp/>MD5<sp/>rather<sp/>than<sp/>OpenSSL,<sp/>please<sp/>configure<sp/>using:</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`cmake<sp/>-DNO_OPENSSL=true<sp/>-DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti<sp/>..`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>**REMARK<sp/>3**<sp/>(GNU<sp/>versions)</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>The<sp/>usage<sp/>of<sp/>different<sp/>GNU<sp/>compiler<sp/>versions<sp/>for<sp/>C<sp/>and<sp/>Fortran<sp/>leads<sp/>currently<sp/>to<sp/>an<sp/>undefined<sp/>behavior.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>compiler<sp/>identification<sp/>for<sp/>C<sp/>and<sp/>Fortran<sp/>is<sp/>the<sp/>same.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>**REMARK<sp/>4**<sp/>(Cray<sp/>System)</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>FTI<sp/>works<sp/>on<sp/>Cray<sp/>system<sp/>with<sp/>these<sp/>modules</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>GNU<sp/>environment:</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`module<sp/>load<sp/>gcc/5.3.0<sp/>CMake/3.6.2<sp/>craype/2.5.8<sp/>cray-mpich/7.5.0<sp/>PrgEnv-gnu/6.0.3<sp/>`</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`export<sp/>CRAY_CPU_TARGET=x86-64`</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`export<sp/>CRAYPE_LINK_TYPE=dynamic`</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Flag<sp/>for<sp/>CMake:<sp/>`-CMAKE_SYSTEM_NAME=CrayLinuxEnvironment`</highlight></codeline>
+<codeline><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Intel<sp/>environment:</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`module<sp/>load<sp/>intel/17.0.1.132<sp/>CMake/3.6.2<sp/>craype/2.5.8<sp/>cray-mpich/7.5.0<sp/>PrgEnv-intel/6.0.3`</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`export<sp/>CRAY_CPU_TARGET=x86-64`</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>`export<sp/>CRAYPE_LINK_TYPE=dynamic`</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Flag<sp/>for<sp/>CMake:<sp/>`-CMAKE_SYSTEM_NAME=CrayLinuxEnvironment`</highlight></codeline>
+<codeline><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>The<sp/>most<sp/>important<sp/>is<sp/>CMake<sp/>version:<sp/>the<sp/>newer<sp/>the<sp/>better.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Configure<sp/>and<sp/>run<sp/>a<sp/>FTI<sp/>example</highlight></codeline>
+<codeline><highlight class="normal">===</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>&quot;build/examples&quot;<sp/>directory<sp/>contains<sp/>heat<sp/>distribution<sp/>simulations<sp/>as<sp/>simple</highlight></codeline>
+<codeline><highlight class="normal">examples<sp/>in<sp/>both,<sp/>C<sp/>and<sp/>Fortran.<sp/>Usage<sp/>instructions<sp/>in<sp/>file<sp/>&quot;examples/README&quot;.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">User<sp/>manual</highlight></codeline>
+<codeline><highlight class="normal">===</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>folder<sp/>&quot;doc/manual&quot;<sp/>you<sp/>will<sp/>find<sp/>a<sp/>user<sp/>manual,<sp/>which<sp/>contains<sp/>the<sp/>API<sp/>description<sp/>and<sp/>code<sp/>snippets<sp/>for<sp/>the<sp/>implementation<sp/>of<sp/>FTI<sp/>as<sp/>checkpoint<sp/>I/O.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>generate<sp/>the<sp/>documentation<sp/>wit<sp/>Doxygen,<sp/>configure<sp/>with<sp/>`-DENABLE_DOCU=ON`<sp/>and<sp/>execute<sp/>in<sp/>the<sp/>build<sp/>directory:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>make<sp/>doc</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Acknowledgement<sp/>(send<sp/>us<sp/>a<sp/>postal<sp/>card!<sp/>\\\(^-^\)/\)</highlight></codeline>
+<codeline><highlight class="normal">===</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>use<sp/>FTI<sp/>please<sp/>consider<sp/>sending<sp/>us<sp/>an<sp/>email<sp/>to<sp/>let<sp/>us<sp/>know<sp/>what<sp/>you</highlight></codeline>
+<codeline><highlight class="normal">liked<sp/>and<sp/>what<sp/>could<sp/>be<sp/>improved<sp/>(<sp/>:email:<sp/>leonardo<sp/>(dot)<sp/>bautista<sp/>(at)<sp/>bsc<sp/>(dot)<sp/>es),</highlight></codeline>
+<codeline><highlight class="normal">your<sp/>feedback<sp/>is<sp/>important.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>use<sp/>FTI<sp/>for<sp/>any<sp/>research<sp/>work,<sp/>please<sp/>make<sp/>sure<sp/>to<sp/>acknowledge<sp/>our<sp/>paper:</highlight></codeline>
+<codeline><highlight class="normal">Bautista-Gomez,<sp/>Leonardo,<sp/>et<sp/>al.<sp/>***&quot;FTI:<sp/>high<sp/>performance<sp/>fault<sp/>tolerance<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>hybrid<sp/>systems.&quot;***<sp/>Proceedings<sp/>of<sp/>2011<sp/>international<sp/>conference<sp/>for<sp/>high</highlight></codeline>
+<codeline><highlight class="normal">performance<sp/>computing,<sp/>networking,<sp/>storage<sp/>and<sp/>analysis.<sp/>ACM,<sp/>2011.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>work<sp/>has<sp/>been<sp/>supported<sp/>by<sp/>EU<sp/>H2020<sp/>ICT<sp/>project<sp/>LEGaTO,<sp/>contract<sp/>#780681.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Finally,<sp/>don&apos;t<sp/>hesitate<sp/>to<sp/>send<sp/>us<sp/>a<sp/>postal<sp/>card<sp/>to<sp/>:</highlight></codeline>
+<codeline><highlight class="normal">Dr.<sp/>Leonardo<sp/>Bautista-Gomez<sp/>(Leo)</highlight></codeline>
+<codeline><highlight class="normal">Barcelona<sp/>Supercomputing<sp/>Center</highlight></codeline>
+<codeline><highlight class="normal">Carrer<sp/>de<sp/>Jordi<sp/>Girona,<sp/>29-31,<sp/>08034<sp/>Barcelona,<sp/>SPAIN.</highlight></codeline>
+<codeline><highlight class="normal">Phone<sp/>:telephone_receiver:<sp/>:<sp/>+34<sp/>934<sp/>13<sp/>77<sp/>16</highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/README.md"/>
+  </compounddef>
+</doxygen>

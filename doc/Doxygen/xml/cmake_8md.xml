@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="cmake_8md" kind="file" language="Markdown">
+    <compoundname>cmake.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>CMake<sp/>Options<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Option<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>What<sp/>it&apos;s<sp/>for<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>default</highlight></codeline>
+<codeline><highlight class="normal">-------------------|-------------------------------------------------------------|---------</highlight></codeline>
+<codeline><highlight class="normal">`ENABLE_FORTRAN`<sp/><sp/><sp/>|<sp/><sp/>Enables<sp/>the<sp/>generation<sp/>of<sp/>the<sp/>Fortran<sp/>wrapper<sp/>for<sp/>FTI<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">`ENABLE_EXAMPLES`<sp/><sp/>|<sp/><sp/>Enables<sp/>the<sp/>generation<sp/>of<sp/>examples<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">`ENABLE_SIONLIB`<sp/><sp/><sp/>|<sp/><sp/>Enables<sp/>the<sp/>parallel<sp/>I/O<sp/>SIONlib<sp/>for<sp/>FTI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>OFF</highlight></codeline>
+<codeline><highlight class="normal">`ENABLE_TESTS`<sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>Enables<sp/>the<sp/>generation<sp/>of<sp/>tests<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>ON</highlight></codeline>
+<codeline><highlight class="normal">`ENABLE_LUSTRE`<sp/><sp/><sp/><sp/>|<sp/><sp/>Enables<sp/>Lustre<sp/>Support<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>OFF</highlight></codeline>
+<codeline><highlight class="normal">`ENABLE_DOCU`<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>Enables<sp/>the<sp/>generation<sp/>of<sp/>a<sp/>Doxygen<sp/>documentation<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>OFF</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Other<sp/>configurations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>a<sp/>certain<sp/>compiler,<sp/>set<sp/>the<sp/>environment<sp/>variables<sp/>`CC`<sp/>and<sp/>`FC`<sp/>to<sp/>the<sp/>name<sp/>of<sp/>the<sp/>compiler<sp/>executables.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">For<sp/>instance<sp/>if<sp/>it<sp/>is<sp/>desired<sp/>to<sp/>use<sp/>the<sp/>PGI<sp/>compiler,<sp/>try:<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CC=pgcc<sp/>FC=pgfortran<sp/>cmake<sp/>-DCMAKE_INSTALL_PREFIX:PATH=install/here/fti<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>the<sp/>built-in<sp/>MD5<sp/>rather<sp/>than<sp/>OpenSSL,<sp/>please<sp/>configure<sp/>using:<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cmake<sp/>-DNO_OPENSSL=true<sp/>-DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">On<sp/>Cray<sp/>systems,<sp/>it<sp/>might<sp/>be<sp/>helping<sp/>to<sp/>use<sp/>the<sp/>cmake<sp/>flag:<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-CMAKE_SYSTEM_NAME=CrayLinuxEnvironment</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="cmake.md"/>
+  </compounddef>
+</doxygen>

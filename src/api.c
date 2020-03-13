@@ -96,7 +96,7 @@ FTIT_type FTI_LDBE;
   @param      configFile      FTI configuration file.
   @param      globalComm      Main MPI communicator of the application.
   @return     integer         FTI_SCES if successful.
-
+    
   This function initializes the FTI context and prepares the heads to wait
   for checkpoints. FTI processes should never get out of this function. In
   case of a restart, checkpoint files should be recovered and in place at the
@@ -208,11 +208,8 @@ int FTI_Init(const char* configFile, MPI_Comm globalComm)
         memset(FTI_Data[i].idChar,'\0',FTI_BUFS);
     }
 }
-
-//adding example tag here for Doxygen
-/** \example heatd2.c
- * This is an example of how to use the FTI_Init
- * More details about this example.
+/** @example example1.c
+ * Simple example of how to use the Init Function
  */
 
 /*-------------------------------------------------------------------------*/

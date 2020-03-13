@@ -1,0 +1,1034 @@
+\hypertarget{fti_8h}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/include/fti.h File Reference}
+\label{fti_8h}\index{/home/bscuser/Documents/release/dev/fti/include/fti.h@{/home/bscuser/Documents/release/dev/fti/include/fti.h}}
+
+
+Header file for the F\+TI library.  
+
+
+{\ttfamily \#include \char`\"{}fti-\/intern.\+h\char`\"{}}\newline
+Include dependency graph for fti.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fti_8h_a4da53a2ca9ef19b414ca7e2522c4864a}{F\+T\+I\+\_\+\+B\+U\+FS}}~256
+\item 
+\#define \mbox{\hyperlink{fti_8h_af166ab9ab3e6ba0039316c9fdffc5e11}{F\+T\+I\+\_\+\+W\+O\+RD}}~16
+\item 
+\#define \mbox{\hyperlink{fti_8h_a7dee5a1994faa8e4a2664942d4d8c024}{F\+T\+I\+\_\+\+D\+O\+NE}}~1
+\item 
+\#define \mbox{\hyperlink{fti_8h_a8c1f0a06b877c18a7270d54c5e6039cf}{F\+T\+I\+\_\+\+S\+C\+ES}}~0
+\item 
+\#define \mbox{\hyperlink{fti_8h_a06d23a2210e17078a6a8862bb6ed3dbd}{F\+T\+I\+\_\+\+N\+S\+CS}}~-\/1
+\item 
+\#define \mbox{\hyperlink{fti_8h_ac879dcdb853f4b5993ceed9fb1d06e88}{F\+T\+I\+\_\+\+N\+R\+EC}}~-\/2
+\item 
+\#define \mbox{\hyperlink{fti_8h_a13af42079571ed8dd290fad82fd11c2d}{F\+T\+I\+\_\+\+H\+E\+AD}}~2
+\item 
+\#define \mbox{\hyperlink{fti_8h_a8b63f0cd5d9aa9417c3d3ec5a703ca1b}{F\+T\+I\+\_\+\+S\+I\+\_\+\+F\+A\+IL}}~0x4
+\item 
+\#define \mbox{\hyperlink{fti_8h_a93cefc8dced9cb5c63c45708ef89694b}{F\+T\+I\+\_\+\+S\+I\+\_\+\+S\+C\+ES}}~0x3
+\item 
+\#define \mbox{\hyperlink{fti_8h_a1685329d73a38dd15caa9a9b5ffef36f}{F\+T\+I\+\_\+\+S\+I\+\_\+\+A\+C\+TV}}~0x2
+\item 
+\#define \mbox{\hyperlink{fti_8h_a4eb6ff54cf8f3c3149d42da30d23c498}{F\+T\+I\+\_\+\+S\+I\+\_\+\+P\+E\+ND}}~0x1
+\item 
+\#define \mbox{\hyperlink{fti_8h_a26fc9f53bb9fcbbf144da0488e217172}{F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+I\+NI}}~0x0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fti_8h_abe8c2b202eaab996bbd88eea4cafe51a}{F\+T\+I\+\_\+\+Init}} (const char $\ast$config\+File, M\+P\+I\+\_\+\+Comm global\+Comm)
+\begin{DoxyCompactList}\small\item\em Initializes F\+TI. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a5222b52e6f1d6b737f4ec1b173f362f5}{F\+T\+I\+\_\+\+Status}} ()
+\begin{DoxyCompactList}\small\item\em It returns the current status of the recovery flag. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a725ffe84dd16beb533e7b4b74fa4e9c4}{F\+T\+I\+\_\+\+Init\+Type}} (\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$type, int size)
+\begin{DoxyCompactList}\small\item\em It initializes a data type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a7fab7e8f18c24f415dc658714c27c669}{F\+T\+I\+\_\+\+Init\+Complex\+Type}} (\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$new\+Type, \mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} $\ast$type\+Definition, int length, size\+\_\+t size, char $\ast$name, \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$h5group)
+\begin{DoxyCompactList}\small\item\em It initializes a complex data type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fti_8h_a990302331eacb14390ce4feae438405f}{F\+T\+I\+\_\+\+Add\+Simple\+Field}} (\mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} $\ast$type\+Definition, \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$fti\+Type, size\+\_\+t offset, int id, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em It adds a simple field in complex data type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fti_8h_ab93e233cbea2ba23a026e3f2396ec0a3}{F\+T\+I\+\_\+\+Add\+Complex\+Field}} (\mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} $\ast$type\+Definition, \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$fti\+Type, size\+\_\+t offset, int rank, int $\ast$dim\+Length, int id, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em It adds a simple field in complex data type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a13fc751bcf88d7c2766d0b76344b0964}{F\+T\+I\+\_\+\+Init\+Group}} (\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$h5group, char $\ast$name, \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em It initialize a H\+D\+F5 group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a2dc4fb3b0353541b7bc156f1c803f92f}{F\+T\+I\+\_\+\+Rename\+Group}} (\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$h5group, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Renames a H\+D\+F5 group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{F\+T\+I\+\_\+\+Protect}} (int id, void $\ast$ptr, long count, \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} type)
+\begin{DoxyCompactList}\small\item\em It sets/resets the pointer and type to a protected variable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_af4cb738277e5d80c40f10491015395cb}{F\+T\+I\+\_\+\+Define\+Dataset}} (int id, int rank, int $\ast$dim\+Length, char $\ast$name, \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$h5group)
+\begin{DoxyCompactList}\small\item\em Defines the dataset. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a1abef7eeec0efb4fb73b5929637aa90f}{F\+T\+I\+\_\+\+Define\+Global\+Dataset}} (int id, int rank, \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$dim\+Length, const char $\ast$name, \mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$h5group, \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} type)
+\begin{DoxyCompactList}\small\item\em Defines a global dataset (shared among application processes) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a55e7d096389f363b570084126af8ece5}{F\+T\+I\+\_\+\+Add\+Subset}} (int id, int rank, \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$offset, \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$count, int did)
+\begin{DoxyCompactList}\small\item\em Assigns a F\+TI protected variable to a global dataset. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a79b24fc99e9cb826b2ad1d0cb6185882}{F\+T\+I\+\_\+\+Recover\+Dataset\+Dimension}} (int did)
+\begin{DoxyCompactList}\small\item\em loads dataset dimension from ckpt file to dataset \textquotesingle{}did\textquotesingle{} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$ \mbox{\hyperlink{fti_8h_a4f699b71886c24e17b68028c6582449b}{F\+T\+I\+\_\+\+Get\+Dataset\+Span}} (int did, int rank)
+\begin{DoxyCompactList}\small\item\em returns static array of dataset dimensions \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a8dd9c8d88cc5e17214c384478b441dd5}{F\+T\+I\+\_\+\+Get\+Dataset\+Rank}} (int did)
+\begin{DoxyCompactList}\small\item\em returns rank of shared dataset \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_aa52eec71c6460f10f2986acef5469c48}{F\+T\+I\+\_\+\+Update\+Global\+Dataset}} (int id, int rank, \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$dim\+Length)
+\begin{DoxyCompactList}\small\item\em Updates global dataset (shared among application processes) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_ad1fb249ff8d7f4b44e40e7e5c027d411}{F\+T\+I\+\_\+\+Update\+Subset}} (int id, int rank, \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$offset, \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$count, int did)
+\begin{DoxyCompactList}\small\item\em Updates a F\+TI protected variable of a global dataset. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{fti_8h_adb927ab62324ba774d8daf91afa01c76}{F\+T\+I\+\_\+\+Get\+Stored\+Size}} (int id)
+\begin{DoxyCompactList}\small\item\em Returns size saved in metadata of variable. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{fti_8h_a125d30b04650f470c0ca82a786e55e9d}{F\+T\+I\+\_\+\+Realloc}} (int id, void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Reallocates dataset to last checkpoint size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_aa6acb36d29481cd0da05ee66f944c1e8}{F\+T\+I\+\_\+\+Bit\+Flip}} (int dataset\+ID)
+\begin{DoxyCompactList}\small\item\em Bit-\/flip injection following the injection instructions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a85ccf559fcbee51bd335ba2c6671eadf}{F\+T\+I\+\_\+\+Checkpoint}} (int id, int level)
+\begin{DoxyCompactList}\small\item\em It takes the checkpoint and triggers the post-\/ckpt. work. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a9a144006e804d976446ba5a9c21f1591}{F\+T\+I\+\_\+\+Get\+Stage\+Dir}} (char $\ast$stage\+Dir, int max\+Len)
+\begin{DoxyCompactList}\small\item\em Places the F\+TI staging directory path into \textquotesingle{}stage\+Dir\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a244522ba34ee7fced63cab22a24b326b}{F\+T\+I\+\_\+\+Get\+Stage\+Status}} (int ID)
+\begin{DoxyCompactList}\small\item\em Returns status of staging request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_ae89330f9e650a1a5b7e2f460edba8d54}{F\+T\+I\+\_\+\+Send\+File}} (char $\ast$lpath, char $\ast$rpath)
+\begin{DoxyCompactList}\small\item\em Copies file asynchronously from \textquotesingle{}lpath\textquotesingle{} to \textquotesingle{}rpath\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_ab761c55656aab212daf8e6f447ec2214}{F\+T\+I\+\_\+\+Recover}} ()
+\begin{DoxyCompactList}\small\item\em It loads the checkpoint data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a6cbf6d6f6b4181e314eef599f85d6c5b}{F\+T\+I\+\_\+\+Snapshot}} ()
+\begin{DoxyCompactList}\small\item\em Takes an F\+TI snapshot or recovers the data if it is a restart. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_aa58102aa8540ed35f2efba23cf2dc19b}{F\+T\+I\+\_\+\+Finalize}} ()
+\begin{DoxyCompactList}\small\item\em It closes F\+TI properly on the application processes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a25b793276f5e79e5947e133abdd52c1e}{F\+T\+I\+\_\+\+Recover\+Var}} (int id)
+\begin{DoxyCompactList}\small\item\em During the restart, recovers the given variable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a7cd136cac151e0a71320ff3f80215e25}{F\+T\+I\+\_\+\+Init\+I\+CP}} (int id, int level, bool activate)
+\begin{DoxyCompactList}\small\item\em Initialize an incremental checkpoint. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a8eb9b278fa5aa30e53ca4ad8baf95ba1}{F\+T\+I\+\_\+\+Add\+Var\+I\+CP}} (int var\+ID)
+\begin{DoxyCompactList}\small\item\em Write variable into the CP file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_ab21e904a57a97bef0b20c1afbe0d868d}{F\+T\+I\+\_\+\+Finalize\+I\+CP}} ()
+\begin{DoxyCompactList}\small\item\em Finalize an incremental checkpoint. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_a2da201b48449cc457f338d23bc3f4cf3}{F\+T\+I\+\_\+set\+I\+D\+From\+String}} (char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Searches in the protected variables for a name. If not found it allocates and returns the ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti_8h_aa3085533f52818cf46175b8f783ad17b}{F\+T\+I\+\_\+get\+I\+D\+From\+String}} (char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Searches in the protected variables for a name. If not found it allocates and returns the ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+P\+I\+\_\+\+Comm \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{F\+T\+I\+\_\+\+C\+O\+M\+M\+\_\+\+W\+O\+R\+LD}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_af384b54744550e2300db530ef46f7e77}{F\+T\+I\+\_\+\+C\+H\+AR}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_a7f97366acb17493ec718fb6086f1ac3c}{F\+T\+I\+\_\+\+S\+H\+RT}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_ad236df2303494837c97a13741423a51b}{F\+T\+I\+\_\+\+I\+N\+TG}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_a29acf773174ad269577b5c771521694a}{F\+T\+I\+\_\+\+L\+O\+NG}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_a2a1ee34ef81027534671ee3145a89213}{F\+T\+I\+\_\+\+U\+C\+HR}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_ad00601a105ae08e82837c629b8e55612}{F\+T\+I\+\_\+\+U\+S\+HT}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_a1e77437528f3df560360e0626b9a3b89}{F\+T\+I\+\_\+\+U\+I\+NT}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_afdc10ccdf5f020d7b0306ecce07f52c1}{F\+T\+I\+\_\+\+U\+L\+NG}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_a39b15455ede057260e435cf49bc3ee6d}{F\+T\+I\+\_\+\+S\+F\+LT}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_aafb3604bd7ebfae406d1c419890e04d8}{F\+T\+I\+\_\+\+D\+B\+LE}}
+\item 
+\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} \mbox{\hyperlink{fti_8h_acd10e7ef980b4ed3d775bb499cfac8ba}{F\+T\+I\+\_\+\+L\+D\+BE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the F\+TI library. 
+
+\begin{DoxyAuthor}{Author}
+Leonardo A. Bautista Gomez (\href{mailto:leobago@gmail.com}{\texttt{ leobago@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July, 2013 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fti_8h_a4da53a2ca9ef19b414ca7e2522c4864a}\label{fti_8h_a4da53a2ca9ef19b414ca7e2522c4864a}} 
+\index{fti.h@{fti.h}!FTI\_BUFS@{FTI\_BUFS}}
+\index{FTI\_BUFS@{FTI\_BUFS}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_BUFS}{FTI\_BUFS}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+B\+U\+FS~256}
+
+Standard size of buffer and max node size. ~\newline
+ \mbox{\Hypertarget{fti_8h_a7dee5a1994faa8e4a2664942d4d8c024}\label{fti_8h_a7dee5a1994faa8e4a2664942d4d8c024}} 
+\index{fti.h@{fti.h}!FTI\_DONE@{FTI\_DONE}}
+\index{FTI\_DONE@{FTI\_DONE}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_DONE}{FTI\_DONE}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+D\+O\+NE~1}
+
+Token returned when F\+TI performs a checkpoint. ~\newline
+ \mbox{\Hypertarget{fti_8h_a13af42079571ed8dd290fad82fd11c2d}\label{fti_8h_a13af42079571ed8dd290fad82fd11c2d}} 
+\index{fti.h@{fti.h}!FTI\_HEAD@{FTI\_HEAD}}
+\index{FTI\_HEAD@{FTI\_HEAD}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_HEAD}{FTI\_HEAD}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+H\+E\+AD~2}
+
+Token that indicates a head process in user space ~\newline
+ \mbox{\Hypertarget{fti_8h_ac879dcdb853f4b5993ceed9fb1d06e88}\label{fti_8h_ac879dcdb853f4b5993ceed9fb1d06e88}} 
+\index{fti.h@{fti.h}!FTI\_NREC@{FTI\_NREC}}
+\index{FTI\_NREC@{FTI\_NREC}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_NREC}{FTI\_NREC}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+N\+R\+EC~-\/2}
+
+Token returned if recovery fails. ~\newline
+ \mbox{\Hypertarget{fti_8h_a06d23a2210e17078a6a8862bb6ed3dbd}\label{fti_8h_a06d23a2210e17078a6a8862bb6ed3dbd}} 
+\index{fti.h@{fti.h}!FTI\_NSCS@{FTI\_NSCS}}
+\index{FTI\_NSCS@{FTI\_NSCS}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_NSCS}{FTI\_NSCS}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+N\+S\+CS~-\/1}
+
+Token returned if a F\+TI function fails. ~\newline
+ \mbox{\Hypertarget{fti_8h_a8c1f0a06b877c18a7270d54c5e6039cf}\label{fti_8h_a8c1f0a06b877c18a7270d54c5e6039cf}} 
+\index{fti.h@{fti.h}!FTI\_SCES@{FTI\_SCES}}
+\index{FTI\_SCES@{FTI\_SCES}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SCES}{FTI\_SCES}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+C\+ES~0}
+
+Token returned if a F\+TI function succeeds. ~\newline
+ \mbox{\Hypertarget{fti_8h_a1685329d73a38dd15caa9a9b5ffef36f}\label{fti_8h_a1685329d73a38dd15caa9a9b5ffef36f}} 
+\index{fti.h@{fti.h}!FTI\_SI\_ACTV@{FTI\_SI\_ACTV}}
+\index{FTI\_SI\_ACTV@{FTI\_SI\_ACTV}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_ACTV}{FTI\_SI\_ACTV}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+A\+C\+TV~0x2}
+
+status \textquotesingle{}active\textquotesingle{} for stage requests ~\newline
+ \mbox{\Hypertarget{fti_8h_a8b63f0cd5d9aa9417c3d3ec5a703ca1b}\label{fti_8h_a8b63f0cd5d9aa9417c3d3ec5a703ca1b}} 
+\index{fti.h@{fti.h}!FTI\_SI\_FAIL@{FTI\_SI\_FAIL}}
+\index{FTI\_SI\_FAIL@{FTI\_SI\_FAIL}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_FAIL}{FTI\_SI\_FAIL}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+F\+A\+IL~0x4}
+
+status \textquotesingle{}failed\textquotesingle{} for stage requests ~\newline
+ \mbox{\Hypertarget{fti_8h_a26fc9f53bb9fcbbf144da0488e217172}\label{fti_8h_a26fc9f53bb9fcbbf144da0488e217172}} 
+\index{fti.h@{fti.h}!FTI\_SI\_NINI@{FTI\_SI\_NINI}}
+\index{FTI\_SI\_NINI@{FTI\_SI\_NINI}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_NINI}{FTI\_SI\_NINI}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+I\+NI~0x0}
+
+status \textquotesingle{}not initialized\textquotesingle{} for stage requests ~\newline
+ \mbox{\Hypertarget{fti_8h_a4eb6ff54cf8f3c3149d42da30d23c498}\label{fti_8h_a4eb6ff54cf8f3c3149d42da30d23c498}} 
+\index{fti.h@{fti.h}!FTI\_SI\_PEND@{FTI\_SI\_PEND}}
+\index{FTI\_SI\_PEND@{FTI\_SI\_PEND}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_PEND}{FTI\_SI\_PEND}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+P\+E\+ND~0x1}
+
+status \textquotesingle{}pending\textquotesingle{} for stage requests ~\newline
+ \mbox{\Hypertarget{fti_8h_a93cefc8dced9cb5c63c45708ef89694b}\label{fti_8h_a93cefc8dced9cb5c63c45708ef89694b}} 
+\index{fti.h@{fti.h}!FTI\_SI\_SCES@{FTI\_SI\_SCES}}
+\index{FTI\_SI\_SCES@{FTI\_SI\_SCES}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SI\_SCES}{FTI\_SI\_SCES}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+S\+I\+\_\+\+S\+C\+ES~0x3}
+
+status \textquotesingle{}succeed\textquotesingle{} for stage requests ~\newline
+ \mbox{\Hypertarget{fti_8h_af166ab9ab3e6ba0039316c9fdffc5e11}\label{fti_8h_af166ab9ab3e6ba0039316c9fdffc5e11}} 
+\index{fti.h@{fti.h}!FTI\_WORD@{FTI\_WORD}}
+\index{FTI\_WORD@{FTI\_WORD}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_WORD}{FTI\_WORD}}
+{\footnotesize\ttfamily \#define F\+T\+I\+\_\+\+W\+O\+RD~16}
+
+Word size used during RS encoding. ~\newline
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fti_8h_ab93e233cbea2ba23a026e3f2396ec0a3}\label{fti_8h_ab93e233cbea2ba23a026e3f2396ec0a3}} 
+\index{fti.h@{fti.h}!FTI\_AddComplexField@{FTI\_AddComplexField}}
+\index{FTI\_AddComplexField@{FTI\_AddComplexField}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_AddComplexField()}{FTI\_AddComplexField()}}
+{\footnotesize\ttfamily void F\+T\+I\+\_\+\+Add\+Complex\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} $\ast$}]{type\+Definition,  }\item[{\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$}]{fti\+Type,  }\item[{size\+\_\+t}]{offset,  }\item[{int}]{rank,  }\item[{int $\ast$}]{dim\+Length,  }\item[{int}]{id,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+It adds a simple field in complex data type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Definition} & Structure definition of the complex data type. \\
+\hline
+{\em fti\+Type} & Type of the field \\
+\hline
+{\em offset} & Offset of the field (use offsetof) \\
+\hline
+{\em rank} & Rank of the array \\
+\hline
+{\em dim\+Length} & Dimention length for each rank \\
+\hline
+{\em id} & Id of the field (start with 0) \\
+\hline
+{\em name} & Name of the field (put N\+U\+LL if want default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function adds a field to the complex datatype. Use offsetof macro to set offset. First ID must be 0, next one must be +1. If name is N\+U\+LL F\+TI will set \char`\"{}\+T\$\{id\}\char`\"{} name. \mbox{\Hypertarget{fti_8h_a990302331eacb14390ce4feae438405f}\label{fti_8h_a990302331eacb14390ce4feae438405f}} 
+\index{fti.h@{fti.h}!FTI\_AddSimpleField@{FTI\_AddSimpleField}}
+\index{FTI\_AddSimpleField@{FTI\_AddSimpleField}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_AddSimpleField()}{FTI\_AddSimpleField()}}
+{\footnotesize\ttfamily void F\+T\+I\+\_\+\+Add\+Simple\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} $\ast$}]{type\+Definition,  }\item[{\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$}]{fti\+Type,  }\item[{size\+\_\+t}]{offset,  }\item[{int}]{id,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+It adds a simple field in complex data type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Definition} & Structure definition of the complex data type. \\
+\hline
+{\em fti\+Type} & Type of the field \\
+\hline
+{\em offset} & Offset of the field (use offsetof) \\
+\hline
+{\em id} & Id of the field (start with 0) \\
+\hline
+{\em name} & Name of the field (put N\+U\+LL if want default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function adds a field to the complex datatype. Use offsetof macro to set offset. First ID must be 0, next one must be +1. If name is N\+U\+LL F\+TI will set \char`\"{}\+T\$\{id\}\char`\"{} name. Sets rank and dim\+Length to 1. \mbox{\Hypertarget{fti_8h_a55e7d096389f363b570084126af8ece5}\label{fti_8h_a55e7d096389f363b570084126af8ece5}} 
+\index{fti.h@{fti.h}!FTI\_AddSubset@{FTI\_AddSubset}}
+\index{FTI\_AddSubset@{FTI\_AddSubset}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_AddSubset()}{FTI\_AddSubset()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Add\+Subset (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{rank,  }\item[{\mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$}]{offset,  }\item[{\mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$}]{count,  }\item[{int}]{did }\end{DoxyParamCaption})}
+
+
+
+Assigns a F\+TI protected variable to a global dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Corresponding variable ID. \\
+\hline
+{\em rank} & Rank of the dataset. \\
+\hline
+{\em offset} & Starting coordinates in global dataset. \\
+\hline
+{\em count} & number of elements for each coordinate. \\
+\hline
+{\em did} & Corresponding global dataset ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function assigns the protected dataset with ID \textquotesingle{}id\textquotesingle{} to a global data-\/ set with ID \textquotesingle{}did\textquotesingle{}. The parameters \textquotesingle{}offset\textquotesingle{} and \textquotesingle{}count\textquotesingle{} specify the selec-\/ tion of the sub-\/set inside the global dataset (\textquotesingle{}offset\textquotesingle{} and \textquotesingle{}count\textquotesingle{} cor-\/ respond to \textquotesingle{}start\textquotesingle{} and \textquotesingle{}count\textquotesingle{} in the H\+D\+F5 function \textquotesingle{}H5\+Sselect\+\_\+hyperslab\textquotesingle{} For questions on what they define, please consult the H\+D\+F5 documentation.) \mbox{\Hypertarget{fti_8h_a8eb9b278fa5aa30e53ca4ad8baf95ba1}\label{fti_8h_a8eb9b278fa5aa30e53ca4ad8baf95ba1}} 
+\index{fti.h@{fti.h}!FTI\_AddVarICP@{FTI\_AddVarICP}}
+\index{FTI\_AddVarICP@{FTI\_AddVarICP}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_AddVarICP()}{FTI\_AddVarICP()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Add\+Var\+I\+CP (\begin{DoxyParamCaption}\item[{int}]{var\+ID }\end{DoxyParamCaption})}
+
+
+
+Write variable into the CP file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Protected variable ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+With this function, the user may write the protected datasets in any order into the checkpoint file. However, before the call to F\+T\+I\+\_\+\+Finalize\+I\+CP, all protected variables must have been written into the file. \mbox{\Hypertarget{fti_8h_aa6acb36d29481cd0da05ee66f944c1e8}\label{fti_8h_aa6acb36d29481cd0da05ee66f944c1e8}} 
+\index{fti.h@{fti.h}!FTI\_BitFlip@{FTI\_BitFlip}}
+\index{FTI\_BitFlip@{FTI\_BitFlip}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_BitFlip()}{FTI\_BitFlip()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Bit\+Flip (\begin{DoxyParamCaption}\item[{int}]{dataset\+ID }\end{DoxyParamCaption})}
+
+
+
+Bit-\/flip injection following the injection instructions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset\+ID} & ID of the dataset where to inject. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function injects the given number of bit-\/flips, at the given frequency and in the given location (rank, dataset, bit position). \mbox{\Hypertarget{fti_8h_a85ccf559fcbee51bd335ba2c6671eadf}\label{fti_8h_a85ccf559fcbee51bd335ba2c6671eadf}} 
+\index{fti.h@{fti.h}!FTI\_Checkpoint@{FTI\_Checkpoint}}
+\index{FTI\_Checkpoint@{FTI\_Checkpoint}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Checkpoint()}{FTI\_Checkpoint()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Checkpoint (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+It takes the checkpoint and triggers the post-\/ckpt. work. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Checkpoint ID. \\
+\hline
+{\em level} & Checkpoint level. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function starts by blocking on a receive if the previous ckpt. was offline. Then, it updates the ckpt. information. It writes down the ckpt. data, creates the metadata and the post-\/processing work. This function is complementary with the F\+T\+I\+\_\+\+Listen function in terms of communications. \mbox{\Hypertarget{fti_8h_af4cb738277e5d80c40f10491015395cb}\label{fti_8h_af4cb738277e5d80c40f10491015395cb}} 
+\index{fti.h@{fti.h}!FTI\_DefineDataset@{FTI\_DefineDataset}}
+\index{FTI\_DefineDataset@{FTI\_DefineDataset}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_DefineDataset()}{FTI\_DefineDataset()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Define\+Dataset (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{rank,  }\item[{int $\ast$}]{dim\+Length,  }\item[{char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$}]{h5group }\end{DoxyParamCaption})}
+
+
+
+Defines the dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID for searches and update. \\
+\hline
+{\em rank} & Rank of the array \\
+\hline
+{\em dim\+Length} & Dimention length for each rank \\
+\hline
+{\em name} & Name of the dataset in H\+D\+F5 file. \\
+\hline
+{\em h5group} & Group of the dataset. If Null then \char`\"{}/\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function gives F\+TI all information needed by H\+D\+F5 to correctly save the dataset in the checkpoint file. \mbox{\Hypertarget{fti_8h_a1abef7eeec0efb4fb73b5929637aa90f}\label{fti_8h_a1abef7eeec0efb4fb73b5929637aa90f}} 
+\index{fti.h@{fti.h}!FTI\_DefineGlobalDataset@{FTI\_DefineGlobalDataset}}
+\index{FTI\_DefineGlobalDataset@{FTI\_DefineGlobalDataset}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_DefineGlobalDataset()}{FTI\_DefineGlobalDataset()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Define\+Global\+Dataset (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{rank,  }\item[{\mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$}]{dim\+Length,  }\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$}]{h5group,  }\item[{\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Defines a global dataset (shared among application processes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the dataset. \\
+\hline
+{\em rank} & Rank of the dataset. \\
+\hline
+{\em dim\+Length} & Dimention length for each rank. \\
+\hline
+{\em name} & Name of the dataset in H\+D\+F5 file. \\
+\hline
+{\em h5group} & Group of the dataset. If Null then \char`\"{}/\char`\"{}. \\
+\hline
+{\em type} & F\+TI type of the dataset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function defines a global dataset which is shared among all ranks. In order to assign sub sets to the dataset the user has to call the function \textquotesingle{}F\+T\+I\+\_\+\+Add\+Subset\textquotesingle{}. The parameter \textquotesingle{}did\textquotesingle{} of that function, corres-\/ ponds to the global dataset id define here. \mbox{\Hypertarget{fti_8h_aa58102aa8540ed35f2efba23cf2dc19b}\label{fti_8h_aa58102aa8540ed35f2efba23cf2dc19b}} 
+\index{fti.h@{fti.h}!FTI\_Finalize@{FTI\_Finalize}}
+\index{FTI\_Finalize@{FTI\_Finalize}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Finalize()}{FTI\_Finalize()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+It closes F\+TI properly on the application processes. 
+
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function notifies the F\+TI processes that the execution is over, frees some data structures and it closes. If this function is not called on the application processes the F\+TI processes will never finish (deadlock). \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example1_8c-example}{example1.\+c}}.\end{Desc}
+\mbox{\Hypertarget{fti_8h_ab21e904a57a97bef0b20c1afbe0d868d}\label{fti_8h_ab21e904a57a97bef0b20c1afbe0d868d}} 
+\index{fti.h@{fti.h}!FTI\_FinalizeICP@{FTI\_FinalizeICP}}
+\index{FTI\_FinalizeICP@{FTI\_FinalizeICP}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_FinalizeICP()}{FTI\_FinalizeICP()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Finalize\+I\+CP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finalize an incremental checkpoint. 
+
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function finalizes an incremental checkpoint. In contrast to Init\+I\+CP, this function is collective on the communicator F\+T\+I\+\_\+\+C\+O\+M\+M\+\_\+\+W\+O\+R\+LD and blocking. \mbox{\Hypertarget{fti_8h_a8dd9c8d88cc5e17214c384478b441dd5}\label{fti_8h_a8dd9c8d88cc5e17214c384478b441dd5}} 
+\index{fti.h@{fti.h}!FTI\_GetDatasetRank@{FTI\_GetDatasetRank}}
+\index{FTI\_GetDatasetRank@{FTI\_GetDatasetRank}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetDatasetRank()}{FTI\_GetDatasetRank()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Get\+Dataset\+Rank (\begin{DoxyParamCaption}\item[{int}]{did }\end{DoxyParamCaption})}
+
+
+
+returns rank of shared dataset 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the dataset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer rank of dataset. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fti_8h_a4f699b71886c24e17b68028c6582449b}\label{fti_8h_a4f699b71886c24e17b68028c6582449b}} 
+\index{fti.h@{fti.h}!FTI\_GetDatasetSpan@{FTI\_GetDatasetSpan}}
+\index{FTI\_GetDatasetSpan@{FTI\_GetDatasetSpan}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetDatasetSpan()}{FTI\_GetDatasetSpan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}}$\ast$ F\+T\+I\+\_\+\+Get\+Dataset\+Span (\begin{DoxyParamCaption}\item[{int}]{did,  }\item[{int}]{rank }\end{DoxyParamCaption})}
+
+
+
+returns static array of dataset dimensions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the dataset. \\
+\hline
+{\em rank} & Rank of the dataset. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fti_8h_aa3085533f52818cf46175b8f783ad17b}\label{fti_8h_aa3085533f52818cf46175b8f783ad17b}} 
+\index{fti.h@{fti.h}!FTI\_getIDFromString@{FTI\_getIDFromString}}
+\index{FTI\_getIDFromString@{FTI\_getIDFromString}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_getIDFromString()}{FTI\_getIDFromString()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+get\+I\+D\+From\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Searches in the protected variables for a name. If not found it allocates and returns the ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the protected variable to search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer id of the variable.
+\end{DoxyReturn}
+This function searches for a given name in the protected variables and returns the respective id for it. \mbox{\Hypertarget{fti_8h_a9a144006e804d976446ba5a9c21f1591}\label{fti_8h_a9a144006e804d976446ba5a9c21f1591}} 
+\index{fti.h@{fti.h}!FTI\_GetStageDir@{FTI\_GetStageDir}}
+\index{FTI\_GetStageDir@{FTI\_GetStageDir}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetStageDir()}{FTI\_GetStageDir()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Get\+Stage\+Dir (\begin{DoxyParamCaption}\item[{char $\ast$}]{stage\+Dir,  }\item[{int}]{max\+Len }\end{DoxyParamCaption})}
+
+
+
+Places the F\+TI staging directory path into \textquotesingle{}stage\+Dir\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage\+Dir} & pointer to allocated memory region. \\
+\hline
+{\em max\+Len} & size of allocated memory region in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful, F\+T\+I\+\_\+\+N\+S\+CS else.
+\end{DoxyReturn}
+This function places the F\+TI staging directory path in \textquotesingle{}stage\+Dir\textquotesingle{}. If allocation size is not sufficiant, no action is perfoprmed and F\+T\+I\+\_\+\+N\+S\+CS is returned. \mbox{\Hypertarget{fti_8h_a244522ba34ee7fced63cab22a24b326b}\label{fti_8h_a244522ba34ee7fced63cab22a24b326b}} 
+\index{fti.h@{fti.h}!FTI\_GetStageStatus@{FTI\_GetStageStatus}}
+\index{FTI\_GetStageStatus@{FTI\_GetStageStatus}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetStageStatus()}{FTI\_GetStageStatus()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Get\+Stage\+Status (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Returns status of staging request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of staging request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer Status of staging request on success, F\+T\+I\+\_\+\+N\+S\+CS else.
+\end{DoxyReturn}
+This function returns the status of the staging request corresponding to ID. The ID is returned by the function \textquotesingle{}F\+T\+I\+\_\+\+Send\+File\textquotesingle{}. The status may be one of the five possible statuses\+:
+
+\begin{DoxyParagraph}{}
+F\+T\+I\+\_\+\+S\+I\+\_\+\+F\+A\+IL -\/ Stage request failed F\+T\+I\+\_\+\+S\+I\+\_\+\+S\+C\+ES -\/ Stage request succeed F\+T\+I\+\_\+\+S\+I\+\_\+\+A\+C\+TV -\/ Stage request is currently processed F\+T\+I\+\_\+\+S\+I\+\_\+\+P\+E\+ND -\/ Stage request is pending F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+I\+NI -\/ There is no stage request with this ID
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+If the status is F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+I\+NI, the ID is either invalid or the request was finished (succeeded or failed). In the latter case, \textquotesingle{}F\+T\+I\+\_\+\+Get\+Stage\+Status\textquotesingle{} returns F\+T\+I\+\_\+\+S\+I\+\_\+\+F\+A\+IL or F\+T\+I\+\_\+\+S\+I\+\_\+\+S\+C\+ES and frees the stage request ressources. In the consecutive call it will then return F\+T\+I\+\_\+\+S\+I\+\_\+\+N\+I\+NI. 
+\end{DoxyNote}
+\mbox{\Hypertarget{fti_8h_adb927ab62324ba774d8daf91afa01c76}\label{fti_8h_adb927ab62324ba774d8daf91afa01c76}} 
+\index{fti.h@{fti.h}!FTI\_GetStoredSize@{FTI\_GetStoredSize}}
+\index{FTI\_GetStoredSize@{FTI\_GetStoredSize}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_GetStoredSize()}{FTI\_GetStoredSize()}}
+{\footnotesize\ttfamily long F\+T\+I\+\_\+\+Get\+Stored\+Size (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Returns size saved in metadata of variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Variable ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long Returns size of variable or 0 if size not saved.
+\end{DoxyReturn}
+This function returns size of variable of given ID that is saved in metadata. This may be different from size of variable that is in the program. If this function it\textquotesingle{}s called when recovery it returns size from metadata file, if it\textquotesingle{}s called after checkpoint it returns size saved in temporary metadata. If there is no size saved in metadata it returns 0. \mbox{\Hypertarget{fti_8h_abe8c2b202eaab996bbd88eea4cafe51a}\label{fti_8h_abe8c2b202eaab996bbd88eea4cafe51a}} 
+\index{fti.h@{fti.h}!FTI\_Init@{FTI\_Init}}
+\index{FTI\_Init@{FTI\_Init}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Init()}{FTI\_Init()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{config\+File,  }\item[{M\+P\+I\+\_\+\+Comm}]{global\+Comm }\end{DoxyParamCaption})}
+
+
+
+Initializes F\+TI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+File} & F\+TI configuration file. \\
+\hline
+{\em global\+Comm} & Main M\+PI communicator of the application. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function initializes the F\+TI context and prepares the heads to wait for checkpoints. F\+TI processes should never get out of this function. In case of a restart, checkpoint files should be recovered and in place at the end of this function. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example1_8c-example}{example1.\+c}}.\end{Desc}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{fti_8h_a7fab7e8f18c24f415dc658714c27c669}\label{fti_8h_a7fab7e8f18c24f415dc658714c27c669}} 
+\index{fti.h@{fti.h}!FTI\_InitComplexType@{FTI\_InitComplexType}}
+\index{FTI\_InitComplexType@{FTI\_InitComplexType}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitComplexType()}{FTI\_InitComplexType()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Complex\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$}]{new\+Type,  }\item[{\mbox{\hyperlink{structFTIT__complexType}{F\+T\+I\+T\+\_\+complex\+Type}} $\ast$}]{type\+Definition,  }\item[{int}]{length,  }\item[{size\+\_\+t}]{size,  }\item[{char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$}]{h5group }\end{DoxyParamCaption})}
+
+
+
+It initializes a complex data type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Type} & The data type to be intialized. \\
+\hline
+{\em type\+Definition} & Structure definition of the new type. \\
+\hline
+{\em length} & Number of fields in structure \\
+\hline
+{\em size} & Size of the structure. \\
+\hline
+{\em name} & Name of the structure. \\
+\hline
+{\em h5group} & Group of the type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function initalizes a simple data type. New type can only consists fields of flat F\+TI types (no arrays). Type definition must include\+:
+\begin{DoxyItemize}
+\item length =$>$ number of fields in the new type
+\item field\mbox{[}\mbox{]}.type =$>$ types of the field in the new type
+\item field\mbox{[}\mbox{]}.name =$>$ name of the field in the new type
+\item field\mbox{[}\mbox{]}.rank =$>$ number of dimentions of the field
+\item field\mbox{[}\mbox{]}.dim\+Length\mbox{[}\mbox{]} =$>$ length of each dimention of the field 
+\end{DoxyItemize}\mbox{\Hypertarget{fti_8h_a13fc751bcf88d7c2766d0b76344b0964}\label{fti_8h_a13fc751bcf88d7c2766d0b76344b0964}} 
+\index{fti.h@{fti.h}!FTI\_InitGroup@{FTI\_InitGroup}}
+\index{FTI\_InitGroup@{FTI\_InitGroup}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitGroup()}{FTI\_InitGroup()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$}]{h5group,  }\item[{char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+
+
+It initialize a H\+D\+F5 group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h5group} & H5 group that we want to initialize \\
+\hline
+{\em name} & Name of the H5 group \\
+\hline
+{\em parent} & Parent H5 group \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+Initialize group defined by user. If parent is N\+U\+LL this mean parent will be set to root group. \mbox{\Hypertarget{fti_8h_a7cd136cac151e0a71320ff3f80215e25}\label{fti_8h_a7cd136cac151e0a71320ff3f80215e25}} 
+\index{fti.h@{fti.h}!FTI\_InitICP@{FTI\_InitICP}}
+\index{FTI\_InitICP@{FTI\_InitICP}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitICP()}{FTI\_InitICP()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+I\+CP (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{level,  }\item[{bool}]{activate }\end{DoxyParamCaption})}
+
+
+
+Initialize an incremental checkpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Checkpoint ID. \\
+\hline
+{\em level} & Checkpoint level. \\
+\hline
+{\em activate} & Boolean expression. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function defines the environment for the incremental checkpointing mechanism. The i\+CP mechanism consists of three functions\+: F\+T\+I\+\_\+\+Init\+I\+CP, F\+T\+I\+\_\+\+Add\+Var\+I\+CP and F\+T\+I\+\_\+\+Finalize\+I\+CP. The two functions F\+T\+I\+\_\+\+Init\+I\+CP and F\+T\+I\+\_\+\+Finalize\+I\+CP define the i\+CP region within the user may write the protected variables in any order. The i\+CP region is active, when the expression passed through \textquotesingle{}activate\textquotesingle{} evaluates to T\+R\+UE.
+
+\begin{DoxyNote}{Note}
+This function is not blocking for P\+O\+S\+IX, F\+T\+I-\/\+FF and H\+D\+F5, but, blocking for M\+P\+I-\/\+IO. This is due to the collective open call in M\+P\+I\+\_\+\+IO 
+\end{DoxyNote}
+\mbox{\Hypertarget{fti_8h_a725ffe84dd16beb533e7b4b74fa4e9c4}\label{fti_8h_a725ffe84dd16beb533e7b4b74fa4e9c4}} 
+\index{fti.h@{fti.h}!FTI\_InitType@{FTI\_InitType}}
+\index{FTI\_InitType@{FTI\_InitType}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitType()}{FTI\_InitType()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} $\ast$}]{type,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+It initializes a data type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The data type to be intialized. \\
+\hline
+{\em size} & The size of the data type to be intialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function initalizes a data type. The only information needed is the size of the data type, the rest is black box for F\+TI. Types saved as byte array in case of H\+D\+F5 format. \mbox{\Hypertarget{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}\label{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}} 
+\index{fti.h@{fti.h}!FTI\_Protect@{FTI\_Protect}}
+\index{FTI\_Protect@{FTI\_Protect}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Protect()}{FTI\_Protect()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Protect (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{void $\ast$}]{ptr,  }\item[{long}]{count,  }\item[{\mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+It sets/resets the pointer and type to a protected variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID for searches and update. \\
+\hline
+{\em ptr} & Pointer to the data structure. \\
+\hline
+{\em count} & Number of elements in the data structure. \\
+\hline
+{\em type} & Type of elements in the data structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function stores a pointer to a data structure, its size, its ID, its number of elements and the type of the elements. This list of structures is the data that will be stored during a checkpoint and loaded during a recovery. It resets the pointer to a data structure, its size, its number of elements and the type of the elements if the dataset was already previously registered. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example1_8c-example}{example1.\+c}}.\end{Desc}
+\mbox{\Hypertarget{fti_8h_a125d30b04650f470c0ca82a786e55e9d}\label{fti_8h_a125d30b04650f470c0ca82a786e55e9d}} 
+\index{fti.h@{fti.h}!FTI\_Realloc@{FTI\_Realloc}}
+\index{FTI\_Realloc@{FTI\_Realloc}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Realloc()}{FTI\_Realloc()}}
+{\footnotesize\ttfamily void$\ast$ F\+T\+I\+\_\+\+Realloc (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Reallocates dataset to last checkpoint size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Variable ID. \\
+\hline
+{\em ptr} & Pointer to the variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr Pointer if successful, N\+U\+LL otherwise This function loads the checkpoint data size from the metadata file, reallacates memory and updates data size information. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fti_8h_ab761c55656aab212daf8e6f447ec2214}\label{fti_8h_ab761c55656aab212daf8e6f447ec2214}} 
+\index{fti.h@{fti.h}!FTI\_Recover@{FTI\_Recover}}
+\index{FTI\_Recover@{FTI\_Recover}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Recover()}{FTI\_Recover()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Recover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+It loads the checkpoint data. 
+
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function loads the checkpoint data from the checkpoint file and it updates some basic checkpoint information. \mbox{\Hypertarget{fti_8h_a79b24fc99e9cb826b2ad1d0cb6185882}\label{fti_8h_a79b24fc99e9cb826b2ad1d0cb6185882}} 
+\index{fti.h@{fti.h}!FTI\_RecoverDatasetDimension@{FTI\_RecoverDatasetDimension}}
+\index{FTI\_RecoverDatasetDimension@{FTI\_RecoverDatasetDimension}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_RecoverDatasetDimension()}{FTI\_RecoverDatasetDimension()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Recover\+Dataset\+Dimension (\begin{DoxyParamCaption}\item[{int}]{did }\end{DoxyParamCaption})}
+
+
+
+loads dataset dimension from ckpt file to dataset \textquotesingle{}did\textquotesingle{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the dataset. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fti_8h_a25b793276f5e79e5947e133abdd52c1e}\label{fti_8h_a25b793276f5e79e5947e133abdd52c1e}} 
+\index{fti.h@{fti.h}!FTI\_RecoverVar@{FTI\_RecoverVar}}
+\index{FTI\_RecoverVar@{FTI\_RecoverVar}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_RecoverVar()}{FTI\_RecoverVar()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Recover\+Var (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+During the restart, recovers the given variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Variable to recover \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+During a restart process, this function recovers the variable specified by the given id. No effect during a regular execution. The variable must have already been protected, otherwise, F\+T\+I\+\_\+\+N\+S\+CS is returned. Improvements to be done\+:
+\begin{DoxyItemize}
+\item Open checkpoint file at F\+T\+I\+\_\+\+Init, close it at F\+T\+I\+\_\+\+Snapshot
+\item Maintain a variable accumulating the offset as variable are protected during the restart to avoid doing the loop to calculate the offset in the checkpoint file. 
+\end{DoxyItemize}\mbox{\Hypertarget{fti_8h_a2dc4fb3b0353541b7bc156f1c803f92f}\label{fti_8h_a2dc4fb3b0353541b7bc156f1c803f92f}} 
+\index{fti.h@{fti.h}!FTI\_RenameGroup@{FTI\_RenameGroup}}
+\index{FTI\_RenameGroup@{FTI\_RenameGroup}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_RenameGroup()}{FTI\_RenameGroup()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Rename\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__H5Group}{F\+T\+I\+T\+\_\+\+H5\+Group}} $\ast$}]{h5group,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Renames a H\+D\+F5 group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h5group} & H5 group that we want to rename \\
+\hline
+{\em name} & New name of the H5 group \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function renames H\+D\+F5 group defined by user. \mbox{\Hypertarget{fti_8h_ae89330f9e650a1a5b7e2f460edba8d54}\label{fti_8h_ae89330f9e650a1a5b7e2f460edba8d54}} 
+\index{fti.h@{fti.h}!FTI\_SendFile@{FTI\_SendFile}}
+\index{FTI\_SendFile@{FTI\_SendFile}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SendFile()}{FTI\_SendFile()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Send\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{lpath,  }\item[{char $\ast$}]{rpath }\end{DoxyParamCaption})}
+
+
+
+Copies file asynchronously from \textquotesingle{}lpath\textquotesingle{} to \textquotesingle{}rpath\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpath} & absolute path local file. \\
+\hline
+{\em rpath} & absolute path remote file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer Request handle (ID) on success, F\+T\+I\+\_\+\+N\+S\+CS else.
+\end{DoxyReturn}
+This function may be used to copy a file local on the nodes via the F\+TI head process asynchronously to the P\+FS. The file will not be removed after successful transfer, however, if stored in the directory returned by \textquotesingle{}F\+T\+I\+\_\+\+Get\+Stage\+Dir\textquotesingle{} it will be removed during \textquotesingle{}F\+T\+I\+\_\+\+Finalize\textquotesingle{}.
+
+\begin{DoxyParagraph}{}
+If staging is enabled but no head process, the staging will be performed synchronously (i.\+e. by the calling rank). 
+\end{DoxyParagraph}
+\mbox{\Hypertarget{fti_8h_a2da201b48449cc457f338d23bc3f4cf3}\label{fti_8h_a2da201b48449cc457f338d23bc3f4cf3}} 
+\index{fti.h@{fti.h}!FTI\_setIDFromString@{FTI\_setIDFromString}}
+\index{FTI\_setIDFromString@{FTI\_setIDFromString}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_setIDFromString()}{FTI\_setIDFromString()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+set\+I\+D\+From\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Searches in the protected variables for a name. If not found it allocates and returns the ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the protected variable to search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer id of the variable.
+\end{DoxyReturn}
+This function searches for a given name in the protected variables and returns the respective id for it. \mbox{\Hypertarget{fti_8h_a6cbf6d6f6b4181e314eef599f85d6c5b}\label{fti_8h_a6cbf6d6f6b4181e314eef599f85d6c5b}} 
+\index{fti.h@{fti.h}!FTI\_Snapshot@{FTI\_Snapshot}}
+\index{FTI\_Snapshot@{FTI\_Snapshot}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Snapshot()}{FTI\_Snapshot()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Snapshot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Takes an F\+TI snapshot or recovers the data if it is a restart. 
+
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function loads the checkpoint data from the checkpoint file in case of restart. Otherwise, it checks if the current iteration requires checkpointing, if it does it checks which checkpoint level, write the data in the files and it communicates with the head of the node to inform that a checkpoint has been taken. Checkpoint ID and counters are updated. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example1_8c-example}{example1.\+c}}.\end{Desc}
+\mbox{\Hypertarget{fti_8h_a5222b52e6f1d6b737f4ec1b173f362f5}\label{fti_8h_a5222b52e6f1d6b737f4ec1b173f362f5}} 
+\index{fti.h@{fti.h}!FTI\_Status@{FTI\_Status}}
+\index{FTI\_Status@{FTI\_Status}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_Status()}{FTI\_Status()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+It returns the current status of the recovery flag. 
+
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+Exec.\+reco.
+\end{DoxyReturn}
+This function returns the current status of the recovery flag. \mbox{\Hypertarget{fti_8h_aa52eec71c6460f10f2986acef5469c48}\label{fti_8h_aa52eec71c6460f10f2986acef5469c48}} 
+\index{fti.h@{fti.h}!FTI\_UpdateGlobalDataset@{FTI\_UpdateGlobalDataset}}
+\index{FTI\_UpdateGlobalDataset@{FTI\_UpdateGlobalDataset}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_UpdateGlobalDataset()}{FTI\_UpdateGlobalDataset()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Update\+Global\+Dataset (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{rank,  }\item[{\mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$}]{dim\+Length }\end{DoxyParamCaption})}
+
+
+
+Updates global dataset (shared among application processes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the dataset. \\
+\hline
+{\em rank} & Rank of the dataset. \\
+\hline
+{\em dim\+Length} & Dimention length for each rank.\\
+\hline
+\end{DoxyParams}
+updates only the rank and number of elements for each coordinate direction. \mbox{\Hypertarget{fti_8h_ad1fb249ff8d7f4b44e40e7e5c027d411}\label{fti_8h_ad1fb249ff8d7f4b44e40e7e5c027d411}} 
+\index{fti.h@{fti.h}!FTI\_UpdateSubset@{FTI\_UpdateSubset}}
+\index{FTI\_UpdateSubset@{FTI\_UpdateSubset}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_UpdateSubset()}{FTI\_UpdateSubset()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Update\+Subset (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{rank,  }\item[{\mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$}]{offset,  }\item[{\mbox{\hyperlink{fti-intern_8h_a93fc516f1fbe5fb3d37e6527684b8dd4}{F\+T\+I\+T\+\_\+hsize\+\_\+t}} $\ast$}]{count,  }\item[{int}]{did }\end{DoxyParamCaption})}
+
+
+
+Updates a F\+TI protected variable of a global dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Corresponding variable ID. \\
+\hline
+{\em rank} & Rank of the dataset. \\
+\hline
+{\em offset} & Starting coordinates in global dataset. \\
+\hline
+{\em count} & number of elements for each coordinate. \\
+\hline
+{\em did} & Corresponding global dataset ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{fti_8h_af384b54744550e2300db530ef46f7e77}\label{fti_8h_af384b54744550e2300db530ef46f7e77}} 
+\index{fti.h@{fti.h}!FTI\_CHAR@{FTI\_CHAR}}
+\index{FTI\_CHAR@{FTI\_CHAR}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_CHAR}{FTI\_CHAR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+C\+H\+AR}
+
+F\+TI data type for chars. ~\newline
+ \mbox{\Hypertarget{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}\label{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}} 
+\index{fti.h@{fti.h}!FTI\_COMM\_WORLD@{FTI\_COMM\_WORLD}}
+\index{FTI\_COMM\_WORLD@{FTI\_COMM\_WORLD}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_COMM\_WORLD}{FTI\_COMM\_WORLD}}
+{\footnotesize\ttfamily M\+P\+I\+\_\+\+Comm F\+T\+I\+\_\+\+C\+O\+M\+M\+\_\+\+W\+O\+R\+LD}
+
+M\+PI communicator that splits the global one into app and F\+TI appart. ~\newline
+ \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example1_8c-example}{example1.\+c}}.\end{Desc}
+\mbox{\Hypertarget{fti_8h_aafb3604bd7ebfae406d1c419890e04d8}\label{fti_8h_aafb3604bd7ebfae406d1c419890e04d8}} 
+\index{fti.h@{fti.h}!FTI\_DBLE@{FTI\_DBLE}}
+\index{FTI\_DBLE@{FTI\_DBLE}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_DBLE}{FTI\_DBLE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+D\+B\+LE}
+
+F\+TI data type for double floating point. ~\newline
+ \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example1_8c-example}{example1.\+c}}.\end{Desc}
+\mbox{\Hypertarget{fti_8h_ad236df2303494837c97a13741423a51b}\label{fti_8h_ad236df2303494837c97a13741423a51b}} 
+\index{fti.h@{fti.h}!FTI\_INTG@{FTI\_INTG}}
+\index{FTI\_INTG@{FTI\_INTG}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_INTG}{FTI\_INTG}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+I\+N\+TG}
+
+F\+TI data type for integers. ~\newline
+ \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example1_8c-example}{example1.\+c}}.\end{Desc}
+\mbox{\Hypertarget{fti_8h_acd10e7ef980b4ed3d775bb499cfac8ba}\label{fti_8h_acd10e7ef980b4ed3d775bb499cfac8ba}} 
+\index{fti.h@{fti.h}!FTI\_LDBE@{FTI\_LDBE}}
+\index{FTI\_LDBE@{FTI\_LDBE}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_LDBE}{FTI\_LDBE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+L\+D\+BE}
+
+F\+TI data type for long doble floating point. ~\newline
+ \mbox{\Hypertarget{fti_8h_a29acf773174ad269577b5c771521694a}\label{fti_8h_a29acf773174ad269577b5c771521694a}} 
+\index{fti.h@{fti.h}!FTI\_LONG@{FTI\_LONG}}
+\index{FTI\_LONG@{FTI\_LONG}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_LONG}{FTI\_LONG}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+L\+O\+NG}
+
+F\+TI data type for long integers. ~\newline
+ \mbox{\Hypertarget{fti_8h_a39b15455ede057260e435cf49bc3ee6d}\label{fti_8h_a39b15455ede057260e435cf49bc3ee6d}} 
+\index{fti.h@{fti.h}!FTI\_SFLT@{FTI\_SFLT}}
+\index{FTI\_SFLT@{FTI\_SFLT}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SFLT}{FTI\_SFLT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+S\+F\+LT}
+
+F\+TI data type for single floating point. ~\newline
+ \mbox{\Hypertarget{fti_8h_a7f97366acb17493ec718fb6086f1ac3c}\label{fti_8h_a7f97366acb17493ec718fb6086f1ac3c}} 
+\index{fti.h@{fti.h}!FTI\_SHRT@{FTI\_SHRT}}
+\index{FTI\_SHRT@{FTI\_SHRT}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_SHRT}{FTI\_SHRT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+S\+H\+RT}
+
+F\+TI data type for short integers. ~\newline
+ \mbox{\Hypertarget{fti_8h_a2a1ee34ef81027534671ee3145a89213}\label{fti_8h_a2a1ee34ef81027534671ee3145a89213}} 
+\index{fti.h@{fti.h}!FTI\_UCHR@{FTI\_UCHR}}
+\index{FTI\_UCHR@{FTI\_UCHR}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_UCHR}{FTI\_UCHR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+U\+C\+HR}
+
+F\+TI data type for unsigned chars. ~\newline
+ \mbox{\Hypertarget{fti_8h_a1e77437528f3df560360e0626b9a3b89}\label{fti_8h_a1e77437528f3df560360e0626b9a3b89}} 
+\index{fti.h@{fti.h}!FTI\_UINT@{FTI\_UINT}}
+\index{FTI\_UINT@{FTI\_UINT}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_UINT}{FTI\_UINT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+U\+I\+NT}
+
+F\+TI data type for unsigned integers. ~\newline
+ \mbox{\Hypertarget{fti_8h_afdc10ccdf5f020d7b0306ecce07f52c1}\label{fti_8h_afdc10ccdf5f020d7b0306ecce07f52c1}} 
+\index{fti.h@{fti.h}!FTI\_ULNG@{FTI\_ULNG}}
+\index{FTI\_ULNG@{FTI\_ULNG}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_ULNG}{FTI\_ULNG}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+U\+L\+NG}
+
+F\+TI data type for unsigned long integers. ~\newline
+ \mbox{\Hypertarget{fti_8h_ad00601a105ae08e82837c629b8e55612}\label{fti_8h_ad00601a105ae08e82837c629b8e55612}} 
+\index{fti.h@{fti.h}!FTI\_USHT@{FTI\_USHT}}
+\index{FTI\_USHT@{FTI\_USHT}!fti.h@{fti.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_USHT}{FTI\_USHT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFTIT__type}{F\+T\+I\+T\+\_\+type}} F\+T\+I\+\_\+\+U\+S\+HT}
+
+F\+TI data type for unsigned short integers. ~\newline
+ 

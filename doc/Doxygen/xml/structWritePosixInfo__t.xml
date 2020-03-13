@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structWritePosixInfo__t" kind="struct" language="C++" prot="public">
+    <compoundname>WritePosixInfo_t</compoundname>
+    <includes refid="utility_8h" local="no">utility.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structWritePosixInfo__t_1a93e11b94d45850834e8b890d32357369" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* WritePosixInfo_t::f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/utility.h" line="20" column="10" bodyfile="/home/bscuser/Documents/release/dev/fti/src/utility.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structWritePosixInfo__t_1aaba726055df3ba624696f1bbc2c058bd" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t WritePosixInfo_t::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/utility.h" line="21" column="12" bodyfile="/home/bscuser/Documents/release/dev/fti/src/utility.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structWritePosixInfo__t_1a4309d3942b6329a6a23b7f7d8e7ad261" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char WritePosixInfo_t::flag</definition>
+        <argsstring></argsstring>
+        <name>flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/utility.h" line="22" column="10" bodyfile="/home/bscuser/Documents/release/dev/fti/src/utility.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structWritePosixInfo__t_1acc0b4a108192e7562bb40a49a56950ac" prot="public" static="no" mutable="no">
+        <type>MD5_CTX</type>
+        <definition>MD5_CTX WritePosixInfo_t::integrity</definition>
+        <argsstring></argsstring>
+        <name>integrity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/utility.h" line="23" column="13" bodyfile="/home/bscuser/Documents/release/dev/fti/src/utility.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/utility.h" line="19" column="16" bodyfile="/home/bscuser/Documents/release/dev/fti/src/utility.h" bodystart="19" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structWritePosixInfo__t_1a93e11b94d45850834e8b890d32357369" prot="public" virt="non-virtual"><scope>WritePosixInfo_t</scope><name>f</name></member>
+      <member refid="structWritePosixInfo__t_1a4309d3942b6329a6a23b7f7d8e7ad261" prot="public" virt="non-virtual"><scope>WritePosixInfo_t</scope><name>flag</name></member>
+      <member refid="structWritePosixInfo__t_1acc0b4a108192e7562bb40a49a56950ac" prot="public" virt="non-virtual"><scope>WritePosixInfo_t</scope><name>integrity</name></member>
+      <member refid="structWritePosixInfo__t_1aaba726055df3ba624696f1bbc2c058bd" prot="public" virt="non-virtual"><scope>WritePosixInfo_t</scope><name>offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

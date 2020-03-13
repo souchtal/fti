@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md_make" kind="page">
+    <compoundname>md_make</compoundname>
+    <title>Make Commands</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>To build the whole project, execute in the build directory: <linebreak/>
+</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>all</highlight></codeline>
+</programlisting></para>
+<para>To install build and install FTI in the specified directory: <linebreak/>
+</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>all<sp/>install</highlight></codeline>
+</programlisting></para>
+<para>To run the C example application <computeroutput>src/heatdis.c</computeroutput>:</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>hd</highlight></codeline>
+</programlisting></para>
+<para>To run the C example application <computeroutput>src/heat2.c</computeroutput>:</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>hd2</highlight></codeline>
+</programlisting></para>
+<para>To run the Fortran example application <computeroutput>src/fheatdis.f90</computeroutput>:</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>hdf</highlight></codeline>
+</programlisting></para>
+<para>To generate the Doxygen documentation files:</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>doc</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

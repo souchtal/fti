@@ -1,0 +1,4 @@
+<map id="FTI_copy_from_device" name="FTI_copy_from_device">
+<area shape="rect" id="node1" title="It copies data from GPU to CPU." alt="" coords="5,5,163,33"/>
+<area shape="rect" id="node2" href="$api_8c.html#a691a9e560e92286bb5bc1b5cf2f7b199" title="Prints FTI messages." alt="" coords="211,5,288,33"/>
+</map>

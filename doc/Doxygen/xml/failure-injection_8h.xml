@@ -1,0 +1,507 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="failure-injection_8h" kind="file" language="C++">
+    <compoundname>failure-injection.h</compoundname>
+    <includes refid="fti_8h" local="no">fti.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">limits.h</includes>
+    <includedby refid="interface_8h" local="yes">/home/bscuser/Documents/release/dev/fti/src/interface.h</includedby>
+    <incdepgraph>
+      <node id="15">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="12">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>fti.h</label>
+        <link refid="fti_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.h</label>
+        <link refid="failure-injection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+      </node>
+      <node id="16">
+        <label>fcntl.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>limits.h</label>
+      </node>
+      <node id="14">
+        <label>sys/types.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="11">
+        <label>unistd.h</label>
+      </node>
+      <node id="3">
+        <label>fti-intern.h</label>
+        <link refid="fti-intern_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mpi.h</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.c</label>
+        <link refid="failure-injection_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.h</label>
+        <link refid="failure-injection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postreco.c</label>
+        <link refid="postreco_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/bscuser/Documents/release/dev/fti/src/interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/bscuser/Documents/release/dev/fti/src/icp.c</label>
+        <link refid="icp_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/bscuser/Documents/release/dev/fti/src/conf.c</label>
+        <link refid="conf_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postckpt.c</label>
+        <link refid="postckpt_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api.c</label>
+        <link refid="api_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/bscuser/Documents/release/dev/fti/src/meta.c</label>
+        <link refid="meta_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/bscuser/Documents/release/dev/fti/src/checkpoint.c</label>
+        <link refid="checkpoint_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/bscuser/Documents/release/dev/fti/src/dcp.c</label>
+        <link refid="dcp_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/bscuser/Documents/release/dev/fti/src/recover.c</label>
+        <link refid="recover_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/bscuser/Documents/release/dev/fti/src/utility.c</label>
+        <link refid="utility_8c"/>
+      </node>
+      <node id="18">
+        <label>/home/bscuser/Documents/release/dev/fti/src/tools.c</label>
+        <link refid="tools_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/bscuser/Documents/release/dev/fti/src/stage.c</label>
+        <link refid="stage_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/bscuser/Documents/release/dev/fti/src/fti-io.c</label>
+        <link refid="fti-io_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/bscuser/Documents/release/dev/fti/src/macros.c</label>
+        <link refid="macros_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/bscuser/Documents/release/dev/fti/src/topo.c</label>
+        <link refid="topo_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.c</label>
+        <link refid="api-cuda_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="failure-injection_8h_1a7becf28120a1bfa4143d26b2b96e60a2" prot="public" static="no">
+        <name>FTI_FI_WRITE</name>
+        <param><defname>ERR</defname></param>
+        <param><defname>FD</defname></param>
+        <param><defname>BUF</defname></param>
+        <param><defname>COUNT</defname></param>
+        <param><defname>FN</defname></param>
+        <initializer>( ERR = write( FD, BUF, COUNT ) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="112" column="10" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="failure-injection_8h_1a607620c0311a5e8e774bc7ab80859084" prot="public" static="no">
+        <name>FTI_FI_FWRITE</name>
+        <param><defname>ERR</defname></param>
+        <param><defname>BUF</defname></param>
+        <param><defname>SIZE</defname></param>
+        <param><defname>COUNT</defname></param>
+        <param><defname>FSTREAM</defname></param>
+        <param><defname>FN</defname></param>
+        <initializer>( ERR = fwrite( BUF, SIZE, COUNT, FSTREAM ) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="113" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="failure-injection_8h_1a3afdeb5b1c319818ead0e1ea7ac6b4e7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t get_ruint</definition>
+        <argsstring>()</argsstring>
+        <name>get_ruint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="76" column="24" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" bodystart="76" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8h_1a7acbcfc49eb071c72fcd452dbf00c197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FTI_InitFIIO</definition>
+        <argsstring>()</argsstring>
+        <name>FTI_InitFIIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="84" column="6" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="16" bodyend="31" declfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" declline="84" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8h_1a42d6575e31a765c4780cba60cb923c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PROBABILITY</definition>
+        <argsstring>()</argsstring>
+        <name>PROBABILITY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="85" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="6" bodyend="8" declfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" declline="85" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8h_1a0917c864ec34200ecfbb1dd974658547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int FUNCTION</definition>
+        <argsstring>(const char *testFunction)</argsstring>
+        <name>FUNCTION</name>
+        <param>
+          <type>const char *</type>
+          <declname>testFunction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="86" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="10" bodyend="14" declfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" declline="86" declcolumn="14"/>
+        <references refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" compoundref="fti_8h" startline="12">FTI_BUFS</references>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8h_1a791fd93b18d6c214cef5d6b934dcbd55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_FloatBitFlip</definition>
+        <argsstring>(float *target, int bit)</argsstring>
+        <name>FTI_FloatBitFlip</name>
+        <param>
+          <type>float *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+<para>It corrupts a bit of the given float. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the float to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the bit to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function filps the bit of the target float. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="116" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="44" bodyend="56" declfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" declline="116" declcolumn="5"/>
+        <references refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" compoundref="fti_8h" startline="20">FTI_NSCS</references>
+        <references refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" compoundref="fti_8h" startline="18">FTI_SCES</references>
+      </memberdef>
+      <memberdef kind="function" id="failure-injection_8h_1acd287cd3e5911bb2d8266c0d8219c861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_DoubleBitFlip</definition>
+        <argsstring>(double *target, int bit)</argsstring>
+        <name>FTI_DoubleBitFlip</name>
+        <param>
+          <type>double *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+<para>It corrupts a bit of the given float. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the float to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the bit to corrupt. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function filps the bit of the target float. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" line="117" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.c" bodystart="69" bodyend="81" declfile="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h" declline="117" declcolumn="5"/>
+        <references refid="unionFTIT__double_1aee22cb8601afc60c43bb8b2cd4e22e00" compoundref="fti-intern_8h" startline="306">FTIT_double::floatval</references>
+        <references refid="failure-injection_8c_1a791fd93b18d6c214cef5d6b934dcbd55" compoundref="failure-injection_8c" startline="44" endline="56">FTI_FloatBitFlip</references>
+        <references refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" compoundref="fti_8h" startline="20">FTI_NSCS</references>
+        <references refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" compoundref="fti_8h" startline="18">FTI_SCES</references>
+        <references refid="unionFTIT__double_1acd4afd0055313efa11db8c5ce3269212" compoundref="fti-intern_8h" startline="305">FTIT_double::value</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines wrapper for POSIX write functions to enable failure injection. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (c) 2017 Leonardo A. Bautista-Gomez All rights reserved</para>
+<para>FTI - A multi-level checkpointing library for C/C++/Fortran applications</para>
+<para>Revision 1.0 : Fault Tolerance Interface (FTI)</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem><para>Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+<para>In order ro enable the Failure Injection for I/O (FIIO) mechanism, we need to pass -DENABLE_FI_IO to the cmake command. We can inject failures for the write (or fwrite) functions in the following functions:</para>
+<para><itemizedlist>
+<listitem><para>FTI_WritePosix</para>
+</listitem><listitem><para>FTIFF_WriteFTIFF</para>
+</listitem><listitem><para>FTI_RecvPtner</para>
+</listitem><listitem><para>FTI_RSenc</para>
+</listitem><listitem><para>FTI_FlushPosix</para>
+</listitem></itemizedlist>
+</para>
+<para>In order to select the function where we want to inject the failure, we need to set the environment variable FTI_FI_FUNCTION. For instance:</para>
+<para>FTI_FI_FUNCTION=FTI_WritePosix mpirun -n 8 ./application</para>
+<para>We can set the probability for the failure to hapen by setting the environment variable FTI_FI_PROBABILITY. For instance to inject a failure in function FTI_WritePosix with probability of 0.5:</para>
+<para>FTI_FI_FUNCTION=FTI_WritePosix FTI_FI_PROBABILITY=0.5 mpirun -n 8 ./application</para>
+<para>The default value for the probability is 0.1.</para>
+<para><simplesect kind="author"><para>Kai Keller (<ulink url="mailto:kellekai@gmx.de">kellekai@gmx.de</ulink>)</para>
+</simplesect>
+<simplesect kind="date"><para>December, 2018 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="65"><highlight class="preprocessor">#ifndef<sp/>_FAILURE_INJECTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_FAILURE_INJECTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fti_8h" kindref="compound">fti.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/>get_ruint()<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>buffer;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>=<sp/>open(</highlight><highlight class="stringliteral">&quot;/dev/urandom&quot;</highlight><highlight class="normal">,<sp/>O_RDWR);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>read(fd,<sp/>&amp;buffer,<sp/>8);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>close(fd);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer%INT_MAX;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8h_1a7acbcfc49eb071c72fcd452dbf00c197" kindref="member">FTI_InitFIIO</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8h_1a42d6575e31a765c4780cba60cb923c91" kindref="member">PROBABILITY</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8h_1a0917c864ec34200ecfbb1dd974658547" kindref="member">FUNCTION</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*testFunction<sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_FTI_FI_IO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_FI_WRITE(<sp/>ERR,<sp/>FD,<sp/>BUF,<sp/>COUNT,<sp/>FN<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>FUNCTION(__FUNCTION__)<sp/>)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>get_ruint()<sp/>&lt;<sp/>((uint64_t)((double)PROBABILITY()*INT_MAX))<sp/>)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(FD);<sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FD<sp/>=<sp/>open(FN,<sp/>O_RDONLY);<sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ERR<sp/>=<sp/>write(<sp/>FD,<sp/>BUF,<sp/>COUNT<sp/>);<sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)(ERR);<sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_FI_FWRITE(<sp/>ERR,<sp/>BUF,<sp/>SIZE,<sp/>COUNT,<sp/>FSTREAM,<sp/>FN<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>FUNCTION(__FUNCTION__)<sp/>)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>get_ruint()<sp/>&lt;<sp/>((uint64_t)((double)PROBABILITY()*INT_MAX))<sp/>)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(FSTREAM);<sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FSTREAM<sp/>=<sp/>fopen(FN,<sp/>&quot;rb&quot;);<sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ERR<sp/>=<sp/>fwrite(<sp/>BUF,<sp/>SIZE,<sp/>COUNT,<sp/>FSTREAM<sp/>);<sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)(ERR);<sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="failure-injection_8h_1a7becf28120a1bfa4143d26b2b96e60a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_FI_WRITE(<sp/>ERR,<sp/>FD,<sp/>BUF,<sp/>COUNT,<sp/>FN<sp/>)<sp/>(<sp/>ERR<sp/>=<sp/>write(<sp/>FD,<sp/>BUF,<sp/>COUNT<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="failure-injection_8h_1a607620c0311a5e8e774bc7ab80859084" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_FI_FWRITE(<sp/>ERR,<sp/>BUF,<sp/>SIZE,<sp/>COUNT,<sp/>FSTREAM,<sp/>FN<sp/>)<sp/>(<sp/>ERR<sp/>=<sp/>fwrite(<sp/>BUF,<sp/>SIZE,<sp/>COUNT,<sp/>FSTREAM<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8h_1a791fd93b18d6c214cef5d6b934dcbd55" kindref="member">FTI_FloatBitFlip</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*target,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="failure-injection_8h_1acd287cd3e5911bb2d8266c0d8219c861" kindref="member">FTI_DoubleBitFlip</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*target,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_FAILURE_INJECTION_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/failure-injection.h"/>
+  </compounddef>
+</doxygen>

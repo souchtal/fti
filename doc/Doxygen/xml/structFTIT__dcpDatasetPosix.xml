@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__dcpDatasetPosix" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_dcpDatasetPosix</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__dcpDatasetPosix_1ae090b0ed6cf9fe43ff63a9d54d279229" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long FTIT_dcpDatasetPosix::hashDataSize</definition>
+        <argsstring></argsstring>
+        <name>hashDataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="139" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpDatasetPosix_1a87104fc8812d30b59499828a54e00928" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* FTIT_dcpDatasetPosix::currentHashArray</definition>
+        <argsstring></argsstring>
+        <name>currentHashArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="140" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpDatasetPosix_1a12592fffe729610a32e25d55bf107417" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* FTIT_dcpDatasetPosix::oldHashArray</definition>
+        <argsstring></argsstring>
+        <name>oldHashArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="141" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="138" column="1" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="137" bodyend="143"/>
+    <listofallmembers>
+      <member refid="structFTIT__dcpDatasetPosix_1a87104fc8812d30b59499828a54e00928" prot="public" virt="non-virtual"><scope>FTIT_dcpDatasetPosix</scope><name>currentHashArray</name></member>
+      <member refid="structFTIT__dcpDatasetPosix_1ae090b0ed6cf9fe43ff63a9d54d279229" prot="public" virt="non-virtual"><scope>FTIT_dcpDatasetPosix</scope><name>hashDataSize</name></member>
+      <member refid="structFTIT__dcpDatasetPosix_1a12592fffe729610a32e25d55bf107417" prot="public" virt="non-virtual"><scope>FTIT_dcpDatasetPosix</scope><name>oldHashArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

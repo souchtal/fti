@@ -1,0 +1,1372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="stage_8h" kind="file" language="C++">
+    <compoundname>stage.h</compoundname>
+    <includedby refid="interface_8h" local="yes">/home/bscuser/Documents/release/dev/fti/src/interface.h</includedby>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.c</label>
+        <link refid="failure-injection_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postreco.c</label>
+        <link refid="postreco_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/bscuser/Documents/release/dev/fti/src/interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/bscuser/Documents/release/dev/fti/src/icp.c</label>
+        <link refid="icp_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/bscuser/Documents/release/dev/fti/src/conf.c</label>
+        <link refid="conf_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postckpt.c</label>
+        <link refid="postckpt_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api.c</label>
+        <link refid="api_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/bscuser/Documents/release/dev/fti/src/meta.c</label>
+        <link refid="meta_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/bscuser/Documents/release/dev/fti/src/checkpoint.c</label>
+        <link refid="checkpoint_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/bscuser/Documents/release/dev/fti/src/dcp.c</label>
+        <link refid="dcp_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/bscuser/Documents/release/dev/fti/src/recover.c</label>
+        <link refid="recover_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/bscuser/Documents/release/dev/fti/src/utility.c</label>
+        <link refid="utility_8c"/>
+      </node>
+      <node id="18">
+        <label>/home/bscuser/Documents/release/dev/fti/src/tools.c</label>
+        <link refid="tools_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/bscuser/Documents/release/dev/fti/src/stage.c</label>
+        <link refid="stage_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/src/stage.h</label>
+        <link refid="stage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/bscuser/Documents/release/dev/fti/src/fti-io.c</label>
+        <link refid="fti-io_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/bscuser/Documents/release/dev/fti/src/macros.c</label>
+        <link refid="macros_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/bscuser/Documents/release/dev/fti/src/topo.c</label>
+        <link refid="topo_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.c</label>
+        <link refid="api-cuda_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structFTIT__StageHeadInfo" prot="public">FTIT_StageHeadInfo</innerclass>
+    <innerclass refid="structFTIT__StageAppInfo" prot="public">FTIT_StageAppInfo</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="stage_8h_1ad88cc2c7bdc825945e93832f0d294ae9" prot="public" static="no">
+        <name>FTI_SI_MAX_NUM</name>
+        <initializer>(512L*1024L)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum amount of concurrent active staging requests <linebreak/>
+ <simplesect kind="note"><para>leads to 2.5MB for the application processes as minimum memory allocated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="49" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1aed3bf8a3f1451c28fdf8f7c0d6f80a3f" prot="public" static="no">
+        <name>FTI_SI_NAVL</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="52" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1a801ee3b0f00dfbfb2c72f17666565fa8" prot="public" static="no">
+        <name>FTI_SI_IAVL</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="53" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1a885359d6b9b087342e57256a345e8ca0" prot="public" static="no">
+        <name>FTI_SI_IALL</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="55" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1a4cb2768f435a67134365643365af27f7" prot="public" static="no">
+        <name>FTI_SI_NALL</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="56" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1ac2bb11c3f5f891e1e161b6b5c4f517e0" prot="public" static="no">
+        <name>FTI_SI_APTR</name>
+        <param><defname>ptr</defname></param>
+        <initializer>((<ref refid="structFTIT__StageAppInfo" kindref="compound">FTIT_StageAppInfo</ref>*)ptr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="58" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1afa3c2ff5007ff6d4e2159653fa2bffbd" prot="public" static="no">
+        <name>FTI_SI_HPTR</name>
+        <param><defname>ptr</defname></param>
+        <initializer>((<ref refid="structFTIT__StageHeadInfo" kindref="compound">FTIT_StageHeadInfo</ref>*)ptr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="59" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1a1de8469fed78e2cafab8f93bd1b2b870" prot="public" static="no">
+        <name>FTI_SI_MAX_ID</name>
+        <initializer>(0x7ffff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="61" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1a699d27699d4a8a419f9d643d8a74aa38" prot="public" static="no">
+        <name>FTI_DISABLE_STAGING</name>
+        <initializer>do{*enableStagingPtr = false;} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="63" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stage_8h_1aa81d3d5a8f468c54e216747e4937c77c" prot="public" static="no">
+        <name>FTI_SI_ENABLED</name>
+        <initializer>(*(bool*)enableStagingPtr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="64" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887" prot="public" static="no" strong="no">
+        <type></type>
+        <name>FTIT_StatusField</name>
+        <enumvalue id="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887a3c0c80cbe8e4a14370a8a47f2a54b6ba" prot="public">
+          <name>FTI_SIF_AVL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887a18a6215a6b91702735bbfb1f211d814c" prot="public">
+          <name>FTI_SIF_VAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>valid fields of &apos;status&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>enum that keeps the particular field identifiers for the &apos;status&apos; field. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="72" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="enum" id="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98" prot="public" static="no" strong="no">
+        <type></type>
+        <name>FTIT_RequestField</name>
+        <enumvalue id="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7" prot="public">
+          <name>FTI_SIF_ALL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8" prot="public">
+          <name>FTI_SIF_IDX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>valid fields of &apos;idxRequest&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>enum that keeps the particular field identifiers for the &apos;idxRequest&apos; field. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="83" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" bodystart="83" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="stage_8h_1a0ace2903bf808b32a8bc91aae9fb93a2" prot="public" static="no">
+        <type>struct <ref refid="structFTIT__StageHeadInfo" kindref="compound">FTIT_StageHeadInfo</ref></type>
+        <definition>FTIT_StageHeadInfo</definition>
+        <argsstring></argsstring>
+        <name>FTIT_StageHeadInfo</name>
+        <briefdescription>
+<para>Head rank staging meta info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="97" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="stage_8h_1a4c4836845c1d522c6c26852c27d53a67" prot="public" static="no">
+        <type>struct <ref refid="structFTIT__StageAppInfo" kindref="compound">FTIT_StageAppInfo</ref></type>
+        <definition>FTIT_StageAppInfo</definition>
+        <argsstring></argsstring>
+        <name>FTIT_StageAppInfo</name>
+        <briefdescription>
+<para>Application rank staging meta info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="106" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="stage_8h_1af704cfca36ed0ca9ab685a838518c114" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_GetRequestID</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo)</argsstring>
+        <name>FTI_GetRequestID</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <briefdescription>
+<para>Returns unique &apos;ID&apos; for staging request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;ID&apos; on success, -1 else. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="109" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="1213" bodyend="1240" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="109" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a46b8c1f1c37f48eb4261fc646e460478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitStage</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_configuration *FTI_Conf, FTIT_topology *FTI_Topo)</argsstring>
+        <name>FTI_InitStage</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the FTI staging feature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function allocates memory for the &apos;idxRequest&apos; and &apos;status&apos; fields, creates a node communicator and an MPI shared memory window. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="110" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="127" bodyend="234" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="110" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1add93ac9ae93c0bc729d2d68f1617341c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitStageRequestApp</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, uint32_t ID)</argsstring>
+        <name>FTI_InitStageRequestApp</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+<para>Initializes new stage meta info element (application rank) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function appends a new staging meta info element for the application ranks to &apos;FTI_Exec-&gt;stageInfo-&gt;request&apos;. Beside that it also initializes the status field (status -&gt; pending) corresponding to &apos;ID&apos; and assigns the proper index of the meta info element to the &apos;ID&apos; corresponding &apos;idxRequest&apos; field. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="111" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="323" bodyend="355" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="111" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a61d6e550d9f80163986a523bc8f2d33d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_AsyncStage</definition>
+        <argsstring>(char *lpath, char *rpath, FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, int ID)</argsstring>
+        <name>FTI_AsyncStage</name>
+        <param>
+          <type>char *</type>
+          <declname>lpath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>rpath</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+<para>This function triggers the asynchronous stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;lpath&apos;, absolute path of local file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;rpath&apos;, absolute path of remote file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;FTI_SCES&apos; on success, &apos;FTI_NSCS&apos; else.</para>
+</simplesect>
+This function uses a non-blocking send (MPI_Isend) in order to pass the information that is needed by the head process to perform an asynchronous staging of the local file to the PFS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="112" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="754" bodyend="785" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="112" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1ae4b37a2f01edc58f583e828993eda152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitStageRequestHead</definition>
+        <argsstring>(char *lpath, char *rpath, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, int source, uint32_t ID)</argsstring>
+        <name>FTI_InitStageRequestHead</name>
+        <param>
+          <type>char *</type>
+          <declname>lpath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>rpath</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+<para>Initializes new stage meta info element (head rank) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;lpath&apos;, absolute path of local file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;rpath&apos;, absolute path of remote file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;source&apos;, application rank of stage request </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;FTI_SCES&apos; on success, &apos;FTI_NSCS&apos; else. <linebreak/>
+</para>
+</simplesect>
+This function appends a new staging meta info element for the head ranks to &apos;FTI_Exec-&gt;stageInfo-&gt;request&apos;. Beside that it also changes the status field corresponding to &apos;ID&apos; (status -&gt; active). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="114" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="373" bodyend="406" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="114" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a182f1f60a5374160a724cee0034c572d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_SyncStage</definition>
+        <argsstring>(char *lpath, char *rpath, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_configuration *FTI_Conf, uint32_t ID)</argsstring>
+        <name>FTI_SyncStage</name>
+        <param>
+          <type>char *</type>
+          <declname>lpath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>rpath</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+<para>This function synchronously stages the local file to the PFS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;lpath&apos;, absolute path of local file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;rpath&apos;, absolute path of remote file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;FTI_SCES&apos; on success, &apos;FTI_NSCS&apos; else. <linebreak/>
+</para>
+</simplesect>
+This function should be called only if the staging feature is enabled without the head process being enabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="116" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="584" bodyend="736" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="116" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a7e59d3bafaa826d69a91493c80a417e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_HandleStageRequest</definition>
+        <argsstring>(FTIT_configuration *FTI_Conf, FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_checkpoint *FTI_Ckpt, int source)</argsstring>
+        <name>FTI_HandleStageRequest</name>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref> *</type>
+          <declname>FTI_Ckpt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>This function asynchronously stages the local file to the PFS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;lpath&apos;, absolute path of local file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;rpath&apos;, absolute path of remote file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;source&apos;, application rank of stage request. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;FTI_SCES&apos; on success, &apos;FTI_NSCS&apos; else. <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="118" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="799" bodyend="988" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="118" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a03ebd25f6254d11bc790e70e9aabd9eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_GetStatusField</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, int ID, FTIT_StatusField val, int source)</argsstring>
+        <name>FTI_GetStatusField</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type><ref refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887" kindref="member">FTIT_StatusField</ref></type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Returns value from the &apos;status&apos; field array at &apos;ID&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTIT_StatusField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested field </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;source&apos;, application rank of stage request. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Field value on success, &apos;FTI_NSCS&apos; else. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="120" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="1103" bodyend="1139" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="120" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1ab210803902592adb2ebb22b9a9a28dda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_SetStatusField</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, int ID, uint8_t entry, FTIT_StatusField val, int source)</argsstring>
+        <name>FTI_SetStatusField</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type><ref refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887" kindref="member">FTIT_StatusField</ref></type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Sets value from the &apos;status&apos; field array at &apos;ID&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;entry&apos;, new value of field </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTIT_StatusField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested field </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;source&apos;, application rank of stage request. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;entry&apos; value on success, &apos;FTI_NSCS&apos; else. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="121" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="1153" bodyend="1203" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="121" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a1b29cd8c8e9446f2dbd8dafac4d07f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_GetRequestField</definition>
+        <argsstring>(int ID, FTIT_RequestField val)</argsstring>
+        <name>FTI_GetRequestField</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type><ref refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98" kindref="member">FTIT_RequestField</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Returns value from the &apos;idxRequest&apos; field array at &apos;ID&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTIT_StatusField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested field </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Field value on success, &apos;FTI_NSCS&apos; else. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="122" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="998" bodyend="1031" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="122" declcolumn="5"/>
+        <references refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" compoundref="fti_8h" startline="20">FTI_NSCS</references>
+        <references refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" compoundref="api_8c" startline="2548" endline="2576">FTI_Print</references>
+        <references refid="stage_8h_1aa81d3d5a8f468c54e216747e4937c77c" compoundref="stage_8h" startline="64">FTI_SI_ENABLED</references>
+        <references refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7" compoundref="stage_8h" startline="84">FTI_SIF_ALL</references>
+        <references refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8" compoundref="stage_8h" startline="85">FTI_SIF_IDX</references>
+        <references refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" compoundref="fti-intern_8h" startline="59">FTI_WARN</references>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a35eb6e7616b99b2d7713d802327fe061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_SetRequestField</definition>
+        <argsstring>(int ID, uint32_t entry, FTIT_RequestField val)</argsstring>
+        <name>FTI_SetRequestField</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type><ref refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98" kindref="member">FTIT_RequestField</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets value of the &apos;idxRequest&apos; field array at &apos;ID&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;entry&apos;, new value of field </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTIT_StatusField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested field </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;entry&apos; on success, &apos;FTI_NSCS&apos; else. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="123" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="1042" bodyend="1090" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="123" declcolumn="5"/>
+        <references refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" compoundref="fti_8h" startline="20">FTI_NSCS</references>
+        <references refid="api_8c_1a691a9e560e92286bb5bc1b5cf2f7b199" compoundref="api_8c" startline="2548" endline="2576">FTI_Print</references>
+        <references refid="stage_8h_1aa81d3d5a8f468c54e216747e4937c77c" compoundref="stage_8h" startline="64">FTI_SI_ENABLED</references>
+        <references refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7" compoundref="stage_8h" startline="84">FTI_SIF_ALL</references>
+        <references refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8" compoundref="stage_8h" startline="85">FTI_SIF_IDX</references>
+        <references refid="fti-intern_8h_1a93eeeef1e283517099194859e3811ea3" compoundref="fti-intern_8h" startline="59">FTI_WARN</references>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a6e74aba3e759272cbdb8db6ccbb879f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_FreeStageRequest</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, int ID, int source)</argsstring>
+        <name>FTI_FreeStageRequest</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>frees stage meta info element (head/application rank) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;source&apos;, application rank of stage request</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function eliminates the &apos;ID&apos; corresponding element from the stage meta info array and frees the corresponding memory. In the application ranks it also reorders the index information in the &apos;idxRequestÄ array corresponding to &apos;ID&apos;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="124" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="422" bodyend="549" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="124" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a11011f5e2b91e35d66c5c39d33aa0aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FTI_PrintStageStatus</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, int ID, int source)</argsstring>
+        <name>FTI_PrintStageStatus</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="125" column="6" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="1243" bodyend="1302" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="125" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1a0c5a2182e719ef3336289bd24f8fd312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_GetRequestIdx</definition>
+        <argsstring>(int ID)</argsstring>
+        <name>FTI_GetRequestIdx</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+<para>returns the index of desired stage meta info element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;ID&apos; of staging request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>index if &apos;ID&apos; corresponding meta info structure was allocated -1, else. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="126" column="5" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="559" bodyend="567" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="126" declcolumn="5"/>
+        <references refid="stage_8c_1a1b29cd8c8e9446f2dbd8dafac4d07f05" compoundref="stage_8c" startline="998" endline="1031">FTI_GetRequestField</references>
+        <references refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7" compoundref="stage_8h" startline="84">FTI_SIF_ALL</references>
+        <references refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8" compoundref="stage_8h" startline="85">FTI_SIF_IDX</references>
+      </memberdef>
+      <memberdef kind="function" id="stage_8h_1acf6cca854e653c7c23d24011f5b3afc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FTI_FinalizeStage</definition>
+        <argsstring>(FTIT_execution *FTI_Exec, FTIT_topology *FTI_Topo, FTIT_configuration *FTI_Conf)</argsstring>
+        <name>FTI_FinalizeStage</name>
+        <param>
+          <type><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref> *</type>
+          <declname>FTI_Exec</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref> *</type>
+          <declname>FTI_Topo</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref> *</type>
+          <declname>FTI_Conf</declname>
+        </param>
+        <briefdescription>
+<para>Finalizes staging feature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FTI_Exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Topo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topology metadata. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTI_Conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration metadata.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function frees allocated ressources, removes local staging files and the staging directory and destroys the node communicator </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h" line="127" column="6" bodyfile="/home/bscuser/Documents/release/dev/fti/src/stage.c" bodystart="247" bodyend="304" declfile="/home/bscuser/Documents/release/dev/fti/src/stage.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="42"><highlight class="preprocessor">#ifndef<sp/>_STAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_STAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="stage_8h_1ad88cc2c7bdc825945e93832f0d294ae9" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_SI_MAX_NUM<sp/>(512L*1024L)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1<sp/>bit<sp/>field</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="stage_8h_1aed3bf8a3f1451c28fdf8f7c0d6f80a3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_NAVL<sp/>0x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="stage_8h_1a801ee3b0f00dfbfb2c72f17666565fa8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_IAVL<sp/>0x0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="stage_8h_1a885359d6b9b087342e57256a345e8ca0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_IALL<sp/>0x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="stage_8h_1a4cb2768f435a67134365643365af27f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_NALL<sp/>0x0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="stage_8h_1ac2bb11c3f5f891e1e161b6b5c4f517e0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_APTR(<sp/>ptr<sp/>)<sp/>((FTIT_StageAppInfo*)ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="stage_8h_1afa3c2ff5007ff6d4e2159653fa2bffbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_HPTR(<sp/>ptr<sp/>)<sp/>((FTIT_StageHeadInfo*)ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="stage_8h_1a1de8469fed78e2cafab8f93bd1b2b870" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_MAX_ID<sp/>(0x7ffff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="stage_8h_1a699d27699d4a8a419f9d643d8a74aa38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_DISABLE_STAGING<sp/>do{*enableStagingPtr<sp/>=<sp/>false;}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="stage_8h_1aa81d3d5a8f468c54e216747e4937c77c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTI_SI_ENABLED<sp/>(*(bool*)enableStagingPtr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73" refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887a3c0c80cbe8e4a14370a8a47f2a54b6ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887a3c0c80cbe8e4a14370a8a47f2a54b6ba" kindref="member">FTI_SIF_AVL</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="74" refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887a18a6215a6b91702735bbfb1f211d814c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887a18a6215a6b91702735bbfb1f211d814c" kindref="member">FTI_SIF_VAL</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/><ref refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887" kindref="member">FTIT_StatusField</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="84" refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a284a69ddc599e948a41d29045bf417a7" kindref="member">FTI_SIF_ALL</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="85" refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98a45cfcc08399841b15ebd1df39e23cfa8" kindref="member">FTI_SIF_IDX</ref></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/><ref refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98" kindref="member">FTIT_RequestField</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="structFTIT__StageHeadInfo" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structFTIT__StageHeadInfo" kindref="compound">FTIT_StageHeadInfo</ref><sp/>{</highlight></codeline>
+<codeline lineno="92" refid="structFTIT__StageHeadInfo_1a07a971666a5a67608a0e5519deec96d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structFTIT__StageHeadInfo_1a07a971666a5a67608a0e5519deec96d8" kindref="member">lpath</ref>[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="structFTIT__StageHeadInfo_1a1b0bea1e339fc1043ec598620dce4553" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structFTIT__StageHeadInfo_1a1b0bea1e339fc1043ec598620dce4553" kindref="member">rpath</ref>[<ref refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" kindref="member">FTI_BUFS</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="structFTIT__StageHeadInfo_1a5a6c7ce79445067322e57034ad732c85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structFTIT__StageHeadInfo_1a5a6c7ce79445067322e57034ad732c85" kindref="member">offset</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="structFTIT__StageHeadInfo_1aee45d4c3ce21f8b7ba30ff8785ae3db4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structFTIT__StageHeadInfo_1aee45d4c3ce21f8b7ba30ff8785ae3db4" kindref="member">size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="structFTIT__StageHeadInfo_1a35d59db5793147287eed4e692878da0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFTIT__StageHeadInfo_1a35d59db5793147287eed4e692878da0e" kindref="member">ID</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}<sp/><ref refid="stage_8h_1a0ace2903bf808b32a8bc91aae9fb93a2" kindref="member">FTIT_StageHeadInfo</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structFTIT__StageAppInfo" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structFTIT__StageAppInfo" kindref="compound">FTIT_StageAppInfo</ref><sp/>{</highlight></codeline>
+<codeline lineno="103" refid="structFTIT__StageAppInfo_1a14defcc395518f8acfe4bd0990c5bc53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structFTIT__StageAppInfo_1a14defcc395518f8acfe4bd0990c5bc53" kindref="member">sendBuf</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="structFTIT__StageAppInfo_1a74306a8cbe3c77c23086ebef25bc4877" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Request<sp/><ref refid="structFTIT__StageAppInfo_1a74306a8cbe3c77c23086ebef25bc4877" kindref="member">mpiReq</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="structFTIT__StageAppInfo_1ab552cab69b2d5a223b44905728c6a4fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFTIT__StageAppInfo_1ab552cab69b2d5a223b44905728c6a4fc" kindref="member">ID</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}<sp/><ref refid="stage_8h_1a4c4836845c1d522c6c26852c27d53a67" kindref="member">FTIT_StageAppInfo</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1af704cfca36ed0ca9ab685a838518c114" kindref="member">FTI_GetRequestID</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo<sp/>);<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a46b8c1f1c37f48eb4261fc646e460478" kindref="member">FTI_InitStage</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref><sp/>*FTI_Conf,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1add93ac9ae93c0bc729d2d68f1617341c" kindref="member">FTI_InitStageRequestApp</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/>uint32_t<sp/>ID<sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a61d6e550d9f80163986a523bc8f2d33d" kindref="member">FTI_AsyncStage</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*lpath,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*rpath,<sp/><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref><sp/>*FTI_Conf,<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID<sp/>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1ae4b37a2f01edc58f583e828993eda152" kindref="member">FTI_InitStageRequestHead</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lpath,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*rpath,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>source,<sp/>uint32_t<sp/>ID<sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a182f1f60a5374160a724cee0034c572d" kindref="member">FTI_SyncStage</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lpath,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*rpath,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref><sp/>*FTI_Conf,<sp/>uint32_t<sp/>ID<sp/>);<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a7e59d3bafaa826d69a91493c80a417e3" kindref="member">FTI_HandleStageRequest</ref>(<ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref>*<sp/>FTI_Conf,<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref>*<sp/>FTI_Exec,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref>*<sp/>FTI_Topo,<sp/><ref refid="structFTIT__checkpoint" kindref="compound">FTIT_checkpoint</ref>*<sp/>FTI_Ckpt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>source);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a03ebd25f6254d11bc790e70e9aabd9eb" kindref="member">FTI_GetStatusField</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/><ref refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887" kindref="member">FTIT_StatusField</ref><sp/>val,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>source<sp/>);<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1ab210803902592adb2ebb22b9a9a28dda" kindref="member">FTI_SetStatusField</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/>uint8_t<sp/>entry,<sp/><ref refid="stage_8h_1a90a1c70f104f770eff8ba0b2febc7887" kindref="member">FTIT_StatusField</ref><sp/>val,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>source<sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a1b29cd8c8e9446f2dbd8dafac4d07f05" kindref="member">FTI_GetRequestField</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/><ref refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98" kindref="member">FTIT_RequestField</ref><sp/>val<sp/>);<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a35eb6e7616b99b2d7713d802327fe061" kindref="member">FTI_SetRequestField</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/>uint32_t<sp/>entry,<sp/><ref refid="stage_8h_1a05ee3f86e04233d44812d99f1ce02f98" kindref="member">FTIT_RequestField</ref><sp/>val<sp/>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a6e74aba3e759272cbdb8db6ccbb879f2" kindref="member">FTI_FreeStageRequest</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>source<sp/>);<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a11011f5e2b91e35d66c5c39d33aa0aae" kindref="member">FTI_PrintStageStatus</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>source<sp/>);<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1a0c5a2182e719ef3336289bd24f8fd312" kindref="member">FTI_GetRequestIdx</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="stage_8h_1acf6cca854e653c7c23d24011f5b3afc4" kindref="member">FTI_FinalizeStage</ref>(<sp/><ref refid="structFTIT__execution" kindref="compound">FTIT_execution</ref><sp/>*FTI_Exec,<sp/><ref refid="structFTIT__topology" kindref="compound">FTIT_topology</ref><sp/>*FTI_Topo,<sp/><ref refid="structFTIT__configuration" kindref="compound">FTIT_configuration</ref><sp/>*FTI_Conf<sp/>);<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/src/stage.h"/>
+  </compounddef>
+</doxygen>

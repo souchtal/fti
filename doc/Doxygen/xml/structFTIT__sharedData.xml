@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__sharedData" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_sharedData</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__sharedData_1ab0853dbe65ce5963c588e0f4dbaa1712" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__globalDataset" kindref="compound">FTIT_globalDataset</ref> *</type>
+        <definition>FTIT_globalDataset* FTIT_sharedData::dataset</definition>
+        <argsstring></argsstring>
+        <name>dataset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to global dataset. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="378" column="28" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>FTIT_H5Group</label>
+        <link refid="structFTIT__H5Group"/>
+      </node>
+      <node id="1">
+        <label>FTIT_sharedData</label>
+        <link refid="structFTIT__sharedData"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dataset</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FTIT_type</label>
+        <link refid="structFTIT__type"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>h5group</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>structure</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FTIT_globalDataset</label>
+        <link refid="structFTIT__globalDataset"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FTIT_typeField</label>
+        <link refid="structFTIT__typeField"/>
+      </node>
+      <node id="5">
+        <label>FTIT_complexType</label>
+        <link refid="structFTIT__complexType"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>field</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="377" column="34" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="377" bodyend="383"/>
+    <listofallmembers>
+      <member refid="structFTIT__sharedData_1ab0853dbe65ce5963c588e0f4dbaa1712" prot="public" virt="non-virtual"><scope>FTIT_sharedData</scope><name>dataset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

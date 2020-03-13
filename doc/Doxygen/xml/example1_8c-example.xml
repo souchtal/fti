@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="example1_8c-example" kind="example">
+    <compoundname>example1.c</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Simple example of how to use the Init Function <programlisting filename="example1.c"><codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/>nbProcs,<sp/>nbLines,<sp/>i,<sp/>M,<sp/>arg;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wtime,<sp/>*h,<sp/>*g,<sp/>memSize,<sp/>localerror,<sp/>globalerror<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Init(&amp;argc,<sp/>&amp;argv);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fti_8h_1abe8c2b202eaab996bbd88eea4cafe51a" kindref="member">FTI_Init</ref>(argv[2],<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Comm_size(<ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref>,<sp/>&amp;nbProcs);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Comm_rank(<ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref>,<sp/>&amp;rank);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arg<sp/>=<sp/>atoi(argv[1]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>M<sp/>=<sp/>(int)sqrt((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)(arg<sp/>*<sp/>1024.0<sp/>*<sp/>512.0<sp/>*<sp/>nbProcs)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nbLines<sp/>=<sp/>(M<sp/>/<sp/>nbProcs)+3;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>h<sp/>=<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)<sp/>*<sp/>M<sp/>*<sp/>nbLines);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>g<sp/>=<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)<sp/>*<sp/>M<sp/>*<sp/>nbLines);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>initData(nbLines,<sp/>M,<sp/>rank,<sp/>g);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>memSize<sp/>=<sp/>M<sp/>*<sp/>nbLines<sp/>*<sp/>2<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(double)<sp/>/<sp/>(1024<sp/>*<sp/>1024);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Local<sp/>data<sp/>size<sp/>is<sp/>%d<sp/>x<sp/>%d<sp/>=<sp/>%f<sp/>MB<sp/>(%d).\n&quot;</highlight><highlight class="normal">,<sp/>M,<sp/>nbLines,<sp/>memSize,<sp/>arg);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Target<sp/>precision<sp/>:<sp/>%f<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>PRECISION);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Maximum<sp/>number<sp/>of<sp/>iterations<sp/>:<sp/>%d<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>ITER_TIMES);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fti_8h_1a913b8cd6e29a152eceaeaec35e21e677" kindref="member">FTI_Protect</ref>(0,<sp/>&amp;i,<sp/>1,<sp/><ref refid="fti_8h_1ad236df2303494837c97a13741423a51b" kindref="member">FTI_INTG</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fti_8h_1a913b8cd6e29a152eceaeaec35e21e677" kindref="member">FTI_Protect</ref>(1,<sp/>h,<sp/>M*nbLines,<sp/><ref refid="fti_8h_1aafb3604bd7ebfae406d1c419890e04d8" kindref="member">FTI_DBLE</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fti_8h_1a913b8cd6e29a152eceaeaec35e21e677" kindref="member">FTI_Protect</ref>(2,<sp/>g,<sp/>M*nbLines,<sp/><ref refid="fti_8h_1aafb3604bd7ebfae406d1c419890e04d8" kindref="member">FTI_DBLE</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wtime<sp/>=<sp/>MPI_Wtime();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ITER_TIMES;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>checkpointed<sp/>=<sp/><ref refid="fti_8h_1a6cbf6d6f6b4181e314eef599f85d6c5b" kindref="member">FTI_Snapshot</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>localerror<sp/>=<sp/>doWork(nbProcs,<sp/>rank,<sp/>M,<sp/>nbLines,<sp/>g,<sp/>h);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(((i%ITER_OUT)<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(rank<sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Step<sp/>:<sp/>%d,<sp/>error<sp/>=<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/>i,<sp/>globalerror);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i%REDUCE)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Allreduce(&amp;localerror,<sp/>&amp;globalerror,<sp/>1,<sp/>MPI_DOUBLE,<sp/>MPI_MAX,<sp/><ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(globalerror<sp/>&lt;<sp/>PRECISION)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Execution<sp/>finished<sp/>in<sp/>%lf<sp/>seconds.\n&quot;</highlight><highlight class="normal">,<sp/>MPI_Wtime()<sp/>-<sp/>wtime);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>free(h);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>free(g);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fti_8h_1aa58102aa8540ed35f2efba23cf2dc19b" kindref="member">FTI_Finalize</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Finalize();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

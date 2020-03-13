@@ -1,0 +1,47 @@
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Option }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ What it\textquotesingle{}s for }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ default  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Option }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ What it\textquotesingle{}s for }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ default  }\\\cline{1-3}
+\endhead
+{\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+F\+O\+R\+T\+R\+AN} &Enables the generation of the Fortran wrapper for F\+TI &ON  \\\cline{1-3}
+{\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+E\+X\+A\+M\+P\+L\+ES} &Enables the generation of examples &ON  \\\cline{1-3}
+{\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+S\+I\+O\+N\+L\+IB} &Enables the parallel I/O S\+I\+O\+Nlib for F\+TI &O\+FF  \\\cline{1-3}
+{\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+T\+E\+S\+TS} &Enables the generation of tests &ON  \\\cline{1-3}
+{\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+L\+U\+S\+T\+RE} &Enables Lustre Support &O\+FF  \\\cline{1-3}
+{\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+D\+O\+CU} &Enables the generation of a Doxygen documentation &O\+FF  \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md_cmake_autotoc_md10}{}\doxysection{Other configurations}\label{md_cmake_autotoc_md10}
+To use a certain compiler, set the environment variables {\ttfamily CC} and {\ttfamily FC} to the name of the compiler executables. ~\newline
+
+
+For instance if it is desired to use the P\+GI compiler, try\+: ~\newline
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CC=pgcc FC=pgfortran cmake -\/DCMAKE\_INSTALL\_PREFIX:PATH=install/here/fti ..}
+\end{DoxyCode}
+
+
+To use the built-\/in M\+D5 rather than Open\+S\+SL, please configure using\+: ~\newline
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/DNO\_OPENSSL=true -\/DCMAKE\_INSTALL\_PREFIX:PATH=/install/here/fti ..}
+\end{DoxyCode}
+
+
+On Cray systems, it might be helping to use the cmake flag\+: ~\newline
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/CMAKE\_SYSTEM\_NAME=CrayLinuxEnvironment}
+\end{DoxyCode}
+ 

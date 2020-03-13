@@ -1,0 +1,333 @@
+\hypertarget{api-cuda_8c}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/api-\/cuda.c File Reference}
+\label{api-cuda_8c}\index{/home/bscuser/Documents/release/dev/fti/src/api-\/cuda.c@{/home/bscuser/Documents/release/dev/fti/src/api-\/cuda.c}}
+{\ttfamily \#include \char`\"{}interface.\+h\char`\"{}}\newline
+Include dependency graph for api-\/cuda.c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{api-cuda_8c_a77a43dab41fd5721fa4581af47413f4c}{F\+T\+I\+\_\+get\+\_\+pointer\+\_\+info}} (const void $\ast$ptr, \mbox{\hyperlink{structFTIT__ptrinfo}{F\+T\+I\+T\+\_\+ptrinfo}} $\ast$ptr\+Info)
+\begin{DoxyCompactList}\small\item\em It gets the information of this pointer (C\+PU or G\+PU, which device, etc.). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_a544c5bac3dc54ef351d1f37a8dcde9d3}{F\+T\+I\+\_\+copy\+\_\+from\+\_\+device}} (void $\ast$dst, const void $\ast$src, size\+\_\+t count, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$exec)
+\begin{DoxyCompactList}\small\item\em It copies data from G\+PU to C\+PU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_a3c02d6e2cb35d50d9bbfbbac490e65e1}{F\+T\+I\+\_\+copy\+\_\+to\+\_\+device}} (void $\ast$dst, const void $\ast$src, size\+\_\+t count, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$exec)
+\begin{DoxyCompactList}\small\item\em It copies data from C\+PU to G\+PU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_a6e6f5a7d5c8cb196a24781dd48e56fd7}{F\+T\+I\+\_\+\+Transfer\+Device\+Mem\+To\+File\+Async}} (\mbox{\hyperlink{structFTIT__dataset}{F\+T\+I\+T\+\_\+dataset}} $\ast$F\+T\+I\+\_\+\+Data, \mbox{\hyperlink{api-cuda_8h_af93c5d2661f8e8cf11b38916a4893dd3}{F\+T\+I\+T\+\_\+fwritefunc}} fwritefunc, void $\ast$opaque)
+\begin{DoxyCompactList}\small\item\em Streaming data from G\+PU to storage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_aecd6f1d36917ef0320232d64dcdfc700}{F\+T\+I\+\_\+\+Init\+Prefetcher}} (\mbox{\hyperlink{structFTIT__data__prefetch}{F\+T\+I\+T\+\_\+data\+\_\+prefetch}} $\ast$dfls)
+\begin{DoxyCompactList}\small\item\em Initializes a Prefetcher. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_a6be5f3795ebc10603244ef0d60594611}{F\+T\+I\+\_\+get\+Prefetched\+Data}} (\mbox{\hyperlink{structFTIT__data__prefetch}{F\+T\+I\+T\+\_\+data\+\_\+prefetch}} $\ast$dfls, size\+\_\+t $\ast$size, unsigned char $\ast$$\ast$fetched\+Data)
+\begin{DoxyCompactList}\small\item\em Gets gpu-\/fetched data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_aea1dfacf72335a4e81cc109ea9aa7c0b}{F\+T\+I\+\_\+destroy\+Prefetcher}} (\mbox{\hyperlink{structFTIT__data__prefetch}{F\+T\+I\+T\+\_\+data\+\_\+prefetch}} $\ast$dfls)
+\item 
+int \mbox{\hyperlink{api-cuda_8c_acd3640ea0b47f0f4b34b9e11294290e1}{F\+T\+I\+\_\+\+Init\+Devices}} (int Host\+Buff\+Size)
+\begin{DoxyCompactList}\small\item\em Allocates Host buffers which will be used for asynchronous communication with the G\+PU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_abb1ca3c8e8cbff17fdcba133ca6a344d}{F\+T\+I\+\_\+\+Destroy\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em De-\/allocates Host buffers which will be used for asynchronous communication with the G\+PU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_aa25ca3090fb1052359f6a5fa4b724082}{F\+T\+I\+\_\+\+Transfer\+File\+To\+Device\+Async}} (F\+I\+LE $\ast$fd, void $\ast$dptr, int num\+Bytes)
+\begin{DoxyCompactList}\small\item\em Copies data from a file to the G\+PU asynchronously. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{api-cuda_8c_a5a897085347de12b9f622375b73c514b}{F\+T\+I\+\_\+get\+Host\+Buff\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of each host buffer in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{api-cuda_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} $\ast$ \mbox{\hyperlink{api-cuda_8c_a62b401eaf98a6c666ca0f1ac0467b239}{F\+T\+I\+\_\+get\+Host\+Buffer}} (int id)
+\begin{DoxyCompactList}\small\item\em Returns the pointer of a specific host buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_a5f16ed2832ece299208ea9c5c0b2c12f}{F\+T\+I\+\_\+copy\+\_\+to\+\_\+device\+\_\+async}} (void $\ast$dst, const void $\ast$src, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Copies asynchronously memory from host to device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{api-cuda_8c_afd0a0ee64043aed23e2dd216db7305ce}{F\+T\+I\+\_\+device\+\_\+sync}} ()
+\begin{DoxyCompactList}\small\item\em Synchronizes the devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{api-cuda_8c_aa95ffe47f6277da792e9454674c5c23a}{host\+Buffers}} \mbox{[}2\mbox{]}
+\item 
+size\+\_\+t \mbox{\hyperlink{api-cuda_8c_a7be887a2ca0a258cf6b368d32fd87487}{buffer\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{api-cuda_8c_a544c5bac3dc54ef351d1f37a8dcde9d3}\label{api-cuda_8c_a544c5bac3dc54ef351d1f37a8dcde9d3}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_copy\_from\_device@{FTI\_copy\_from\_device}}
+\index{FTI\_copy\_from\_device@{FTI\_copy\_from\_device}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_copy\_from\_device()}{FTI\_copy\_from\_device()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+copy\+\_\+from\+\_\+device (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{count,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{exec }\end{DoxyParamCaption})}
+
+
+
+It copies data from G\+PU to C\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & C\+PU destination memory address. \\
+\hline
+{\em src} & G\+PU source memory address. \\
+\hline
+{\em count} & Size in bytes to copy. \\
+\hline
+{\em ptr\+Info} & Information of the src pointer. \\
+\hline
+{\em exec} & Information of this execution. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function copies count bytes from the G\+PU memory area pointed to by src to the C\+PU memory area pointed to by dst. Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{api-cuda_8c_a3c02d6e2cb35d50d9bbfbbac490e65e1}\label{api-cuda_8c_a3c02d6e2cb35d50d9bbfbbac490e65e1}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_copy\_to\_device@{FTI\_copy\_to\_device}}
+\index{FTI\_copy\_to\_device@{FTI\_copy\_to\_device}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_copy\_to\_device()}{FTI\_copy\_to\_device()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+copy\+\_\+to\+\_\+device (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{count,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{exec }\end{DoxyParamCaption})}
+
+
+
+It copies data from C\+PU to G\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & G\+PU destination memory address. \\
+\hline
+{\em src} & C\+PU source memory address. \\
+\hline
+{\em count} & Size in bytes to copy. \\
+\hline
+{\em ptr\+Info} & Information of the dst pointer. \\
+\hline
+{\em exec} & Information of this execution. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function copies count bytes from the C\+PU memory area pointed to by src to the G\+PU memory area pointed to by dst. Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{api-cuda_8c_a5f16ed2832ece299208ea9c5c0b2c12f}\label{api-cuda_8c_a5f16ed2832ece299208ea9c5c0b2c12f}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_copy\_to\_device\_async@{FTI\_copy\_to\_device\_async}}
+\index{FTI\_copy\_to\_device\_async@{FTI\_copy\_to\_device\_async}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_copy\_to\_device\_async()}{FTI\_copy\_to\_device\_async()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+copy\+\_\+to\+\_\+device\+\_\+async (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Copies asynchronously memory from host to device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Memory location to copy data to. \\
+\hline
+{\em src} & Memory location to copy data from. \\
+\hline
+{\em count} & Number of bytes to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES on success.
+\end{DoxyReturn}
+Copies data from a C\+PU memory Location to a G\+PU memory location. Attention neither src or dest can be de allocated until the transaction is finished. \mbox{\Hypertarget{api-cuda_8c_abb1ca3c8e8cbff17fdcba133ca6a344d}\label{api-cuda_8c_abb1ca3c8e8cbff17fdcba133ca6a344d}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_DestroyDevices@{FTI\_DestroyDevices}}
+\index{FTI\_DestroyDevices@{FTI\_DestroyDevices}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_DestroyDevices()}{FTI\_DestroyDevices()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Destroy\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+De-\/allocates Host buffers which will be used for asynchronous communication with the G\+PU. 
+
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+De-\/\+Allocates 2 host buffers which are going to be used for asynchronous communication with the G\+PU. \mbox{\Hypertarget{api-cuda_8c_aea1dfacf72335a4e81cc109ea9aa7c0b}\label{api-cuda_8c_aea1dfacf72335a4e81cc109ea9aa7c0b}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_destroyPrefetcher@{FTI\_destroyPrefetcher}}
+\index{FTI\_destroyPrefetcher@{FTI\_destroyPrefetcher}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_destroyPrefetcher()}{FTI\_destroyPrefetcher()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+destroy\+Prefetcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__data__prefetch}{F\+T\+I\+T\+\_\+data\+\_\+prefetch}} $\ast$}]{dfls }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{api-cuda_8c_afd0a0ee64043aed23e2dd216db7305ce}\label{api-cuda_8c_afd0a0ee64043aed23e2dd216db7305ce}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_device\_sync@{FTI\_device\_sync}}
+\index{FTI\_device\_sync@{FTI\_device\_sync}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_device\_sync()}{FTI\_device\_sync()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+device\+\_\+sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Synchronizes the devices. 
+
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES on success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{api-cuda_8c_a77a43dab41fd5721fa4581af47413f4c}\label{api-cuda_8c_a77a43dab41fd5721fa4581af47413f4c}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_get\_pointer\_info@{FTI\_get\_pointer\_info}}
+\index{FTI\_get\_pointer\_info@{FTI\_get\_pointer\_info}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_get\_pointer\_info()}{FTI\_get\_pointer\_info()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+get\+\_\+pointer\+\_\+info (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{structFTIT__ptrinfo}{F\+T\+I\+T\+\_\+ptrinfo}} $\ast$}]{ptr\+Info }\end{DoxyParamCaption})}
+
+
+
+It gets the information of this pointer (C\+PU or G\+PU, which device, etc.). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer to be checked. \\
+\hline
+{\em ptr\+Info} & Output the information regarding this pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function returns the information of the pointer. It is useful for determining the location of data. Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{api-cuda_8c_a62b401eaf98a6c666ca0f1ac0467b239}\label{api-cuda_8c_a62b401eaf98a6c666ca0f1ac0467b239}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_getHostBuffer@{FTI\_getHostBuffer}}
+\index{FTI\_getHostBuffer@{FTI\_getHostBuffer}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_getHostBuffer()}{FTI\_getHostBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{api-cuda_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}}$\ast$ F\+T\+I\+\_\+get\+Host\+Buffer (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Returns the pointer of a specific host buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the host buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer To the location of the data buffer.
+\end{DoxyReturn}
+Returns the pointer of a specific host buffer in bytes \mbox{\Hypertarget{api-cuda_8c_a5a897085347de12b9f622375b73c514b}\label{api-cuda_8c_a5a897085347de12b9f622375b73c514b}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_getHostBuffSize@{FTI\_getHostBuffSize}}
+\index{FTI\_getHostBuffSize@{FTI\_getHostBuffSize}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_getHostBuffSize()}{FTI\_getHostBuffSize()}}
+{\footnotesize\ttfamily size\+\_\+t F\+T\+I\+\_\+get\+Host\+Buff\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the size of each host buffer in bytes. 
+
+\begin{DoxyReturn}{Returns}
+integer The size of the buffer.
+\end{DoxyReturn}
+Returns the size of each host buffer in bytes \mbox{\Hypertarget{api-cuda_8c_a6be5f3795ebc10603244ef0d60594611}\label{api-cuda_8c_a6be5f3795ebc10603244ef0d60594611}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_getPrefetchedData@{FTI\_getPrefetchedData}}
+\index{FTI\_getPrefetchedData@{FTI\_getPrefetchedData}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_getPrefetchedData()}{FTI\_getPrefetchedData()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+get\+Prefetched\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__data__prefetch}{F\+T\+I\+T\+\_\+data\+\_\+prefetch}} $\ast$}]{dfls,  }\item[{size\+\_\+t $\ast$}]{size,  }\item[{unsigned char $\ast$$\ast$}]{fetched\+Data }\end{DoxyParamCaption})}
+
+
+
+Gets gpu-\/fetched data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dfls} & A pointer to the Prefetcher struct \\
+\hline
+{\em size} & the amount of data in bytes copied from the gpu to the cpu \\
+\hline
+{\em fetch\+Data} & pointer pointing to the data fetched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This data returns a pointer to data copied from the G\+PU side. It also requests more data from the G\+PU side. \mbox{\Hypertarget{api-cuda_8c_acd3640ea0b47f0f4b34b9e11294290e1}\label{api-cuda_8c_acd3640ea0b47f0f4b34b9e11294290e1}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_InitDevices@{FTI\_InitDevices}}
+\index{FTI\_InitDevices@{FTI\_InitDevices}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitDevices()}{FTI\_InitDevices()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Devices (\begin{DoxyParamCaption}\item[{int}]{Host\+Buff\+Size }\end{DoxyParamCaption})}
+
+
+
+Allocates Host buffers which will be used for asynchronous communication with the G\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Host\+Buff\+Size} & Size in bytes of each buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+Allocates 2 host buffers which are going to be used for asynchronous communication with the G\+PU. Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{api-cuda_8c_aecd6f1d36917ef0320232d64dcdfc700}\label{api-cuda_8c_aecd6f1d36917ef0320232d64dcdfc700}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_InitPrefetcher@{FTI\_InitPrefetcher}}
+\index{FTI\_InitPrefetcher@{FTI\_InitPrefetcher}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitPrefetcher()}{FTI\_InitPrefetcher()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Prefetcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__data__prefetch}{F\+T\+I\+T\+\_\+data\+\_\+prefetch}} $\ast$}]{dfls }\end{DoxyParamCaption})}
+
+
+
+Initializes a Prefetcher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & pointer to the Prefetcher struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function initializes the streaming procedure for data in the G\+PU. If the data re in the G\+PU side it also performs the first request to the G\+PU to copy data. Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{api-cuda_8c_a6e6f5a7d5c8cb196a24781dd48e56fd7}\label{api-cuda_8c_a6e6f5a7d5c8cb196a24781dd48e56fd7}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_TransferDeviceMemToFileAsync@{FTI\_TransferDeviceMemToFileAsync}}
+\index{FTI\_TransferDeviceMemToFileAsync@{FTI\_TransferDeviceMemToFileAsync}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_TransferDeviceMemToFileAsync()}{FTI\_TransferDeviceMemToFileAsync()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Transfer\+Device\+Mem\+To\+File\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__dataset}{F\+T\+I\+T\+\_\+dataset}} $\ast$}]{F\+T\+I\+\_\+\+Data,  }\item[{\mbox{\hyperlink{api-cuda_8h_af93c5d2661f8e8cf11b38916a4893dd3}{F\+T\+I\+T\+\_\+fwritefunc}}}]{fwritefunc,  }\item[{void $\ast$}]{opaque }\end{DoxyParamCaption})}
+
+
+
+Streaming data from G\+PU to storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Data} & Pointer to the dataset to be copied. \\
+\hline
+{\em fwritefunc} & Pointer to the function that perform file writes. \\
+\hline
+{\em opaque} & Additional data to be passed to fwritefunc. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function streams (pipelines) data from the G\+PU memory to the storage. The actual writes to the storage are performed by fwritefunc. \mbox{\Hypertarget{api-cuda_8c_aa25ca3090fb1052359f6a5fa4b724082}\label{api-cuda_8c_aa25ca3090fb1052359f6a5fa4b724082}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!FTI\_TransferFileToDeviceAsync@{FTI\_TransferFileToDeviceAsync}}
+\index{FTI\_TransferFileToDeviceAsync@{FTI\_TransferFileToDeviceAsync}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_TransferFileToDeviceAsync()}{FTI\_TransferFileToDeviceAsync()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Transfer\+File\+To\+Device\+Async (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fd,  }\item[{void $\ast$}]{dptr,  }\item[{int}]{num\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Copies data from a file to the G\+PU asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & Pointer to the file \\
+\hline
+{\em dptr} & Pointer to the data \\
+\hline
+{\em num\+Bytes} & number of bytes to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+Uses 2 streams to copy data from a file to the G\+PU device memory. Here is the call graph for this function\+:
+% FIG 6
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{api-cuda_8c_a7be887a2ca0a258cf6b368d32fd87487}\label{api-cuda_8c_a7be887a2ca0a258cf6b368d32fd87487}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!bufferSize@{bufferSize}}
+\index{bufferSize@{bufferSize}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{bufferSize}{bufferSize}}
+{\footnotesize\ttfamily size\+\_\+t buffer\+Size}
+
+\mbox{\Hypertarget{api-cuda_8c_aa95ffe47f6277da792e9454674c5c23a}\label{api-cuda_8c_aa95ffe47f6277da792e9454674c5c23a}} 
+\index{api-\/cuda.c@{api-\/cuda.c}!hostBuffers@{hostBuffers}}
+\index{hostBuffers@{hostBuffers}!api-\/cuda.c@{api-\/cuda.c}}
+\doxysubsubsection{\texorpdfstring{hostBuffers}{hostBuffers}}
+{\footnotesize\ttfamily void$\ast$ host\+Buffers\mbox{[}2\mbox{]}}
+

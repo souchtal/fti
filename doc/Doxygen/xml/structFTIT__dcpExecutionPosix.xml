@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__dcpExecutionPosix" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_dcpExecutionPosix</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1a13072c6afb5b025e98db73f4e013275a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_dcpExecutionPosix::nbLayerReco</definition>
+        <argsstring></argsstring>
+        <name>nbLayerReco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="125" column="13" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1a67560eeb276a22f571f61e47517b1858" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_dcpExecutionPosix::nbVarReco</definition>
+        <argsstring></argsstring>
+        <name>nbVarReco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="126" column="13" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1ad36c5198a70a07f5444ce73b9accafc3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FTIT_dcpExecutionPosix::Counter</definition>
+        <argsstring></argsstring>
+        <name>Counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="127" column="22" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1aef8910acedc2a23ea1c88a8a891808a8" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long FTIT_dcpExecutionPosix::FileSize</definition>
+        <argsstring></argsstring>
+        <name>FileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="128" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1abcf766ef7f738705f5dac1f42aeaa0e7" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long FTIT_dcpExecutionPosix::dataSize</definition>
+        <argsstring></argsstring>
+        <name>dataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="129" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1abf959bf358b8122c0ac01aa3fa945bdc" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long FTIT_dcpExecutionPosix::dcpSize</definition>
+        <argsstring></argsstring>
+        <name>dcpSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="130" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1aafdd6f004c3e110bfda51d89dc651d7c" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long FTIT_dcpExecutionPosix::LayerSize[MAX_STACK_SIZE]</definition>
+        <argsstring>[MAX_STACK_SIZE]</argsstring>
+        <name>LayerSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="131" column="23" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1a23f59d5fce406a0f93e8f8476a24603c" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__datasetInfo" kindref="compound">FTIT_datasetInfo</ref></type>
+        <definition>FTIT_datasetInfo FTIT_dcpExecutionPosix::datasetInfo[MAX_STACK_SIZE][FTI_BUFS]</definition>
+        <argsstring>[MAX_STACK_SIZE][FTI_BUFS]</argsstring>
+        <name>datasetInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="132" column="26" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__dcpExecutionPosix_1ade63eda0939e7b4657d565ba3eed536f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FTIT_dcpExecutionPosix::LayerHash[MAX_STACK_SIZE *MD5_DIGEST_STRING_LENGTH]</definition>
+        <argsstring>[MAX_STACK_SIZE *MD5_DIGEST_STRING_LENGTH]</argsstring>
+        <name>LayerHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="133" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>FTIT_dcpExecutionPosix</label>
+        <link refid="structFTIT__dcpExecutionPosix"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>datasetInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FTIT_datasetInfo</label>
+        <link refid="structFTIT__datasetInfo"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="124" column="1" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="123" bodyend="135"/>
+    <listofallmembers>
+      <member refid="structFTIT__dcpExecutionPosix_1ad36c5198a70a07f5444ce73b9accafc3" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>Counter</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1a23f59d5fce406a0f93e8f8476a24603c" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>datasetInfo</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1abcf766ef7f738705f5dac1f42aeaa0e7" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>dataSize</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1abf959bf358b8122c0ac01aa3fa945bdc" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>dcpSize</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1aef8910acedc2a23ea1c88a8a891808a8" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>FileSize</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1ade63eda0939e7b4657d565ba3eed536f" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>LayerHash</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1aafdd6f004c3e110bfda51d89dc651d7c" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>LayerSize</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1a13072c6afb5b025e98db73f4e013275a" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>nbLayerReco</name></member>
+      <member refid="structFTIT__dcpExecutionPosix_1a67560eeb276a22f571f61e47517b1858" prot="public" virt="non-virtual"><scope>FTIT_dcpExecutionPosix</scope><name>nbVarReco</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

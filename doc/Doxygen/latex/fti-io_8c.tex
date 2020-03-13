@@ -1,0 +1,70 @@
+\hypertarget{fti-io_8c}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/fti-\/io.c File Reference}
+\label{fti-io_8c}\index{/home/bscuser/Documents/release/dev/fti/src/fti-\/io.c@{/home/bscuser/Documents/release/dev/fti/src/fti-\/io.c}}
+{\ttfamily \#include \char`\"{}interface.\+h\char`\"{}}\newline
+Include dependency graph for fti-\/io.c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{fti-io_8c_a8889373132577527f58806fc9ad1dd39}{F\+T\+I\+\_\+dummy}} (unsigned char $\ast$data, void $\ast$a)
+\begin{DoxyCompactList}\small\item\em Place holder function, it is used when the file format does not support integrity checksums. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fti-io_8c_a82389b45effbf23533c3377f24d8956c}{F\+T\+I\+\_\+\+Init\+Function\+Pointers}} (int ckpt\+IO, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec)
+\begin{DoxyCompactList}\small\item\em This function initializes the F\+T\+I\+\_\+\+IO structure with the functions that write the ckpt file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}{F\+T\+I\+T\+\_\+\+IO}} \mbox{\hyperlink{fti-io_8c_a28a33d94e22f56316d3cc558fbc22ea2}{fti\+IO}} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fti-io_8c_a8889373132577527f58806fc9ad1dd39}\label{fti-io_8c_a8889373132577527f58806fc9ad1dd39}} 
+\index{fti-\/io.c@{fti-\/io.c}!FTI\_dummy@{FTI\_dummy}}
+\index{FTI\_dummy@{FTI\_dummy}!fti-\/io.c@{fti-\/io.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_dummy()}{FTI\_dummy()}}
+{\footnotesize\ttfamily void F\+T\+I\+\_\+dummy (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{void $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Place holder function, it is used when the file format does not support integrity checksums. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Does not matter. \\
+\hline
+{\em a} & does not matter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void.
+\end{DoxyReturn}
+T\+His function is passed as a reference when different file formats do not actually compute an integrity checksum. It helps to avoid if statements in the code and provides a more stream line code format. \mbox{\Hypertarget{fti-io_8c_a82389b45effbf23533c3377f24d8956c}\label{fti-io_8c_a82389b45effbf23533c3377f24d8956c}} 
+\index{fti-\/io.c@{fti-\/io.c}!FTI\_InitFunctionPointers@{FTI\_InitFunctionPointers}}
+\index{FTI\_InitFunctionPointers@{FTI\_InitFunctionPointers}!fti-\/io.c@{fti-\/io.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_InitFunctionPointers()}{FTI\_InitFunctionPointers()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Init\+Function\+Pointers (\begin{DoxyParamCaption}\item[{int}]{ckpt\+IO,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec }\end{DoxyParamCaption})}
+
+
+
+This function initializes the F\+T\+I\+\_\+\+IO structure with the functions that write the ckpt file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ckpt\+IO} & File format selected by the user in the configuration file. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution environment of the F\+TI. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int On success F\+T\+I\+\_\+\+S\+C\+ES
+\end{DoxyReturn}
+This function actually initializes the execution paths of the write checkpoint function. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{fti-io_8c_a28a33d94e22f56316d3cc558fbc22ea2}\label{fti-io_8c_a28a33d94e22f56316d3cc558fbc22ea2}} 
+\index{fti-\/io.c@{fti-\/io.c}!ftiIO@{ftiIO}}
+\index{ftiIO@{ftiIO}!fti-\/io.c@{fti-\/io.c}}
+\doxysubsubsection{\texorpdfstring{ftiIO}{ftiIO}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fti-intern_8h_ae83015b55c5ff7c80ed77ba8a7cb6de4}{F\+T\+I\+T\+\_\+\+IO}} fti\+IO\mbox{[}4\mbox{]}}
+
+Structure that stores the function pointer wrappers to perform the IO 

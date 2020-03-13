@@ -1,0 +1,165 @@
+\hypertarget{conf_8h}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/conf.h File Reference}
+\label{conf_8h}\index{/home/bscuser/Documents/release/dev/fti/src/conf.h@{/home/bscuser/Documents/release/dev/fti/src/conf.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{conf_8h_a072119e00ecaef96e6b516174beb0321}{F\+T\+I\+\_\+\+Update\+Conf}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, int restart)
+\begin{DoxyCompactList}\small\item\em Sets the exec. ID and failure parameters in the conf. file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{conf_8h_a42e37d4585f16c3d958e7825d2d06bd2}{F\+T\+I\+\_\+\+Read\+Conf}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$F\+T\+I\+\_\+\+Ckpt, \mbox{\hyperlink{structFTIT__injection}{F\+T\+I\+T\+\_\+injection}} $\ast$F\+T\+I\+\_\+\+Inje)
+\begin{DoxyCompactList}\small\item\em It reads the configuration given in the configuration file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{conf_8h_a85fa285a8ef0f88312f482f355e0c14c}{F\+T\+I\+\_\+\+Test\+Config}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$F\+T\+I\+\_\+\+Ckpt, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec)
+\begin{DoxyCompactList}\small\item\em It tests that the configuration given is correct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{conf_8h_a1fd3729e1cd570f4b5944e334ebddce6}{F\+T\+I\+\_\+\+Test\+Directories}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo)
+\begin{DoxyCompactList}\small\item\em It tests that the directories given is correct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{conf_8h_afcc58051e6dc11db94fa1467a9ee0467}{F\+T\+I\+\_\+\+Create\+Dirs}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$F\+T\+I\+\_\+\+Ckpt)
+\begin{DoxyCompactList}\small\item\em It creates the directories required for current execution. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{conf_8h_a89e78abb2e98f65c3d65e2979550e99d}{F\+T\+I\+\_\+\+Load\+Conf}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$F\+T\+I\+\_\+\+Ckpt, \mbox{\hyperlink{structFTIT__injection}{F\+T\+I\+T\+\_\+injection}} $\ast$F\+T\+I\+\_\+\+Inje)
+\begin{DoxyCompactList}\small\item\em It reads and tests the configuration given. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{conf_8h_afcc58051e6dc11db94fa1467a9ee0467}\label{conf_8h_afcc58051e6dc11db94fa1467a9ee0467}} 
+\index{conf.h@{conf.h}!FTI\_CreateDirs@{FTI\_CreateDirs}}
+\index{FTI\_CreateDirs@{FTI\_CreateDirs}!conf.h@{conf.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_CreateDirs()}{FTI\_CreateDirs()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Create\+Dirs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$}]{F\+T\+I\+\_\+\+Ckpt }\end{DoxyParamCaption})}
+
+
+
+It creates the directories required for current execution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Ckpt} & Checkpoint metadata. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function creates the temporary metadata, local and global directories required for the current execution. \mbox{\Hypertarget{conf_8h_a89e78abb2e98f65c3d65e2979550e99d}\label{conf_8h_a89e78abb2e98f65c3d65e2979550e99d}} 
+\index{conf.h@{conf.h}!FTI\_LoadConf@{FTI\_LoadConf}}
+\index{FTI\_LoadConf@{FTI\_LoadConf}!conf.h@{conf.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_LoadConf()}{FTI\_LoadConf()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Load\+Conf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$}]{F\+T\+I\+\_\+\+Ckpt,  }\item[{\mbox{\hyperlink{structFTIT__injection}{F\+T\+I\+T\+\_\+injection}} $\ast$}]{F\+T\+I\+\_\+\+Inje }\end{DoxyParamCaption})}
+
+
+
+It reads and tests the configuration given. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Ckpt} & Checkpoint metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Inje} & Type to describe failure injections in F\+TI. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function reads the configuration file. Then test that the configuration parameters are correct (including directories). \mbox{\Hypertarget{conf_8h_a42e37d4585f16c3d958e7825d2d06bd2}\label{conf_8h_a42e37d4585f16c3d958e7825d2d06bd2}} 
+\index{conf.h@{conf.h}!FTI\_ReadConf@{FTI\_ReadConf}}
+\index{FTI\_ReadConf@{FTI\_ReadConf}!conf.h@{conf.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_ReadConf()}{FTI\_ReadConf()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Read\+Conf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$}]{F\+T\+I\+\_\+\+Ckpt,  }\item[{\mbox{\hyperlink{structFTIT__injection}{F\+T\+I\+T\+\_\+injection}} $\ast$}]{F\+T\+I\+\_\+\+Inje }\end{DoxyParamCaption})}
+
+
+
+It reads the configuration given in the configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Ckpt} & Checkpoint metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Inje} & Type to describe failure injections in F\+TI. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function reads the configuration given in the F\+TI configuration file and sets other required parameters. \mbox{\Hypertarget{conf_8h_a85fa285a8ef0f88312f482f355e0c14c}\label{conf_8h_a85fa285a8ef0f88312f482f355e0c14c}} 
+\index{conf.h@{conf.h}!FTI\_TestConfig@{FTI\_TestConfig}}
+\index{FTI\_TestConfig@{FTI\_TestConfig}!conf.h@{conf.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_TestConfig()}{FTI\_TestConfig()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Test\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$}]{F\+T\+I\+\_\+\+Ckpt,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec }\end{DoxyParamCaption})}
+
+
+
+It tests that the configuration given is correct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Ckpt} & Checkpoint metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function tests the F\+TI configuration to make sure that all parameter\textquotesingle{}s values are correct. \mbox{\Hypertarget{conf_8h_a1fd3729e1cd570f4b5944e334ebddce6}\label{conf_8h_a1fd3729e1cd570f4b5944e334ebddce6}} 
+\index{conf.h@{conf.h}!FTI\_TestDirectories@{FTI\_TestDirectories}}
+\index{FTI\_TestDirectories@{FTI\_TestDirectories}!conf.h@{conf.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_TestDirectories()}{FTI\_TestDirectories()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Test\+Directories (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo }\end{DoxyParamCaption})}
+
+
+
+It tests that the directories given is correct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function tests that the directories given in the F\+TI configuration are correct. \mbox{\Hypertarget{conf_8h_a072119e00ecaef96e6b516174beb0321}\label{conf_8h_a072119e00ecaef96e6b516174beb0321}} 
+\index{conf.h@{conf.h}!FTI\_UpdateConf@{FTI\_UpdateConf}}
+\index{FTI\_UpdateConf@{FTI\_UpdateConf}!conf.h@{conf.h}}
+\doxysubsubsection{\texorpdfstring{FTI\_UpdateConf()}{FTI\_UpdateConf()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Update\+Conf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{int}]{restart }\end{DoxyParamCaption})}
+
+
+
+Sets the exec. ID and failure parameters in the conf. file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em restart} & Value to set in the conf. file (0 or 1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function sets the execution ID and failure parameters in the configuration file. This is to avoid forcing the user to change these values manually in case of recovery needed. In this way, relaunching the execution in the same way as the initial time will make F\+TI detect that it is a restart. It also allows to set the failure parameter back to 0 at the end of a successful execution. 

@@ -1,0 +1,62 @@
+\hypertarget{example1_8c-example}{}\doxysection{example1.\+c}
+Simple example of how to use the Init Function
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} rank, nbProcs, nbLines, i, M, arg;}
+\DoxyCodeLine{    \textcolor{keywordtype}{double} wtime, *h, *g, memSize, localerror, globalerror = 1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    MPI\_Init(\&argc, \&argv);}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_abe8c2b202eaab996bbd88eea4cafe51a}{FTI\_Init}}(argv[2], MPI\_COMM\_WORLD);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    MPI\_Comm\_size(\mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&nbProcs);}
+\DoxyCodeLine{    MPI\_Comm\_rank(\mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}}, \&rank);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    arg = atoi(argv[1]);}
+\DoxyCodeLine{    M = (int)sqrt((\textcolor{keywordtype}{double})(arg * 1024.0 * 512.0 * nbProcs)/\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{    nbLines = (M / nbProcs)+3;}
+\DoxyCodeLine{    h = (\textcolor{keywordtype}{double} *) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double} *) * M * nbLines);}
+\DoxyCodeLine{    g = (\textcolor{keywordtype}{double} *) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double} *) * M * nbLines);}
+\DoxyCodeLine{    initData(nbLines, M, rank, g);}
+\DoxyCodeLine{    memSize = M * nbLines * 2 * \textcolor{keyword}{sizeof}(double) / (1024 * 1024);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank == 0) \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"Local data size is \%d x \%d = \%f MB (\%d).\(\backslash\)n"}, M, nbLines, memSize, arg);}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"Target precision : \%f \(\backslash\)n"}, PRECISION);}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"Maximum number of iterations : \%d \(\backslash\)n"}, ITER\_TIMES);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{FTI\_Protect}}(0, \&i, 1, \mbox{\hyperlink{fti_8h_ad236df2303494837c97a13741423a51b}{FTI\_INTG}});}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{FTI\_Protect}}(1, h, M*nbLines, \mbox{\hyperlink{fti_8h_aafb3604bd7ebfae406d1c419890e04d8}{FTI\_DBLE}});}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_a913b8cd6e29a152eceaeaec35e21e677}{FTI\_Protect}}(2, g, M*nbLines, \mbox{\hyperlink{fti_8h_aafb3604bd7ebfae406d1c419890e04d8}{FTI\_DBLE}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    wtime = MPI\_Wtime();}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (i = 0; i < ITER\_TIMES; i++) \{}
+\DoxyCodeLine{        \textcolor{keywordtype}{int} checkpointed = \mbox{\hyperlink{fti_8h_a6cbf6d6f6b4181e314eef599f85d6c5b}{FTI\_Snapshot}}();}
+\DoxyCodeLine{        localerror = doWork(nbProcs, rank, M, nbLines, g, h);}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (((i\%ITER\_OUT) == 0) \&\& (rank == 0)) \{}
+\DoxyCodeLine{            printf(\textcolor{stringliteral}{"Step : \%d, error = \%f\(\backslash\)n"}, i, globalerror);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} ((i\%REDUCE) == 0) \{}
+\DoxyCodeLine{            MPI\_Allreduce(\&localerror, \&globalerror, 1, MPI\_DOUBLE, MPI\_MAX, \mbox{\hyperlink{fti_8h_a7deaa5171fbf22fe59ae1c08f2bdcc97}{FTI\_COMM\_WORLD}});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if}(globalerror < PRECISION) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{break};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rank == 0) \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"Execution finished in \%lf seconds.\(\backslash\)n"}, MPI\_Wtime() -\/ wtime);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    free(h);}
+\DoxyCodeLine{    free(g);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{fti_8h_aa58102aa8540ed35f2efba23cf2dc19b}{FTI\_Finalize}}();}
+\DoxyCodeLine{    MPI\_Finalize();}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCodeInclude}
+ 

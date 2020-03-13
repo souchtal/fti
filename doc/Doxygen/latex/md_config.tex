@@ -1,0 +1,171 @@
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\#\#\#\#\#\#\#\#\#\#\#\#\#   FTI CONFIGURATION FILE   \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{\# *** Here are the main parameters you should provide to FTI ******}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{[Basic]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Set to 1 if you want to dedicate 1 MPI rank per node to FTI}
+\DoxyCodeLine{\# set to 0 if you want ALL ckpt. post-\/processing to be done inline}
+\DoxyCodeLine{Head = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# The number of processes launched per node (Same for every node)}
+\DoxyCodeLine{\# including FTI-\/dedicated process.}
+\DoxyCodeLine{Node\_size = 2}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# LOCAL directory where the local checkpoints will be stored}
+\DoxyCodeLine{\# This directory MUST exist and have write access}
+\DoxyCodeLine{Ckpt\_dir = ./Local  \#/path/to/local/storage/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# GLOBAL directory where the global checkpoints will be stored}
+\DoxyCodeLine{\# This directory MUST exist and have write access}
+\DoxyCodeLine{Glbl\_dir = ./Global     \#/path/to/global/storage/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# GLOBAL directory where the FTI metadata will be stored}
+\DoxyCodeLine{\# This directory MUST exist and have write access}
+\DoxyCodeLine{Meta\_dir = ./Meta   \#/home/username/.fti}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Level 1 ckpt interval in minutes of L1 ckpts (Local write)}
+\DoxyCodeLine{Ckpt\_L1 = 3}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Level 2 ckpt interval in minutes of L2 ckpts (Partner copy)}
+\DoxyCodeLine{Ckpt\_L2 = 5}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Level 3 ckpt interval in minutes of L3 ckpts (Reed-\/Solomon)}
+\DoxyCodeLine{Ckpt\_L3 = 7}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Level 4 ckpt interval in minutes of L4 ckpts (PFS write)}
+\DoxyCodeLine{Ckpt\_L4 = 11}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# dCP interval in minutes for level 4 checkpoints}
+\DoxyCodeLine{\# dCP -\/ differential checkpointing}
+\DoxyCodeLine{\# This setting requires io\_mode=3 (FTI-\/FF) and dcp\_enabled=1}
+\DoxyCodeLine{Dcp\_L4 = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 1 if Level 2 ckpt is inline (synchronous) 0 if not (asynchronous)}
+\DoxyCodeLine{Inline\_L2 = 1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 1 if Level 3 ckpt is inline (synchronous) 0 if not (asynchronous)}
+\DoxyCodeLine{Inline\_L3 = 1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 1 if Level 4 ckpt is inline (synchronous) 0 if not (asynchronous)}
+\DoxyCodeLine{Inline\_L4 = 1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Set to 1 if you want to save the last checkpoint taken before finalize}
+\DoxyCodeLine{\# Set to 0 if you want to erase all checkpoints after finalize}
+\DoxyCodeLine{keep\_last\_ckpt = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Enabled, all level 4 checkpoints of the execution will be kept in 'Glbl\_dir/l4\_archive'}
+\DoxyCodeLine{keep\_l4\_ckpt   = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# The size of the encoding groups (Something between 4 and 16)}
+\DoxyCodeLine{\# The total number of nodes MUST be multiple of this parameter}
+\DoxyCodeLine{Group\_size = 4}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Number of iterations between iteration length sync (0 => 512 iterations)}
+\DoxyCodeLine{\# If you app has iterations of varying length set this value between (1 and 10)}
+\DoxyCodeLine{max\_sync\_intv               = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Set to: }
+\DoxyCodeLine{\# 1 -\/> POSIX }
+\DoxyCodeLine{\# 2 -\/> MPI-\/IO}
+\DoxyCodeLine{\# 3 -\/> FTI-\/FF}
+\DoxyCodeLine{\# 4 -\/> SIONLib}
+\DoxyCodeLine{\# 5 -\/> HDF5.}
+\DoxyCodeLine{ckpt\_io                     = 1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Enable staging feature}
+\DoxyCodeLine{Enable\_Staging              = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Enable differential checkpointing (dCP)}
+\DoxyCodeLine{Enable\_dCP                  = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Select dCP hashing algorithm:}
+\DoxyCodeLine{\# 1 -\/> MD5}
+\DoxyCodeLine{\# 2 -\/> CRC32}
+\DoxyCodeLine{\# The modes may be set as well by the environment variable 'FTI\_DCP\_HASH\_MODE=[0|1]'}
+\DoxyCodeLine{\# This will overwrite the setting from the configuration file!}
+\DoxyCodeLine{dCP\_Mode                    = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Set hash-\/partition block size}
+\DoxyCodeLine{\# The partition block size, b,  must be: 512 < b < USHRT\_MAX (Bytes)}
+\DoxyCodeLine{\# b may be set as well by the environment variable 'FTI\_DCP\_BLOCK\_SIZE=b (in bytes)'}
+\DoxyCodeLine{\# This will overwrite the setting from the configuration file!}
+\DoxyCodeLine{dCP\_Block\_Size              = 16384}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# The verbosity of FTI. (2 is recommended)}
+\DoxyCodeLine{\# 3 (Print only errors, silent mode)}
+\DoxyCodeLine{\# 2 (Print errors and some few important information)}
+\DoxyCodeLine{\# 1 (Print debug messages, very verbose)}
+\DoxyCodeLine{Verbosity = 2}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{\# *** Change these parameters ONLY in case of restart   ***********}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Restart]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Set this to 0 if you are launching this job for the first time}
+\DoxyCodeLine{\# Set this to 1 if you are recovering this job after a failure}
+\DoxyCodeLine{Failure = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Set with the execution ID in case of restart after failure}
+\DoxyCodeLine{\# Set to NULL if normal execution}
+\DoxyCodeLine{Exec\_ID = XXXX-\/XX-\/XX\_XX-\/XX-\/XX}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{\# *** Change these parameters to inject failures.       ***********}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Injection]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Rank of the process that injects the failures}
+\DoxyCodeLine{rank = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Total number of bit-\/flips to inject}
+\DoxyCodeLine{number = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Bit position of the injection}
+\DoxyCodeLine{position = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Injection frequency in seconds}
+\DoxyCodeLine{frequency = 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{\# *** Change something here ONLY if you know what you are doing ***}
+\DoxyCodeLine{\# *****************************************************************}
+\DoxyCodeLine{[Advanced]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# The ckpt files are decomposed in blocks of size Block\_size KB}
+\DoxyCodeLine{Block\_size = 1024}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# The ckpt files are transfered in chunks of size Transfer\_size MB}
+\DoxyCodeLine{\# from local to PFS}
+\DoxyCodeLine{Transfer\_size = 16}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# The tags for MPI communications done within the FTI library}
+\DoxyCodeLine{general\_tag = 2612}
+\DoxyCodeLine{ckpt\_tag = 711   }
+\DoxyCodeLine{stage\_tag = 406}
+\DoxyCodeLine{final\_tag = 3107}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Set to 1 if you are doing a test in local in a single computer}
+\DoxyCodeLine{Local\_test = 1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#This option only impacts if -\/DENABLE\_LUSTRE was added to the Cmake command.}
+\DoxyCodeLine{\#It sets the striping unit for the MPI-\/IO file.}
+\DoxyCodeLine{lustre\_striping\_unit        = 4194304}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#This option only impacts if -\/DENABLE\_LUSTRE was added to the Cmake command.}
+\DoxyCodeLine{\#It sets the striping factor for the MPI-\/IO file.}
+\DoxyCodeLine{lustre\_striping\_factor      = -\/1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#This option only impacts if -\/DENABLE\_LUSTRE was added to the Cmake command.}
+\DoxyCodeLine{\#It sets the striping offset for the MPI-\/IO file.}
+\DoxyCodeLine{lustre\_striping\_offset      = -\/1}
+\end{DoxyCode}
+ 

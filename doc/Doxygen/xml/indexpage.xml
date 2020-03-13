@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Fault Tolerance Interface</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md__home_bscuser_Documents_release_dev_fti_README"/><ulink url="https://fti.readthedocs.io/en/latest/?badge=latest"><image type="html" name="https://readthedocs.org/projects/fti/badge/?version=latest" inline="yes"></image>
+ </ulink></para>
+<sect1 id="index_1autotoc_md0">
+<title>What is FTI?</title>
+<para>FTI stands for Fault Tolerance Interface and is a library that aims to give computational scientists the means to perform fast and efficient multilevel checkpointing in large scale supercomputers. FTI leverages local storage plus data replication and erasure codes to provide several levels of reliability and performance. FTI is application-level checkpointing and allows users to select which datasets needs to be protected, in order to improve efficiency and avoid wasting space, time and energy. In addition, it offers a direct data interface so that users do not need to deal with files and/or directory names. All metadata is managed by FTI in a transparent fashion for the user. If desired, users can dedicate one process per node to overlap fault tolerance workload and scientific computation, so that post-checkpoint tasks are executed asynchronously.</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Download, compile and install FTI (as easy as 1,2,3)</title>
+<para>1) git clone <ulink url="https://github.com/leobago/fti.git">https://github.com/leobago/fti.git</ulink> 2) mkdir fti/build &amp;&amp; cd fti/build 3) cmake -DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti .. &amp;&amp; make all install</para>
+<para><blockquote><para><bold>REMARK 1</bold> (Intel and GCC) For the case that both, <bold>Intel and GCC</bold>, compilers are installed, please configure using: <computeroutput>cmake -C ../intel.cmake -DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti ..</computeroutput> </para>
+</blockquote></para>
+<para><blockquote><para><bold>REMARK 2</bold> (OpenSSL) To use the built-in MD5 rather than OpenSSL, please configure using: <computeroutput>cmake -DNO_OPENSSL=true -DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti ..</computeroutput> </para>
+</blockquote></para>
+<para><blockquote><para><bold>REMARK 3</bold> (GNU versions) The usage of different GNU compiler versions for C and Fortran leads currently to an undefined behavior. Please make sure the compiler identification for C and Fortran is the same. </para>
+</blockquote></para>
+<para><blockquote><para><bold>REMARK 4</bold> (Cray System) FTI works on Cray system with these modules GNU environment: <computeroutput>module load gcc/5.3.0 CMake/3.6.2 craype/2.5.8 cray-mpich/7.5.0 PrgEnv-gnu/6.0.3</computeroutput> <computeroutput>export CRAY_CPU_TARGET=x86-64</computeroutput> <computeroutput>export CRAYPE_LINK_TYPE=dynamic</computeroutput> Flag for CMake: <computeroutput>-CMAKE_SYSTEM_NAME=CrayLinuxEnvironment</computeroutput></para>
+<para>Intel environment: <computeroutput>module load intel/17.0.1.132 CMake/3.6.2 craype/2.5.8 cray-mpich/7.5.0 PrgEnv-intel/6.0.3</computeroutput> <computeroutput>export CRAY_CPU_TARGET=x86-64</computeroutput> <computeroutput>export CRAYPE_LINK_TYPE=dynamic</computeroutput> Flag for CMake: <computeroutput>-CMAKE_SYSTEM_NAME=CrayLinuxEnvironment</computeroutput></para>
+<para>The most important is CMake version: the newer the better. </para>
+</blockquote></para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>Configure and run a FTI example</title>
+<para>The &quot;build/examples&quot; directory contains heat distribution simulations as simple examples in both, C and Fortran. Usage instructions in file &quot;examples/README&quot;.</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>User manual</title>
+<para>In folder &quot;doc/manual&quot; you will find a user manual, which contains the API description and code snippets for the implementation of FTI as checkpoint I/O.</para>
+<para>To generate the documentation wit Doxygen, configure with <computeroutput>-DENABLE_DOCU=ON</computeroutput> and execute in the build directory: <programlisting><codeline><highlight class="normal">make<sp/>doc</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md8">
+<title>Acknowledgement (send us a postal card! \(^-^)/)</title>
+<para>If you use FTI please consider sending us an email to let us know what you liked and what could be improved ( :email: leonardo (dot) bautista (at) bsc (dot) es), your feedback is important.</para>
+<para>If you use FTI for any research work, please make sure to acknowledge our paper: Bautista-Gomez, Leonardo, et al. <emphasis><bold>&quot;FTI: high performance fault tolerance interface
+for hybrid systems.&quot;</bold></emphasis> Proceedings of 2011 international conference for high performance computing, networking, storage and analysis. ACM, 2011.</para>
+<para>This work has been supported by EU H2020 ICT project LEGaTO, contract #780681.</para>
+<para>Finally, don&apos;t hesitate to send us a postal card to : Dr. Leonardo Bautista-Gomez (Leo) Barcelona Supercomputing Center Carrer de Jordi Girona, 29-31, 08034 Barcelona, SPAIN. Phone :telephone_receiver: : +34 934 13 77 16 </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,122 @@
+\hypertarget{recover_8c}{}\doxysection{/home/bscuser/\+Documents/release/dev/fti/src/recover.c File Reference}
+\label{recover_8c}\index{/home/bscuser/Documents/release/dev/fti/src/recover.c@{/home/bscuser/Documents/release/dev/fti/src/recover.c}}
+
+
+Recovery functions for the F\+TI library.  
+
+
+{\ttfamily \#include \char`\"{}interface.\+h\char`\"{}}\newline
+Include dependency graph for recover.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{recover_8c_a29f1aae84d9ec782867b16905241e531}{F\+T\+I\+\_\+\+Check\+File}} (char $\ast$fn, long fs, char $\ast$checksum)
+\begin{DoxyCompactList}\small\item\em It checks if a file exist and that its size is \textquotesingle{}correct\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{recover_8c_a0d67927230e5cfb7848475129aa3b97c}{F\+T\+I\+\_\+\+Check\+Erasures}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$F\+T\+I\+\_\+\+Ckpt, int $\ast$erased)
+\begin{DoxyCompactList}\small\item\em It detects all the erasures for a particular level. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{recover_8c_aa5ca92e3168d5b1ee7830507f8847dec}{F\+T\+I\+\_\+\+Recover\+Files}} (\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$F\+T\+I\+\_\+\+Conf, \mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$F\+T\+I\+\_\+\+Exec, \mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$F\+T\+I\+\_\+\+Topo, \mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$F\+T\+I\+\_\+\+Ckpt)
+\begin{DoxyCompactList}\small\item\em It decides wich action take depending on the restart level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Recovery functions for the F\+TI library. 
+
+Copyright (c) 2017 Leonardo A. Bautista-\/\+Gomez All rights reserved
+
+F\+TI -\/ A multi-\/level checkpointing library for C/\+C++/\+Fortran applications
+
+Revision 1.\+0 \+: Fault Tolerance Interface (F\+TI)
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+\begin{DoxyDate}{Date}
+October, 2017 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{recover_8c_a0d67927230e5cfb7848475129aa3b97c}\label{recover_8c_a0d67927230e5cfb7848475129aa3b97c}} 
+\index{recover.c@{recover.c}!FTI\_CheckErasures@{FTI\_CheckErasures}}
+\index{FTI\_CheckErasures@{FTI\_CheckErasures}!recover.c@{recover.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_CheckErasures()}{FTI\_CheckErasures()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Check\+Erasures (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$}]{F\+T\+I\+\_\+\+Ckpt,  }\item[{int $\ast$}]{erased }\end{DoxyParamCaption})}
+
+
+
+It detects all the erasures for a particular level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Ckpt} & Checkpoint metadata. \\
+\hline
+{\em erased} & The array of erasures to fill. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function detects all the erasures for L1, L2 and L3. It return the results in the erased array. The search for erasures is done at the three levels independently on the current recovery level. \mbox{\Hypertarget{recover_8c_a29f1aae84d9ec782867b16905241e531}\label{recover_8c_a29f1aae84d9ec782867b16905241e531}} 
+\index{recover.c@{recover.c}!FTI\_CheckFile@{FTI\_CheckFile}}
+\index{FTI\_CheckFile@{FTI\_CheckFile}!recover.c@{recover.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_CheckFile()}{FTI\_CheckFile()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Check\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{fn,  }\item[{long}]{fs,  }\item[{char $\ast$}]{checksum }\end{DoxyParamCaption})}
+
+
+
+It checks if a file exist and that its size is \textquotesingle{}correct\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & The ckpt. file name to check. \\
+\hline
+{\em fs} & The ckpt. file size to check. \\
+\hline
+{\em checksum} & The file checksum to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if file exists, 1 if not or wrong size.
+\end{DoxyReturn}
+This function checks whether a file exist or not and if its size is the expected one. Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{recover_8c_aa5ca92e3168d5b1ee7830507f8847dec}\label{recover_8c_aa5ca92e3168d5b1ee7830507f8847dec}} 
+\index{recover.c@{recover.c}!FTI\_RecoverFiles@{FTI\_RecoverFiles}}
+\index{FTI\_RecoverFiles@{FTI\_RecoverFiles}!recover.c@{recover.c}}
+\doxysubsubsection{\texorpdfstring{FTI\_RecoverFiles()}{FTI\_RecoverFiles()}}
+{\footnotesize\ttfamily int F\+T\+I\+\_\+\+Recover\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFTIT__configuration}{F\+T\+I\+T\+\_\+configuration}} $\ast$}]{F\+T\+I\+\_\+\+Conf,  }\item[{\mbox{\hyperlink{structFTIT__execution}{F\+T\+I\+T\+\_\+execution}} $\ast$}]{F\+T\+I\+\_\+\+Exec,  }\item[{\mbox{\hyperlink{structFTIT__topology}{F\+T\+I\+T\+\_\+topology}} $\ast$}]{F\+T\+I\+\_\+\+Topo,  }\item[{\mbox{\hyperlink{structFTIT__checkpoint}{F\+T\+I\+T\+\_\+checkpoint}} $\ast$}]{F\+T\+I\+\_\+\+Ckpt }\end{DoxyParamCaption})}
+
+
+
+It decides wich action take depending on the restart level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+T\+I\+\_\+\+Conf} & Configuration metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Exec} & Execution metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Topo} & Topology metadata. \\
+\hline
+{\em F\+T\+I\+\_\+\+Ckpt} & Checkpoint metadata. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer F\+T\+I\+\_\+\+S\+C\+ES if successful.
+\end{DoxyReturn}
+This function launches the required action depending on the recovery level. The recovery level is detected from the checkpoint ID of the last checkpoint taken. 

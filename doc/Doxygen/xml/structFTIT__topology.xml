@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__topology" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_topology</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__topology_1a1ea262b4b51c8134cc3fec8fda8b1836" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::nbProc</definition>
+        <argsstring></argsstring>
+        <name>nbProc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total global number of proc. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="506" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ae95183051d84d1ee105771251c27d0b6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::nbNodes</definition>
+        <argsstring></argsstring>
+        <name>nbNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total global number of nodes. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="507" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1afd9e834e60e98abbce232192a38a7d58" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::myRank</definition>
+        <argsstring></argsstring>
+        <name>myRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>My rank on the global comm. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="508" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="508" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1a3d4083051c43d031972d83cffb242a38" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::splitRank</definition>
+        <argsstring></argsstring>
+        <name>splitRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>My rank on the FTI comm. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="509" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ab25ad2efd2edfe685bf3a5c8db4a4275" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::nodeSize</definition>
+        <argsstring></argsstring>
+        <name>nodeSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total number of pro. per node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="510" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="510" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ae6c9d66ebe7506e56262bfdd65628ac8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::nbHeads</definition>
+        <argsstring></argsstring>
+        <name>nbHeads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of FTI proc. per node. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="511" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ab2b0c3441e7d43d243de5fefb4d8bf5d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::nbApprocs</definition>
+        <argsstring></argsstring>
+        <name>nbApprocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of app. proc. per node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="512" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1a3b3935614c24137493f43615cd8b4f8b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::groupSize</definition>
+        <argsstring></argsstring>
+        <name>groupSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Group size for L2 and L3. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="513" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="513" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1aac0b7bf67b26177e8fa451715e8c1627" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::sectorID</definition>
+        <argsstring></argsstring>
+        <name>sectorID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sector ID in the system. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="514" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="514" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1a1609f0606f6b7957f1e1b321e2fdb5af" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::nodeID</definition>
+        <argsstring></argsstring>
+        <name>nodeID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Node ID in the system. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="515" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1aac2b0e68e669ae2b5f93cfdc2b938d5a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::groupID</definition>
+        <argsstring></argsstring>
+        <name>groupID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Group ID in the node. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="516" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ad44da908f25f84e0dc29086b77b37d8d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::amIaHead</definition>
+        <argsstring></argsstring>
+        <name>amIaHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TRUE if FTI process. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="517" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ad6b000c681a3230febbc5829c6ad9247" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::headRank</definition>
+        <argsstring></argsstring>
+        <name>headRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rank of the head in this node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="518" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1a01a744b0c9a84006be57cbca1f76abf5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::headRankNode</definition>
+        <argsstring></argsstring>
+        <name>headRankNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rank of the head in node comm. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="519" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="519" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1a39761a9bc4ad6d0ca46b7ca82593c175" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::nodeRank</definition>
+        <argsstring></argsstring>
+        <name>nodeRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rank of the node. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="520" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="520" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ae8e3386463c1ce97ca24713c7d47b9b4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::groupRank</definition>
+        <argsstring></argsstring>
+        <name>groupRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>My rank in the group comm. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="521" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="521" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1ab7e5bb797fc3a2066f0db3b3e3e3297c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Proc. on the right of the ring. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="522" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="522" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1afabfbf43460d6493b05efe06d80572d8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Proc. on the left of the ring. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="523" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="523" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__topology_1a2f5a76c767d70a27b5741fd08582c839" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_topology::body[FTI_BUFS]</definition>
+        <argsstring>[FTI_BUFS]</argsstring>
+        <name>body</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of app. proc. in the node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="524" column="25" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="524" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="505" column="32" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="505" bodyend="525"/>
+    <listofallmembers>
+      <member refid="structFTIT__topology_1ad44da908f25f84e0dc29086b77b37d8d" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>amIaHead</name></member>
+      <member refid="structFTIT__topology_1a2f5a76c767d70a27b5741fd08582c839" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>body</name></member>
+      <member refid="structFTIT__topology_1aac2b0e68e669ae2b5f93cfdc2b938d5a" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>groupID</name></member>
+      <member refid="structFTIT__topology_1ae8e3386463c1ce97ca24713c7d47b9b4" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>groupRank</name></member>
+      <member refid="structFTIT__topology_1a3b3935614c24137493f43615cd8b4f8b" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>groupSize</name></member>
+      <member refid="structFTIT__topology_1ad6b000c681a3230febbc5829c6ad9247" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>headRank</name></member>
+      <member refid="structFTIT__topology_1a01a744b0c9a84006be57cbca1f76abf5" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>headRankNode</name></member>
+      <member refid="structFTIT__topology_1afabfbf43460d6493b05efe06d80572d8" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>left</name></member>
+      <member refid="structFTIT__topology_1afd9e834e60e98abbce232192a38a7d58" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>myRank</name></member>
+      <member refid="structFTIT__topology_1ab2b0c3441e7d43d243de5fefb4d8bf5d" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>nbApprocs</name></member>
+      <member refid="structFTIT__topology_1ae6c9d66ebe7506e56262bfdd65628ac8" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>nbHeads</name></member>
+      <member refid="structFTIT__topology_1ae95183051d84d1ee105771251c27d0b6" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>nbNodes</name></member>
+      <member refid="structFTIT__topology_1a1ea262b4b51c8134cc3fec8fda8b1836" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>nbProc</name></member>
+      <member refid="structFTIT__topology_1a1609f0606f6b7957f1e1b321e2fdb5af" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>nodeID</name></member>
+      <member refid="structFTIT__topology_1a39761a9bc4ad6d0ca46b7ca82593c175" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>nodeRank</name></member>
+      <member refid="structFTIT__topology_1ab25ad2efd2edfe685bf3a5c8db4a4275" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>nodeSize</name></member>
+      <member refid="structFTIT__topology_1ab7e5bb797fc3a2066f0db3b3e3e3297c" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>right</name></member>
+      <member refid="structFTIT__topology_1aac0b7bf67b26177e8fa451715e8c1627" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>sectorID</name></member>
+      <member refid="structFTIT__topology_1a3d4083051c43d031972d83cffb242a38" prot="public" virt="non-virtual"><scope>FTIT_topology</scope><name>splitRank</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

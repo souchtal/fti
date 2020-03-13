@@ -1,0 +1,2223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="fti_8h" kind="file" language="C++">
+    <compoundname>fti.h</compoundname>
+    <includes refid="fti-intern_8h" local="yes">fti-intern.h</includes>
+    <includedby refid="interface_8h" local="yes">/home/bscuser/Documents/release/dev/fti/src/interface.h</includedby>
+    <includedby refid="fti-io_8h" local="yes">/home/bscuser/Documents/release/dev/fti/src/fti-io.h</includedby>
+    <includedby refid="utility_8h" local="no">/home/bscuser/Documents/release/dev/fti/src/utility.h</includedby>
+    <includedby refid="failure-injection_8h" local="no">/home/bscuser/Documents/release/dev/fti/src/failure-injection.h</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/include/fti.h</label>
+        <link refid="fti_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdarg.h</label>
+      </node>
+      <node id="9">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="10">
+        <label>unistd.h</label>
+      </node>
+      <node id="2">
+        <label>fti-intern.h</label>
+        <link refid="fti-intern_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>mpi.h</label>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/bscuser/Documents/release/dev/fti/include/fti.h</label>
+        <link refid="fti_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.c</label>
+        <link refid="failure-injection_8c"/>
+      </node>
+      <node id="23">
+        <label>/home/bscuser/Documents/release/dev/fti/src/failure-injection.h</label>
+        <link refid="failure-injection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postreco.c</label>
+        <link refid="postreco_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/bscuser/Documents/release/dev/fti/src/interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/bscuser/Documents/release/dev/fti/src/icp.c</label>
+        <link refid="icp_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/bscuser/Documents/release/dev/fti/src/conf.c</label>
+        <link refid="conf_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/bscuser/Documents/release/dev/fti/src/postckpt.c</label>
+        <link refid="postckpt_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api.c</label>
+        <link refid="api_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/bscuser/Documents/release/dev/fti/src/meta.c</label>
+        <link refid="meta_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/bscuser/Documents/release/dev/fti/src/checkpoint.c</label>
+        <link refid="checkpoint_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/bscuser/Documents/release/dev/fti/src/dcp.c</label>
+        <link refid="dcp_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/bscuser/Documents/release/dev/fti/src/recover.c</label>
+        <link refid="recover_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/bscuser/Documents/release/dev/fti/src/utility.c</label>
+        <link refid="utility_8c"/>
+      </node>
+      <node id="22">
+        <label>/home/bscuser/Documents/release/dev/fti/src/utility.h</label>
+        <link refid="utility_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/bscuser/Documents/release/dev/fti/src/tools.c</label>
+        <link refid="tools_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/bscuser/Documents/release/dev/fti/src/stage.c</label>
+        <link refid="stage_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/bscuser/Documents/release/dev/fti/src/fti-io.c</label>
+        <link refid="fti-io_8c"/>
+      </node>
+      <node id="21">
+        <label>/home/bscuser/Documents/release/dev/fti/src/fti-io.h</label>
+        <link refid="fti-io_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/bscuser/Documents/release/dev/fti/src/macros.c</label>
+        <link refid="macros_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/bscuser/Documents/release/dev/fti/src/topo.c</label>
+        <link refid="topo_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.c</label>
+        <link refid="api-cuda_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/bscuser/Documents/release/dev/fti/src/api-cuda.h</label>
+        <link refid="api-cuda_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" prot="public" static="no">
+        <name>FTI_BUFS</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Standard size of buffer and max node size. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="12" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1af166ab9ab3e6ba0039316c9fdffc5e11" prot="public" static="no">
+        <name>FTI_WORD</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Word size used during RS encoding. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="14" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a7dee5a1994faa8e4a2664942d4d8c024" prot="public" static="no">
+        <name>FTI_DONE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Token returned when FTI performs a checkpoint. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="16" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" prot="public" static="no">
+        <name>FTI_SCES</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Token returned if a FTI function succeeds. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="18" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" prot="public" static="no">
+        <name>FTI_NSCS</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Token returned if a FTI function fails. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="20" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1ac879dcdb853f4b5993ceed9fb1d06e88" prot="public" static="no">
+        <name>FTI_NREC</name>
+        <initializer>-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Token returned if recovery fails. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="22" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a13af42079571ed8dd290fad82fd11c2d" prot="public" static="no">
+        <name>FTI_HEAD</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Token that indicates a head process in user space <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="24" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a8b63f0cd5d9aa9417c3d3ec5a703ca1b" prot="public" static="no">
+        <name>FTI_SI_FAIL</name>
+        <initializer>0x4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status &apos;failed&apos; for stage requests <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="27" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a93cefc8dced9cb5c63c45708ef89694b" prot="public" static="no">
+        <name>FTI_SI_SCES</name>
+        <initializer>0x3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status &apos;succeed&apos; for stage requests <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="29" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a1685329d73a38dd15caa9a9b5ffef36f" prot="public" static="no">
+        <name>FTI_SI_ACTV</name>
+        <initializer>0x2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status &apos;active&apos; for stage requests <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="31" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a4eb6ff54cf8f3c3149d42da30d23c498" prot="public" static="no">
+        <name>FTI_SI_PEND</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status &apos;pending&apos; for stage requests <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="33" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fti_8h_1a26fc9f53bb9fcbbf144da0488e217172" prot="public" static="no">
+        <name>FTI_SI_NINI</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status &apos;not initialized&apos; for stage requests <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="35" column="9" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" prot="public" static="no" mutable="no">
+        <type>MPI_Comm</type>
+        <definition>MPI_Comm FTI_COMM_WORLD</definition>
+        <argsstring></argsstring>
+        <name>FTI_COMM_WORLD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MPI communicator that splits the global one into app and FTI appart. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="48" column="19" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="66" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="48" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1af384b54744550e2300db530ef46f7e77" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_CHAR</definition>
+        <argsstring></argsstring>
+        <name>FTI_CHAR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for chars. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="51" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="69" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="51" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1a7f97366acb17493ec718fb6086f1ac3c" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_SHRT</definition>
+        <argsstring></argsstring>
+        <name>FTI_SHRT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for short integers. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="53" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="71" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="53" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1ad236df2303494837c97a13741423a51b" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_INTG</definition>
+        <argsstring></argsstring>
+        <name>FTI_INTG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for integers. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="55" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="73" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="55" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1a29acf773174ad269577b5c771521694a" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_LONG</definition>
+        <argsstring></argsstring>
+        <name>FTI_LONG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for long integers. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="57" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="75" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="57" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1a2a1ee34ef81027534671ee3145a89213" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_UCHR</definition>
+        <argsstring></argsstring>
+        <name>FTI_UCHR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for unsigned chars. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="59" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="77" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="59" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1ad00601a105ae08e82837c629b8e55612" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_USHT</definition>
+        <argsstring></argsstring>
+        <name>FTI_USHT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for unsigned short integers. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="61" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="79" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="61" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1a1e77437528f3df560360e0626b9a3b89" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_UINT</definition>
+        <argsstring></argsstring>
+        <name>FTI_UINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for unsigned integers. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="63" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="81" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="63" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1afdc10ccdf5f020d7b0306ecce07f52c1" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_ULNG</definition>
+        <argsstring></argsstring>
+        <name>FTI_ULNG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for unsigned long integers. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="65" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="83" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="65" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1a39b15455ede057260e435cf49bc3ee6d" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_SFLT</definition>
+        <argsstring></argsstring>
+        <name>FTI_SFLT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for single floating point. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="67" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="85" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="67" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1aafb3604bd7ebfae406d1c419890e04d8" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_DBLE</definition>
+        <argsstring></argsstring>
+        <name>FTI_DBLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for double floating point. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="69" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="87" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="69" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="fti_8h_1acd10e7ef980b4ed3d775bb499cfac8ba" prot="public" static="no" mutable="no">
+        <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+        <definition>FTIT_type FTI_LDBE</definition>
+        <argsstring></argsstring>
+        <name>FTI_LDBE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTI data type for long doble floating point. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="71" column="20" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="89" bodyend="-1" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="71" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fti_8h_1abe8c2b202eaab996bbd88eea4cafe51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Init</definition>
+        <argsstring>(const char *configFile, MPI_Comm globalComm)</argsstring>
+        <name>FTI_Init</name>
+        <param>
+          <type>const char *</type>
+          <declname>configFile</declname>
+        </param>
+        <param>
+          <type>MPI_Comm</type>
+          <declname>globalComm</declname>
+        </param>
+        <briefdescription>
+<para>Initializes FTI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FTI configuration file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>globalComm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Main MPI communicator of the application. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function initializes the FTI context and prepares the heads to wait for checkpoints. FTI processes should never get out of this function. In case of a restart, checkpoint files should be recovered and in place at the end of this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="77" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="107" bodyend="210" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="77" declcolumn="7"/>
+        <references refid="tools_8c_1ad95399f229aa8c9ae4aef2574d732f7d" compoundref="tools_8c" startline="88" endline="236">FTI_InitExecVars</references>
+        <references refid="failure-injection_8c_1a7acbcfc49eb071c72fcd452dbf00c197" compoundref="failure-injection_8c" startline="16" endline="31">FTI_InitFIIO</references>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a5222b52e6f1d6b737f4ec1b173f362f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Status</definition>
+        <argsstring>()</argsstring>
+        <name>FTI_Status</name>
+        <briefdescription>
+<para>It returns the current status of the recovery flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>integer FTI_Exec.reco.</para>
+</simplesect>
+This function returns the current status of the recovery flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="78" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="224" bodyend="227" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="78" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a725ffe84dd16beb533e7b4b74fa4e9c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitType</definition>
+        <argsstring>(FTIT_type *type, int size)</argsstring>
+        <name>FTI_InitType</name>
+        <param>
+          <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref> *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>It initializes a data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data type to be intialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data type to be intialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function initalizes a data type. The only information needed is the size of the data type, the rest is black box for FTI. Types saved as byte array in case of HDF5 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="79" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="242" bodyend="287" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="79" declcolumn="7"/>
+        <references refid="structFTIT__type_1a75237aa3e6824b450ee623bffb36608a" compoundref="fti-intern_8h" startline="349">FTIT_type::id</references>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a7fab7e8f18c24f415dc658714c27c669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitComplexType</definition>
+        <argsstring>(FTIT_type *newType, FTIT_complexType *typeDefinition, int length, size_t size, char *name, FTIT_H5Group *h5group)</argsstring>
+        <name>FTI_InitComplexType</name>
+        <param>
+          <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref> *</type>
+          <declname>newType</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__complexType" kindref="compound">FTIT_complexType</ref> *</type>
+          <declname>typeDefinition</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref> *</type>
+          <declname>h5group</declname>
+        </param>
+        <briefdescription>
+<para>It initializes a complex data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data type to be intialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>typeDefinition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure definition of the new type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of fields in structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h5group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Group of the type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function initalizes a simple data type. New type can only consists fields of flat FTI types (no arrays). Type definition must include:<itemizedlist>
+<listitem><para>length =&gt; number of fields in the new type</para>
+</listitem><listitem><para>field[].type =&gt; types of the field in the new type</para>
+</listitem><listitem><para>field[].name =&gt; name of the field in the new type</para>
+</listitem><listitem><para>field[].rank =&gt; number of dimentions of the field</para>
+</listitem><listitem><para>field[].dimLength[] =&gt; length of each dimention of the field </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="80" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="310" bodyend="373" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="80" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a990302331eacb14390ce4feae438405f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FTI_AddSimpleField</definition>
+        <argsstring>(FTIT_complexType *typeDefinition, FTIT_type *ftiType, size_t offset, int id, char *name)</argsstring>
+        <name>FTI_AddSimpleField</name>
+        <param>
+          <type><ref refid="structFTIT__complexType" kindref="compound">FTIT_complexType</ref> *</type>
+          <declname>typeDefinition</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref> *</type>
+          <declname>ftiType</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>It adds a simple field in complex data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeDefinition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure definition of the complex data type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ftiType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the field </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset of the field (use offsetof) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the field (start with 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the field (put NULL if want default) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function adds a field to the complex datatype. Use offsetof macro to set offset. First ID must be 0, next one must be +1. If name is NULL FTI will set &quot;T${id}&quot; name. Sets rank and dimLength to 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="82" column="8" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="391" bodyend="402" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="82" declcolumn="8"/>
+        <references refid="structFTIT__typeField_1af0e311f38f7f6b7ab7ff04e3897f6c37" compoundref="fti-intern_8h" startline="394">FTIT_typeField::dimLength</references>
+        <references refid="structFTIT__complexType_1abbb9d041a59fd4972244d8c62e78dbaa" compoundref="fti-intern_8h" startline="406">FTIT_complexType::field</references>
+        <references refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" compoundref="fti_8h" startline="12">FTI_BUFS</references>
+        <references refid="structFTIT__type_1a75237aa3e6824b450ee623bffb36608a" compoundref="fti-intern_8h" startline="349">FTIT_type::id</references>
+        <references refid="structFTIT__typeField_1aa2dcf41b2455dd8b220587a655fcf73d" compoundref="fti-intern_8h" startline="395">FTIT_typeField::name</references>
+        <references refid="structFTIT__typeField_1a75068a6f39c20766ec43624f9b497cbf" compoundref="fti-intern_8h" startline="392">FTIT_typeField::offset</references>
+        <references refid="structFTIT__typeField_1ad46ee30f23a6af1c5ac85ecce834cdc2" compoundref="fti-intern_8h" startline="393">FTIT_typeField::rank</references>
+        <references refid="structFTIT__typeField_1ac81ba503b07eae0ed82ad1e2f5ecdced" compoundref="fti-intern_8h" startline="391">FTIT_typeField::typeID</references>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1ab93e233cbea2ba23a026e3f2396ec0a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FTI_AddComplexField</definition>
+        <argsstring>(FTIT_complexType *typeDefinition, FTIT_type *ftiType, size_t offset, int rank, int *dimLength, int id, char *name)</argsstring>
+        <name>FTI_AddComplexField</name>
+        <param>
+          <type><ref refid="structFTIT__complexType" kindref="compound">FTIT_complexType</ref> *</type>
+          <declname>typeDefinition</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref> *</type>
+          <declname>ftiType</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>dimLength</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>It adds a simple field in complex data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeDefinition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure definition of the complex data type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ftiType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the field </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset of the field (use offsetof) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rank of the array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dimention length for each rank </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the field (start with 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the field (put NULL if want default) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function adds a field to the complex datatype. Use offsetof macro to set offset. First ID must be 0, next one must be +1. If name is NULL FTI will set &quot;T${id}&quot; name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="84" column="8" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="422" bodyend="436" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="84" declcolumn="8"/>
+        <references refid="structFTIT__typeField_1af0e311f38f7f6b7ab7ff04e3897f6c37" compoundref="fti-intern_8h" startline="394">FTIT_typeField::dimLength</references>
+        <references refid="structFTIT__complexType_1abbb9d041a59fd4972244d8c62e78dbaa" compoundref="fti-intern_8h" startline="406">FTIT_complexType::field</references>
+        <references refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" compoundref="fti_8h" startline="12">FTI_BUFS</references>
+        <references refid="structFTIT__type_1a75237aa3e6824b450ee623bffb36608a" compoundref="fti-intern_8h" startline="349">FTIT_type::id</references>
+        <references refid="structFTIT__typeField_1aa2dcf41b2455dd8b220587a655fcf73d" compoundref="fti-intern_8h" startline="395">FTIT_typeField::name</references>
+        <references refid="structFTIT__typeField_1a75068a6f39c20766ec43624f9b497cbf" compoundref="fti-intern_8h" startline="392">FTIT_typeField::offset</references>
+        <references refid="structFTIT__typeField_1ad46ee30f23a6af1c5ac85ecce834cdc2" compoundref="fti-intern_8h" startline="393">FTIT_typeField::rank</references>
+        <references refid="structFTIT__typeField_1ac81ba503b07eae0ed82ad1e2f5ecdced" compoundref="fti-intern_8h" startline="391">FTIT_typeField::typeID</references>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a13fc751bcf88d7c2766d0b76344b0964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitGroup</definition>
+        <argsstring>(FTIT_H5Group *h5group, char *name, FTIT_H5Group *parent)</argsstring>
+        <name>FTI_InitGroup</name>
+        <param>
+          <type><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref> *</type>
+          <declname>h5group</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>It initialize a HDF5 group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h5group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>H5 group that we want to initialize </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the H5 group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parent H5 group </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+Initialize group defined by user. If parent is NULL this mean parent will be set to root group. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="86" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="633" bodyend="670" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="86" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a2dc4fb3b0353541b7bc156f1c803f92f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_RenameGroup</definition>
+        <argsstring>(FTIT_H5Group *h5group, char *name)</argsstring>
+        <name>FTI_RenameGroup</name>
+        <param>
+          <type><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref> *</type>
+          <declname>h5group</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Renames a HDF5 group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h5group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>H5 group that we want to rename </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New name of the H5 group </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function renames HDF5 group defined by user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="87" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="731" bodyend="735" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="87" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a913b8cd6e29a152eceaeaec35e21e677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Protect</definition>
+        <argsstring>(int id, void *ptr, long count, FTIT_type type)</argsstring>
+        <name>FTI_Protect</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>It sets/resets the pointer and type to a protected variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID for searches and update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements in the data structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of elements in the data structure. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function stores a pointer to a data structure, its size, its ID, its number of elements and the type of the elements. This list of structures is the data that will be stored during a checkpoint and loaded during a recovery. It resets the pointer to a data structure, its size, its number of elements and the type of the elements if the dataset was already previously registered. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="88" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="755" bodyend="914" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="88" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1af4cb738277e5d80c40f10491015395cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_DefineDataset</definition>
+        <argsstring>(int id, int rank, int *dimLength, char *name, FTIT_H5Group *h5group)</argsstring>
+        <name>FTI_DefineDataset</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>dimLength</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref> *</type>
+          <declname>h5group</declname>
+        </param>
+        <briefdescription>
+<para>Defines the dataset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID for searches and update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rank of the array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dimention length for each rank </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the dataset in HDF5 file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h5group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Group of the dataset. If Null then &quot;/&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function gives FTI all information needed by HDF5 to correctly save the dataset in the checkpoint file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="89" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1367" bodyend="1423" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="89" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a1abef7eeec0efb4fb73b5929637aa90f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_DefineGlobalDataset</definition>
+        <argsstring>(int id, int rank, FTIT_hsize_t *dimLength, const char *name, FTIT_H5Group *h5group, FTIT_type type)</argsstring>
+        <name>FTI_DefineGlobalDataset</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref> *</type>
+          <declname>dimLength</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref> *</type>
+          <declname>h5group</declname>
+        </param>
+        <param>
+          <type><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Defines a global dataset (shared among application processes) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rank of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dimention length for each rank. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the dataset in HDF5 file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h5group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Group of the dataset. If Null then &quot;/&quot;. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FTI type of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function defines a global dataset which is shared among all ranks. In order to assign sub sets to the dataset the user has to call the function &apos;FTI_AddSubset&apos;. The parameter &apos;did&apos; of that function, corres- ponds to the global dataset id define here. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="90" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="934" bodyend="985" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="90" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a55e7d096389f363b570084126af8ece5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_AddSubset</definition>
+        <argsstring>(int id, int rank, FTIT_hsize_t *offset, FTIT_hsize_t *count, int did)</argsstring>
+        <name>FTI_AddSubset</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref> *</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref> *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>did</declname>
+        </param>
+        <briefdescription>
+<para>Assigns a FTI protected variable to a global dataset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corresponding variable ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rank of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting coordinates in global dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements for each coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>did</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corresponding global dataset ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function assigns the protected dataset with ID &apos;id&apos; to a global data- set with ID &apos;did&apos;. The parameters &apos;offset&apos; and &apos;count&apos; specify the selec- tion of the sub-set inside the global dataset (&apos;offset&apos; and &apos;count&apos; cor- respond to &apos;start&apos; and &apos;count&apos; in the HDF5 function &apos;H5Sselect_hyperslab&apos; For questions on what they define, please consult the HDF5 documentation.) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="91" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1005" bodyend="1071" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="91" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a79b24fc99e9cb826b2ad1d0cb6185882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_RecoverDatasetDimension</definition>
+        <argsstring>(int did)</argsstring>
+        <name>FTI_RecoverDatasetDimension</name>
+        <param>
+          <type>int</type>
+          <declname>did</declname>
+        </param>
+        <briefdescription>
+<para>loads dataset dimension from ckpt file to dataset &apos;did&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="92" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1291" bodyend="1350" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="92" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a4f699b71886c24e17b68028c6582449b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref> *</type>
+        <definition>FTIT_hsize_t* FTI_GetDatasetSpan</definition>
+        <argsstring>(int did, int rank)</argsstring>
+        <name>FTI_GetDatasetSpan</name>
+        <param>
+          <type>int</type>
+          <declname>did</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <briefdescription>
+<para>returns static array of dataset dimensions </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rank of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="93" column="16" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1248" bodyend="1283" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="93" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a8dd9c8d88cc5e17214c384478b441dd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_GetDatasetRank</definition>
+        <argsstring>(int did)</argsstring>
+        <name>FTI_GetDatasetRank</name>
+        <param>
+          <type>int</type>
+          <declname>did</declname>
+        </param>
+        <briefdescription>
+<para>returns rank of shared dataset </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer rank of dataset. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="94" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1212" bodyend="1238" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="94" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1aa52eec71c6460f10f2986acef5469c48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_UpdateGlobalDataset</definition>
+        <argsstring>(int id, int rank, FTIT_hsize_t *dimLength)</argsstring>
+        <name>FTI_UpdateGlobalDataset</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref> *</type>
+          <declname>dimLength</declname>
+        </param>
+        <briefdescription>
+<para>Updates global dataset (shared among application processes) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rank of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dimention length for each rank.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+updates only the rank and number of elements for each coordinate direction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="95" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1084" bodyend="1120" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="95" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1ad1fb249ff8d7f4b44e40e7e5c027d411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_UpdateSubset</definition>
+        <argsstring>(int id, int rank, FTIT_hsize_t *offset, FTIT_hsize_t *count, int did)</argsstring>
+        <name>FTI_UpdateSubset</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref> *</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref> *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>did</declname>
+        </param>
+        <briefdescription>
+<para>Updates a FTI protected variable of a global dataset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corresponding variable ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rank of the dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting coordinates in global dataset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements for each coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>did</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corresponding global dataset ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="96" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1134" bodyend="1203" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="96" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1adb927ab62324ba774d8daf91afa01c76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long FTI_GetStoredSize</definition>
+        <argsstring>(int id)</argsstring>
+        <name>FTI_GetStoredSize</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Returns size saved in metadata of variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>long Returns size of variable or 0 if size not saved.</para>
+</simplesect>
+This function returns size of variable of given ID that is saved in metadata. This may be different from size of variable that is in the program. If this function it&apos;s called when recovery it returns size from metadata file, if it&apos;s called after checkpoint it returns size saved in temporary metadata. If there is no size saved in metadata it returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="97" column="8" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1439" bodyend="1464" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="97" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a125d30b04650f470c0ca82a786e55e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* FTI_Realloc</definition>
+        <argsstring>(int id, void *ptr)</argsstring>
+        <name>FTI_Realloc</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Reallocates dataset to last checkpoint size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the variable. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ptr Pointer if successful, NULL otherwise This function loads the checkpoint data size from the metadata file, reallacates memory and updates data size information. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="98" column="8" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1476" bodyend="1512" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="98" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1aa6acb36d29481cd0da05ee66f944c1e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_BitFlip</definition>
+        <argsstring>(int datasetID)</argsstring>
+        <name>FTI_BitFlip</name>
+        <param>
+          <type>int</type>
+          <declname>datasetID</declname>
+        </param>
+        <briefdescription>
+<para>Bit-flip injection following the injection instructions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>datasetID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the dataset where to inject. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function injects the given number of bit-flips, at the given frequency and in the given location (rank, dataset, bit position). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="99" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1525" bodyend="1567" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="99" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a85ccf559fcbee51bd335ba2c6671eadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Checkpoint</definition>
+        <argsstring>(int id, int level)</argsstring>
+        <name>FTI_Checkpoint</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>It takes the checkpoint and triggers the post-ckpt. work. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint level. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function starts by blocking on a receive if the previous ckpt. was offline. Then, it updates the ckpt. information. It writes down the ckpt. data, creates the metadata and the post-processing work. This function is complementary with the FTI_Listen function in terms of communications. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="100" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1583" bodyend="1697" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="100" declcolumn="7"/>
+        <references refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" compoundref="fti_8h" startline="12">FTI_BUFS</references>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a9a144006e804d976446ba5a9c21f1591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_GetStageDir</definition>
+        <argsstring>(char *stageDir, int maxLen)</argsstring>
+        <name>FTI_GetStageDir</name>
+        <param>
+          <type>char *</type>
+          <declname>stageDir</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxLen</declname>
+        </param>
+        <briefdescription>
+<para>Places the FTI staging directory path into &apos;stageDir&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stageDir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to allocated memory region. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of allocated memory region in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful, FTI_NSCS else.</para>
+</simplesect>
+This function places the FTI staging directory path in &apos;stageDir&apos;. If allocation size is not sufficiant, no action is perfoprmed and FTI_NSCS is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="101" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="450" bodyend="480" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="101" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a244522ba34ee7fced63cab22a24b326b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_GetStageStatus</definition>
+        <argsstring>(int ID)</argsstring>
+        <name>FTI_GetStageStatus</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+<para>Returns status of staging request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of staging request. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer Status of staging request on success, FTI_NSCS else.</para>
+</simplesect>
+This function returns the status of the staging request corresponding to ID. The ID is returned by the function &apos;FTI_SendFile&apos;. The status may be one of the five possible statuses:</para>
+<para><simplesect kind="par"><title></title><para>FTI_SI_FAIL - Stage request failed FTI_SI_SCES - Stage request succeed FTI_SI_ACTV - Stage request is currently processed FTI_SI_PEND - Stage request is pending FTI_SI_NINI - There is no stage request with this ID</para>
+</simplesect>
+<simplesect kind="note"><para>If the status is FTI_SI_NINI, the ID is either invalid or the request was finished (succeeded or failed). In the latter case, &apos;FTI_GetStageStatus&apos; returns FTI_SI_FAIL or FTI_SI_SCES and frees the stage request ressources. In the consecutive call it will then return FTI_SI_NINI. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="102" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="507" bodyend="546" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="102" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1ae89330f9e650a1a5b7e2f460edba8d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_SendFile</definition>
+        <argsstring>(char *lpath, char *rpath)</argsstring>
+        <name>FTI_SendFile</name>
+        <param>
+          <type>char *</type>
+          <declname>lpath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>rpath</declname>
+        </param>
+        <briefdescription>
+<para>Copies file asynchronously from &apos;lpath&apos; to &apos;rpath&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>absolute path local file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>absolute path remote file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer Request handle (ID) on success, FTI_NSCS else.</para>
+</simplesect>
+This function may be used to copy a file local on the nodes via the FTI head process asynchronously to the PFS. The file will not be removed after successful transfer, however, if stored in the directory returned by &apos;FTI_GetStageDir&apos; it will be removed during &apos;FTI_Finalize&apos;.</para>
+<para><simplesect kind="par"><title></title><para>If staging is enabled but no head process, the staging will be performed synchronously (i.e. by the calling rank). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="103" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="566" bodyend="618" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="103" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1ab761c55656aab212daf8e6f447ec2214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Recover</definition>
+        <argsstring>()</argsstring>
+        <name>FTI_Recover</name>
+        <briefdescription>
+<para>It loads the checkpoint data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function loads the checkpoint data from the checkpoint file and it updates some basic checkpoint information. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="104" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="2034" bodyend="2176" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="104" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a6cbf6d6f6b4181e314eef599f85d6c5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Snapshot</definition>
+        <argsstring>()</argsstring>
+        <name>FTI_Snapshot</name>
+        <briefdescription>
+<para>Takes an FTI snapshot or recovers the data if it is a restart. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function loads the checkpoint data from the checkpoint file in case of restart. Otherwise, it checks if the current iteration requires checkpointing, if it does it checks which checkpoint level, write the data in the files and it communicates with the head of the node to inform that a checkpoint has been taken. Checkpoint ID and counters are updated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="105" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="2191" bodyend="2244" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="105" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1aa58102aa8540ed35f2efba23cf2dc19b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_Finalize</definition>
+        <argsstring>()</argsstring>
+        <name>FTI_Finalize</name>
+        <briefdescription>
+<para>It closes FTI properly on the application processes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function notifies the FTI processes that the execution is over, frees some data structures and it closes. If this function is not called on the application processes the FTI processes will never finish (deadlock). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="106" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="2257" bodyend="2392" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="106" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a25b793276f5e79e5947e133abdd52c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_RecoverVar</definition>
+        <argsstring>(int id)</argsstring>
+        <name>FTI_RecoverVar</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>During the restart, recovers the given variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to recover </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int FTI_SCES if successful.</para>
+</simplesect>
+During a restart process, this function recovers the variable specified by the given id. No effect during a regular execution. The variable must have already been protected, otherwise, FTI_NSCS is returned. Improvements to be done:<itemizedlist>
+<listitem><para>Open checkpoint file at FTI_Init, close it at FTI_Snapshot</para>
+</listitem><listitem><para>Maintain a variable accumulating the offset as variable are protected during the restart to avoid doing the loop to calculate the offset in the checkpoint file. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="107" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="2410" bodyend="2532" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="107" declcolumn="7"/>
+        <references refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" compoundref="fti_8h" startline="12">FTI_BUFS</references>
+        <references refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" compoundref="fti_8h" startline="20">FTI_NSCS</references>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a7cd136cac151e0a71320ff3f80215e25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_InitICP</definition>
+        <argsstring>(int id, int level, bool activate)</argsstring>
+        <name>FTI_InitICP</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>activate</declname>
+        </param>
+        <briefdescription>
+<para>Initialize an incremental checkpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint level. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>activate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean expression. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function defines the environment for the incremental checkpointing mechanism. The iCP mechanism consists of three functions: FTI_InitICP, FTI_AddVarICP and FTI_FinalizeICP. The two functions FTI_InitICP and FTI_FinalizeICP define the iCP region within the user may write the protected variables in any order. The iCP region is active, when the expression passed through &apos;activate&apos; evaluates to TRUE.</para>
+<para><simplesect kind="note"><para>This function is not blocking for POSIX, FTI-FF and HDF5, but, blocking for MPI-IO. This is due to the collective open call in MPI_IO </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="108" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1718" bodyend="1823" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="108" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a8eb9b278fa5aa30e53ca4ad8baf95ba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_AddVarICP</definition>
+        <argsstring>(int varID)</argsstring>
+        <name>FTI_AddVarICP</name>
+        <param>
+          <type>int</type>
+          <declname>varID</declname>
+        </param>
+        <briefdescription>
+<para>Write variable into the CP file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Protected variable ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+With this function, the user may write the protected datasets in any order into the checkpoint file. However, before the call to FTI_FinalizeICP, all protected variables must have been written into the file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="109" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1837" bodyend="1890" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="109" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1ab21e904a57a97bef0b20c1afbe0d868d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_FinalizeICP</definition>
+        <argsstring>()</argsstring>
+        <name>FTI_FinalizeICP</name>
+        <briefdescription>
+<para>Finalize an incremental checkpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>integer FTI_SCES if successful.</para>
+</simplesect>
+This function finalizes an incremental checkpoint. In contrast to InitICP, this function is collective on the communicator FTI_COMM_WORLD and blocking. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="110" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="1902" bodyend="2022" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="110" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1a2da201b48449cc457f338d23bc3f4cf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_setIDFromString</definition>
+        <argsstring>(char *name)</argsstring>
+        <name>FTI_setIDFromString</name>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Searches in the protected variables for a name. If not found it allocates and returns the ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the protected variable to search </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer id of the variable.</para>
+</simplesect>
+This function searches for a given name in the protected variables and returns the respective id for it. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="111" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="684" bodyend="693" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="111" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="fti_8h_1aa3085533f52818cf46175b8f783ad17b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FTI_getIDFromString</definition>
+        <argsstring>(char *name)</argsstring>
+        <name>FTI_getIDFromString</name>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Searches in the protected variables for a name. If not found it allocates and returns the ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the protected variable to search </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer id of the variable.</para>
+</simplesect>
+This function searches for a given name in the protected variables and returns the respective id for it. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h" line="112" column="7" bodyfile="/home/bscuser/Documents/release/dev/fti/src/api.c" bodystart="705" bodyend="718" declfile="/home/bscuser/Documents/release/dev/fti/include/fti.h" declline="112" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for the FTI library. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Leonardo A. Bautista Gomez (<ulink url="mailto:leobago@gmail.com">leobago@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>July, 2013 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>__FTI_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FTI_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="fti_8h_1a4da53a2ca9ef19b414ca7e2522c4864a" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_BUFS<sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="fti_8h_1af166ab9ab3e6ba0039316c9fdffc5e11" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_WORD<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="fti_8h_1a7dee5a1994faa8e4a2664942d4d8c024" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_DONE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="fti_8h_1a8c1f0a06b877c18a7270d54c5e6039cf" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_SCES<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="fti_8h_1a06d23a2210e17078a6a8862bb6ed3dbd" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_NSCS<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="fti_8h_1ac879dcdb853f4b5993ceed9fb1d06e88" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_NREC<sp/>-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="fti_8h_1a13af42079571ed8dd290fad82fd11c2d" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_HEAD<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="fti_8h_1a8b63f0cd5d9aa9417c3d3ec5a703ca1b" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_SI_FAIL<sp/>0x4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="fti_8h_1a93cefc8dced9cb5c63c45708ef89694b" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_SI_SCES<sp/>0x3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="fti_8h_1a1685329d73a38dd15caa9a9b5ffef36f" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_SI_ACTV<sp/>0x2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="fti_8h_1a4eb6ff54cf8f3c3149d42da30d23c498" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_SI_PEND<sp/>0x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="fti_8h_1a26fc9f53bb9fcbbf144da0488e217172" refkind="member"><highlight class="preprocessor">#define<sp/>FTI_SI_NINI<sp/>0x0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fti-intern_8h" kindref="compound">fti-intern.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*---------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/>Global<sp/>variables</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>---------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>MPI_Comm<sp/><ref refid="fti_8h_1a7deaa5171fbf22fe59ae1c08f2bdcc97" kindref="member">FTI_COMM_WORLD</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1af384b54744550e2300db530ef46f7e77" kindref="member">FTI_CHAR</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1a7f97366acb17493ec718fb6086f1ac3c" kindref="member">FTI_SHRT</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1ad236df2303494837c97a13741423a51b" kindref="member">FTI_INTG</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1a29acf773174ad269577b5c771521694a" kindref="member">FTI_LONG</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1a2a1ee34ef81027534671ee3145a89213" kindref="member">FTI_UCHR</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1ad00601a105ae08e82837c629b8e55612" kindref="member">FTI_USHT</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1a1e77437528f3df560360e0626b9a3b89" kindref="member">FTI_UINT</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1afdc10ccdf5f020d7b0306ecce07f52c1" kindref="member">FTI_ULNG</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1a39b15455ede057260e435cf49bc3ee6d" kindref="member">FTI_SFLT</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1aafb3604bd7ebfae406d1c419890e04d8" kindref="member">FTI_DBLE</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/><ref refid="fti_8h_1acd10e7ef980b4ed3d775bb499cfac8ba" kindref="member">FTI_LDBE</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*---------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/>FTI<sp/>public<sp/>functions</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/>---------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1abe8c2b202eaab996bbd88eea4cafe51a" kindref="member">FTI_Init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*configFile,<sp/>MPI_Comm<sp/><ref refid="structFTIT__execution_1a9cbca3e2e49bb808bc73569db3fdecb2" kindref="member">globalComm</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a5222b52e6f1d6b737f4ec1b173f362f5" kindref="member">FTI_Status</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a725ffe84dd16beb533e7b4b74fa4e9c4" kindref="member">FTI_InitType</ref>(<ref refid="structFTIT__type" kindref="compound">FTIT_type</ref>*<sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a7fab7e8f18c24f415dc658714c27c669" kindref="member">FTI_InitComplexType</ref>(<ref refid="structFTIT__type" kindref="compound">FTIT_type</ref>*<sp/>newType,<sp/><ref refid="structFTIT__complexType" kindref="compound">FTIT_complexType</ref>*<sp/>typeDefinition,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref>*<sp/>h5group);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a990302331eacb14390ce4feae438405f" kindref="member">FTI_AddSimpleField</ref>(<ref refid="structFTIT__complexType" kindref="compound">FTIT_complexType</ref>*<sp/>typeDefinition,<sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref>*<sp/>ftiType,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1ab93e233cbea2ba23a026e3f2396ec0a3" kindref="member">FTI_AddComplexField</ref>(<ref refid="structFTIT__complexType" kindref="compound">FTIT_complexType</ref>*<sp/>typeDefinition,<sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref>*<sp/>ftiType,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>dimLength,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a13fc751bcf88d7c2766d0b76344b0964" kindref="member">FTI_InitGroup</ref>(<ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref>*<sp/>h5group,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref>*<sp/>parent);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a2dc4fb3b0353541b7bc156f1c803f92f" kindref="member">FTI_RenameGroup</ref>(<ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref>*<sp/>h5group,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a913b8cd6e29a152eceaeaec35e21e677" kindref="member">FTI_Protect</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ptr,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>count,<sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/>type);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1af4cb738277e5d80c40f10491015395cb" kindref="member">FTI_DefineDataset</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>dimLength,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref>*<sp/>h5group);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a1abef7eeec0efb4fb73b5929637aa90f" kindref="member">FTI_DefineGlobalDataset</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref>*<sp/>dimLength,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/><ref refid="structFTIT__H5Group" kindref="compound">FTIT_H5Group</ref>*<sp/>h5group,<sp/><ref refid="structFTIT__type" kindref="compound">FTIT_type</ref><sp/>type);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a55e7d096389f363b570084126af8ece5" kindref="member">FTI_AddSubset</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref>*<sp/>offset,<sp/><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref>*<sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>did<sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a79b24fc99e9cb826b2ad1d0cb6185882" kindref="member">FTI_RecoverDatasetDimension</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>did<sp/>);<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref>*<sp/><ref refid="fti_8h_1a4f699b71886c24e17b68028c6582449b" kindref="member">FTI_GetDatasetSpan</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>did,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank<sp/>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8dd9c8d88cc5e17214c384478b441dd5" kindref="member">FTI_GetDatasetRank</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>did<sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1aa52eec71c6460f10f2986acef5469c48" kindref="member">FTI_UpdateGlobalDataset</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref>*<sp/>dimLength<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1ad1fb249ff8d7f4b44e40e7e5c027d411" kindref="member">FTI_UpdateSubset</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank,<sp/><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref>*<sp/>offset,<sp/><ref refid="fti-intern_8h_1a93fc516f1fbe5fb3d37e6527684b8dd4" kindref="member">FTIT_hsize_t</ref>*<sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>did<sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1adb927ab62324ba774d8daf91afa01c76" kindref="member">FTI_GetStoredSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="fti_8h_1a125d30b04650f470c0ca82a786e55e9d" kindref="member">FTI_Realloc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ptr);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1aa6acb36d29481cd0da05ee66f944c1e8" kindref="member">FTI_BitFlip</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>datasetID);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a85ccf559fcbee51bd335ba2c6671eadf" kindref="member">FTI_Checkpoint</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a9a144006e804d976446ba5a9c21f1591" kindref="member">FTI_GetStageDir</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>stageDir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxLen<sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a244522ba34ee7fced63cab22a24b326b" kindref="member">FTI_GetStageStatus</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ID<sp/>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1ae89330f9e650a1a5b7e2f460edba8d54" kindref="member">FTI_SendFile</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lpath,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*rpath<sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1ab761c55656aab212daf8e6f447ec2214" kindref="member">FTI_Recover</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a6cbf6d6f6b4181e314eef599f85d6c5b" kindref="member">FTI_Snapshot</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1aa58102aa8540ed35f2efba23cf2dc19b" kindref="member">FTI_Finalize</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a25b793276f5e79e5947e133abdd52c1e" kindref="member">FTI_RecoverVar</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a7cd136cac151e0a71320ff3f80215e25" kindref="member">FTI_InitICP</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>activate);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a8eb9b278fa5aa30e53ca4ad8baf95ba1" kindref="member">FTI_AddVarICP</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>varID<sp/>);<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1ab21e904a57a97bef0b20c1afbe0d868d" kindref="member">FTI_FinalizeICP</ref>();<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1a2da201b48449cc457f338d23bc3f4cf3" kindref="member">FTI_setIDFromString</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fti_8h_1aa3085533f52818cf46175b8f783ad17b" kindref="member">FTI_getIDFromString</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__FTI_H__</highlight></codeline>
+    </programlisting>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti.h"/>
+  </compounddef>
+</doxygen>

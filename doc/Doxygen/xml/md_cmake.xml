@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md_cmake" kind="page">
+    <compoundname>md_cmake</compoundname>
+    <title>CMake Options</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><table rows="7" cols="3"><row>
+<entry thead="yes"><para>Option </para>
+</entry><entry thead="yes"><para>What it&apos;s for </para>
+</entry><entry thead="yes"><para>default  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ENABLE_FORTRAN</computeroutput> </para>
+</entry><entry thead="no"><para>Enables the generation of the Fortran wrapper for FTI </para>
+</entry><entry thead="no"><para>ON  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ENABLE_EXAMPLES</computeroutput> </para>
+</entry><entry thead="no"><para>Enables the generation of examples </para>
+</entry><entry thead="no"><para>ON  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ENABLE_SIONLIB</computeroutput> </para>
+</entry><entry thead="no"><para>Enables the parallel I/O SIONlib for FTI </para>
+</entry><entry thead="no"><para>OFF  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ENABLE_TESTS</computeroutput> </para>
+</entry><entry thead="no"><para>Enables the generation of tests </para>
+</entry><entry thead="no"><para>ON  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ENABLE_LUSTRE</computeroutput> </para>
+</entry><entry thead="no"><para>Enables Lustre Support </para>
+</entry><entry thead="no"><para>OFF  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ENABLE_DOCU</computeroutput> </para>
+</entry><entry thead="no"><para>Enables the generation of a Doxygen documentation </para>
+</entry><entry thead="no"><para>OFF  </para>
+</entry></row>
+</table>
+</para>
+<sect1 id="md_cmake_1autotoc_md10">
+<title>Other configurations</title>
+<para>To use a certain compiler, set the environment variables <computeroutput>CC</computeroutput> and <computeroutput>FC</computeroutput> to the name of the compiler executables. <linebreak/>
+</para>
+<para>For instance if it is desired to use the PGI compiler, try: <linebreak/>
+</para>
+<para><programlisting><codeline><highlight class="normal">CC=pgcc<sp/>FC=pgfortran<sp/>cmake<sp/>-DCMAKE_INSTALL_PREFIX:PATH=install/here/fti<sp/>..</highlight></codeline>
+</programlisting></para>
+<para>To use the built-in MD5 rather than OpenSSL, please configure using: <linebreak/>
+</para>
+<para><programlisting><codeline><highlight class="normal">cmake<sp/>-DNO_OPENSSL=true<sp/>-DCMAKE_INSTALL_PREFIX:PATH=/install/here/fti<sp/>..</highlight></codeline>
+</programlisting></para>
+<para>On Cray systems, it might be helping to use the cmake flag: <linebreak/>
+</para>
+<para><programlisting><codeline><highlight class="normal">-CMAKE_SYSTEM_NAME=CrayLinuxEnvironment</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

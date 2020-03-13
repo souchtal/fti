@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structFTIT__StageInfo" kind="struct" language="C++" prot="public">
+    <compoundname>FTIT_StageInfo</compoundname>
+    <includes refid="fti-intern_8h" local="no">fti-intern.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTIT__StageInfo_1ab474f420ab576dde4f8375a403cacbcc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FTIT_StageInfo::nbRequest</definition>
+        <argsstring></argsstring>
+        <name>nbRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of allocated request info structures <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="294" column="13" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFTIT__StageInfo_1a4687045f1b5e679855bae7251421a82d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* FTIT_StageInfo::request</definition>
+        <argsstring></argsstring>
+        <name>request</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to request meta info array <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="295" column="14" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" line="293" column="33" bodyfile="/home/bscuser/Documents/release/dev/fti/include/fti-intern.h" bodystart="293" bodyend="296"/>
+    <listofallmembers>
+      <member refid="structFTIT__StageInfo_1ab474f420ab576dde4f8375a403cacbcc" prot="public" virt="non-virtual"><scope>FTIT_StageInfo</scope><name>nbRequest</name></member>
+      <member refid="structFTIT__StageInfo_1a4687045f1b5e679855bae7251421a82d" prot="public" virt="non-virtual"><scope>FTIT_StageInfo</scope><name>request</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
