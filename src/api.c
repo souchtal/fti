@@ -102,7 +102,6 @@ FTIT_type FTI_LDBE;
   case of a restart, checkpoint files should be recovered and in place at the
   end of this function.
 
-  \example example1.c
  **/
 /*-------------------------------------------------------------------------*/
 int FTI_Init(const char* configFile, MPI_Comm globalComm)
@@ -209,6 +208,12 @@ int FTI_Init(const char* configFile, MPI_Comm globalComm)
         memset(FTI_Data[i].idChar,'\0',FTI_BUFS);
     }
 }
+
+//adding example tag here for Doxygen
+/** \example example1.c
+ * This is an example of how to use the FTI_Init
+ * More details about this example.
+ */
 
 /*-------------------------------------------------------------------------*/
 /**
