@@ -210,7 +210,7 @@ int FTI_Init(const char* configFile, MPI_Comm globalComm)
 }
 
 //adding example tag here for Doxygen
-/** \example example1.c
+/** \example heatd2.c
  * This is an example of how to use the FTI_Init
  * More details about this example.
  */
