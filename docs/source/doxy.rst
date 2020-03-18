@@ -16,6 +16,7 @@ FTI uses Doxygen_ for generating its documentation. For a new function to be inc
 
 
 .. code-block:: C
+
 	/*-------------------------------------------------------------------------*/
 	/**
 	  @brief      It sets/resets the pointer and type to a protected variable.
