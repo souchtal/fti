@@ -4,15 +4,38 @@
 Doxygen Documentation
 ==============================
 
-For a deeper dive into FTI's members, you can explore the documentation through Doxygen's auto-generated page_.
+For a deeper dive into FTI's members, you can explore the documentation through Doxygen's auto-generated documentation_.
 
 
-.. _page: http://leobago.github.io/fti/
+.. _documentation: http://leobago.github.io/fti/
 
 Contributing 
 -------------------------------
 
 FTI uses Doxygen_ for generating its documentation. For a new function to be included in the documentation, it should be commented in the source code as follows:
+
+
+.. code-block:: C
+
+	/*-------------------------------------------------------------------------*/
+	/**
+	  @brief      Description of the function
+	  @param      arg1              arg1 meaning
+	  @param      arg2              arg2 meaning
+	  ...
+	  @return     integer           return value meaning
+
+	  Here goes an explanation of what the function does in details or how it 
+	  relates to other functions in the project. 
+
+	 **/
+	/*-------------------------------------------------------------------------*/
+	int myFunction(arg1, arg2...)
+	{
+	...
+	}
+
+This is an example from FTI: 
 
 
 .. code-block:: C
@@ -39,7 +62,6 @@ FTI uses Doxygen_ for generating its documentation. For a new function to be inc
 	{
 	...
 	}
-
 
 
 Upon contributing to FTI with a new API, it is recommended to have it show on the APIs pag. To do so, add the following lines ``FTI_ROOT/docs/source/apireferences.rst`` where ``FTI_API`` is the name of your function.

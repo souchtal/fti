@@ -33,13 +33,41 @@ cpplint checks C/C++ files style issues following Google C/C++ style guide_.
 
 Fortran's and CMake style checkers have a plenty of formatting options, as their websites lists. For FTI, we choose to adopt the following style rules: 
 
-**Table for formatting options per lang**
+**Formatting options for Fortran Files**
+
+.. list-table::
+   :header-rows: 1
+
+   * - Options
+     - Explanation
+   * - --indent 4 
+     - relative indentation width
+   * - --line-length 140          
+     - column after which a line should end
+   * - --whitespace 2
+     - Presets for the amount of whitespace : 2
+   * - --strict-indent               
+     - strictly impose indentation even for nested loops
+
+**Formatting options for C Files**
+
+.. list-table::
+   :header-rows: 1
+
+   * - Options
+     - Explanation
+   * - --line-width 80 
+     - How wide to allow formatted cmake files
+   * - --tab-size 4             
+     - How many spaces to tab for indent
+   * - --separate-ctrl-name-with-space
+     - separate flow control names from their parentheses with a space
+   * - --separate-fn-name-with-space            
+     - separate function names from parentheses with a space
+                     
 
 
 .. _guide: http://google.github.io/styleguide/cppguide.html
-
-
-**Examples**
 
 
 Implementation
