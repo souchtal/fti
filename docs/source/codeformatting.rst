@@ -79,7 +79,7 @@ Examples of the execution on FTI s code
 
 .. image:: _static/pre-commit-fails.png
    :width: 600px
-   :height: 800px
+   :height: 700px
 
 Contributing
 ----------------------
