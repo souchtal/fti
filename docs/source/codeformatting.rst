@@ -78,8 +78,8 @@ Code checking is integrated in FTI through a script that traverses any added/mod
 Examples of the execution on FTI s code
 
 .. image:: _static/pre-commit-fails.png
-   :width: 800px
-   :height: 1600px
+   :width: 600px
+   :height: 800px
 
 Contributing
 ----------------------
