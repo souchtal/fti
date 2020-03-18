@@ -29,9 +29,9 @@ To enhance the code quality of FTI, we use the following open source code checke
 Coding Style
 -----------------------
 
-cpplint checks C/C++ files style issues following Google C/C++ style guide_. 
+cpplint checks C/C++ files style issues following Google C/C++ style guide_. Please visit this guide to understand how you should format your code to comply to FTI's style. 
 
-Fortran's and CMake style checkers have a plenty of formatting options, as their websites lists. For FTI, we choose to adopt the following style rules: 
+Fortran's and CMake style checkers have a plenty of formatting options, as the respective documentation lists. For FTI, we choose to adopt the following style rules: 
 
 **Formatting options for Fortran Files**
 
@@ -49,14 +49,14 @@ Fortran's and CMake style checkers have a plenty of formatting options, as their
    * - --strict-indent               
      - strictly impose indentation even for nested loops
 
-**Formatting options for C Files**
+**Formatting options for CMake Files**
 
 .. list-table::
    :header-rows: 1
 
    * - Options
      - Explanation
-   * - --line-width 80 
+   * -  --line-width 80 
      - How wide to allow formatted cmake files
    * - --tab-size 4             
      - How many spaces to tab for indent
