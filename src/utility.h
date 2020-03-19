@@ -78,9 +78,7 @@ int FTI_WriteSionData(FTIT_dataset * FTI_DataVar, void *fd);
 void* FTI_InitSion(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo, FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data);
 int FTI_SionClose(void *fileDesc);
 size_t FTI_GetSionFilePos(void *fileDesc);
-/*int FTI_RecoverVarInitSION(char* fn);
-int FTI_RecoverVarSION(int id, int fileHandle);
-int FTI_RecoverVarFinalizeSION(int fileHandle);*/
+
 #endif
 
 // Wrappers around MPIO
@@ -92,9 +90,7 @@ size_t FTI_GetMPIOFilePos(void *fileDesc);
 
 void *FTI_InitMPIO(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo, FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data);
 int FTI_WriteMPIOData(FTIT_dataset * FTI_DataVar, void *write_info);
-/*MPI_File FTI_RecoverVarInitMPIIO(char* fn);
-int FTI_RecoverVarMPIIO(int id, MPI_File pfh);
-int FTI_RecoverVarFinalizeMPIIO(MPI_File pfh);*/
+
 
 //Wrappers around dcp POSIX
 

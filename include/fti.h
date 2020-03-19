@@ -110,6 +110,8 @@ extern "C" {
   int FTI_FinalizeICP(); 
   int FTI_setIDFromString( char *name );
   int FTI_getIDFromString( char *name );
+  int FTI_RecoverVarInit();
+  int FTI_RecoverVarFinalize();
 
 #ifdef __cplusplus
 }

@@ -96,7 +96,7 @@ FTIT_type FTI_LDBE;
   @param      configFile      FTI configuration file.
   @param      globalComm      Main MPI communicator of the application.
   @return     integer         FTI_SCES if successful.
-    
+
   This function initializes the FTI context and prepares the heads to wait
   for checkpoints. FTI processes should never get out of this function. In
   case of a restart, checkpoint files should be recovered and in place at the
@@ -208,9 +208,6 @@ int FTI_Init(const char* configFile, MPI_Comm globalComm)
         memset(FTI_Data[i].idChar,'\0',FTI_BUFS);
     }
 }
-/** @example example1.c
- * Simple example of how to use the Init Function
- */
 
 /*-------------------------------------------------------------------------*/
 /**
@@ -2391,27 +2388,18 @@ int FTI_Finalize()
     return FTI_SCES;
     }
 
-    /*-------------------------------------------------------------------------*/
-    /**
-      @brief      During the restart, recovers the given variable
-      @param      id              Variable to recover
-      @return     int             FTI_SCES if successful.
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Initializes recovery of variable
+  @return     integer             FTI_SCES if successful.
 
-      During a restart process, this function recovers the variable specified
-      by the given id. No effect during a regular execution.
-      The variable must have already been protected, otherwise, FTI_NSCS is returned.
-      Improvements to be done:
-      - Open checkpoint file at FTI_Init, close it at FTI_Snapshot
-      - Maintain a variable accumulating the offset as variable are protected during
-      the restart to avoid doing the loop to calculate the offset in the
-      checkpoint file.
-     **/
-    /*-------------------------------------------------------------------------*/
-    int FTI_RecoverVar(int id)
-{
+  Initializes the I/O operations for recoverVar 
+  includes implementation for all I/O modes
+ **/
+/*-------------------------------------------------------------------------*/
+int FTI_RecoverVarInit(){
     int res = FTI_NSCS;
 
-    //int activeID, oldID;
     char fn[FTI_BUFS];
 
     if (FTI_Exec.initSCES == 0) {
@@ -2429,20 +2417,31 @@ int FTI_Finalize()
         return FTI_NSCS;
     }
 
+    //Recovering from local for L4 case in FTI_Recover
+    if (FTI_Exec.ckptLvel == 4) {
+        if( FTI_Ckpt[4].recoIsDcp && FTI_Conf.dcpPosix ) {
+            snprintf( fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec.ckptLvel].dcpDir, FTI_Exec.meta[4].ckptFile );
+            res = FTI_RecoverVarDcpPosixInit(fn, &FTI_Conf);
+            if(blockSize == 0){
+                FTI_Print("[INIT] blocksize is zero", FTI_WARN);
+            }
+            return ;
+        } else {
+            snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[1].dir, FTI_Exec.meta[1].ckptFile);
+        }
+    }
+    
+    else {
+        snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec.ckptLvel].dir, FTI_Exec.meta[FTI_Exec.ckptLvel].ckptFile);
+    }
 
-    //snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec->ckptLvel].dir, FTI_Exec->meta[FTI_Exec->ckptLvel].ckptFile);
-    snprintf(fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec.ckptLvel].dir, FTI_Exec.meta[FTI_Exec.ckptLvel].ckptFile);
-
+    //switch case
     switch(FTI_Conf.ioMode){
 
         case FTI_IO_HDF5:
-#ifdef ENABLE_HDF5 // --> If HDF5 is installed
-            hid_t _file_id = FTI_RecoverVarInitHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, fn);
-            if(_file_id != -1){
-                if(FTI_RecoverVarHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, id) != -1){//evaluate recovery
-                    res = FTI_RecoverVarFinalizeHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, _file_id);
-                }
-            }
+#ifdef ENABLE_HDF5 
+            //what to return?
+            res = FTI_RecoverVarInitHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, fn);
 #else
             FTI_Print("Selected Ckpt I/O is HDF5, but HDF5 is not enabled.", FTI_WARN);
 #endif
@@ -2451,77 +2450,79 @@ int FTI_Finalize()
 #ifdef ENABLE_SIONLIB // --> If SIONlib is installed
 
         case FTI_IO_SIONLIB:
-            /*int filehandle = FTI_RecoverVarInitSION(fn);
-            if(filehandle > 0){
-                if(FTI_RecoverVarSION(filehandle) != FTI_NSCS){
-                    res = FTI_RecoverVarFinalizeSION(filehandle);              
-                }
-            }*/
-            //call posix 
-            FILE* file;
-            file = FTI_RecoverVarInitPOSIX(fn);
-            if(file == NULL){
-                res = FTI_NSCS;
-            }else{
-                res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, file);
-                if(res != FTI_NSCS){
-                    res = FTI_RecoverVarFinalizePOSIX(file);
-                }
-            }
+            res = FTI_RecoverVarInitPOSIX(fn);
 #else
             FTI_Print("Selected Ckpt I/O is SION, but SION is not enabled.", FTI_WARN);
 #endif
             break;
 
         case FTI_IO_POSIX:
-            {
-                FILE* file;
-                file = FTI_RecoverVarInitPOSIX(fn);
-                if(file == NULL){
-                    res = FTI_NSCS;
-                }else{
-                    res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, file);
-                    if(res != FTI_NSCS){
-                        res = FTI_RecoverVarFinalizePOSIX(file);
-                    }
-                }
-                break;
-            }
+            res = FTI_RecoverVarInitPOSIX(fn);
 
         case FTI_IO_MPI:
-            /*MPI_File mpf ;
-            mpf = FTI_RecoverVarInitMPIIO(fn);
-            res = FTI_RecoverVarMPIIO(mpf);
-            if(res != FTI_NSCS){
-                res = FTI_RecoverVarFinalizeMPIIO(mpf);
-            }*/
-            //call posix 
-            {
-                FILE* file;
-                file = FTI_RecoverVarInitPOSIX(fn);
-                if(file == NULL){
-                    res = FTI_NSCS;
-                }else{
-                    res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, file);
-                    if(res != FTI_NSCS){
-                        res = FTI_RecoverVarFinalizePOSIX(file);
-                    }
-                }
-                break;
-            }
+            res = FTI_RecoverVarInitPOSIX(fn);
+            
+        case FTI_IO_FTIFF:            
+            res = FTI_RecoverVarInitFTIFF(fn);
+
+        default: 
+            FTI_Print("Unknown I/O mode.", FTI_EROR);
+            res = FTI_NSCS;
+    }
+    return res;
+}
+
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Recovers given variable
+  @param      integer         id of variable to be recovered
+  @return     integer         FTI_SCES if successful.
+
+ **/
+/*-------------------------------------------------------------------------*/
+int FTI_RecoverVar(int id)
+{
+    int res = FTI_NSCS;
+
+    //Recovering from local for L4 case in FTI_Recover
+    if (FTI_Exec.ckptLvel == 4) {
+        if( FTI_Ckpt[4].recoIsDcp && FTI_Conf.dcpPosix ) {
+            FTI_Print("about to DCP", FTI_INFO);
+            res =  FTI_RecoverVarDcpPosix(&FTI_Conf, &FTI_Exec, FTI_Data, fd, blockSize, stackSize, buffer, id);
+            return; 
+        }
+    }
+    switch(FTI_Conf.ioMode){
+
+        case FTI_IO_HDF5:
+#ifdef ENABLE_HDF5 // --> If HDF5 is installed
+            res = FTI_RecoverVarHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, id); 
+#else
+            FTI_Print("Selected Ckpt I/O is HDF5, but HDF5 is not enabled.", FTI_WARN);
+#endif
+            break;
+
+#ifdef ENABLE_SIONLIB // --> If SIONlib is installed
+
+        case FTI_IO_SIONLIB:
+            
+            res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, fileposix);
+#else
+            FTI_Print("Selected Ckpt I/O is SION, but SION is not enabled.", FTI_WARN);
+#endif
+            break;
+
+        case FTI_IO_POSIX:
+            res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, fileposix);
+            break;
+
+        case FTI_IO_MPI:
+            res = FTI_RecoverVarPOSIX(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, fileposix);
+            break;
 
         case FTI_IO_FTIFF:
-            {
-                char *fmmap = NULL;
-                struct stat st;
-
-                if(FTI_RecoverVarInitFTIFF(fn, fmmap, st) != FTI_NSCS){
-                    if(FTIFF_RecoverVar(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id, fmmap, st) != FTI_NSCS){
-                        res = FTI_RecoverVarFinalizeFTIFF(fmmap, st);
-                    }
-                }
-                break;
-            }
+            res = FTIFF_RecoverVar(&FTI_Conf, &FTI_Exec, &FTI_Topo, FTI_Ckpt, FTI_Data, id);
+            break;
 
         default: 
             FTI_Print("Unknown I/O mode.", FTI_EROR);
@@ -2531,46 +2532,105 @@ int FTI_Finalize()
     return res; 
 }
 
-    /*-------------------------------------------------------------------------*/
-    /**
-      @brief      Prints FTI messages.
-      @param      msg             Message to print.
-      @param      priority        Priority of the message to be printed.
-      @return     void
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Finalizes recovery of variable
+  @return     integer             FTI_SCES if successful.
 
-      This function prints messages depending on their priority and the
-      verbosity level set by the user. DEBUG messages are printed by all
-      processes with their rank. INFO messages are printed by one process.
-      ERROR messages are printed with errno.
+  Finalizes the I/O operations for recoverVar 
+  includes implementation for all I/O modes
+ **/
+/*-------------------------------------------------------------------------*/
+int FTI_RecoverVarFinalize(){
+    int res; 
 
-     **/
-    /*-------------------------------------------------------------------------*/
-    void FTI_Print(char* msg, int priority)
-    {
-        if (priority >= FTI_Conf.verbosity) {
-            if (msg != NULL) {
-                switch (priority) {
-                    case FTI_EROR:
-                        fprintf(stderr, "[ " FTI_COLOR_RED "FTI Error - %06d" FTI_COLOR_RESET " ] : %s : %s \n", FTI_Topo.myRank, msg, strerror(errno));
-                        break;
-                    case FTI_WARN:
-                        fprintf(stdout, "[ " FTI_COLOR_ORG "FTI Warning %06d" FTI_COLOR_RESET " ] : %s \n", FTI_Topo.myRank, msg);
-                        break;
-                    case FTI_INFO:
-                        if (FTI_Topo.splitRank == 0) {
-                            fprintf(stdout, "[ " FTI_COLOR_GRN "FTI  Information" FTI_COLOR_RESET " ] : %s \n", msg);
-                        }
-                        break;
-                    case FTI_IDCP:
-                        if (FTI_Topo.splitRank == 0) {
-                            fprintf(stdout, "[ " FTI_COLOR_BLU "FTI  dCP Message" FTI_COLOR_RESET " ] : %s \n", msg);
-                        }
-                        break;
-                    case FTI_DBUG:
-                        fprintf(stdout, "[FTI Debug - %06d] : %s \n", FTI_Topo.myRank, msg);
-                        break;
-                }
+    if (FTI_Exec.ckptLvel == 4) {
+        if( FTI_Ckpt[4].recoIsDcp && FTI_Conf.dcpPosix ) {
+            res = FTI_RecoverVarDcpPosixFinalize(fd, buffer);
+            return; 
+        }
+    }
+
+    switch(FTI_Conf.ioMode){
+
+        case FTI_IO_HDF5:
+#ifdef ENABLE_HDF5 // --> If HDF5 is installed
+            res = FTI_RecoverVarFinalizeHDF5(FTI_Conf, FTI_Exec, FTI_Ckpt, FTI_Data, _file_id); 
+#else
+            FTI_Print("Selected Ckpt I/O is HDF5, but HDF5 is not enabled.", FTI_WARN);
+#endif
+            break;
+
+#ifdef ENABLE_SIONLIB // --> If SIONlib is installed
+
+        case FTI_IO_SIONLIB:
+            res = FTI_RecoverVarFinalizePOSIX(fileposix);
+#else
+            FTI_Print("Selected Ckpt I/O is SION, but SION is not enabled.", FTI_WARN);
+#endif
+            break;
+
+        case FTI_IO_POSIX:
+            res = FTI_RecoverVarFinalizePOSIX(fileposix);
+            break;
+
+        case FTI_IO_MPI:
+            res = FTI_RecoverVarFinalizePOSIX(fileposix);
+            break;
+
+        case FTI_IO_FTIFF:
+            res = FTI_RecoverVarFinalizeFTIFF(filemmap, filestats);
+            break;
+
+        default: 
+            FTI_Print("Unknown I/O mode.", FTI_EROR);
+            res = FTI_NSCS;
+    }
+    return res; 
+}
+
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Prints FTI messages.
+  @param      msg             Message to print.
+  @param      priority        Priority of the message to be printed.
+  @return     void
+
+  This function prints messages depending on their priority and the
+  verbosity level set by the user. DEBUG messages are printed by all
+  processes with their rank. INFO messages are printed by one process.
+  ERROR messages are printed with errno.
+
+ **/
+/*-------------------------------------------------------------------------*/
+void FTI_Print(char* msg, int priority)
+{
+    if (priority >= FTI_Conf.verbosity) {
+        if (msg != NULL) {
+            switch (priority) {
+                case FTI_EROR:
+                    fprintf(stderr, "[ " FTI_COLOR_RED "FTI Error - %06d" FTI_COLOR_RESET " ] : %s : %s \n", FTI_Topo.myRank, msg, strerror(errno));
+                    break;
+                case FTI_WARN:
+                    fprintf(stdout, "[ " FTI_COLOR_ORG "FTI Warning %06d" FTI_COLOR_RESET " ] : %s \n", FTI_Topo.myRank, msg);
+                    break;
+                case FTI_INFO:
+                    if (FTI_Topo.splitRank == 0) {
+                        fprintf(stdout, "[ " FTI_COLOR_GRN "FTI  Information" FTI_COLOR_RESET " ] : %s \n", msg);
+                    }
+                    break;
+                case FTI_IDCP:
+                    if (FTI_Topo.splitRank == 0) {
+                        fprintf(stdout, "[ " FTI_COLOR_BLU "FTI  dCP Message" FTI_COLOR_RESET " ] : %s \n", msg);
+                    }
+                    break;
+                case FTI_DBUG:
+                    fprintf(stdout, "[FTI Debug - %06d] : %s \n", FTI_Topo.myRank, msg);
+                    break;
+
             }
         }
-        fflush(stdout);
+        
     }
+    fflush(stdout);
+}

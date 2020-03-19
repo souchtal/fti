@@ -41,7 +41,7 @@
 #include <sys/types.h>
 #include <dirent.h>
 
-
+hid_t _file_id;
 /*-------------------------------------------------------------------------*/
 /**
   @brief      It creates h5datatype (hid_t) from definitions in FTI_Types
@@ -1571,6 +1571,13 @@ herr_t FTI_WriteSharedFileData( FTIT_dataset FTI_Data )
 
 }
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Gets dataset rank
+  @param      did             HDF5 file handle
+  @return     integer         rank of dataset
+ **/
+/*-------------------------------------------------------------------------*/
 int FTI_GetDatasetRankReco( hid_t did ) 
 {
 
@@ -1586,6 +1593,14 @@ int FTI_GetDatasetRankReco( hid_t did )
 
 }
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Gets dataset span
+  @param      did             HDF5 file handle
+  @param      span            HDF5 file span
+  @return     integer         FTI_SCES if successful.
+ **/
+/*-------------------------------------------------------------------------*/
 int FTI_GetDatasetSpanReco( hid_t did, hsize_t * span )
 {
 
@@ -1833,10 +1848,11 @@ int FTI_CreateGlobalDatasets( FTIT_execution* FTI_Exec )
                                         positive if successful
  **/
 /*-------------------------------------------------------------------------*/
-hid_t FTI_RecoverVarInitHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_checkpoint* FTI_Ckpt,
+int FTI_RecoverVarInitHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_checkpoint* FTI_Ckpt,
                     FTIT_dataset* FTI_Data, char* fn)
 {
-    hid_t _file_id = -1; 
+    _file_id = -1; 
+    int res = FTI_SCES;
 
     if( FTI_Exec->h5SingleFile ) {
         snprintf( fn, FTI_BUFS, "%s/%s-ID%08d.h5", FTI_Conf->h5SingleFileDir, FTI_Conf->h5SingleFilePrefix, FTI_Exec->ckptID );
@@ -1851,6 +1867,7 @@ hid_t FTI_RecoverVarInitHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_E
     DBG_MSG("file_id: %lld", -1, _file_id);
     if (_file_id < 0) {
         FTI_Print("Could not open FTI checkpoint file.", FTI_EROR);
+        res = FTI_NSCS;
         exit(-1);
     }
     FTI_Exec->H5groups[0]->h5groupID = _file_id;
@@ -1873,7 +1890,7 @@ hid_t FTI_RecoverVarInitHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_E
     if( FTI_Exec->h5SingleFile ) { 
         FTI_OpenGlobalDatasets( FTI_Exec );
     }
-    return _file_id;
+    return res;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -1883,10 +1900,10 @@ hid_t FTI_RecoverVarInitHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_E
   @return     Integer               FTI_SCES if successful
  **/
 /*-------------------------------------------------------------------------*/
-herr_t FTI_RecoverVarHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_checkpoint* FTI_Ckpt,
+int FTI_RecoverVarHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_checkpoint* FTI_Ckpt,
         FTIT_dataset* FTI_Data, int id)
 {
-    herr_t res = -1;
+    int res = FTI_NSCS;
 
     int activeID, oldID;
     if(findVarInMeta(&FTI_Exec, FTI_Data, id, &activeID, &oldID) != FTI_NSCS){
@@ -1912,7 +1929,7 @@ herr_t FTI_RecoverVarHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec
  **/
 /*-------------------------------------------------------------------------*/
 int FTI_RecoverVarFinalizeHDF5(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_checkpoint* FTI_Ckpt,
-        FTIT_dataset* FTI_Data, hid_t _file_id)
+        FTIT_dataset* FTI_Data)
 {
     int res = FTI_NSCS; 
     int i;

@@ -45,6 +45,8 @@
 #include <dirent.h>
 #include <inttypes.h>
 
+char *filemmap; 
+struct stat filestats;
 /*  
 
     +-------------------------------------------------------------------------+
@@ -62,6 +64,21 @@ MPI_Datatype FTIFF_MpiTypes[FTIFF_NUM_MPI_TYPES];
    +-------------------------------------------------------------------------+
 
  */
+
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Activates Head for FTIFF
+  @param      FTI_Conf        Configuration metadata.
+  @param      FTI_Exec        Execution metadata.
+  @param      FTI_Topo        Topology metadata.
+  @param      FTI_Ckpt        Checkpoint metadata.
+  @param      status          FTI status
+  @return     integer         FTI_SCES if successful.
+
+  Builds meta data list from checkpoint file for the FTI File Format
+
+ **/
+/*-------------------------------------------------------------------------*/
 int FTI_ActivateHeadsFTIFF(FTIT_configuration* FTI_Conf,FTIT_execution* FTI_Exec,FTIT_topology* FTI_Topo, FTIT_checkpoint* FTI_Ckpt, int status)
 {
 
@@ -2299,6 +2316,13 @@ int FTIFF_CheckL4RecoverInit( FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo,
 
 }
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief    Sets hash chunk for FTI-FF
+  @param    dbvar          hash to compute.
+  @param    FTI_Data       Dataset metadata.
+ **/
+/*-------------------------------------------------------------------------*/
 void FTIFF_SetHashChunk( FTIFF_dbvar *dbvar, FTIT_dataset* FTI_Data ) 
 {
     if( dbvar->hascontent ) {
@@ -2679,13 +2703,13 @@ void FTIFF_FreeDbFTIFF(FTIFF_db* last)
                                         
  **/
 /*-------------------------------------------------------------------------*/
-int FTI_RecoverVarInitFTIFF(char* fn, char *fmmap, struct stat st)
+int FTI_RecoverVarInitFTIFF(char* fn)
 {
     // get filesize
     int res = FTI_SCES; 
 
     //struct stat st;
-    if (stat(fn, &st) == -1) {
+    if (stat(fn, &filestats) == -1) {
         //could not open file
         res = FTI_NREC;
     }
@@ -2696,8 +2720,8 @@ int FTI_RecoverVarInitFTIFF(char* fn, char *fmmap, struct stat st)
         res = FTI_NREC;
     }
     // map file into memory
-    fmmap = (char*) mmap(0, st.st_size, PROT_READ, MAP_SHARED, fd, 0);
-    if (fmmap == MAP_FAILED) {
+    filemmap = (char*) mmap(0, filestats.st_size, PROT_READ, MAP_SHARED, fd, 0);
+    if (filemmap == MAP_FAILED) {
         res = FTI_NREC;
     }  
     // file is mapped, we can close it.
@@ -2715,8 +2739,9 @@ int FTI_RecoverVarInitFTIFF(char* fn, char *fmmap, struct stat st)
  **/
 /*-------------------------------------------------------------------------*/
 int FTIFF_RecoverVar(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo, 
-    FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data, int id, char* fmmap, struct stat st)
+    FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data, int id)
 {
+    
     int res = FTI_NREC;
     FTIFF_db *currentdb;
     FTIFF_dbvar *currentdbvar = NULL;
@@ -2744,7 +2769,7 @@ int FTIFF_RecoverVar(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTI
                 res = FTI_FindVarInMeta(FTI_Exec, FTI_Data, id, &(currentdbvar->idx), &oldIndex);
                 if(res != FTI_NREC){
                     destptr = (char*) FTI_Data[currentdbvar->idx].ptr + currentdbvar->dptr;
-                    srcptr = (char*) fmmap + currentdbvar->fptr;
+                    srcptr = (char*) filemmap + currentdbvar->fptr;
                     
                     MD5_Init( &mdContext );
                     cpycnt = 0;
@@ -2761,7 +2786,7 @@ int FTIFF_RecoverVar(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTI
 
                     if ( memcmp( currentdbvar->hash, hash, MD5_DIGEST_LENGTH ) != 0 ) {
                         FTI_Print("FTIFF checkpoint data has been corrupted. ", FTI_EROR);
-                        munmap( fmmap, st.st_size );
+                        munmap( filemmap, filestats.st_size );
                         res = FTI_NREC;
                         exit(-1);
                     }else{
@@ -2787,10 +2812,10 @@ int FTIFF_RecoverVar(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTI
                                         
  **/
 /*-------------------------------------------------------------------------*/
-int FTI_RecoverVarFinalizeFTIFF(char* fmmap, struct stat st)
+int FTI_RecoverVarFinalizeFTIFF()
 {
     int res = FTI_NREC;
-    if ( munmap( fmmap, st.st_size ) == -1 ) {
+    if ( munmap( filemmap, filestats.st_size ) == -1 ) {
         FTI_Print("Could not close FTI checkpoint file.", FTI_EROR);
     }else{
         res = FTI_SCES;

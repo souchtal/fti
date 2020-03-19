@@ -1,6 +1,13 @@
 #include "../interface.h"
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Closes Sion File 
+  @param      fileDesc          Sion file 
+  @return     Integer           FTI_SCES if successful
 
+ **/
+/*-------------------------------------------------------------------------*/
 int FTI_SionClose(void *fileDesc){
     WriteSionInfo_t *fd = (WriteSionInfo_t *) fileDesc;
     if (sion_parclose_mapped_mpi(fd->sid) == -1) {
@@ -171,84 +178,4 @@ size_t FTI_GetSionFilePos(void *fileDesc){
     WriteSionInfo_t *fd  = (WriteSionInfo_t *) fileDesc;
     return fd->loffset;
 }
-
-/*-------------------------------------------------------------------------*/
-/**
-  @brief      Initializes variable recovery for SION mode
-  @param      fn                        ckpt file
-  @return     Integer                   SION file handle
-                                        positive if successful
-                                        -1 if not successful
- **/
-/*-------------------------------------------------------------------------*/
-int FTI_RecoverVarInitSION(char* fn)//should be in src/IO/sion-fti.c
-{ 
-    int numFiles = 1;
-    MPI_Comm gComm = FTI_COMM_WORLD;
-    MPI_Comm lComm = FTI_COMM_WORLD;
-    sion_int64 chunksize = 10 * 1024 * 1024; //maximum size to write 
-    sion_int32 fsblksize = -1;               //file system block size. (-1 for automatic) 
-    int globalrank = FTI_Topo.splitRank;     //splitRank(FTI) instead of myRank(MPI)
-    FILE* fileptr = NULL;
-    char *newfname = NULL;
-
-    //open file for read
-    int fileHandle = sion_paropen_mpi(fn, "rb", &numFiles, gComm, &lComm, &chunksize, &fsblksize, &globalrank, &fileptr, &newfname);
-
-    if(fileHandle == -1){
-        FTI_Print("Could not open FTI checkpoint file.", FTI_EROR);
-    }
-    return fileHandle;
-}
-
-/*-------------------------------------------------------------------------*/
-/**
-  @brief      Recovers variable for SION mode
-  @param      id                        variable id
-  @param      Integer                   fileHandle                
-  @return     Integer                   FTI_SCES if successful 
-                                        
- **/
-/*-------------------------------------------------------------------------*/
-int FTI_RecoverVarSION(int id, int fileHandle)//should be in src/IO/sion-fti.c
-{
-    //current position?
-    int res = FTI_NSCS; 
-
-    //SION_CURRENT_POS -> filePose(long) : convert to sion_int64
-    int activeID, oldID;
-    res = findVarInMeta(&FTI_Exec, FTI_Data, id, &activeID, &oldID);
-    if(res != FTI_NSCS){
-        sion_int64 filePos = FTI_Exec.meta[FTI_Exec.ckptLvel].filePos[oldID]; 
-        res = sion_seek(fileHandle, FTI_Topo->splitRank, SION_CURRENT_BLK, filePos);//assumes var resides in current block
-        if(res == SION_SUCCESS){
-            res = sion_fread(FTI_Data[activeID].ptr, 1, btoread, fileHandle);
-            if(res <= 0){//no elements were read
-                FTI_Print("Could not read variable.", FTI_EROR);
-            }else{
-                res = FTI_SCES;
-            }
-        }
-    }
-    return res; 
-}
-
-/*-------------------------------------------------------------------------*/
-/**
-  @brief      Finalizes variable recovery for SION mode
-  @param      Integer                   fileHandle                
-  @return     Integer                   FTI_SCES if successful 
-                                        
- **/
-/*-------------------------------------------------------------------------*/
-int FTI_RecoverVarFinalizeSION(int fileHandle)//should be in src/IO/sion-fti.c
-{
-    int res = FTI_SCES;
-    if(sion_parclose_mpi(fileHandle) != SION_SUCCESS){//returns SION_NOT_SUCCESS
-        res = FTI_NSCS;
-        FTI_Print("Could not close FTI checkpoint file.", FTI_EROR);
-    }
-    return res; 
-}
-
 
