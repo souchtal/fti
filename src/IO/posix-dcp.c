@@ -40,7 +40,10 @@
 #include "../api-cuda.h"
 #include "cuda-md5/md5Opt.h"
 
-
+FILE* fd;
+void* buffer; 
+unsigned long blockSize;
+unsigned int stackSize;
 
 /*-------------------------------------------------------------------------*/
 /**
@@ -632,6 +635,66 @@ int FTI_RecoverDcpPosix
 
 /*-------------------------------------------------------------------------*/
 /**
+  @brief      Initializes variable recovery for dcpPosix
+  @param      id              Variable to recover
+  @return     int             FTI_SCES if successful.
+
+  dCP POSIX implementation of FTI_RecoverVarInit().
+ **/
+/*-------------------------------------------------------------------------*/
+
+int FTI_RecoverVarDcpPosixInit(char *fn, FTIT_configuration* FTI_Conf){
+    int res = FTI_NSCS;
+
+    char errstr[FTI_BUFS];
+
+    fd = fopen( fn, "rb" );
+    if (fd != NULL){
+        res = FTI_SCES;
+    }
+    fread( &blockSize, sizeof(unsigned long), 1, fd );
+    if(blockSize == 0){
+        FTI_Print("blockSize is zero " ,FTI_WARN);
+    }
+    if(ferror(fd)) {
+        snprintf( errstr, FTI_BUFS, "unable to read in file %s", fn );
+        FTI_Print( errstr, FTI_EROR );
+        res = FTI_NSCS;
+    }
+    fread( &stackSize, sizeof(unsigned int), 1, fd );
+    if(ferror(fd)) {
+        snprintf( errstr, FTI_BUFS, "unable to read in file %s", fn );
+        FTI_Print( errstr, FTI_EROR );
+        res = FTI_NSCS;
+    }
+
+    // check if settings are correct. If not correct them
+    if( blockSize != FTI_Conf->dcpInfoPosix.BlockSize )
+    {
+        char str[FTI_BUFS];
+        snprintf( str, FTI_BUFS, "dCP blocksize differ between configuration settings ('%lu') and checkpoint file ('%lu')", FTI_Conf->dcpInfoPosix.BlockSize, blockSize );
+        FTI_Print( str, FTI_WARN );
+        res = FTI_NREC;
+    }
+    if( stackSize != FTI_Conf->dcpInfoPosix.StackSize )
+    {
+        char str[FTI_BUFS];
+        snprintf( str, FTI_BUFS, "dCP stacksize differ between configuration settings ('%u') and checkpoint file ('%u')", FTI_Conf->dcpInfoPosix.StackSize, stackSize );
+        FTI_Print( str, FTI_WARN );
+        res = FTI_NREC;
+    }
+
+    buffer = (void*) malloc( blockSize ); 
+    if( !buffer ) {
+        FTI_Print("unable to allocate memory!", FTI_EROR);
+        res = FTI_NSCS;
+    }
+
+    return res; 
+}
+
+/*-------------------------------------------------------------------------*/
+/**
   @brief      Recovers the given variable for dcpPosix
   @param      id              Variable to recover
   @return     int             FTI_SCES if successful.
@@ -643,60 +706,24 @@ int FTI_RecoverVarDcpPosix
 ( 
  FTIT_configuration* FTI_Conf, 
  FTIT_execution* FTI_Exec, 
- FTIT_checkpoint* FTI_Ckpt, 
  FTIT_dataset* FTI_Data,
+ FILE* fd,
+ unsigned long blockSize, 
+ unsigned long stackSize,
+ void* buffer,
  int id
  )
 
 {
-    unsigned long blockSize;
-    unsigned int stackSize;
+
     int nbVarLayer;
     int ckptID;
 
     char errstr[FTI_BUFS];
+    //for testing
     char fn[FTI_BUFS];
-
-    snprintf( fn, FTI_BUFS, "%s/%s", FTI_Ckpt[FTI_Exec->ckptLvel].dcpDir, FTI_Exec->meta[4].ckptFile );
-
-    // read base part of file
-    FILE* fd = fopen( fn, "rb" );
-    fread( &blockSize, sizeof(unsigned long), 1, fd );
-    if(ferror(fd)) {
-        snprintf( errstr, FTI_BUFS, "unable to read in file %s", fn );
-        FTI_Print( errstr, FTI_EROR );
-        return FTI_NSCS;
-    }
-    fread( &stackSize, sizeof(unsigned int), 1, fd );
-    if(ferror(fd)) {
-        snprintf( errstr, FTI_BUFS, "unable to read in file %s", fn );
-        FTI_Print( errstr, FTI_EROR );
-        return FTI_NSCS;
-    }
-
-    // check if settings are correct. If not correct them
-    if( blockSize != FTI_Conf->dcpInfoPosix.BlockSize )
-    {
-        char str[FTI_BUFS];
-        snprintf( str, FTI_BUFS, "dCP blocksize differ between configuration settings ('%lu') and checkpoint file ('%lu')", FTI_Conf->dcpInfoPosix.BlockSize, blockSize );
-        FTI_Print( str, FTI_WARN );
-        return FTI_NREC;
-    }
-    if( stackSize != FTI_Conf->dcpInfoPosix.StackSize )
-    {
-        char str[FTI_BUFS];
-        snprintf( str, FTI_BUFS, "dCP stacksize differ between configuration settings ('%u') and checkpoint file ('%u')", FTI_Conf->dcpInfoPosix.StackSize, stackSize );
-        FTI_Print( str, FTI_WARN );
-        return FTI_NREC;
-    }
-
-
-    void *buffer = (void*) malloc( blockSize ); 
-    if( !buffer ) {
-        FTI_Print("unable to allocate memory!", FTI_EROR);
-        return FTI_NSCS;
-    }
-
+    snprintf( fn, FTI_BUFS, "test");
+    
     int i;
 
     // treat Layer 0 first
@@ -916,12 +943,26 @@ int FTI_RecoverVarDcpPosix
     free(buffer);
     }
      */
-    free(buffer);
-    fclose(fd);
-
-
     return FTI_SCES;
+}
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Finalizes the recovery of a variable for DCP.
+  @param      fd              POSIX file handle
+  @param      buffer          buffer for reading ckpt data
+  @return     integer         FTI_SCES if successful
+
+  dCP POSIX implementation of FTI_RecoverVarFinalize()
+ **/
+/*-------------------------------------------------------------------------*/
+int FTI_RecoverVarDcpPosixFinalize(FILE* fd, void *buffer){
+    int res = FTI_NSCS;
+    free(buffer);
+    if(fclose(fd) == 0){
+        return FTI_SCES;
+    }
+    return res; 
 }
 
 /*-------------------------------------------------------------------------*/
@@ -1243,6 +1284,15 @@ FINALIZE:;
 
 // HELPER FUNCTIONS
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Shows runtime information for DcpPosix Recovery
+  @param      tag           Filename of the checkpoint.
+  @param      exec_         Checksum to compare.
+  @param      conf_         FTI_SCES if successful.
+  @return     ptr           pointer to the configuration or the execution
+ **/
+/*-------------------------------------------------------------------------*/
 void* FTI_DcpPosixRecoverRuntimeInfo( int tag, void* exec_, void* conf_ ) {
 
     static void* exec = NULL;
@@ -1287,6 +1337,15 @@ unsigned char* CRC32( const unsigned char *d, unsigned long nBytes, unsigned cha
     return hash;
 }
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Gets data of a given variable
+  @param      varId             variable id
+  @param      FTI_Exec          FTI execution
+  @param      FTI_Data          FTI dataset
+  @return     Integer           0 if successful, -1 if not.
+ **/
+/*-------------------------------------------------------------------------*/
 int FTI_DataGetIdx( int varId, FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data )
 {
     int i=0;

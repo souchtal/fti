@@ -15,14 +15,21 @@
 #define DCP_POSIX_CONF_TAG 1
 #define DCP_POSIX_INIT_TAG -1
 
+extern FILE* fd;
+extern void* buffer; 
+extern unsigned long blockSize;
+extern unsigned int stackSize;
+
 int FTI_WritePosixDcp(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec,
         FTIT_topology* FTI_Topo, FTIT_checkpoint* FTI_Ckpt,
         FTIT_dataset* FTI_Data);
 int FTI_CheckFileDcpPosix(char* fn, long fs, char* checksum);
 int FTI_VerifyChecksumDcpPosix(char* fileName);
 void* FTI_DcpPosixRecoverRuntimeInfo( int tag, void* exec_, void* conf_ );
+int FTI_RecoverVarDcpPosixInit(char *fn, FTIT_configuration* FTI_Conf);
 int FTI_RecoverDcpPosix( FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_checkpoint* FTI_Ckpt, FTIT_dataset* FTI_Data );
-int FTI_RecoverVarDcpPosix( FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_checkpoint* FTI_Ckpt, FTIT_dataset* FTI_Data, int id );
+int FTI_RecoverVarDcpPosixFinalize(FILE* fd, void *buffer);
+int FTI_RecoverVarDcpPosix( FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data, FILE* fd, unsigned long blockSize, unsigned long stackSize, void* buffer, int id );
 int FTI_DataGetIdx( int varId, FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data );
 char* FTI_GetHashHexStr( unsigned char* hash, int digestWidth, char* hashHexStr );
 // wrapper for CRC32 hash algorithm

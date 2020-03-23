@@ -620,6 +620,17 @@ long FTI_CalcNumHashes( long chunkSize )
     }
 }
 
+/*-------------------------------------------------------------------------*/
+/**
+  @brief      Prints hash information for data
+  @param      dataHash          FTI data diff hash
+  @param      chunksize         size of data chunk
+  @param      id                index id   
+
+  This function computes the number of hash blocks according to the set dCP
+  block size corresponding to chunkSize.
+ **/
+/*-------------------------------------------------------------------------*/
 void PrintDataHashInfo( FTIT_DataDiffHash* dataHash, long chunkSize, int id){
     char str[FTI_BUFS];
     FTI_Print("+++++++++++++++ INFO IS  +++++++++++++++",FTI_INFO);

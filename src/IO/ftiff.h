@@ -47,7 +47,7 @@
 #include <assert.h>
 #include <string.h>
 #include "../utility.h"
-//test
+//headers required for recoverVar()
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -63,6 +63,8 @@ extern int FTI_filemetastructsize;	/**< size of FTIFF_metaInfo in file */
 extern int FTI_dbstructsize;		/**< size of FTIFF_db in file       */
 extern int FTI_dbvarstructsize;		/**< size of FTIFF_dbvar in file    */
 
+extern char *filemmap; 
+extern struct stat filestats;
 /**
 
   +-------------------------------------------------------------------------+
@@ -163,7 +165,7 @@ int FTIFF_SerializeDbVarMeta( FTIFF_dbvar* dbvar, char* buffer_ser );
 void FTIFF_FreeDbFTIFF(FTIFF_db* last);
 int FTIFF_Recover( FTIT_execution *FTI_Exec, FTIT_dataset *FTI_Data, FTIT_checkpoint *FTI_Ckpt );
 int FTIFF_RecoverVar(FTIT_configuration* FTI_Conf, FTIT_execution* FTI_Exec, FTIT_topology* FTI_Topo, 
-    FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data, int id, char* fmmap, struct stat st);
+    FTIT_checkpoint *FTI_Ckpt, FTIT_dataset *FTI_Data, int id);
 int FTIFF_UpdateDatastructVarFTIFF( FTIT_execution* FTI_Exec, 
         FTIT_dataset* FTI_Data, FTIT_configuration* FTI_Conf, 
         int pvar_idx );
@@ -192,6 +194,6 @@ void FTIFF_GetHashdb( unsigned char *hash, FTIFF_db *db );
 void FTIFF_GetHashdbvar( unsigned char *hash, FTIFF_dbvar *dbvar );
 void FTIFF_SetHashChunk( FTIFF_dbvar *dbvar, FTIT_dataset* FTI_Data ); 
 void FTIFF_PrintDataStructure( int rank, FTIT_execution* FTI_Exec, FTIT_dataset* FTI_Data );
-int FTI_RecoverVarInitFTIFF(char* fn, char *fmmap, struct stat st);
-int FTI_RecoverVarFinalizeFTIFF(char* fmmap, struct stat st);
+int FTI_RecoverVarInitFTIFF(char* fn);
+int FTI_RecoverVarFinalizeFTIFF();
 #endif
