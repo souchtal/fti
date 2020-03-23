@@ -5,18 +5,18 @@ Tutorial
 
 In this page we present a tutorial of FTI. The purpose of the practice section is for you to get familiar with the FTI API as well as with the configuration file. Therefore there is limited information on how you should proceed.  
 
-
-test
-
-..dHy35WCP7lo
-..ZB_gLMEsjbk
-
+For a detailed step-by-step guide for installing FTI: 
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/dHy35WCP7lo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+A demonstration of the multi-level checkpointing is explained here:
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ZB_gLMEsjbk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Installation
 -----------------
