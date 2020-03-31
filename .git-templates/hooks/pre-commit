@@ -6,6 +6,7 @@
 #   @brief  	Checks formatting of C/Fortran/CMake files before local commit
 #
 
+
 # For more formatting options, check FTI's guide
 # at : https://fault-tolerance-interface.readthedocs.io
 
