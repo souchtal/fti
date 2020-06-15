@@ -1,7 +1,6 @@
 name: FTI
-
 channels:
-  - FTI 
+  - QuantStack 
 
 dependencies:
   - pip:
