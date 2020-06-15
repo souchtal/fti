@@ -1,7 +1,7 @@
-name: docu-docs
+name: FTI
 
 channels:
-  - QuantStack 
+  - FTI 
 
 dependencies:
   - pip:
